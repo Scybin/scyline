@@ -1,0 +1,461 @@
+meta:
+  engine: 4.2.1
+  name: scyline
+  version: 1.0
+  author: Scybin
+  url: https://github.com/Scybin/scyline
+
+units:
+
+  # Key Variables (MX)
+  kx: u # 19 mm MX width (center-to-center)
+  ky: u # 19 mm MX height (center-to-center)
+  px: kx + 2 # horizontal padding (~21 mm)
+  py: ky + 2 # vertical padding (~21 mm)
+  ks: 19 # horizontal space between columns (MX default: 19)
+  kp: 19 # vertical padding between keys (MX default: 19)
+  kcow: 14 # MX plate cutout width
+  kcoh: 14 # MX plate cutout height
+  keycw: 18 # keycap width (MX / Cherry ~18 mm)
+  keych: 18 # keycap height (MX / Cherry ~18 mm)
+  switch_rotation: 180 # Hotswap south, LED north
+
+  # Diode Variables
+  vertical_diode_shift: 1.5 # How much to shift to avoid overlap
+  horizontal_diode_shift: -0.5 kcow - 0.85
+  diode_rotation: -180 # Diode rotation
+
+  # Controller Variables
+  mcu_width: 18 # x-axis
+  mcu_height: 33 # y-axis
+  mcu_padding: 1.5
+
+  # Reset Switch Variables
+  rst_x: 27.884 # Reset switch position on x-axis
+  rst_y: -28.5 # Reset switch position on y-axis
+
+  # On Off Switch Variables
+  pwr_x: 27.725 # On off switch position on x-axis
+  pwr_y: rst_y-9.35 # On off switch position on y-axis
+
+  # JST Variables
+  jst_x: pwr_x-4.5 # JST connector position on x-axis
+  jst_y: -34.01 # JST connector position on y-axis
+  jst_shift: 3.5 # JST footprint center point shift
+
+  # Screw variables
+  screw_size: 1.5 # M2 flathead screw
+  screw_x: (-kx/2) # Screw position on x-axis
+  screw_y: (-ky/2) # Screw position on y-axis
+  switchplate_screw_hole: 1.1 # Switchplate screw hole radius
+
+  # Standoff variables
+  standoff_size: 2.5 # Threaded screw inserts 3.2mm wide, and 3mm tall
+  spacer_radius: 2.15 # M2 standoffs
+  spacer_diameter: spacer_radius * 2
+
+  # Case variables
+  case_x: kx+8 # Case position on x-axis
+  case_y: ky+8 # Case position on y-axis
+
+points:
+  zones:
+    # Main key matrix
+    matrix:
+      key:
+        padding: ky
+        spread: kx
+        tags:
+          - key
+          - matrix_key
+      anchor.shift: [100,-150] # Fix KiCad placement
+      columns:
+        outer:
+          key:
+            column_net: C0
+        pinky:
+          key:
+            column_net: C1
+            stagger: 0.1ky
+        ring:
+          key:
+            column_net: C2
+            stagger: 0.66ky
+        middle:
+          key:
+            column_net: C3
+            stagger: 0.25ky
+        index:
+          key:
+            column_net: C4
+            stagger: -0.25ky
+        inner:
+          key:
+            column_net: C5
+            stagger: -0.15ky
+      rows:
+        bottom:
+          row_net: R3
+        home:
+          row_net: R2
+        upper:
+          row_net: R1
+        top:
+          row_net: R0
+    # Thumb cluster
+    thumb:
+      key:
+        padding: ky
+        spread: kx
+        tags:
+          - key
+          - thumb_key
+      anchor:
+        ref: matrix_index_bottom
+      columns:
+        tuck:
+          key:
+            column_net: C2
+            name: thumb_tuck
+            shift: [-1.1kx, -1.24ky]
+            rotate: 10
+        layer: 
+          key:
+            column_net: C3
+            name: thumb_layer
+            shift: [-1kx, -1.15ky]
+        space:
+          key:
+            column_net: C4
+            name: thumb_space
+            width: 1.5kx
+            shift: [-13.75, -1.15ky]
+      rows:
+        cluster:
+          row_net: R3
+
+    # Helper points
+    screw_pcb_outer_top:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: matrix_outer_top
+          shift: [7.75, 11]
+    screw_pcb_outer_bottom:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: matrix_outer_bottom
+          shift: [29.8, -8.25]
+    screw_pcb_ring_top:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: matrix_ring_top
+          shift: [6.37, 11.14]
+    screw_pcb_index_top:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: matrix_index_top
+          shift: [-6.37, 11.14]
+    screw_pcb_inner_bottom:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: matrix_inner_bottom
+          shift: [12.25, -1.31]
+    screw_pcb_thumb_tuck:
+      key.tags:
+        - helper
+        - screw
+      anchor:
+        - ref: thumb_tuck
+          shift: [-4.5, 10.75]
+  #mirror: &mirror
+  #  ref: matrix_inner_top
+  #  distance: 5kx
+
+outlines:
+    keycap_outline:
+    - what: rectangle
+      fillet: 2
+      where: /key/
+      size: [keycw, keych]
+    switch_cutout:
+    - what: rectangle
+      where: /key/
+      size: [kcow, kcoh]  
+    pcb:
+    - what: polygon
+      operation: stack
+      fillet:
+      points:
+        - ref: matrix_outer_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: matrix_outer_top
+          shift: [0.5kx, 0.5keych]
+        - ref: matrix_pinky_top
+          shift: [-0.5kx, 0.5keych]
+        - ref: matrix_pinky_top
+          shift: [0.5kx, 0.5keych]
+        - ref: matrix_ring_top
+          shift: [-0.5kx, 0.5keych]
+        - ref: matrix_ring_top
+          shift: [0.5kx, 0.5keych]          
+        - ref: matrix_middle_top
+          shift: [-0.5kx, 0.5keych]
+        - ref: matrix_middle_top
+          shift: [0.5kx, 0.5keych]          
+        - ref: matrix_index_top
+          shift: [-0.5kx, 0.5keych]
+        - ref: matrix_index_top
+          shift: [0.5kx, 0.5keych]          
+        - ref: matrix_inner_top
+          shift: [-0.5kx, 0.5keych]
+        - ref: matrix_inner_top
+          shift: [0.5kx + mcu_padding + mcu_width + 0.35, 0.5keych]
+        - ref: matrix_inner_bottom
+          shift: [0.5kx + mcu_padding + mcu_width + 0.35, -0.5keych-ky]
+        - ref: thumb_space
+          shift: [-0.5kx, -0.5keych]
+        - ref: thumb_layer
+          shift: [-0.5kx, -0.5keych]
+        - ref: thumb_tuck
+          shift: [-0.5kx, -0.5keych]
+        - ref: matrix_pinky_bottom
+          shift: [0.5kx, -0.5keych]
+        - ref: matrix_pinky_bottom
+          shift: [-0.5kx, -0.5keych]          
+        - ref: matrix_outer_bottom
+          shift: [0.5kx, -0.5keych]
+        - ref: matrix_outer_bottom
+          shift: [-0.5kx, -0.5keych]          
+    switchplate:
+    - what: outline
+      name: pcb
+    - what: outline
+      name: switch_cutout
+      operation: subtract
+    xlBoard:
+    - what: rectangle
+      where: /key/
+      size: [px, py]
+      operation: add
+      fillet: 0
+    mounting: 
+    - what: circle
+      radius: screw_size
+      where: /screw/
+    plate_hole: 
+    - what: circle
+      radius: switchplate_screw_hole
+      where: /screw/
+    standoff:
+    - what: circle
+      radius: standoff_size
+      where: /screw/
+    combo:
+    - what: outline
+      name: pcb
+    - operation: subtract
+      name: keycap_outline
+    #- operation: subtract
+    #  name: plate_hole
+    #- operation: stack
+     # name: switchplate
+
+pcbs:
+  scyboard_mx:
+    template: kicad8
+    outlines:
+      main:
+        outline: pcb
+      keycaps_front:
+          outline:  keycap_outline
+          layer: F.SilkS
+    footprints:
+
+      key_switches:
+        what: ceoloide/switch_mx
+        where: /key/
+        params:
+          from: "{{column_net}}"
+          to: "{{colrow}}_B"
+          reversible: true
+          # hotswap: true      # default is true; uncomment if you want to be explicit
+          # solder: false      # keep only hotswap by default
+        adjust:
+          rotate: switch_rotation
+
+      diodes_b:
+        what: ceoloide/diode_tht_sod123
+        where: /key/
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: B
+        adjust:
+          shift: [horizontal_diode_shift, vertical_diode_shift]
+          rotate: 90 + diode_rotation  
+          
+      diodes_f:
+        what: ceoloide/diode_tht_sod123
+        where: /key/
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: F
+        adjust:
+          shift: [-1 * horizontal_diode_shift, vertical_diode_shift]
+          rotate: 90 + diode_rotation   
+          
+      mcu:
+        what: ceoloide/mcu_nice_nano
+        where:
+          ref: matrix_inner_top
+          shift: [kx+mcu_padding, -mcu_width/2+1.875]
+        params:
+          reversible: true
+          use_rectangular_jumpers: true
+          show_instructions: false
+
+          #Pin Assignments
+
+          # Left side
+          # RAW         # Battery Pos
+          # GND         # Ground / Battery Neg
+          # RST         # Reset pin
+          # VCC         # External Power
+          P21: C0
+          P20: C1
+          P19: C2
+          P18: C3
+          P15: C4
+          P14: C5
+          # P16:        # Free pin, not used
+          # P10:        # Free pin, not used
+
+          #Right side
+          # P0:        # Free pin, not used
+          # P1:        # Free pin, not used
+          # GND
+          # GND
+          # P2:        # Free pin, not used
+          # P3:        # Free pin, not used
+          P4: R0
+          P5: R1
+          P6: R2
+          P7: R3
+          # P8:        # Free pin, not used
+          # P9:        # Free pin, not used
+
+      on_off_switch:
+        what: ceoloide/power_switch_smd_side
+        where: matrix_inner_top
+        params:
+          from: BAT_P
+          to: RAW
+          reversible: true
+        adjust:
+          shift: [pwr_x, pwr_y]
+
+      reset_switch:
+        what: ceoloide/reset_switch_smd_side
+        where: matrix_inner_top
+        params:
+          from: GND
+          to: RST
+          reversible: true
+          include_bosses: true
+        adjust:
+          shift: [rst_x, rst_y]  
+          
+      battery_connector:  
+        what: ceoloide/battery_connector_jst_ph_2
+        where: matrix_inner_top
+        params:
+          BAT_P: BAT_P
+          BAT_N: GND
+          reversible: true
+          include_courtyard: false
+        adjust:
+          shift: [jst_x, jst_y]
+          rotate: 90
+      
+      logo:
+        what: ceoloide/utility_ergogen_logo
+        where: matrix_pinky_bottom
+        adjust:
+          shift: [23, -6.8]
+
+      #screw_holes:
+      #  what: ceoloide/mounting_hole_npth
+      #  where: /screw_pcb/
+      #  params:
+      #    hole_size: spacer_diameter
+      #    hole_drill: spacer_diameter
+
+cases:
+  bottom:
+    - name: pcb
+      extrude: 1
+  switchplate:
+    - name: switchplate
+      extrude: 1
+  xlBottom:
+    - name: xlBoard
+      extrude: 1
+  _outerWall:
+    - name: xlBoard
+      extrude: 4
+  _innerWall:
+    - name: pcb
+      extrude: 4
+  wall:
+    - what: case
+      name: _outerWall
+      operation: add
+    - what: case
+      name: _innerWall
+      operation: subtract
+  _holes:
+    - name: mounting
+      extrude: 4
+  _plate_holes:
+    - name: plate_hole
+  _standoffs:
+    - name: standoff
+      extrude: 4
+  bottom_case:
+    - what: case
+      name: xlBottom
+      operation: add
+    - what: case
+      name: wall
+      operation: add
+    - what: case
+      name: _standoffs
+      operation: add
+    - what: case
+      name: _holes
+      operation: subtract
+  _switch_holes:
+    - name: switch_cutout
+  switchplate_case:
+    - what: case
+      name: switchplate
+      operation: add
+    - what: case
+      name: _switch_holes
+      operation: subtract
+    - what: case
+      name: _plate_holes
+      operation: subtract
