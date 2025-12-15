@@ -274,8 +274,54 @@ outlines:
       radius: standoff_size
       where: /mount/
     switchplate:
-    - what: outline
-      name: pcb
+    - what: polygon
+      operation: stack
+      fillet:
+      points:
+        - ref: matrix_outer_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: matrix_outer_top
+          shift: [0.5kx+0.5, 0.5keych]
+        - ref: matrix_pinky_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: matrix_pinky_top
+          shift: [0.5kx+0.5, 0.5keych]
+        - ref: matrix_ring_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: matrix_ring_top
+          shift: [0.5kx+0.5, 0.5keych]          
+        - ref: matrix_middle_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: matrix_middle_top
+          shift: [0.5keycw, 0.5keych]          
+        - ref: matrix_index_top
+          shift: [-0.5kx-0.5, 0.5keych]
+        - ref: matrix_index_top
+          shift: [0.5keycw, 0.5keych]          
+        - ref: matrix_inner_top
+          shift: [-0.5kx-0.5, 0.5keych]
+        - ref: matrix_inner_top
+          shift: [0.5keycw, 0.5keych]                  
+        - ref: matrix_inner_bottom
+          shift: [0.5keycw, -0.5keych-1]
+        - ref: matrix_inner_bottom
+          shift: [keycw, -0.5keych-1]          
+        - ref: thumb_space
+          shift: [13.5, 0.5keych]
+        - ref: thumb_space
+          shift: [13.5, -0.5keych]          
+        - ref: thumb_layer
+          shift: [-0.5kx, -0.5keych]
+        - ref: thumb_tuck
+          shift: [-0.5keycw, -0.5keych]
+        - ref: matrix_pinky_bottom
+          shift: [0.5keycw, -0.5keych]
+        - ref: matrix_pinky_bottom
+          shift: [-0.5kx-0.5, -0.5keych]          
+        - ref: matrix_outer_bottom
+          shift: [0.5keycw, -0.5keych]
+        - ref: matrix_outer_bottom
+          shift: [-0.5keycw, -0.5keych] 
     - what: outline
       name: switch_cutout
       operation: subtract
@@ -283,16 +329,16 @@ outlines:
       name: plate_hole
       operation: subtract
     combo:
+    #- what: outline
+    #  name: pcb
     - what: outline
-      name: pcb
+      name: switchplate
     - operation: subtract
       name: keycap_outline
-    - operation: subtract
-      name: standoff
     #- operation: subtract
     #  name: plate_hole
     #- operation: stack
-     # name: switchplate
+    #  name: switchplate
 
 pcbs:
   scyline_mx:
@@ -453,14 +499,11 @@ cases:
     - what: case
       name: _innerWall
       operation: subtract
-  _holes:
-    - name: mounting
-      extrude: 4
   _plate_holes:
     - name: plate_hole
   _standoffs:
     - name: standoff
-      extrude: 4
+      extrude: 0
   bottom_case:
     - what: case
       name: xlBottom
@@ -472,7 +515,7 @@ cases:
       name: _standoffs
       operation: add
     - what: case
-      name: _holes
+      name: _plate_holes
       operation: subtract
   _switch_holes:
     - name: switch_cutout
