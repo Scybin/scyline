@@ -8,10 +8,10 @@ meta:
 units:
 
   # Key Variables (MX)
-  kx: u # 19 mm MX width (center-to-center)
-  ky: u # 19 mm MX height (center-to-center)
-  px: kx + 2 # horizontal padding (~21 mm)
-  py: ky + 2 # vertical padding (~21 mm)
+  kx: u # spacing between key centers
+  ky: u # spacing between key centers
+  px: kx + 2 # horizontal padding (21 mm)
+  py: ky + 2 # vertical padding (21 mm)
   ks: 19 # horizontal space between columns (MX default: 19)
   kp: 19 # vertical padding between keys (MX default: 19)
   kcow: 14 # MX plate cutout width
@@ -134,51 +134,59 @@ points:
             shift: [-14.5, -1.15ky]
       rows:
         cluster:
-          row_net: R3
+          row_net: R4
 
-    # Helper points
-    screw_pcb_outer_top:
+    # Standoff / screw points:
+    mount_outer_upper:
       key.tags:
         - helper
-        - screw
+        - mount
       anchor:
-        - ref: matrix_outer_top
-          shift: [7.75, 11]
-    screw_pcb_outer_bottom:
+        - ref: matrix_outer_upper
+          shift: [0.5kx, 0.55ky]
+    mount_outer_home:
       key.tags:
         - helper
-        - screw
+        - mount
+      anchor:
+        - ref: matrix_outer_home
+          shift: [0.5kx, 0.55ky]
+    mount_outer_bottom:
+      key.tags:
+        - helper
+        - mount
       anchor:
         - ref: matrix_outer_bottom
-          shift: [29.8, -8.25]
-    screw_pcb_ring_top:
+          shift: [0.5kx, 0.55ky]
+    mount_middle_bottom:
       key.tags:
         - helper
-        - screw
+        - mount
       anchor:
-        - ref: matrix_ring_top
-          shift: [6.37, 11.14]
-    screw_pcb_index_top:
+        - ref: matrix_middle_bottom
+          shift: [-0.7125, -14.155]
+    mount_inner_top:
       key.tags:
         - helper
-        - screw
+        - mount
       anchor:
-        - ref: matrix_index_top
-          shift: [-6.37, 11.14]
-    screw_pcb_inner_bottom:
+        - ref: matrix_inner_top
+          shift: [-0.5kx, -0.5kcow-1.075]          
+    mount_inner_middle:
       key.tags:
         - helper
-        - screw
+        - mount
       anchor:
-        - ref: matrix_inner_bottom
-          shift: [12.25, -1.31]
-    screw_pcb_thumb_tuck:
+        - ref: matrix_inner_upper
+          shift: [-0.5kx, -0.5kcow-1.075]                          
+    mount_inner_home:
       key.tags:
         - helper
-        - screw
+        - mount
       anchor:
-        - ref: thumb_tuck
-          shift: [-4.5, 10.75]
+        - ref: matrix_inner_home
+          shift: [-0.5kx, -0.5kcow-1.075]
+
   #mirror: &mirror
   #  ref: matrix_inner_top
   #  distance: 5kx
@@ -247,35 +255,40 @@ outlines:
           shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
           shift: [-0.5keycw, -0.5keych]          
+    xlBoard:
+    - what: outline
+      name: pcb
+      expand: 2
+      operation: stack
+      fillet: 0
+    mounting: 
+    - what: circle
+      radius: screw_size
+      where: /mount/
+    plate_hole: 
+    - what: circle
+      radius: switchplate_screw_hole
+      where: /mount/
+    standoff:
+    - what: circle
+      radius: standoff_size
+      where: /mount/
     switchplate:
     - what: outline
       name: pcb
     - what: outline
       name: switch_cutout
       operation: subtract
-    xlBoard:
-    - what: rectangle
-      where: /key/
-      size: [px, py]
-      operation: add
-      fillet: 0
-    mounting: 
-    - what: circle
-      radius: screw_size
-      where: /screw/
-    plate_hole: 
-    - what: circle
-      radius: switchplate_screw_hole
-      where: /screw/
-    standoff:
-    - what: circle
-      radius: standoff_size
-      where: /screw/
+    - what: outline
+      name: plate_hole
+      operation: subtract
     combo:
     - what: outline
       name: pcb
     - operation: subtract
       name: keycap_outline
+    - operation: subtract
+      name: standoff
     #- operation: subtract
     #  name: plate_hole
     #- operation: stack
@@ -302,8 +315,6 @@ pcbs:
           from: "{{column_net}}"
           to: "{{colrow}}_B"
           reversible: true
-          # hotswap: true      # default is true; uncomment if you want to be explicit
-          # solder: false      # keep only hotswap by default
         adjust:
           rotate: switch_rotation
 
@@ -363,11 +374,11 @@ pcbs:
           # GND
           # GND
           # P2:        # Free pin, not used
-          # P3:        # Free pin, not used
-          P4: R0
-          P5: R1
-          P6: R2
-          P7: R3
+          P3: R0
+          P4: R1
+          P5: R2
+          P6: R3
+          P7: R4
           # P8:        # Free pin, not used
           # P9:        # Free pin, not used
 
@@ -410,14 +421,14 @@ pcbs:
         what: ceoloide/utility_ergogen_logo
         where: matrix_pinky_bottom
         adjust:
-          shift: [23, -6.8]
+          shift: [kx, -3]
 
-      #screw_holes:
-      #  what: ceoloide/mounting_hole_npth
-      #  where: /screw_pcb/
-      #  params:
-      #    hole_size: spacer_diameter
-      #    hole_drill: spacer_diameter
+      mounting_holes:
+        what: ceoloide/mounting_hole_npth
+        where: /mount/
+        params:
+          hole_size: spacer_diameter
+          hole_drill: spacer_diameter
 
 cases:
   bottom:
