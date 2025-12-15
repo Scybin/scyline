@@ -28,7 +28,8 @@ units:
   # Controller Variables
   mcu_width: 18 # x-axis
   mcu_height: 33 # y-axis
-  mcu_padding: 1.5
+  mcu_padding_x: 1.5
+  mcu_padding_y: 1
 
   # Reset Switch Variables
   rst_x: 27.884 # Reset switch position on x-axis
@@ -37,6 +38,7 @@ units:
   # On Off Switch Variables
   pwr_x: 27.725 # On off switch position on x-axis
   pwr_y: rst_y-9.35 # On off switch position on y-axis
+  pwr_shift: 5 # On off switch footprint center point shift
 
   # JST Variables
   jst_x: pwr_x-4.5 # JST connector position on x-axis
@@ -117,7 +119,7 @@ points:
           key:
             column_net: C2
             name: thumb_tuck
-            shift: [-1.1kx, -1.24ky]
+            shift: [-1.075kx, -1.24ky]
             rotate: 10
         layer: 
           key:
@@ -129,7 +131,7 @@ points:
             column_net: C4
             name: thumb_space
             width: 1.5kx
-            shift: [-13.75, -1.15ky]
+            shift: [-14.5, -1.15ky]
       rows:
         cluster:
           row_net: R3
@@ -184,9 +186,14 @@ points:
 outlines:
     keycap_outline:
     - what: rectangle
-      fillet: 2
+      fillet: 0
       where: /key/
       size: [keycw, keych]
+    - what: rectangle
+      fillet: 0
+      where: thumb_space
+      size: [1.5keycw, keych]
+      operation: add
     switch_cutout:
     - what: rectangle
       where: /key/
@@ -199,43 +206,47 @@ outlines:
         - ref: matrix_outer_top
           shift: [-0.5keycw, 0.5keych]
         - ref: matrix_outer_top
-          shift: [0.5kx, 0.5keych]
+          shift: [0.5kx+0.5, 0.5keych]
         - ref: matrix_pinky_top
-          shift: [-0.5kx, 0.5keych]
+          shift: [-0.5keycw, 0.5keych]
         - ref: matrix_pinky_top
-          shift: [0.5kx, 0.5keych]
+          shift: [0.5kx+0.5, 0.5keych]
         - ref: matrix_ring_top
-          shift: [-0.5kx, 0.5keych]
+          shift: [-0.5keycw, 0.5keych]
         - ref: matrix_ring_top
-          shift: [0.5kx, 0.5keych]          
+          shift: [0.5kx+0.5, 0.5keych]          
         - ref: matrix_middle_top
-          shift: [-0.5kx, 0.5keych]
+          shift: [-0.5keycw, 0.5keych]
         - ref: matrix_middle_top
-          shift: [0.5kx, 0.5keych]          
+          shift: [0.5keycw, 0.5keych]          
         - ref: matrix_index_top
-          shift: [-0.5kx, 0.5keych]
+          shift: [-0.5kx-0.5, 0.5keych]
         - ref: matrix_index_top
-          shift: [0.5kx, 0.5keych]          
+          shift: [0.5keycw, 0.5keych]          
         - ref: matrix_inner_top
-          shift: [-0.5kx, 0.5keych]
+          shift: [-0.5kx-0.5, 0.5keych]
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_padding + mcu_width + 0.35, 0.5keych]
+          shift: [0.5keycw, 0.5keych]                  
         - ref: matrix_inner_bottom
-          shift: [0.5kx + mcu_padding + mcu_width + 0.35, -0.5keych-ky]
+          shift: [0.5keycw, -0.5keych + mcu_height]
+        - ref: matrix_inner_bottom
+          shift: [0.5kx + mcu_width + 0.35, -0.5keych + mcu_height]          
+        - ref: matrix_inner_bottom
+          shift: [0.5kx + mcu_width + 0.35, -0.5keych-ky]
         - ref: thumb_space
           shift: [-0.5kx, -0.5keych]
         - ref: thumb_layer
           shift: [-0.5kx, -0.5keych]
         - ref: thumb_tuck
-          shift: [-0.5kx, -0.5keych]
+          shift: [-0.5keycw, -0.5keych]
         - ref: matrix_pinky_bottom
-          shift: [0.5kx, -0.5keych]
+          shift: [0.5keycw, -0.5keych]
         - ref: matrix_pinky_bottom
-          shift: [-0.5kx, -0.5keych]          
+          shift: [-0.5kx-0.5, -0.5keych]          
         - ref: matrix_outer_bottom
-          shift: [0.5kx, -0.5keych]
+          shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
-          shift: [-0.5kx, -0.5keych]          
+          shift: [-0.5keycw, -0.5keych]          
     switchplate:
     - what: outline
       name: pcb
@@ -271,13 +282,16 @@ outlines:
      # name: switchplate
 
 pcbs:
-  scyboard_mx:
+  scyline_mx:
     template: kicad8
     outlines:
       main:
         outline: pcb
       keycaps_front:
-          outline:  keycap_outline
+          outline: keycap_outline
+          layer: F.SilkS
+      switches_front:
+          outline: switch_cutout
           layer: F.SilkS
     footprints:
 
@@ -320,8 +334,8 @@ pcbs:
       mcu:
         what: ceoloide/mcu_nice_nano
         where:
-          ref: matrix_inner_top
-          shift: [kx+mcu_padding, -mcu_width/2+1.875]
+          ref: matrix_inner_bottom
+          shift: [kx, -(keych-mcu_height)/2]
         params:
           reversible: true
           use_rectangular_jumpers: true
@@ -359,36 +373,38 @@ pcbs:
 
       on_off_switch:
         what: ceoloide/power_switch_smd_side
-        where: matrix_inner_top
+        where: matrix_pinky_bottom
         params:
           from: BAT_P
           to: RAW
           reversible: true
         adjust:
-          shift: [pwr_x, pwr_y]
+          shift: [0.5kx + pwr_shift + 2jst_shift + 1, -14.8]
+          rotate: -122.2
 
       reset_switch:
         what: ceoloide/reset_switch_smd_side
-        where: matrix_inner_top
+        where: matrix_pinky_bottom
         params:
           from: GND
           to: RST
           reversible: true
           include_bosses: true
         adjust:
-          shift: [rst_x, rst_y]  
+          shift: [0.5kx + jst_shift + 1, -9.6]  
+          rotate: 148.2
           
       battery_connector:  
         what: ceoloide/battery_connector_jst_ph_2
-        where: matrix_inner_top
+        where: thumb_space
         params:
           BAT_P: BAT_P
           BAT_N: GND
           reversible: true
           include_courtyard: false
         adjust:
-          shift: [jst_x, jst_y]
-          rotate: 90
+          shift: [kx, -7]
+          rotate: 180
       
       logo:
         what: ceoloide/utility_ergogen_logo
