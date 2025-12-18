@@ -260,7 +260,26 @@ outlines:
       name: pcb
       expand: 2
       operation: stack
-      fillet: 0
+      fillet: 1
+    xlBoard_wall:
+    - what: outline
+      name: xlBoard
+    - what: outline
+      name: pcb
+      operation: subtract      
+    button_access:
+    - what: rectangle
+      where:
+        ref: matrix_pinky_bottom
+        shift: [20.25, -12.2]
+      size: [22, 8]
+      fillet: 1
+    button_wall:
+    - what: outline
+      name: button_access
+    - what: outline
+      name: xlBoard_wall
+      operation: intersect
     mounting: 
     - what: circle
       radius: screw_size
@@ -488,10 +507,16 @@ cases:
       extrude: 1
   _outerWall:
     - name: xlBoard
-      extrude: 4
+      extrude: 9.5
   _innerWall:
     - name: pcb
-      extrude: 4
+      extrude: 9.5
+  _button_access_cut:
+    - name: button_wall
+      extrude: 6
+  _button_access_fill:
+    - name: button_wall
+      extrude: 2
   wall:
     - what: case
       name: _outerWall
@@ -499,6 +524,12 @@ cases:
     - what: case
       name: _innerWall
       operation: subtract
+    - what: case
+      name: _button_access_cut
+      operation: subtract
+    - what: case
+      name: _button_access_fill
+      operation: add    
   _plate_holes:
     - name: plate_hole
   _standoffs:
