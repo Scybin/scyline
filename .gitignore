@@ -365,3 +365,5 @@ FodyWeavers.xsd
 # Additional exclusions
 scyboard.sln
 .gitmodules
+package-lock.json
+package.json
