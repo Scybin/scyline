@@ -516,6 +516,19 @@ pcbs:
         adjust:
           shift: [kx, -5]
           rotate: 180
+
+      #qwiic_jst:  
+      #  what: scybin/jst_sh_sm04b_srss_tb
+      #  where: matrix_inner_home
+      #  params:
+      #    GND: GND
+      #    VCC: 3V3
+      #    SDA: SDA
+      #    SCL: SCL
+      #    reversible: true
+      #  adjust:
+      #    shift: [kx, -5]
+      #    rotate: 180          
       
       logo:
         what: ceoloide/utility_ergogen_logo
