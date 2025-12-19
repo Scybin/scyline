@@ -75,6 +75,8 @@ function switchplate_extrude_1_outline_fn(){
 function switch_cutout_extrude_1_outline_fn(){
     return new CSG.Path2D([[149.896883,-167.2291915],[163.6841915,-164.798117]]).appendPoint([161.253117,-151.0108085]).appendPoint([147.4658085,-153.441883]).appendPoint([149.896883,-167.2291915]).close().innerToCAG()
 .union(
+    new CSG.Path2D([[207,-145.41],[221,-145.41]]).appendPoint([221,-131.41]).appendPoint([207,-131.41]).appendPoint([207,-145.41]).close().innerToCAG()
+).union(
     new CSG.Path2D([[192.5,-164.41],[206.5,-164.41]]).appendPoint([206.5,-150.41]).appendPoint([192.5,-150.41]).appendPoint([192.5,-164.41]).close().innerToCAG()
 ).union(
     new CSG.Path2D([[169,-164.41],[183,-164.41]]).appendPoint([183,-150.41]).appendPoint([169,-150.41]).appendPoint([169,-164.41]).close().innerToCAG()

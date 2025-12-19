@@ -135,6 +135,23 @@ points:
       rows:
         cluster:
           row_net: R4
+    extra:
+      key:
+        padding: ky
+        spread: kx
+        tags:
+          - key
+          - extra_key
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [kx, 0]
+      columns:
+        macro:
+          key:
+            column_net: C5
+      rows:
+        bottom:
+          row_net: R3
 
     # Standoff / screw points:
     mount_outer_upper:
@@ -234,9 +251,9 @@ outlines:
         - ref: matrix_inner_top
           shift: [-0.5kx-0.5, 0.5keych]
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + 0.35, 0.5keych]                        
+          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych]                        
         - ref: matrix_inner_bottom
-          shift: [0.5kx + mcu_width + 0.35, -0.5keych-ky]
+          shift: [0.5kx + mcu_width + mcu_padding_x, -0.5keych-ky]
         - ref: thumb_space
           shift: [-0.5kx, -0.5keych]
         - ref: thumb_layer
@@ -479,7 +496,7 @@ pcbs:
 
       qwiic_jst:  
         what: scybin/jst_sh_sm04b_srss_tb
-        where: thumb_space
+        where: matrix_inner_home
         params:
           GND: GND
           VCC: 3V3
@@ -487,7 +504,7 @@ pcbs:
           SCL: SCL
           reversible: true
         adjust:
-          shift: [kx, -7]
+          shift: [kx, -5]
           rotate: 180
       
       logo:
