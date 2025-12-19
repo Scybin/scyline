@@ -553,10 +553,10 @@ cases:
       extrude: 1
   _outerWall:
     - name: xlBoard
-      extrude: 14.5
+      extrude: 18
   _innerWall:
     - name: pcb
-      extrude: 14.5
+      extrude: 18
   _button_access_cut:
     - name: button_wall
       extrude: 6
