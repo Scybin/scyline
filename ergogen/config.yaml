@@ -148,10 +148,14 @@ points:
       columns:
         macro:
           key:
-            column_net: C5
+            column_net: C6
       rows:
         bottom:
           row_net: R3
+          name: extra_bottom
+        home:
+          row_net: R2 
+          name: extra_top   
 
     # Standoff / screw points:
     mount_outer_upper:
@@ -333,15 +337,21 @@ outlines:
         - ref: matrix_inner_top
           shift: [-0.5kx-0.5, 0.5keych]
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych]                  
-        - ref: matrix_inner_bottom
-          shift: [0.5keycw, -0.5keych-1]
-        - ref: matrix_inner_bottom
-          shift: [keycw, -0.5keych-1]          
+          shift: [0.5keycw, 0.5keych] 
+        - ref: matrix_inner_home
+          shift: [0.5keycw, 0.5keych]                       
+        - ref: extra_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: extra_top
+          shift: [0.5keycw, 0.5keych]          
+        - ref: extra_bottom
+          shift: [0.5keycw, 0.5keych]  
+        - ref: extra_bottom
+          shift: [0.5keycw, 0.5keych]                                           
         - ref: thumb_space
-          shift: [13.5, 0.5keych]
+          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych]
         - ref: thumb_space
-          shift: [13.5, -0.5keych]          
+          shift: [-0.5kx, -0.5keych]
         - ref: thumb_layer
           shift: [-0.5kx, -0.5keych]
         - ref: thumb_tuck
@@ -353,7 +363,7 @@ outlines:
         - ref: matrix_outer_bottom
           shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw, -0.5keych] 
+          shift: [-0.5keycw, -0.5keych]  
     - what: outline
       name: switch_cutout
       operation: subtract
@@ -443,7 +453,7 @@ pcbs:
           P18: C3
           P15: C4
           P14: C5
-          # P16:        # Free pin, not used
+          P16: C6
           # P10:        # Free pin, not used
 
           #Right side
