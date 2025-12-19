@@ -234,11 +234,7 @@ outlines:
         - ref: matrix_inner_top
           shift: [-0.5kx-0.5, 0.5keych]
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych]                  
-        - ref: matrix_inner_bottom
-          shift: [0.5keycw, -0.5keych + mcu_height]
-        - ref: matrix_inner_bottom
-          shift: [0.5kx + mcu_width + 0.35, -0.5keych + mcu_height]          
+          shift: [0.5kx + mcu_width + 0.35, 0.5keych]                        
         - ref: matrix_inner_bottom
           shift: [0.5kx + mcu_width + 0.35, -0.5keych-ky]
         - ref: thumb_space
@@ -254,7 +250,7 @@ outlines:
         - ref: matrix_outer_bottom
           shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw, -0.5keych]          
+          shift: [-0.5keycw, -0.5keych]           
     xlBoard:
     - what: outline
       name: pcb
@@ -408,10 +404,10 @@ pcbs:
           rotate: 90 + diode_rotation   
           
       mcu:
-        what: ceoloide/mcu_nice_nano
+        what: scybin/mcu_nice_nano_sp
         where:
-          ref: matrix_inner_bottom
-          shift: [kx, -(keych-mcu_height)/2]
+          ref: matrix_inner_top
+          shift: [kx, -mcu_width/2 + 1.4]
         params:
           reversible: true
           use_rectangular_jumpers: true
@@ -420,10 +416,10 @@ pcbs:
           #Pin Assignments
 
           # Left side
-          # RAW         # Battery Pos
-          # GND         # Ground / Battery Neg
-          # RST         # Reset pin
-          # VCC         # External Power
+          # RAW:         # Battery Pos
+          # GND:         # Ground / Battery Neg
+          # RST:         # Reset pin
+          VCC: 3V3
           P21: C0
           P20: C1
           P19: C2
@@ -434,18 +430,18 @@ pcbs:
           # P10:        # Free pin, not used
 
           #Right side
-          # P0:        # Free pin, not used
-          # P1:        # Free pin, not used
-          # GND
-          # GND
-          # P2:        # Free pin, not used
-          P3: R0
-          P4: R1
-          P5: R2
-          P6: R3
-          P7: R4
-          # P8:        # Free pin, not used
-          # P9:        # Free pin, not used
+          # P0:         # Free pin, not used
+          # P1:         # Free pin, not used
+          # GND:
+          # GND:
+          P2: SDA
+          P3: SCL
+          P4: R0
+          P5: R1
+          P6: R2
+          P7: R3
+          P8: R4
+          # P9:         # Free pin, not used
 
       on_off_switch:
         what: ceoloide/power_switch_smd_side
@@ -478,6 +474,18 @@ pcbs:
           BAT_N: GND
           reversible: true
           include_courtyard: false
+        adjust:
+          shift: [kx, 0.5ky-2]
+
+      qwiic_jst:  
+        what: scybin/jst_sh_sm04b_srss_tb
+        where: thumb_space
+        params:
+          GND: GND
+          VCC: 3V3
+          SDA: SDA
+          SCL: SCL
+          reversible: true
         adjust:
           shift: [kx, -7]
           rotate: 180
