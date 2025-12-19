@@ -40,7 +40,7 @@ units:
   pwr_y: rst_y-9.35 # On off switch position on y-axis
   pwr_shift: 5 # On off switch footprint center point shift
 
-  # JST Variables
+  # JST-PH Variables
   jst_x: pwr_x-4.5 # JST connector position on x-axis
   jst_y: -34.01 # JST connector position on y-axis
   jst_shift: 3.5 # JST footprint center point shift
@@ -230,7 +230,6 @@ outlines:
     pcb:
     - what: polygon
       operation: stack
-      fillet:
       points:
         - ref: matrix_outer_top
           shift: [-0.5keycw, 0.5keych]
@@ -277,7 +276,7 @@ outlines:
       name: pcb
       expand: 2
       operation: stack
-      fillet: 1
+      fillet: 0
     xlBoard_wall:
     - what: outline
       name: xlBoard
@@ -312,7 +311,6 @@ outlines:
     switchplate:
     - what: polygon
       operation: stack
-      fillet:
       points:
         - ref: matrix_outer_top
           shift: [-0.5keycw, 0.5keych]
@@ -493,7 +491,7 @@ pcbs:
           shift: [0.5kx + jst_shift + 1, -9.6]  
           rotate: 148.2
           
-      battery_connector:  
+      jst_ph:  
         what: ceoloide/battery_connector_jst_ph_2
         where: thumb_space
         params:
@@ -504,7 +502,7 @@ pcbs:
         adjust:
           shift: [kx, 0.5ky-2]
 
-      qwiic_jst:  
+      jst_sh:  
         what: scybin/jst_sh_sm04b_srss_tb
         where: matrix_inner_home
         params:
@@ -517,7 +515,7 @@ pcbs:
           shift: [kx, -5]
           rotate: 180
 
-      #qwiic_jst:  
+      #jst_sh:  
       #  what: scybin/jst_sh_sm04b_srss_tb
       #  where: matrix_inner_home
       #  params:
@@ -549,16 +547,16 @@ cases:
       extrude: 1
   switchplate:
     - name: switchplate
-      extrude: 1
+      extrude: 1.6
   xlBottom:
     - name: xlBoard
       extrude: 1
   _outerWall:
     - name: xlBoard
-      extrude: 9.5
+      extrude: 14.5
   _innerWall:
     - name: pcb
-      extrude: 9.5
+      extrude: 14.5
   _button_access_cut:
     - name: button_wall
       extrude: 6
