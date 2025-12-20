@@ -226,7 +226,8 @@ outlines:
     switch_cutout:
     - what: rectangle
       where: /key/
-      size: [kcow, kcoh]  
+      size: [kcow, kcoh]
+
     pcb:
     - what: polygon
       operation: stack
@@ -270,7 +271,8 @@ outlines:
         - ref: matrix_outer_bottom
           shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw, -0.5keych]           
+          shift: [-0.5keycw, -0.5keych]   
+          
     xlBoard:
     - what: outline
       name: pcb
@@ -296,6 +298,21 @@ outlines:
     - what: outline
       name: xlBoard_wall
       operation: intersect
+    usb_access:
+    - what: rectangle
+      where:
+        ref: matrix_inner_top
+        shift: [kx, 0.5keych + 1]
+      size: [14, 8]
+      fillet: 1
+
+    usb_wall:
+    - what: outline
+      name: usb_access
+    - what: outline
+      name: xlBoard_wall
+      operation: intersect
+
     mounting: 
     - what: circle
       radius: screw_size
@@ -512,21 +529,8 @@ pcbs:
           SCL: SCL
           reversible: true
         adjust:
-          shift: [kx, -5]
-          rotate: 180
-
-      #jst_sh:  
-      #  what: scybin/jst_sh_sm04b_srss_tb
-      #  where: matrix_inner_home
-      #  params:
-      #    GND: GND
-      #    VCC: 3V3
-      #    SDA: SDA
-      #    SCL: SCL
-      #    reversible: true
-      #  adjust:
-      #    shift: [kx, -5]
-      #    rotate: 180          
+          shift: [kx, 0.5kcoh]
+          rotate: 180 
       
       logo:
         what: ceoloide/utility_ergogen_logo
@@ -545,9 +549,11 @@ cases:
   bottom:
     - name: pcb
       extrude: 1
+
   switchplate:
     - name: switchplate
       extrude: 1.6
+
   xlBottom:
     - name: xlBoard
       extrude: 1
@@ -563,6 +569,12 @@ cases:
   _button_access_fill:
     - name: button_wall
       extrude: 2
+  _usb_access_cut:
+    - name: usb_wall
+      extrude: 17
+  _usb_access_fill:
+    - name: usb_wall
+      extrude: 10
   wall:
     - what: case
       name: _outerWall
@@ -575,7 +587,14 @@ cases:
       operation: subtract
     - what: case
       name: _button_access_fill
-      operation: add    
+      operation: add   
+    - what: case
+      name: _usb_access_cut
+      operation: subtract
+    - what: case
+      name: _usb_access_fill
+      operation: add
+      
   _plate_holes:
     - name: plate_hole
   _standoffs:
