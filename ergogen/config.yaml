@@ -286,18 +286,22 @@ outlines:
       name: pcb
       operation: subtract      
     button_access:
-    - what: rectangle
-      where:
-        ref: matrix_pinky_bottom
-        shift: [20.25, -12.2]
-      size: [22, 8]
-      fillet: 1
+    - what: polygon
+      points:
+        - ref: thumb_tuck
+          shift: [0, 20]
+        - ref: thumb_tuck
+          shift: [-13, -20]
+        - ref: matrix_pinky_bottom
+          shift: [11, -20]
+        - ref: matrix_pinky_bottom
+          shift: [0, 20]
     button_wall:
     - what: outline
       name: button_access
     - what: outline
       name: xlBoard_wall
-      operation: intersect
+      operation: intersect    
     usb_access:
     - what: rectangle
       where:
@@ -563,18 +567,18 @@ cases:
   _innerWall:
     - name: pcb
       extrude: 18
-  _button_access_cut:
-    - name: button_wall
-      extrude: 6
-  _button_access_fill:
-    - name: button_wall
-      extrude: 2
   _usb_access_cut:
     - name: usb_wall
       extrude: 17
   _usb_access_fill:
     - name: usb_wall
       extrude: 10
+  _button_access_cut:
+    - name: button_wall
+      extrude: 15
+  _button_access_fill:
+    - name: button_wall
+      extrude: 10      
   wall:
     - what: case
       name: _outerWall
@@ -583,17 +587,17 @@ cases:
       name: _innerWall
       operation: subtract
     - what: case
-      name: _button_access_cut
-      operation: subtract
-    - what: case
-      name: _button_access_fill
-      operation: add   
-    - what: case
       name: _usb_access_cut
       operation: subtract
     - what: case
       name: _usb_access_fill
       operation: add
+    - what: case
+      name: _button_access_cut
+      operation: subtract     
+    - what: case
+      name: _button_access_fill
+      operation: add       
       
   _plate_holes:
     - name: plate_hole

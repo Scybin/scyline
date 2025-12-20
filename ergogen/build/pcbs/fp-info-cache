@@ -1,4 +1,4 @@
-26777923147249021
+26784988147363294
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -106421,9 +106421,37 @@ utility_ergogen_logo
 0
 0
 scyline
-switch_mx
+battery_connector_jst_ph_2
+
+
+0
+10
+8
+scyline
+power_switch_smd_side
+
+
+0
+14
+3
+scyline
+reset_switch_smd_side
+
+
+0
+8
+4
+scyline
+scybin_switch_mx
 
 
 0
 4
 2
+scyline
+utility_ergogen_logo
+
+
+0
+0
+0

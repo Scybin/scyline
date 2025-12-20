@@ -16,18 +16,6 @@ function pcb_extrude_18_outline_fn(){
 }
 
 
-function button_wall_extrude_6_outline_fn(){
-    return new CSG.Path2D([[135.9058389,-164.3],[139.7287198,-164.3]]).appendPoint([128.2510532,-157.254116]).appendArc([128.25,-157.3],{"radius":1,"clockwise":false,"large":false}).appendPoint([128.25,-159.6002509]).appendPoint([135.9058389,-164.3]).close().innerToCAG()
-.extrude({ offset: [0, 0, 6] });
-}
-
-
-function button_wall_extrude_2_outline_fn(){
-    return new CSG.Path2D([[135.9058389,-164.3],[139.7287198,-164.3]]).appendPoint([128.2510532,-157.254116]).appendArc([128.25,-157.3],{"radius":1,"clockwise":false,"large":false}).appendPoint([128.25,-159.6002509]).appendPoint([135.9058389,-164.3]).close().innerToCAG()
-.extrude({ offset: [0, 0, 2] });
-}
-
-
 function usb_wall_extrude_17_outline_fn(){
     return new CSG.Path2D([[221,-72.41],[221,-70.41]]).appendPoint([207,-70.41]).appendPoint([207,-72.41]).appendPoint([221,-72.41]).close().innerToCAG()
 .extrude({ offset: [0, 0, 17] });
@@ -36,6 +24,18 @@ function usb_wall_extrude_17_outline_fn(){
 
 function usb_wall_extrude_10_outline_fn(){
     return new CSG.Path2D([[221,-72.41],[221,-70.41]]).appendPoint([207,-70.41]).appendPoint([207,-72.41]).appendPoint([221,-72.41]).close().innerToCAG()
+.extrude({ offset: [0, 0, 10] });
+}
+
+
+function button_wall_extrude_15_outline_fn(){
+    return new CSG.Path2D([[147.8988313,-169.3154496],[147.6015683,-171.429472]]).appendArc([147.2282325,-171.2505654],{"radius":2,"clockwise":true,"large":false}).appendPoint([127.5432597,-159.1663988]).appendPoint([126.975,-157.1]).appendPoint([128,-157.1]).appendPoint([147.8988313,-169.3154496]).close().innerToCAG()
+.extrude({ offset: [0, 0, 15] });
+}
+
+
+function button_wall_extrude_10_outline_fn(){
+    return new CSG.Path2D([[147.8988313,-169.3154496],[147.6015683,-171.429472]]).appendArc([147.2282325,-171.2505654],{"radius":2,"clockwise":true,"large":false}).appendPoint([127.5432597,-159.1663988]).appendPoint([126.975,-157.1]).appendPoint([128,-157.1]).appendPoint([147.8988313,-169.3154496]).close().innerToCAG()
 .extrude({ offset: [0, 0, 10] });
 }
 
@@ -137,7 +137,7 @@ function plate_hole_extrude_1_outline_fn(){
             
 
                 // creating part 2 of case wall
-                let wall__part_2 = _button_access_cut_case_fn();
+                let wall__part_2 = _usb_access_cut_case_fn();
 
                 // make sure that rotations are relative
                 let wall__part_2_bounds = wall__part_2.getBounds();
@@ -153,7 +153,7 @@ function plate_hole_extrude_1_outline_fn(){
             
 
                 // creating part 3 of case wall
-                let wall__part_3 = _button_access_fill_case_fn();
+                let wall__part_3 = _usb_access_fill_case_fn();
 
                 // make sure that rotations are relative
                 let wall__part_3_bounds = wall__part_3.getBounds();
@@ -169,7 +169,7 @@ function plate_hole_extrude_1_outline_fn(){
             
 
                 // creating part 4 of case wall
-                let wall__part_4 = _usb_access_cut_case_fn();
+                let wall__part_4 = _button_access_cut_case_fn();
 
                 // make sure that rotations are relative
                 let wall__part_4_bounds = wall__part_4.getBounds();
@@ -185,7 +185,7 @@ function plate_hole_extrude_1_outline_fn(){
             
 
                 // creating part 5 of case wall
-                let wall__part_5 = _usb_access_fill_case_fn();
+                let wall__part_5 = _button_access_fill_case_fn();
 
                 // make sure that rotations are relative
                 let wall__part_5_bounds = wall__part_5.getBounds();
@@ -250,52 +250,6 @@ function plate_hole_extrude_1_outline_fn(){
             
             
 
-                function _button_access_cut_case_fn() {
-                    
-
-                // creating part 0 of case _button_access_cut
-                let _button_access_cut__part_0 = button_wall_extrude_6_outline_fn();
-
-                // make sure that rotations are relative
-                let _button_access_cut__part_0_bounds = _button_access_cut__part_0.getBounds();
-                let _button_access_cut__part_0_x = _button_access_cut__part_0_bounds[0].x + (_button_access_cut__part_0_bounds[1].x - _button_access_cut__part_0_bounds[0].x) / 2
-                let _button_access_cut__part_0_y = _button_access_cut__part_0_bounds[0].y + (_button_access_cut__part_0_bounds[1].y - _button_access_cut__part_0_bounds[0].y) / 2
-                _button_access_cut__part_0 = translate([-_button_access_cut__part_0_x, -_button_access_cut__part_0_y, 0], _button_access_cut__part_0);
-                _button_access_cut__part_0 = rotate([0,0,0], _button_access_cut__part_0);
-                _button_access_cut__part_0 = translate([_button_access_cut__part_0_x, _button_access_cut__part_0_y, 0], _button_access_cut__part_0);
-
-                _button_access_cut__part_0 = translate([0,0,0], _button_access_cut__part_0);
-                let result = _button_access_cut__part_0;
-                
-            
-                    return result;
-                }
-            
-            
-
-                function _button_access_fill_case_fn() {
-                    
-
-                // creating part 0 of case _button_access_fill
-                let _button_access_fill__part_0 = button_wall_extrude_2_outline_fn();
-
-                // make sure that rotations are relative
-                let _button_access_fill__part_0_bounds = _button_access_fill__part_0.getBounds();
-                let _button_access_fill__part_0_x = _button_access_fill__part_0_bounds[0].x + (_button_access_fill__part_0_bounds[1].x - _button_access_fill__part_0_bounds[0].x) / 2
-                let _button_access_fill__part_0_y = _button_access_fill__part_0_bounds[0].y + (_button_access_fill__part_0_bounds[1].y - _button_access_fill__part_0_bounds[0].y) / 2
-                _button_access_fill__part_0 = translate([-_button_access_fill__part_0_x, -_button_access_fill__part_0_y, 0], _button_access_fill__part_0);
-                _button_access_fill__part_0 = rotate([0,0,0], _button_access_fill__part_0);
-                _button_access_fill__part_0 = translate([_button_access_fill__part_0_x, _button_access_fill__part_0_y, 0], _button_access_fill__part_0);
-
-                _button_access_fill__part_0 = translate([0,0,0], _button_access_fill__part_0);
-                let result = _button_access_fill__part_0;
-                
-            
-                    return result;
-                }
-            
-            
-
                 function _usb_access_cut_case_fn() {
                     
 
@@ -335,6 +289,52 @@ function plate_hole_extrude_1_outline_fn(){
 
                 _usb_access_fill__part_0 = translate([0,0,0], _usb_access_fill__part_0);
                 let result = _usb_access_fill__part_0;
+                
+            
+                    return result;
+                }
+            
+            
+
+                function _button_access_cut_case_fn() {
+                    
+
+                // creating part 0 of case _button_access_cut
+                let _button_access_cut__part_0 = button_wall_extrude_15_outline_fn();
+
+                // make sure that rotations are relative
+                let _button_access_cut__part_0_bounds = _button_access_cut__part_0.getBounds();
+                let _button_access_cut__part_0_x = _button_access_cut__part_0_bounds[0].x + (_button_access_cut__part_0_bounds[1].x - _button_access_cut__part_0_bounds[0].x) / 2
+                let _button_access_cut__part_0_y = _button_access_cut__part_0_bounds[0].y + (_button_access_cut__part_0_bounds[1].y - _button_access_cut__part_0_bounds[0].y) / 2
+                _button_access_cut__part_0 = translate([-_button_access_cut__part_0_x, -_button_access_cut__part_0_y, 0], _button_access_cut__part_0);
+                _button_access_cut__part_0 = rotate([0,0,0], _button_access_cut__part_0);
+                _button_access_cut__part_0 = translate([_button_access_cut__part_0_x, _button_access_cut__part_0_y, 0], _button_access_cut__part_0);
+
+                _button_access_cut__part_0 = translate([0,0,0], _button_access_cut__part_0);
+                let result = _button_access_cut__part_0;
+                
+            
+                    return result;
+                }
+            
+            
+
+                function _button_access_fill_case_fn() {
+                    
+
+                // creating part 0 of case _button_access_fill
+                let _button_access_fill__part_0 = button_wall_extrude_10_outline_fn();
+
+                // make sure that rotations are relative
+                let _button_access_fill__part_0_bounds = _button_access_fill__part_0.getBounds();
+                let _button_access_fill__part_0_x = _button_access_fill__part_0_bounds[0].x + (_button_access_fill__part_0_bounds[1].x - _button_access_fill__part_0_bounds[0].x) / 2
+                let _button_access_fill__part_0_y = _button_access_fill__part_0_bounds[0].y + (_button_access_fill__part_0_bounds[1].y - _button_access_fill__part_0_bounds[0].y) / 2
+                _button_access_fill__part_0 = translate([-_button_access_fill__part_0_x, -_button_access_fill__part_0_y, 0], _button_access_fill__part_0);
+                _button_access_fill__part_0 = rotate([0,0,0], _button_access_fill__part_0);
+                _button_access_fill__part_0 = translate([_button_access_fill__part_0_x, _button_access_fill__part_0_y, 0], _button_access_fill__part_0);
+
+                _button_access_fill__part_0 = translate([0,0,0], _button_access_fill__part_0);
+                let result = _button_access_fill__part_0;
                 
             
                     return result;
