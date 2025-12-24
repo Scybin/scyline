@@ -49,10 +49,11 @@ units:
   screw_size: 1.5 # M2 flathead screw
   screw_x: (-kx/2) # Screw position on x-axis
   screw_y: (-ky/2) # Screw position on y-axis
-  switchplate_screw_hole: 1.1 # Switchplate screw hole radius
+  screw_hole: 1.1 # Switchplate screw hole radius
 
   # Standoff variables
-  standoff_size: 2.5 # Threaded screw inserts 3.2mm wide, and 3mm tall
+  insert_size: 2.5 # Threaded screw inserts 3.2mm wide, and 3mm tall
+  insert_radius: 1.25 # Threaded screw insert radius
   spacer_radius: 2.15 # M2 standoffs
   spacer_diameter: spacer_radius * 2
 
@@ -211,6 +212,50 @@ points:
       anchor:
         - ref: matrix_inner_home
           shift: [-0.5kx, -0.5kcow-1.075]
+    mount_extra_top:
+      key.tags:
+        - helper
+        - mount
+      anchor:
+        - ref: extra_top
+          shift: [-0.5kx, -0.5keych-0.5]   
+    mount_extra_bottom:
+      key.tags:
+        - helper
+        - mount
+      anchor:
+        - ref: extra_bottom
+          shift: [-0.5kx, -0.5keych]   
+
+    # Insert Points
+    wall_insert_nw:
+      key.tags:
+        - helper
+        - wall_screw
+      anchor:
+        - ref: matrix_outer_top
+          shift: [-0.5keycw, 0.5keych + 2]
+    wall_insert_ne:
+      key.tags:
+        - helper
+        - wall_screw
+      anchor:
+        - ref: matrix_inner_top
+          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + 2]
+    wall_insert_sw:
+      key.tags:
+        - helper
+        - wall_screw
+      anchor:
+        - ref: matrix_outer_bottom
+          shift: [-0.5keycw, -0.5keych - 2]
+    wall_insert_se:
+      key.tags:
+        - helper
+        - wall_screw
+      anchor:
+        - ref: thumb_space
+          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych - 2]                           
 
   #mirror: &mirror
   #  ref: matrix_inner_top
@@ -281,7 +326,7 @@ outlines:
     xlBoard:
     - what: outline
       name: pcb
-      expand: 2
+      expand: 4
       operation: stack
       fillet: 0
     xlBoard_wall:
@@ -314,7 +359,7 @@ outlines:
         ref: matrix_inner_top
         shift: [kx, 0.5keych + 1]
       size: [14, 8]
-      fillet: 1
+      fillet: 0
     usb_wall:
     - what: outline
       name: usb_access
@@ -328,12 +373,20 @@ outlines:
       where: /mount/
     plate_hole: 
     - what: circle
-      radius: switchplate_screw_hole
+      radius: screw_hole
       where: /mount/
-    standoff:
+    insert:
     - what: circle
-      radius: standoff_size
+      radius: insert_size
       where: /mount/
+    wall_insert:
+    - what: circle
+      radius: insert_radius
+      where: /wall_screw/
+    wall_clearance:
+    - what: circle
+      radius: screw_hole
+      where: /wall_screw/
 
     switchplate:
     - what: polygon
@@ -460,13 +513,13 @@ outlines:
           shift: [0.5kx + mcu_width + mcu_padding_x+2, 0.5keych+2]
       fillet: 2
 
-    combo:
+    #combo:
     #- what: outline
     #  name: pcb
-    - what: outline
-      name: switchplate
-    - operation: subtract
-      name: keycap_outline
+    #- what: outline
+    #  name: switchplate
+    #- operation: subtract
+    #  name: keycap_outline
     #- operation: subtract
     #  name: plate_hole
     #- operation: stack
@@ -484,6 +537,7 @@ pcbs:
       switches_front:
           outline: switch_cutout
           layer: F.SilkS
+
     footprints:
 
       key_switches:
@@ -604,7 +658,7 @@ pcbs:
           SCL: SCL
           reversible: true
         adjust:
-          shift: [kx, 0.5kcoh] 
+          shift: [kx, 0.5kcoh]           
       
       logo:
         what: ceoloide/utility_ergogen_logo
@@ -621,27 +675,13 @@ pcbs:
 
 cases:
 
-  bottom:
-    - name: pcb
-      extrude: 1
-
-  switchplate:
-    - name: switchplate
-      extrude: 1.6
-  switchplate_tb:
-    - name: switchplate_tb
-      extrude: 1.6   
-
-  _cover_cap:
-    - name: cover
-      extrude: 20
-    - name: cover
-      extrude: 17
-      operation: subtract
-
-  xlBottom:
-    - name: xlBoard
-      extrude: 1
+  _inserts:
+    - name: insert
+      extrude: 0     
+  _switch_holes:
+    - name: switch_cutout   
+  _plate_holes:
+    - name: plate_hole   
   _outerWall:
     - name: xlBoard
       extrude: 18
@@ -656,11 +696,40 @@ cases:
       extrude: 10
   _button_access_cut:
     - name: button_wall
-      extrude: 11.5
+      extrude: 12
   _button_access_fill:
     - name: button_wall
-      extrude: 10      
-  wall:
+      extrude: 9.5       
+  _switchplate:
+    - name: switchplate
+      extrude: 1.6
+  _switchplate_tb:
+    - name: switchplate_tb
+      extrude: 1.6    
+  _cover_cap:
+    - name: cover
+      extrude: 20
+    - name: cover
+      extrude: 17
+      operation: subtract
+  _wall_insert:
+    - name: wall_insert
+      extrude: 3  # 3mm insert height
+  _base_holes:
+    - name: wall_clearance
+      extrude: 1  # through 1 mm bottom plate
+
+  bottom_case:
+    - name: xlBoard
+      extrude: 1
+    - what: case
+      name: _plate_holes
+      operation: subtract
+    - what: case
+      name: _base_holes
+      operation: subtract      
+       
+  wall_cover_case:
     - what: case
       name: _outerWall
       operation: add
@@ -681,32 +750,14 @@ cases:
       operation: add       
     - what: case
       name: _cover_cap
-      operation: add        
+      operation: add 
+    - what: case
+      name: _wall_insert
+      operation: subtract             
 
-  _plate_holes:
-    - name: plate_hole
-  _standoffs:
-    - name: standoff
-      extrude: 0
-  bottom_case:
-    - what: case
-      name: xlBottom
-      operation: add
-    - what: case
-      name: wall
-      operation: add
-    - what: case
-      name: _standoffs
-      operation: add
-    - what: case
-      name: _plate_holes
-      operation: subtract
-
-  _switch_holes:
-    - name: switch_cutout
   switchplate_case:
     - what: case
-      name: switchplate
+      name: _switchplate
       operation: add
     - what: case
       name: _switch_holes
@@ -716,7 +767,7 @@ cases:
       operation: subtract
   switchplate_case_tb:
     - what: case
-      name: switchplate_tb
+      name: _switchplate_tb
       operation: add
     - what: case
       name: _switch_holes
@@ -724,3 +775,17 @@ cases:
     - what: case
       name: _plate_holes
       operation: subtract   
+
+  #full_case:
+  #  - what: case
+  #    name: xlBottom
+  #    operation: add
+  #  - what: case
+  #    name: wall
+  #    operation: add
+  #  - what: case
+  #    name: _standoffs
+  #    operation: add
+  #  - what: case
+  #    name: _plate_holes
+  #    operation: subtract      
