@@ -29,14 +29,26 @@ function usb_wall_extrude_10_outline_fn(){
 
 
 function button_wall_extrude_11_5_outline_fn(){
-    return new CSG.Path2D([[144.4479939,-167.1970573],[143.8948268,-169.2042618]]).appendPoint([129.4837217,-160.3576052]).appendPoint([128.530925,-157.425923]).appendPoint([144.4479939,-167.1970573]).close().innerToCAG()
+    return new CSG.Path2D([[144.1893411,-167.0382761],[143.6174808,-169.0340053]]).appendPoint([128.9847877,-160.0513208]).appendPoint([128.0773359,-157.1474748]).appendPoint([144.1893411,-167.0382761]).close().innerToCAG()
 .extrude({ offset: [0, 0, 11.5] });
 }
 
 
 function button_wall_extrude_10_outline_fn(){
-    return new CSG.Path2D([[144.4479939,-167.1970573],[143.8948268,-169.2042618]]).appendPoint([129.4837217,-160.3576052]).appendPoint([128.530925,-157.425923]).appendPoint([144.4479939,-167.1970573]).close().innerToCAG()
+    return new CSG.Path2D([[144.1893411,-167.0382761],[143.6174808,-169.0340053]]).appendPoint([128.9847877,-160.0513208]).appendPoint([128.0773359,-157.1474748]).appendPoint([144.1893411,-167.0382761]).close().innerToCAG()
 .extrude({ offset: [0, 0, 10] });
+}
+
+
+function cover_extrude_20_outline_fn(){
+    return new CSG.Path2D([[224,-70.41],[206,-70.41]]).appendArc([204,-72.41],{"radius":2,"clockwise":false,"large":false}).appendPoint([204,-126.41]).appendArc([206,-128.41],{"radius":2,"clockwise":false,"large":false}).appendPoint([224,-128.41]).appendArc([226,-126.41],{"radius":2,"clockwise":false,"large":false}).appendPoint([226,-72.41]).appendArc([224,-70.41],{"radius":2,"clockwise":false,"large":false}).close().innerToCAG()
+.extrude({ offset: [0, 0, 20] });
+}
+
+
+function cover_extrude_17_outline_fn(){
+    return new CSG.Path2D([[224,-70.41],[206,-70.41]]).appendArc([204,-72.41],{"radius":2,"clockwise":false,"large":false}).appendPoint([204,-126.41]).appendArc([206,-128.41],{"radius":2,"clockwise":false,"large":false}).appendPoint([224,-128.41]).appendArc([226,-126.41],{"radius":2,"clockwise":false,"large":false}).appendPoint([226,-72.41]).appendArc([224,-70.41],{"radius":2,"clockwise":false,"large":false}).close().innerToCAG()
+.extrude({ offset: [0, 0, 17] });
 }
 
 
@@ -199,6 +211,22 @@ function plate_hole_extrude_1_outline_fn(){
                 result = result.union(wall__part_5);
                 
             
+
+                // creating part 6 of case wall
+                let wall__part_6 = _cover_cap_case_fn();
+
+                // make sure that rotations are relative
+                let wall__part_6_bounds = wall__part_6.getBounds();
+                let wall__part_6_x = wall__part_6_bounds[0].x + (wall__part_6_bounds[1].x - wall__part_6_bounds[0].x) / 2
+                let wall__part_6_y = wall__part_6_bounds[0].y + (wall__part_6_bounds[1].y - wall__part_6_bounds[0].y) / 2
+                wall__part_6 = translate([-wall__part_6_x, -wall__part_6_y, 0], wall__part_6);
+                wall__part_6 = rotate([0,0,0], wall__part_6);
+                wall__part_6 = translate([wall__part_6_x, wall__part_6_y, 0], wall__part_6);
+
+                wall__part_6 = translate([0,0,0], wall__part_6);
+                result = result.union(wall__part_6);
+                
+            
                     return result;
                 }
             
@@ -335,6 +363,45 @@ function plate_hole_extrude_1_outline_fn(){
 
                 _button_access_fill__part_0 = translate([0,0,0], _button_access_fill__part_0);
                 let result = _button_access_fill__part_0;
+                
+            
+                    return result;
+                }
+            
+            
+
+                function _cover_cap_case_fn() {
+                    
+
+                // creating part 0 of case _cover_cap
+                let _cover_cap__part_0 = cover_extrude_20_outline_fn();
+
+                // make sure that rotations are relative
+                let _cover_cap__part_0_bounds = _cover_cap__part_0.getBounds();
+                let _cover_cap__part_0_x = _cover_cap__part_0_bounds[0].x + (_cover_cap__part_0_bounds[1].x - _cover_cap__part_0_bounds[0].x) / 2
+                let _cover_cap__part_0_y = _cover_cap__part_0_bounds[0].y + (_cover_cap__part_0_bounds[1].y - _cover_cap__part_0_bounds[0].y) / 2
+                _cover_cap__part_0 = translate([-_cover_cap__part_0_x, -_cover_cap__part_0_y, 0], _cover_cap__part_0);
+                _cover_cap__part_0 = rotate([0,0,0], _cover_cap__part_0);
+                _cover_cap__part_0 = translate([_cover_cap__part_0_x, _cover_cap__part_0_y, 0], _cover_cap__part_0);
+
+                _cover_cap__part_0 = translate([0,0,0], _cover_cap__part_0);
+                let result = _cover_cap__part_0;
+                
+            
+
+                // creating part 1 of case _cover_cap
+                let _cover_cap__part_1 = cover_extrude_17_outline_fn();
+
+                // make sure that rotations are relative
+                let _cover_cap__part_1_bounds = _cover_cap__part_1.getBounds();
+                let _cover_cap__part_1_x = _cover_cap__part_1_bounds[0].x + (_cover_cap__part_1_bounds[1].x - _cover_cap__part_1_bounds[0].x) / 2
+                let _cover_cap__part_1_y = _cover_cap__part_1_bounds[0].y + (_cover_cap__part_1_bounds[1].y - _cover_cap__part_1_bounds[0].y) / 2
+                _cover_cap__part_1 = translate([-_cover_cap__part_1_x, -_cover_cap__part_1_y, 0], _cover_cap__part_1);
+                _cover_cap__part_1 = rotate([0,0,0], _cover_cap__part_1);
+                _cover_cap__part_1 = translate([_cover_cap__part_1_x, _cover_cap__part_1_y, 0], _cover_cap__part_1);
+
+                _cover_cap__part_1 = translate([0,0,0], _cover_cap__part_1);
+                result = result.subtract(_cover_cap__part_1);
                 
             
                     return result;

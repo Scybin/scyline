@@ -62,6 +62,7 @@ units:
 
 points:
   zones:
+
     # Main key matrix
     matrix:
       key:
@@ -104,6 +105,7 @@ points:
           row_net: R1
         top:
           row_net: R0
+
     # Thumb cluster
     thumb:
       key:
@@ -135,6 +137,8 @@ points:
       rows:
         cluster:
           row_net: R4
+
+    # Extra Keys
     extra:
       key:
         padding: ky
@@ -213,6 +217,7 @@ points:
   #  distance: 5kx
 
 outlines:
+
     keycap_outline:
     - what: rectangle
       fillet: 0
@@ -284,16 +289,17 @@ outlines:
       name: xlBoard
     - what: outline
       name: pcb
-      operation: subtract      
+      operation: subtract
+      
     button_access:
     - what: polygon
       points:
         - ref: thumb_tuck
           shift: [0, 20]
         - ref: thumb_tuck
-          shift: [-19, -20]
+          shift: [-19.5, -20]
         - ref: matrix_pinky_bottom
-          shift: [13, -20]
+          shift: [12.5, -20]
         - ref: matrix_pinky_bottom
           shift: [0, 20]
     button_wall:
@@ -309,7 +315,6 @@ outlines:
         shift: [kx, 0.5keych + 1]
       size: [14, 8]
       fillet: 1
-
     usb_wall:
     - what: outline
       name: usb_access
@@ -329,6 +334,7 @@ outlines:
     - what: circle
       radius: standoff_size
       where: /mount/
+
     switchplate:
     - what: polygon
       operation: stack
@@ -383,12 +389,77 @@ outlines:
           shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
           shift: [-0.5keycw, -0.5keych]  
+    switchplate_tb:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_outer_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: matrix_outer_top
+          shift: [0.5kx+0.5, 0.5keych]
+        - ref: matrix_pinky_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: matrix_pinky_top
+          shift: [0.5kx+0.5, 0.5keych]
+        - ref: matrix_ring_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: matrix_ring_top
+          shift: [0.5kx+0.5, 0.5keych]          
+        - ref: matrix_middle_top
+          shift: [-0.5keycw, 0.5keych]
+        - ref: matrix_middle_top
+          shift: [0.5keycw, 0.5keych]          
+        - ref: matrix_index_top
+          shift: [-0.5kx-0.5, 0.5keych]
+        - ref: matrix_index_top
+          shift: [0.5keycw, 0.5keych]          
+        - ref: matrix_inner_top
+          shift: [-0.5kx-0.5, 0.5keych]
+        - ref: matrix_inner_top
+          shift: [0.5keycw, 0.5keych] 
+        - ref: matrix_inner_home
+          shift: [0.5keycw, 0.5keych] 
+        - ref: extra_bottom
+          shift: [-0.5kx-0.5, 0.5keych]                                          
+        - ref: extra_bottom
+          shift: [0.5keycw, 0.5keych]                                           
+        - ref: thumb_space
+          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych]
+        - ref: thumb_space
+          shift: [-0.5kx, -0.5keych]
+        - ref: thumb_layer
+          shift: [-0.5kx, -0.5keych]
+        - ref: thumb_tuck
+          shift: [-0.5keycw, -0.5keych]
+        - ref: matrix_pinky_bottom
+          shift: [0.5keycw, -0.5keych]
+        - ref: matrix_pinky_bottom
+          shift: [-0.5kx-0.5, -0.5keych]          
+        - ref: matrix_outer_bottom
+          shift: [0.5keycw, -0.5keych]
+        - ref: matrix_outer_bottom
+          shift: [-0.5keycw, -0.5keych]  
     - what: outline
       name: switch_cutout
       operation: subtract
     - what: outline
       name: plate_hole
       operation: subtract
+
+    cover:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_inner_top
+          shift: [0.5keycw, 0.5keych+2]     
+        - ref: matrix_inner_home
+          shift: [0.5keycw, -0.5keych]      
+        - ref: matrix_inner_home
+          shift: [0.5kx + mcu_width + mcu_padding_x+2, -0.5keych]                       
+        - ref: matrix_inner_top
+          shift: [0.5kx + mcu_width + mcu_padding_x+2, 0.5keych+2]
+      fillet: 2
+
     combo:
     #- what: outline
     #  name: pcb
@@ -549,6 +620,7 @@ pcbs:
           hole_drill: spacer_diameter
 
 cases:
+
   bottom:
     - name: pcb
       extrude: 1
@@ -556,6 +628,16 @@ cases:
   switchplate:
     - name: switchplate
       extrude: 1.6
+  switchplate_tb:
+    - name: switchplate_tb
+      extrude: 1.6   
+
+  _cover_cap:
+    - name: cover
+      extrude: 20
+    - name: cover
+      extrude: 17
+      operation: subtract
 
   xlBottom:
     - name: xlBoard
@@ -597,7 +679,10 @@ cases:
     - what: case
       name: _button_access_fill
       operation: add       
-      
+    - what: case
+      name: _cover_cap
+      operation: add        
+
   _plate_holes:
     - name: plate_hole
   _standoffs:
@@ -616,6 +701,7 @@ cases:
     - what: case
       name: _plate_holes
       operation: subtract
+
   _switch_holes:
     - name: switch_cutout
   switchplate_case:
@@ -628,3 +714,13 @@ cases:
     - what: case
       name: _plate_holes
       operation: subtract
+  switchplate_case_tb:
+    - what: case
+      name: switchplate_tb
+      operation: add
+    - what: case
+      name: _switch_holes
+      operation: subtract
+    - what: case
+      name: _plate_holes
+      operation: subtract   
