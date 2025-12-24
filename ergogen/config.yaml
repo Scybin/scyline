@@ -504,14 +504,28 @@ outlines:
       operation: stack
       points:
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych+2]     
+          shift: [0.5keycw, 0.5keych+4]     
+        - ref: matrix_inner_home
+          shift: [0.5keycw, 0.5keych]      
+        - ref: matrix_inner_home
+          shift: [0.5kx + mcu_width + mcu_padding_x+4, 0.5keych]                       
+        - ref: matrix_inner_top
+          shift: [0.5kx + mcu_width + mcu_padding_x+4, 0.5keych+4]
+      fillet: 4      
+
+    cover_tb:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_inner_top
+          shift: [0.5keycw, 0.5keych+4]     
         - ref: matrix_inner_home
           shift: [0.5keycw, -0.5keych]      
         - ref: matrix_inner_home
-          shift: [0.5kx + mcu_width + mcu_padding_x+2, -0.5keych]                       
+          shift: [0.5kx + mcu_width + mcu_padding_x+4, -0.5keych]                       
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x+2, 0.5keych+2]
-      fillet: 2
+          shift: [0.5kx + mcu_width + mcu_padding_x+4, 0.5keych+4]
+      fillet: 4
 
     #combo:
     #- what: outline
@@ -575,7 +589,7 @@ pcbs:
           rotate: 90 + diode_rotation   
           
       mcu:
-        what: scybin/mcu_nice_nano_sp
+        what: scybin/mcu_nice_nano_sp # 8.5mm pcb through-holes
         where:
           ref: matrix_inner_top
           shift: [kx, -mcu_width/2 + 1.4]
@@ -711,25 +725,31 @@ cases:
       extrude: 20
     - name: cover
       extrude: 17
+      operation: subtract       
+  _cover_cap_tb:
+    - name: cover_tb
+      extrude: 20
+    - name: cover_tb
+      extrude: 17
       operation: subtract
   _wall_insert:
     - name: wall_insert
       extrude: 3  # 3mm insert height
   _base_holes:
     - name: wall_clearance
-      extrude: 1  # through 1 mm bottom plate
+      extrude: 2  # through 2 mm bottom plate
 
   bottom_case:
     - name: xlBoard
-      extrude: 1
+      extrude: 2
     - what: case
       name: _plate_holes
       operation: subtract
     - what: case
       name: _base_holes
-      operation: subtract      
-       
-  wall_cover_case:
+      operation: subtract  
+
+  wall_cover_case_L:
     - what: case
       name: _outerWall
       operation: add
@@ -750,6 +770,31 @@ cases:
       operation: add       
     - what: case
       name: _cover_cap
+      operation: add 
+    - what: case
+      name: _wall_insert
+      operation: subtract             
+  wall_cover_case_tb_L:
+    - what: case
+      name: _outerWall
+      operation: add
+    - what: case
+      name: _innerWall
+      operation: subtract
+    - what: case
+      name: _usb_access_cut
+      operation: subtract
+    - what: case
+      name: _usb_access_fill
+      operation: add
+    - what: case
+      name: _button_access_cut
+      operation: subtract     
+    - what: case
+      name: _button_access_fill
+      operation: add       
+    - what: case
+      name: _cover_cap_tb
       operation: add 
     - what: case
       name: _wall_insert
