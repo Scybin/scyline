@@ -321,7 +321,14 @@ outlines:
         - ref: matrix_outer_bottom
           shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw, -0.5keych]   
+          shift: [-0.5keycw, -0.5keych]  
+    # Notch for JST PH wires
+    - what: circle
+      where:
+        ref: thumb_space
+        shift: [kx, -0.5ky]
+      radius: 2
+      operation: subtract          
           
     xlBoard:
     - what: outline
