@@ -615,18 +615,18 @@ pcbs:
           # P10:        # Free pin, not used
 
           #Right side
-          # P0:         # Free pin, not used
           # P1:         # Free pin, not used
+          # P0:         # Free pin, not used
           # GND:
           # GND:
           P2: SDA
           P3: SCL
-          P4: R0
-          P5: R1
-          P6: R2
-          P7: R3
-          P8: R4
-          # P9:         # Free pin, not used
+          # P4:         # Free pin, not used
+          P5: R0
+          P6: R1
+          P7: R2
+          P8: R3
+          P9: R4
 
       on_off_switch:
         what: ceoloide/power_switch_smd_side
