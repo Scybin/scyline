@@ -537,6 +537,17 @@ outlines:
           shift: [0.5kx + mcu_width + mcu_padding_x+4, 0.5keych+4]
       fillet: 4
 
+    # Lip inside case
+    bottom_lip_wall:
+    - what: outline
+      name: pcb
+      joints: 1
+    bottom_lip_cut:
+    - what: outline
+      name: bottom_lip_wall
+      expand: -2
+      joints: 1 
+
     #combo:
     #- what: outline
     #  name: pcb
@@ -751,14 +762,20 @@ cases:
       extrude: 2  # through 2 mm bottom plate
 
   bottom_case:
+    - name: bottom_lip_wall
+      extrude: 8
+    - name: bottom_lip_cut
+      extrude: 8
+      operation: subtract     
     - name: xlBoard
       extrude: 2
+      operation: add          
     - what: case
       name: _plate_holes
       operation: subtract
     - what: case
       name: _base_holes
-      operation: subtract  
+      operation: subtract   
 
   wall_cover_case_L:
     - what: case
