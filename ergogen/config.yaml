@@ -705,7 +705,8 @@ cases:
   _switch_holes:
     - name: switch_cutout   
   _plate_holes:
-    - name: plate_hole   
+    - name: plate_hole 
+      extrude: 2
   _outerWall:
     - name: xlBoard
       extrude: 18
@@ -831,16 +832,10 @@ cases:
       name: _plate_holes
       operation: subtract   
 
-  #full_case:
-  #  - what: case
-  #    name: xlBottom
-  #    operation: add
-  #  - what: case
-  #    name: wall
-  #    operation: add
-  #  - what: case
-  #    name: _standoffs
-  #    operation: add
-  #  - what: case
-  #    name: _plate_holes
-  #    operation: subtract      
+  full_case:
+    - what: case
+      name: wall_cover_case_tb_L
+      operation: add    
+    - what: case
+      name: bottom_case
+      operation: add       
