@@ -322,13 +322,16 @@ outlines:
           shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
           shift: [-0.5keycw, -0.5keych]  
-    # Notch for JST PH wires
+    pcb_notched:
+    - what: outline
+      name: pcb
+      operation: stack
     - what: circle
       where:
         ref: thumb_space
         shift: [kx, -0.5ky]
       radius: 2
-      operation: subtract          
+      operation: subtract     
           
     xlBoard:
     - what: outline
@@ -551,7 +554,7 @@ pcbs:
     template: kicad8
     outlines:
       main:
-        outline: pcb
+        outline: pcb_notched
       keycaps_front:
           outline: keycap_outline
           layer: F.SilkS
