@@ -28,14 +28,14 @@ function usb_wall_extrude_10_outline_fn(){
 }
 
 
-function button_wall_extrude_15_outline_fn(){
-    return new CSG.Path2D([[147.8988313,-169.3154496],[147.6015683,-171.429472]]).appendArc([147.2282325,-171.2505654],{"radius":2,"clockwise":true,"large":false}).appendPoint([127.5432597,-159.1663988]).appendPoint([126.975,-157.1]).appendPoint([128,-157.1]).appendPoint([147.8988313,-169.3154496]).close().innerToCAG()
-.extrude({ offset: [0, 0, 15] });
+function button_wall_extrude_11_5_outline_fn(){
+    return new CSG.Path2D([[144.4479939,-167.1970573],[143.8948268,-169.2042618]]).appendPoint([129.4837217,-160.3576052]).appendPoint([128.530925,-157.425923]).appendPoint([144.4479939,-167.1970573]).close().innerToCAG()
+.extrude({ offset: [0, 0, 11.5] });
 }
 
 
 function button_wall_extrude_10_outline_fn(){
-    return new CSG.Path2D([[147.8988313,-169.3154496],[147.6015683,-171.429472]]).appendArc([147.2282325,-171.2505654],{"radius":2,"clockwise":true,"large":false}).appendPoint([127.5432597,-159.1663988]).appendPoint([126.975,-157.1]).appendPoint([128,-157.1]).appendPoint([147.8988313,-169.3154496]).close().innerToCAG()
+    return new CSG.Path2D([[144.4479939,-167.1970573],[143.8948268,-169.2042618]]).appendPoint([129.4837217,-160.3576052]).appendPoint([128.530925,-157.425923]).appendPoint([144.4479939,-167.1970573]).close().innerToCAG()
 .extrude({ offset: [0, 0, 10] });
 }
 
@@ -300,7 +300,7 @@ function plate_hole_extrude_1_outline_fn(){
                     
 
                 // creating part 0 of case _button_access_cut
-                let _button_access_cut__part_0 = button_wall_extrude_15_outline_fn();
+                let _button_access_cut__part_0 = button_wall_extrude_11_5_outline_fn();
 
                 // make sure that rotations are relative
                 let _button_access_cut__part_0_bounds = _button_access_cut__part_0.getBounds();

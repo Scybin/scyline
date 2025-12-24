@@ -291,9 +291,9 @@ outlines:
         - ref: thumb_tuck
           shift: [0, 20]
         - ref: thumb_tuck
-          shift: [-13, -20]
+          shift: [-19, -20]
         - ref: matrix_pinky_bottom
-          shift: [11, -20]
+          shift: [13, -20]
         - ref: matrix_pinky_bottom
           shift: [0, 20]
     button_wall:
@@ -533,8 +533,7 @@ pcbs:
           SCL: SCL
           reversible: true
         adjust:
-          shift: [kx, 0.5kcoh]
-          rotate: 180 
+          shift: [kx, 0.5kcoh] 
       
       logo:
         what: ceoloide/utility_ergogen_logo
@@ -575,7 +574,7 @@ cases:
       extrude: 10
   _button_access_cut:
     - name: button_wall
-      extrude: 15
+      extrude: 11.5
   _button_access_fill:
     - name: button_wall
       extrude: 10      

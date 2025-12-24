@@ -1,4 +1,4 @@
-26784988147363294
+26788521211907887
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -106428,12 +106428,26 @@ battery_connector_jst_ph_2
 10
 8
 scyline
+mcu_nice_nano_4mm
+
+
+0
+144
+48
+scyline
 power_switch_smd_side
 
 
 0
 14
 3
+scyline
+qwiik_jst
+JST SH series connector, SM04B-SRSS-TB (http://www.jst-mfg.com/product/pdf/eng/eSH.pdf)
+connector JST SH horizontal
+0
+12
+5
 scyline
 reset_switch_smd_side
 
