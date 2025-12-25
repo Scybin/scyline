@@ -29,7 +29,7 @@ units:
   mcu_width: 18 # x-axis
   mcu_height: 30.6 # y-axis
   mcu_padding_x: 1.5
-  mcu_padding_y: 0.5
+  mcu_padding_y: 1
 
   # Reset Switch Variables
   rst_x: 27.884 # Reset switch position on x-axis

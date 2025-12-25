@@ -17,7 +17,7 @@ function xlBoard_extrude_2_outline_fn(){
 
 
 function mcu_lip_clear_extrude_12_outline_fn(){
-    return new CSG.Path2D([[222,-105.96],[226,-105.96]]).appendPoint([226,-74.86]).appendPoint([222,-74.86]).appendPoint([222,-105.96]).close().innerToCAG()
+    return new CSG.Path2D([[222,-106.21],[226,-106.21]]).appendPoint([226,-74.61]).appendPoint([222,-74.61]).appendPoint([222,-106.21]).close().innerToCAG()
 .extrude({ offset: [0, 0, 12] });
 }
 
