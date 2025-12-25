@@ -35,20 +35,32 @@ function button_wall_extrude_12_outline_fn(){
 
 
 function cover_tb_extrude_26_outline_fn(){
-    return new CSG.Path2D([[224,-67.41],[209,-67.41]]).appendArc([204,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([204,-123.41]).appendArc([209,-128.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-128.41]).appendArc([229,-123.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
+    return new CSG.Path2D([[224,-67.41],[210,-67.41]]).appendArc([205,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-123.41]).appendArc([210,-128.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-128.41]).appendArc([229,-123.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
 .extrude({ offset: [0, 0, 26] });
 }
 
 
 function cover_tb_extrude_22_outline_fn(){
-    return new CSG.Path2D([[224,-67.41],[209,-67.41]]).appendArc([204,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([204,-123.41]).appendArc([209,-128.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-128.41]).appendArc([229,-123.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
+    return new CSG.Path2D([[224,-67.41],[210,-67.41]]).appendArc([205,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-123.41]).appendArc([210,-128.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-128.41]).appendArc([229,-123.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
 .extrude({ offset: [0, 0, 22] });
 }
 
 
 function cover_tb_cut_extrude_26_outline_fn(){
-    return new CSG.Path2D([[207.1,-126.56],[221.4,-126.56]]).appendPoint([221.4,-112.26]).appendPoint([207.1,-112.26]).appendPoint([207.1,-126.56]).close().innerToCAG()
+    return new CSG.Path2D([[207.85,-123.06],[218.15,-123.06]]).appendArc([220.15,-121.06],{"radius":2,"clockwise":false,"large":false}).appendPoint([220.15,-110.76]).appendArc([218.15,-108.76],{"radius":2,"clockwise":false,"large":false}).appendPoint([207.85,-108.76]).appendArc([205.85,-110.76],{"radius":2,"clockwise":false,"large":false}).appendPoint([205.85,-121.06]).appendArc([207.85,-123.06],{"radius":2,"clockwise":false,"large":false}).close().innerToCAG()
 .extrude({ offset: [0, 0, 26] });
+}
+
+
+function trackball_mount_holes_extrude_26_outline_fn(){
+    return CAG.circle({"center":[218.5,-124.91],"radius":1.1})
+.union(
+    CAG.circle({"center":[207.5,-124.91],"radius":1.1})
+).union(
+    CAG.circle({"center":[218.5,-106.91],"radius":1.1})
+).union(
+    CAG.circle({"center":[207.5,-106.91],"radius":1.1})
+).extrude({ offset: [0, 0, 26] });
 }
 
 
@@ -252,6 +264,22 @@ function wall_insert_extrude_3_outline_fn(){
 
                 _cover_cap_tb__part_2 = translate([0,0,0], _cover_cap_tb__part_2);
                 result = result.subtract(_cover_cap_tb__part_2);
+                
+            
+
+                // creating part 3 of case _cover_cap_tb
+                let _cover_cap_tb__part_3 = trackball_mount_holes_extrude_26_outline_fn();
+
+                // make sure that rotations are relative
+                let _cover_cap_tb__part_3_bounds = _cover_cap_tb__part_3.getBounds();
+                let _cover_cap_tb__part_3_x = _cover_cap_tb__part_3_bounds[0].x + (_cover_cap_tb__part_3_bounds[1].x - _cover_cap_tb__part_3_bounds[0].x) / 2
+                let _cover_cap_tb__part_3_y = _cover_cap_tb__part_3_bounds[0].y + (_cover_cap_tb__part_3_bounds[1].y - _cover_cap_tb__part_3_bounds[0].y) / 2
+                _cover_cap_tb__part_3 = translate([-_cover_cap_tb__part_3_x, -_cover_cap_tb__part_3_y, 0], _cover_cap_tb__part_3);
+                _cover_cap_tb__part_3 = rotate([0,0,0], _cover_cap_tb__part_3);
+                _cover_cap_tb__part_3 = translate([_cover_cap_tb__part_3_x, _cover_cap_tb__part_3_y, 0], _cover_cap_tb__part_3);
+
+                _cover_cap_tb__part_3 = translate([0,0,0], _cover_cap_tb__part_3);
+                result = result.subtract(_cover_cap_tb__part_3);
                 
             
                     return result;

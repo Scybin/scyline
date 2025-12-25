@@ -4,71 +4,79 @@ function pcb_notched_extrude_1_6_outline_fn(){
 }
 
 
-function switch_cutout_extrude_1_6_outline_fn(){
-    return new CSG.Path2D([[149.896883,-167.2291915],[163.6841915,-164.798117]]).appendPoint([161.253117,-151.0108085]).appendPoint([147.4658085,-153.441883]).appendPoint([149.896883,-167.2291915]).close().innerToCAG()
+function switch_cutout_test_extrude_1_6_outline_fn(){
+    return new CSG.Path2D([[150.3892868,-167.1423674],[163.1917876,-164.8849411]]).appendPoint([160.7607132,-151.0976326]).appendPoint([147.9582124,-153.3550589]).appendPoint([150.3892868,-167.1423674]).close().innerToCAG()
 .union(
-    new CSG.Path2D([[207,-126.41],[221,-126.41]]).appendPoint([221,-112.41]).appendPoint([207,-112.41]).appendPoint([207,-126.41]).close().innerToCAG()
+    new CSG.Path2D([[207.5,-126.41],[220.5,-126.41]]).appendPoint([220.5,-112.41]).appendPoint([207.5,-112.41]).appendPoint([207.5,-126.41]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[207,-145.41],[221,-145.41]]).appendPoint([221,-131.41]).appendPoint([207,-131.41]).appendPoint([207,-145.41]).close().innerToCAG()
+    new CSG.Path2D([[207.5,-145.41],[220.5,-145.41]]).appendPoint([220.5,-131.41]).appendPoint([207.5,-131.41]).appendPoint([207.5,-145.41]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[192.5,-164.41],[206.5,-164.41]]).appendPoint([206.5,-150.41]).appendPoint([192.5,-150.41]).appendPoint([192.5,-164.41]).close().innerToCAG()
+    new CSG.Path2D([[193,-164.41],[206,-164.41]]).appendPoint([206,-150.41]).appendPoint([193,-150.41]).appendPoint([193,-164.41]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169,-164.41],[183,-164.41]]).appendPoint([183,-150.41]).appendPoint([169,-150.41]).appendPoint([169,-164.41]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-164.41],[182.5,-164.41]]).appendPoint([182.5,-150.41]).appendPoint([169.5,-150.41]).appendPoint([169.5,-164.41]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[188,-88.41],[202,-88.41]]).appendPoint([202,-74.41]).appendPoint([188,-74.41]).appendPoint([188,-88.41]).close().innerToCAG()
+    new CSG.Path2D([[188.5,-88.41],[201.5,-88.41]]).appendPoint([201.5,-74.41]).appendPoint([188.5,-74.41]).appendPoint([188.5,-88.41]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[188,-107.41],[202,-107.41]]).appendPoint([202,-93.41]).appendPoint([188,-93.41]).appendPoint([188,-107.41]).close().innerToCAG()
+    new CSG.Path2D([[188.5,-107.41],[201.5,-107.41]]).appendPoint([201.5,-93.41]).appendPoint([188.5,-93.41]).appendPoint([188.5,-107.41]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[188,-126.41],[202,-126.41]]).appendPoint([202,-112.41]).appendPoint([188,-112.41]).appendPoint([188,-126.41]).close().innerToCAG()
+    new CSG.Path2D([[188.5,-126.41],[201.5,-126.41]]).appendPoint([201.5,-112.41]).appendPoint([188.5,-112.41]).appendPoint([188.5,-126.41]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[188,-145.41],[202,-145.41]]).appendPoint([202,-131.41]).appendPoint([188,-131.41]).appendPoint([188,-145.41]).close().innerToCAG()
+    new CSG.Path2D([[188.5,-145.41],[201.5,-145.41]]).appendPoint([201.5,-131.41]).appendPoint([188.5,-131.41]).appendPoint([188.5,-145.41]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169,-85.56],[183,-85.56]]).appendPoint([183,-71.56]).appendPoint([169,-71.56]).appendPoint([169,-85.56]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-85.56],[182.5,-85.56]]).appendPoint([182.5,-71.56]).appendPoint([169.5,-71.56]).appendPoint([169.5,-85.56]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169,-104.56],[183,-104.56]]).appendPoint([183,-90.56]).appendPoint([169,-90.56]).appendPoint([169,-104.56]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-104.56],[182.5,-104.56]]).appendPoint([182.5,-90.56]).appendPoint([169.5,-90.56]).appendPoint([169.5,-104.56]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169,-123.56],[183,-123.56]]).appendPoint([183,-109.56]).appendPoint([169,-109.56]).appendPoint([169,-123.56]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-123.56],[182.5,-123.56]]).appendPoint([182.5,-109.56]).appendPoint([169.5,-109.56]).appendPoint([169.5,-123.56]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169,-142.56],[183,-142.56]]).appendPoint([183,-128.56]).appendPoint([169,-128.56]).appendPoint([169,-142.56]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-142.56],[182.5,-142.56]]).appendPoint([182.5,-128.56]).appendPoint([169.5,-128.56]).appendPoint([169.5,-142.56]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[150,-80.81],[164,-80.81]]).appendPoint([164,-66.81]).appendPoint([150,-66.81]).appendPoint([150,-80.81]).close().innerToCAG()
+    new CSG.Path2D([[150.5,-80.81],[163.5,-80.81]]).appendPoint([163.5,-66.81]).appendPoint([150.5,-66.81]).appendPoint([150.5,-80.81]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[150,-99.81],[164,-99.81]]).appendPoint([164,-85.81]).appendPoint([150,-85.81]).appendPoint([150,-99.81]).close().innerToCAG()
+    new CSG.Path2D([[150.5,-99.81],[163.5,-99.81]]).appendPoint([163.5,-85.81]).appendPoint([150.5,-85.81]).appendPoint([150.5,-99.81]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[150,-118.81],[164,-118.81]]).appendPoint([164,-104.81]).appendPoint([150,-104.81]).appendPoint([150,-118.81]).close().innerToCAG()
+    new CSG.Path2D([[150.5,-118.81],[163.5,-118.81]]).appendPoint([163.5,-104.81]).appendPoint([150.5,-104.81]).appendPoint([150.5,-118.81]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[150,-137.81],[164,-137.81]]).appendPoint([164,-123.81]).appendPoint([150,-123.81]).appendPoint([150,-137.81]).close().innerToCAG()
+    new CSG.Path2D([[150.5,-137.81],[163.5,-137.81]]).appendPoint([163.5,-123.81]).appendPoint([150.5,-123.81]).appendPoint([150.5,-137.81]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[131,-85.56],[145,-85.56]]).appendPoint([145,-71.56]).appendPoint([131,-71.56]).appendPoint([131,-85.56]).close().innerToCAG()
+    new CSG.Path2D([[131.5,-85.56],[144.5,-85.56]]).appendPoint([144.5,-71.56]).appendPoint([131.5,-71.56]).appendPoint([131.5,-85.56]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[131,-104.56],[145,-104.56]]).appendPoint([145,-90.56]).appendPoint([131,-90.56]).appendPoint([131,-104.56]).close().innerToCAG()
+    new CSG.Path2D([[131.5,-104.56],[144.5,-104.56]]).appendPoint([144.5,-90.56]).appendPoint([131.5,-90.56]).appendPoint([131.5,-104.56]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[131,-123.56],[145,-123.56]]).appendPoint([145,-109.56]).appendPoint([131,-109.56]).appendPoint([131,-123.56]).close().innerToCAG()
+    new CSG.Path2D([[131.5,-123.56],[144.5,-123.56]]).appendPoint([144.5,-109.56]).appendPoint([131.5,-109.56]).appendPoint([131.5,-123.56]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[131,-142.56],[145,-142.56]]).appendPoint([145,-128.56]).appendPoint([131,-128.56]).appendPoint([131,-142.56]).close().innerToCAG()
+    new CSG.Path2D([[131.5,-142.56],[144.5,-142.56]]).appendPoint([144.5,-128.56]).appendPoint([131.5,-128.56]).appendPoint([131.5,-142.56]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[112,-98.1],[126,-98.1]]).appendPoint([126,-84.1]).appendPoint([112,-84.1]).appendPoint([112,-98.1]).close().innerToCAG()
+    new CSG.Path2D([[112.5,-98.1],[125.5,-98.1]]).appendPoint([125.5,-84.1]).appendPoint([112.5,-84.1]).appendPoint([112.5,-98.1]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[112,-117.1],[126,-117.1]]).appendPoint([126,-103.1]).appendPoint([112,-103.1]).appendPoint([112,-117.1]).close().innerToCAG()
+    new CSG.Path2D([[112.5,-117.1],[125.5,-117.1]]).appendPoint([125.5,-103.1]).appendPoint([112.5,-103.1]).appendPoint([112.5,-117.1]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[112,-136.1],[126,-136.1]]).appendPoint([126,-122.1]).appendPoint([112,-122.1]).appendPoint([112,-136.1]).close().innerToCAG()
+    new CSG.Path2D([[112.5,-136.1],[125.5,-136.1]]).appendPoint([125.5,-122.1]).appendPoint([112.5,-122.1]).appendPoint([112.5,-136.1]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[112,-155.1],[126,-155.1]]).appendPoint([126,-141.1]).appendPoint([112,-141.1]).appendPoint([112,-155.1]).close().innerToCAG()
+    new CSG.Path2D([[112.5,-155.1],[125.5,-155.1]]).appendPoint([125.5,-141.1]).appendPoint([112.5,-141.1]).appendPoint([112.5,-155.1]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[93,-100],[107,-100]]).appendPoint([107,-86]).appendPoint([93,-86]).appendPoint([93,-100]).close().innerToCAG()
+    new CSG.Path2D([[93.5,-100],[106.5,-100]]).appendPoint([106.5,-86]).appendPoint([93.5,-86]).appendPoint([93.5,-100]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[93,-119],[107,-119]]).appendPoint([107,-105]).appendPoint([93,-105]).appendPoint([93,-119]).close().innerToCAG()
+    new CSG.Path2D([[93.5,-119],[106.5,-119]]).appendPoint([106.5,-105]).appendPoint([93.5,-105]).appendPoint([93.5,-119]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[93,-138],[107,-138]]).appendPoint([107,-124]).appendPoint([93,-124]).appendPoint([93,-138]).close().innerToCAG()
+    new CSG.Path2D([[93.5,-138],[106.5,-138]]).appendPoint([106.5,-124]).appendPoint([93.5,-124]).appendPoint([93.5,-138]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[93,-157],[107,-157]]).appendPoint([107,-143]).appendPoint([93,-143]).appendPoint([93,-157]).close().innerToCAG()
+    new CSG.Path2D([[93.5,-157],[106.5,-157]]).appendPoint([106.5,-143]).appendPoint([93.5,-143]).appendPoint([93.5,-157]).close().innerToCAG()
 ).extrude({ offset: [0, 0, 1.6] });
 }
 
 
 function standoff_hole_extrude_1_6_outline_fn(){
-    return CAG.circle({"center":[204.5,-147.41],"radius":2.15})
+    return CAG.circle({"center":[218.5,-124.91],"radius":2.15})
 .union(
+    CAG.circle({"center":[207.5,-124.91],"radius":2.15})
+).union(
+    CAG.circle({"center":[218.5,-106.91],"radius":2.15})
+).union(
+    CAG.circle({"center":[207.5,-106.91],"radius":2.15})
+).union(
+    CAG.circle({"center":[204.5,-147.41],"radius":2.15})
+).union(
     CAG.circle({"center":[204.5,-128.91],"radius":2.15})
 ).union(
     CAG.circle({"center":[185.5,-127.485],"radius":2.15})
@@ -90,22 +98,22 @@ function standoff_hole_extrude_1_6_outline_fn(){
 
 
 
-                function _switch_holes_case_fn() {
+                function _switch_holes_test_case_fn() {
                     
 
-                // creating part 0 of case _switch_holes
-                let _switch_holes__part_0 = switch_cutout_extrude_1_6_outline_fn();
+                // creating part 0 of case _switch_holes_test
+                let _switch_holes_test__part_0 = switch_cutout_test_extrude_1_6_outline_fn();
 
                 // make sure that rotations are relative
-                let _switch_holes__part_0_bounds = _switch_holes__part_0.getBounds();
-                let _switch_holes__part_0_x = _switch_holes__part_0_bounds[0].x + (_switch_holes__part_0_bounds[1].x - _switch_holes__part_0_bounds[0].x) / 2
-                let _switch_holes__part_0_y = _switch_holes__part_0_bounds[0].y + (_switch_holes__part_0_bounds[1].y - _switch_holes__part_0_bounds[0].y) / 2
-                _switch_holes__part_0 = translate([-_switch_holes__part_0_x, -_switch_holes__part_0_y, 0], _switch_holes__part_0);
-                _switch_holes__part_0 = rotate([0,0,0], _switch_holes__part_0);
-                _switch_holes__part_0 = translate([_switch_holes__part_0_x, _switch_holes__part_0_y, 0], _switch_holes__part_0);
+                let _switch_holes_test__part_0_bounds = _switch_holes_test__part_0.getBounds();
+                let _switch_holes_test__part_0_x = _switch_holes_test__part_0_bounds[0].x + (_switch_holes_test__part_0_bounds[1].x - _switch_holes_test__part_0_bounds[0].x) / 2
+                let _switch_holes_test__part_0_y = _switch_holes_test__part_0_bounds[0].y + (_switch_holes_test__part_0_bounds[1].y - _switch_holes_test__part_0_bounds[0].y) / 2
+                _switch_holes_test__part_0 = translate([-_switch_holes_test__part_0_x, -_switch_holes_test__part_0_y, 0], _switch_holes_test__part_0);
+                _switch_holes_test__part_0 = rotate([0,0,0], _switch_holes_test__part_0);
+                _switch_holes_test__part_0 = translate([_switch_holes_test__part_0_x, _switch_holes_test__part_0_y, 0], _switch_holes_test__part_0);
 
-                _switch_holes__part_0 = translate([0,0,0], _switch_holes__part_0);
-                let result = _switch_holes__part_0;
+                _switch_holes_test__part_0 = translate([0,0,0], _switch_holes_test__part_0);
+                let result = _switch_holes_test__part_0;
                 
             
                     return result;
@@ -156,7 +164,7 @@ function standoff_hole_extrude_1_6_outline_fn(){
             
 
                 // creating part 1 of case pcb_case
-                let pcb_case__part_1 = _switch_holes_case_fn();
+                let pcb_case__part_1 = _switch_holes_test_case_fn();
 
                 // make sure that rotations are relative
                 let pcb_case__part_1_bounds = pcb_case__part_1.getBounds();

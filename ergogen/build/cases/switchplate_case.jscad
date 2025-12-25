@@ -21,8 +21,6 @@ function switchplate_extrude_1_6_outline_fn(){
 ).union(
     new CSG.Path2D([[149.896883,-167.2291915],[163.6841915,-164.798117]]).appendPoint([161.253117,-151.0108085]).appendPoint([147.4658085,-153.441883]).appendPoint([149.896883,-167.2291915]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[207,-126.41],[221,-126.41]]).appendPoint([221,-112.41]).appendPoint([207,-112.41]).appendPoint([207,-126.41]).close().innerToCAG()
-).union(
     new CSG.Path2D([[207,-145.41],[221,-145.41]]).appendPoint([221,-131.41]).appendPoint([207,-131.41]).appendPoint([207,-145.41]).close().innerToCAG()
 ).union(
     new CSG.Path2D([[192.5,-164.41],[206.5,-164.41]]).appendPoint([206.5,-150.41]).appendPoint([192.5,-150.41]).appendPoint([192.5,-164.41]).close().innerToCAG()
@@ -76,6 +74,8 @@ function switchplate_extrude_1_6_outline_fn(){
     new CSG.Path2D([[93,-138],[107,-138]]).appendPoint([107,-124]).appendPoint([93,-124]).appendPoint([93,-138]).close().innerToCAG()
 ).union(
     new CSG.Path2D([[93,-157],[107,-157]]).appendPoint([107,-143]).appendPoint([93,-143]).appendPoint([93,-157]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[207,-126.41],[221,-126.41]]).appendPoint([221,-112.41]).appendPoint([207,-112.41]).appendPoint([207,-123.9302041]).appendArc([207,-125.8897959],{"radius":1.1,"clockwise":false,"large":false}).appendPoint([207,-126.41]).close().innerToCAG()
 )).extrude({ offset: [0, 0, 1.6] });
 }
 
@@ -143,8 +143,16 @@ function switch_cutout_extrude_1_6_outline_fn(){
 
 
 function plate_hole_extrude_2_outline_fn(){
-    return CAG.circle({"center":[204.5,-147.41],"radius":1.1})
+    return CAG.circle({"center":[218.5,-124.91],"radius":1.1})
 .union(
+    CAG.circle({"center":[207.5,-124.91],"radius":1.1})
+).union(
+    CAG.circle({"center":[218.5,-106.91],"radius":1.1})
+).union(
+    CAG.circle({"center":[207.5,-106.91],"radius":1.1})
+).union(
+    CAG.circle({"center":[204.5,-147.41],"radius":1.1})
+).union(
     CAG.circle({"center":[204.5,-128.91],"radius":1.1})
 ).union(
     CAG.circle({"center":[185.5,-127.485],"radius":1.1})

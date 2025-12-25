@@ -65,13 +65,15 @@ units:
   case_y: ky+8 # Case position on y-axis
 
   # Trackball variables
-  trackball_housing_w: 14      # Square Width
-  trackball_housing_h: 14      # Square Height
-  trackball_clearance: 0.15    # Padding
+  trackball_housing_w: 14 # Square Width
+  trackball_housing_h: 14 # Square Height
+  trackball_clearance: 0.15 # Padding
   trackball_hole_w: trackball_housing_w + 2*trackball_clearance
   trackball_hole_h: trackball_housing_h + 2*trackball_clearance
-  trackball_offset_x: 0.5kx + (mcu_width + mcu_padding_x)/2
-  trackball_offset_y: 0
+  trackball_offset_x: 0.5kx + (mcu_width + mcu_padding_x)/2 - 1.25
+  trackball_offset_y: 3.5
+  trackball_mount_x: 5.5
+  trackball_mount_y: 9
 
 points:
   zones:
@@ -276,7 +278,35 @@ points:
         - trackball
       anchor:
         - ref: matrix_inner_home
-          shift: [trackball_offset_x, trackball_offset_y]                                
+          shift: [trackball_offset_x, trackball_offset_y]      
+    trackball_hole_nw:
+      key.tags:
+        - helper
+        - trackball_mount
+      anchor:
+        - ref: trackball_center
+          shift: [-trackball_mount_x,  trackball_mount_y]
+    trackball_hole_ne:
+      key.tags:
+        - helper
+        - trackball_mount
+      anchor:
+        - ref: trackball_center
+          shift: [ trackball_mount_x,  trackball_mount_y]
+    trackball_hole_sw:
+      key.tags:
+        - helper
+        - trackball_mount
+      anchor:
+        - ref: trackball_center
+          shift: [-trackball_mount_x, -trackball_mount_y]
+    trackball_hole_se:
+      key.tags:
+        - helper
+        - trackball_mount
+      anchor:
+        - ref: trackball_center
+          shift: [ trackball_mount_x, -trackball_mount_y]                                 
 
   #mirror: &mirror
   #  ref: matrix_inner_top
@@ -298,6 +328,10 @@ outlines:
     - what: rectangle
       where: /key/
       size: [kcow, kcoh]
+    switch_cutout_test:
+    - what: rectangle
+      where: /key/
+      size: [kcow - 1, kcoh]      
 
     pcb:
     - what: polygon
@@ -425,6 +459,10 @@ outlines:
     - what: circle
       radius: screw_hole
       where: /wall_screw/
+    trackball_mount_holes:
+    - what: circle
+      where: /trackball_mount/
+      radius: screw_hole      
 
     switchplate:
     - what: polygon
@@ -552,9 +590,9 @@ outlines:
       operation: stack
       points:
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych+5]     
+          shift: [kx - 0.5keycw, 0.5keych+5]     
         - ref: matrix_inner_home
-          shift: [0.5keycw, 0.5keych]      
+          shift: [kx - 0.5keycw, 0.5keych]      
         - ref: matrix_inner_home
           shift: [0.5kx + mcu_width + mcu_padding_x+5, 0.5keych]                       
         - ref: matrix_inner_top
@@ -565,9 +603,9 @@ outlines:
       operation: stack
       points:
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych+5]     
+          shift: [kx - 0.5keycw, 0.5keych+5]     
         - ref: matrix_inner_home
-          shift: [0.5keycw, -0.5keych]      
+          shift: [kx - 0.5keycw, -0.5keych]      
         - ref: matrix_inner_home
           shift: [0.5kx + mcu_width + mcu_padding_x+5, -0.5keych]                       
         - ref: matrix_inner_top
@@ -578,7 +616,7 @@ outlines:
       where:
         ref: trackball_center
       size: [trackball_hole_w, trackball_hole_h]
-      fillet: 0      
+      fillet: 2    
 
     # Lip inside case
     bottom_lip_rect:
@@ -770,6 +808,9 @@ cases:
   _switch_holes:
     - name: switch_cutout  
       extrude: fr4_thickness
+  _switch_holes_test:
+    - name: switch_cutout_test 
+      extrude: fr4_thickness      
   _plate_holes:
     - name: plate_hole 
       extrude: 2
@@ -805,7 +846,7 @@ cases:
       extrude: 26
     - name: cover
       extrude: 22
-      operation: subtract       
+      operation: subtract          
   _cover_cap_tb:
     - name: cover_tb
       extrude: 26
@@ -814,7 +855,10 @@ cases:
       operation: subtract
     - name: cover_tb_cut
       extrude: 26
-      operation: subtract      
+      operation: subtract  
+    - name: trackball_mount_holes
+      extrude: 26
+      operation: subtract          
   _wall_insert:
     - name: wall_insert
       extrude: 3  # 3mm insert height
@@ -926,11 +970,11 @@ cases:
     - name: pcb_notched
       extrude: fr4_thickness
     - what: case
-      name: _switch_holes
+      name: _switch_holes_test
       operation: subtract
     - what: case
       name: _mounting_holes
-      operation: subtract    
+      operation: subtract
 
   full_case:
     - what: case

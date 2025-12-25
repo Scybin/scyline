@@ -8726,6 +8726,78 @@
     )
   )
   
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 207.5 106.91 0)
+    (property "Reference" "MH10"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 4.3 4.3)
+      (drill 4.3)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 218.5 106.91 0)
+    (property "Reference" "MH11"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 4.3 4.3)
+      (drill 4.3)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 207.5 124.91 0)
+    (property "Reference" "MH12"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 4.3 4.3)
+      (drill 4.3)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 218.5 124.91 0)
+    (property "Reference" "MH13"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 4.3 4.3)
+      (drill 4.3)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
   (gr_line (start 91 159) (end 91 84) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_line (start 91 84) (end 110 84) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_line (start 110 84) (end 110 82.1) (layer Edge.Cuts) (stroke (width 0.15) (type default)))

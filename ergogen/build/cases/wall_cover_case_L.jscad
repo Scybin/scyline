@@ -35,13 +35,13 @@ function button_wall_extrude_12_outline_fn(){
 
 
 function cover_extrude_26_outline_fn(){
-    return new CSG.Path2D([[224,-67.41],[209,-67.41]]).appendArc([204,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([204,-105.41]).appendArc([209,-110.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-110.41]).appendArc([229,-105.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
+    return new CSG.Path2D([[224,-67.41],[210,-67.41]]).appendArc([205,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-105.41]).appendArc([210,-110.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-110.41]).appendArc([229,-105.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
 .extrude({ offset: [0, 0, 26] });
 }
 
 
 function cover_extrude_22_outline_fn(){
-    return new CSG.Path2D([[224,-67.41],[209,-67.41]]).appendArc([204,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([204,-105.41]).appendArc([209,-110.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-110.41]).appendArc([229,-105.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
+    return new CSG.Path2D([[224,-67.41],[210,-67.41]]).appendArc([205,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-105.41]).appendArc([210,-110.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-110.41]).appendArc([229,-105.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
 .extrude({ offset: [0, 0, 22] });
 }
 

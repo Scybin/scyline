@@ -2427,7 +2427,7 @@
 			(at 4.572 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "0d3425b6-d195-4e1c-9b32-bdbce8545088")
+			(uuid "44e3eeaf-6230-46a8-ba77-df4587cd00f5")
 			(effects
 				(font
 					(size 1 1)
@@ -2438,7 +2438,7 @@
 		(property "Value" ""
 			(at 0 0 0)
 			(layer "F.Fab")
-			(uuid "6ae2d83a-6adb-4e06-b413-83764da4b73c")
+			(uuid "83366094-dffd-42cf-be35-d7fa7a0d5f5c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2450,7 +2450,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d868e02d-459f-481b-90b5-f8403071ccd6")
+			(uuid "5dfc1b5e-7863-429f-9d15-98a98a3da2c1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2462,7 +2462,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "2086c24a-d458-43f5-85e1-e8e0fd9d7f92")
+			(uuid "c593190f-53a6-46bb-9bda-1566fa404753")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2492,20 +2492,9 @@
 			)
 			(fill yes)
 			(layer "F.SilkS")
-			(uuid "43817014-210a-4478-ba82-c00da03715ac")
+			(uuid "187634ce-5539-4f0b-a47e-c546b48e4452")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/3d/bottom_case.step"
-			(offset
-				(xyz -138 151.1 -13.6)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 		(model "F:/VS_repos/source/repos/scyline/3d/wall_cover_case_tb_L.step"
 			(offset
 				(xyz -138 151.1 -13.6)
@@ -2515,28 +2504,6 @@
 			)
 			(rotate
 				(xyz -0 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/3d/switchplate_tb.step"
-			(offset
-				(xyz -138 151.1 2.8)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/258 1200mAh lipo.step"
-			(offset
-				(xyz 23 39 -11.5)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 180)
 			)
 		)
 	)
