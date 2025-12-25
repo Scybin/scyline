@@ -57,9 +57,21 @@ units:
   spacer_radius: 2.15 # M2 standoffs
   spacer_diameter: spacer_radius * 2
 
+  # FR4 variables
+  fr4_thickness: 1.6  # standard FR4 thickness in mm  
+
   # Case variables
   case_x: kx+8 # Case position on x-axis
   case_y: ky+8 # Case position on y-axis
+
+  # Trackball variables
+  trackball_housing_w: 14      # Square Width
+  trackball_housing_h: 14      # Square Height
+  trackball_clearance: 0.15    # Padding
+  trackball_hole_w: trackball_housing_w + 2*trackball_clearance
+  trackball_hole_h: trackball_housing_h + 2*trackball_clearance
+  trackball_offset_x: 0.5kx + (mcu_width + mcu_padding_x)/2
+  trackball_offset_y: 0
 
 points:
   zones:
@@ -255,7 +267,16 @@ points:
         - wall_screw
       anchor:
         - ref: thumb_space
-          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych - 2.5]                           
+          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych - 2.5]    
+
+    # Trackball Points
+    trackball_center:
+      key.tags:
+        - helper
+        - trackball
+      anchor:
+        - ref: matrix_inner_home
+          shift: [trackball_offset_x, trackball_offset_y]                                
 
   #mirror: &mirror
   #  ref: matrix_inner_top
@@ -355,11 +376,11 @@ outlines:
         - ref: thumb_tuck
           shift: [0, 20]
         - ref: thumb_tuck
-          shift: [-19.5, -20]
+          shift: [-18, -20]
         - ref: matrix_pinky_bottom
-          shift: [12.5, -20]
+          shift: [6.5, -20]
         - ref: matrix_pinky_bottom
-          shift: [0, 20]
+          shift: [15, 20]
     button_wall:
     - what: outline
       name: button_access
@@ -388,6 +409,10 @@ outlines:
     - what: circle
       radius: screw_hole
       where: /mount/
+    standoff_hole: 
+    - what: circle
+      radius: spacer_radius
+      where: /mount/      
     insert:
     - what: circle
       radius: insert_size
@@ -434,9 +459,9 @@ outlines:
         - ref: extra_top
           shift: [-0.5keycw, 0.5keych]
         - ref: extra_top
-          shift: [0.5keycw, 0.5keych]
+          shift: [0.5keycw+1, 0.5keych]
         - ref: extra_bottom
-          shift: [0.5keycw, -0.5keych]  
+          shift: [0.5keycw+1, -0.5keych]  
         - ref: thumb_space
           shift: [1.5kx/2, 0.5keych+1]                                                         
         - ref: thumb_space
@@ -494,9 +519,9 @@ outlines:
         - ref: extra_bottom
           shift: [-0.5kx-0.5, 0.5keych]                                          
         - ref: extra_bottom
-          shift: [0.5keycw, 0.5keych]    
+          shift: [0.5keycw+1, 0.5keych]    
         - ref: extra_bottom
-          shift: [0.5keycw, -0.5keych]            
+          shift: [0.5keycw+1, -0.5keych]            
         - ref: thumb_space
           shift: [1.5kx/2, 0.5keych+1]                                                         
         - ref: thumb_space
@@ -535,7 +560,6 @@ outlines:
         - ref: matrix_inner_top
           shift: [0.5kx + mcu_width + mcu_padding_x+5, 0.5keych+5]
       fillet: 5      
-
     cover_tb:
     - what: polygon
       operation: stack
@@ -549,6 +573,12 @@ outlines:
         - ref: matrix_inner_top
           shift: [0.5kx + mcu_width + mcu_padding_x+5, 0.5keych+5]
       fillet: 5
+    cover_tb_cut:
+    - what: rectangle
+      where:
+        ref: trackball_center
+      size: [trackball_hole_w, trackball_hole_h]
+      fillet: 0      
 
     # Lip inside case
     bottom_lip_rect:
@@ -572,17 +602,17 @@ outlines:
       expand: -2
       joints: 1
 
-    #combo:
-    #- what: outline
-    #  name: pcb
-    #- what: outline
-    #  name: switchplate
-    #- operation: subtract
-    #  name: keycap_outline
-    #- operation: subtract
-    #  name: plate_hole
-    #- operation: stack
-    #  name: switchplate
+    _combo:
+    - what: outline
+      name: pcb
+    - what: outline
+      name: switchplate
+    - operation: subtract
+      name: keycap_outline
+    - operation: subtract
+      name: plate_hole
+    - operation: stack
+      name: switchplate
 
 pcbs:
   scyline_mx:
@@ -717,7 +747,7 @@ pcbs:
           SCL: SCL
           reversible: true
         adjust:
-          shift: [kx, 0.5kcoh]           
+          shift: [kx, 10.3]   
       
       logo:
         what: ceoloide/utility_ergogen_logo
@@ -738,46 +768,53 @@ cases:
     - name: insert
       extrude: 0     
   _switch_holes:
-    - name: switch_cutout   
+    - name: switch_cutout  
+      extrude: fr4_thickness
   _plate_holes:
     - name: plate_hole 
       extrude: 2
+  _mounting_holes:
+    - name: standoff_hole
+      extrude: fr4_thickness      
   _outerWall:
     - name: xlBoard
-      extrude: 18
+      extrude: 22
   _innerWall:
     - name: pcb
-      extrude: 18
+      extrude: 22
   _usb_access_cut:
     - name: usb_wall
-      extrude: 17
+      extrude: 20
   _usb_access_fill:
     - name: usb_wall
-      extrude: 10
+      extrude: 13
   _button_access_cut:
     - name: button_wall
-      extrude: 12
+      extrude: 22
   _button_access_fill:
     - name: button_wall
-      extrude: 9.5       
+      extrude: 12      
   _switchplate:
     - name: switchplate
-      extrude: 1.6
+      extrude: fr4_thickness
   _switchplate_tb:
     - name: switchplate_tb
-      extrude: 1.6    
+      extrude: fr4_thickness   
   _cover_cap:
     - name: cover
-      extrude: 20
+      extrude: 26
     - name: cover
-      extrude: 17
+      extrude: 22
       operation: subtract       
   _cover_cap_tb:
     - name: cover_tb
-      extrude: 20
+      extrude: 26
     - name: cover_tb
-      extrude: 17
+      extrude: 22
       operation: subtract
+    - name: cover_tb_cut
+      extrude: 26
+      operation: subtract      
   _wall_insert:
     - name: wall_insert
       extrude: 3  # 3mm insert height
@@ -789,7 +826,7 @@ cases:
       extrude: 12    
   _bottom_lip_notch_raise:
     - name: bottom_lip_rect
-      extrude: 2         
+      extrude: 2        
 
   bottom_case:
     - name: bottom_lip_wall
@@ -883,7 +920,17 @@ cases:
       operation: subtract
     - what: case
       name: _plate_holes
-      operation: subtract   
+      operation: subtract  
+
+  pcb_case:
+    - name: pcb_notched
+      extrude: fr4_thickness
+    - what: case
+      name: _switch_holes
+      operation: subtract
+    - what: case
+      name: _mounting_holes
+      operation: subtract    
 
   full_case:
     - what: case

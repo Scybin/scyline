@@ -7,7 +7,7 @@
 		(at 4.572 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1a55d5f2-bd6b-4cac-883d-4f3f9edccb4e")
+		(uuid "07588847-1a69-4691-87c8-bd77b5e69886")
 		(effects
 			(font
 				(size 1 1)
@@ -18,7 +18,7 @@
 	(property "Value" ""
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "304a8b78-2cc2-4744-af53-624fe7df7a7e")
+		(uuid "516db758-d72e-45f6-be2a-092756c7cc42")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -30,7 +30,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "781f513c-752d-4b97-a4bb-beb3c1b47249")
+		(uuid "1ccb8899-9bdb-4bc1-a38b-c8c19a0711dc")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -42,7 +42,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "acf59ef7-f54b-41b4-9d6b-248b9d92d03f")
+		(uuid "4972c1b5-e960-428a-abd8-91b009d8b3e3")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -72,34 +72,12 @@
 		)
 		(fill yes)
 		(layer "F.SilkS")
-		(uuid "60768cf7-2714-4751-a74a-09ed76144d42")
+		(uuid "b08d70ed-7093-4956-8f53-8c03bb685f70")
 	)
 	(embedded_fonts no)
 	(model "F:/VS_repos/source/repos/scyline/3d/bottom_case.step"
 		(offset
-			(xyz -138.5 151 -10)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -0 -0 -0)
-		)
-	)
-	(model "F:/VS_repos/source/repos/scyline/3d/wall_cover_case_tb_L.step"
-		(offset
-			(xyz -138.5 151 -10)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz -0 -0 -0)
-		)
-	)
-	(model "F:/VS_repos/source/repos/scyline/3d/switchplate_tb.step"
-		(offset
-			(xyz -138 151 3)
+			(xyz -138 151.1 -13.6)
 		)
 		(scale
 			(xyz 1 1 1)

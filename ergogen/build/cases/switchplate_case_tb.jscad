@@ -1,5 +1,5 @@
 function switchplate_tb_extrude_1_6_outline_fn(){
-    return new CSG.Path2D([[91,-159],[91,-84]]).appendPoint([110,-84]).appendPoint([110,-82.1]).appendPoint([129,-82.1]).appendPoint([129,-69.56]).appendPoint([148,-69.56]).appendPoint([148,-64.81]).appendPoint([166,-64.81]).appendPoint([166,-69.56]).appendPoint([185,-69.56]).appendPoint([185,-72.41]).appendPoint([204,-72.41]).appendPoint([204,-127.9302041]).appendArc([205.4797959,-129.41],{"radius":1.1,"clockwise":false,"large":true}).appendPoint([223,-129.41]).appendPoint([223,-147.41]).appendPoint([213.75,-147.41]).appendPoint([213.75,-166.41]).appendPoint([166.5,-166.41]).appendPoint([148.2745638,-169.5461034]).appendPoint([128,-157.1]).appendPoint([109,-157.1]).appendPoint([109,-159]).appendPoint([91,-159]).close().innerToCAG()
+    return new CSG.Path2D([[91,-159],[91,-84]]).appendPoint([110,-84]).appendPoint([110,-82.1]).appendPoint([129,-82.1]).appendPoint([129,-69.56]).appendPoint([148,-69.56]).appendPoint([148,-64.81]).appendPoint([166,-64.81]).appendPoint([166,-69.56]).appendPoint([185,-69.56]).appendPoint([185,-72.41]).appendPoint([204,-72.41]).appendPoint([204,-127.9302041]).appendArc([205.4797959,-129.41],{"radius":1.1,"clockwise":false,"large":true}).appendPoint([224,-129.41]).appendPoint([224,-147.41]).appendPoint([213.75,-147.41]).appendPoint([213.75,-166.41]).appendPoint([166.5,-166.41]).appendPoint([148.2745638,-169.5461034]).appendPoint([128,-157.1]).appendPoint([109,-157.1]).appendPoint([109,-159]).appendPoint([91,-159]).close().innerToCAG()
 .subtract(
     CAG.circle({"center":[204.5,-147.41],"radius":1.1})
 .union(
@@ -76,7 +76,7 @@ function switchplate_tb_extrude_1_6_outline_fn(){
 }
 
 
-function switch_cutout_extrude_1_outline_fn(){
+function switch_cutout_extrude_1_6_outline_fn(){
     return new CSG.Path2D([[149.896883,-167.2291915],[163.6841915,-164.798117]]).appendPoint([161.253117,-151.0108085]).appendPoint([147.4658085,-153.441883]).appendPoint([149.896883,-167.2291915]).close().innerToCAG()
 .union(
     new CSG.Path2D([[207,-126.41],[221,-126.41]]).appendPoint([221,-112.41]).appendPoint([207,-112.41]).appendPoint([207,-126.41]).close().innerToCAG()
@@ -134,7 +134,7 @@ function switch_cutout_extrude_1_outline_fn(){
     new CSG.Path2D([[93,-138],[107,-138]]).appendPoint([107,-124]).appendPoint([93,-124]).appendPoint([93,-138]).close().innerToCAG()
 ).union(
     new CSG.Path2D([[93,-157],[107,-157]]).appendPoint([107,-143]).appendPoint([93,-143]).appendPoint([93,-157]).close().innerToCAG()
-).extrude({ offset: [0, 0, 1] });
+).extrude({ offset: [0, 0, 1.6] });
 }
 
 
@@ -189,7 +189,7 @@ function plate_hole_extrude_2_outline_fn(){
                     
 
                 // creating part 0 of case _switch_holes
-                let _switch_holes__part_0 = switch_cutout_extrude_1_outline_fn();
+                let _switch_holes__part_0 = switch_cutout_extrude_1_6_outline_fn();
 
                 // make sure that rotations are relative
                 let _switch_holes__part_0_bounds = _switch_holes__part_0.getBounds();

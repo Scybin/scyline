@@ -1,4 +1,4 @@
-26788522161168799
+26790288960000118
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -106427,6 +106427,13 @@ battery_connector_jst_ph_2
 0
 10
 8
+scyline
+full_case
+
+
+0
+0
+0
 scyline
 mcu_nice_nano_4mm
 

@@ -8199,7 +8199,7 @@
 
     (footprint "scybin:qwiik_jst"
       (layer "F.Cu")
-      (at 214 112.41 0)
+      (at 214 109.11 0)
       (descr "JST SH series connector, SM04B-SRSS-TB (http://www.jst-mfg.com/product/pdf/eng/eSH.pdf)")
       (tags "connector JST SH horizontal")
       (property "Reference" "J1"
