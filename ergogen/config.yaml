@@ -63,6 +63,8 @@ units:
   # Case variables
   case_x: kx+8 # Case position on x-axis
   case_y: ky+8 # Case position on y-axis
+  wall_z: 24.3 # Wall height (& cut)
+  cover_z: 28.3 # Cover height (& fill)
 
   # Trackball variables
   trackball_housing_w: 14 # Square Width
@@ -73,7 +75,7 @@ units:
   trackball_offset_x: 0.5kx + (mcu_width + mcu_padding_x)/2 - 1.25
   trackball_offset_y: 3.5
   trackball_mount_x: 5.5
-  trackball_mount_y: 9
+  trackball_mount_y: 9.8
 
 points:
   zones:
@@ -819,19 +821,19 @@ cases:
       extrude: fr4_thickness      
   _outerWall:
     - name: xlBoard
-      extrude: 22
+      extrude: wall_z
   _innerWall:
     - name: pcb
-      extrude: 22
+      extrude: wall_z
   _usb_access_cut:
     - name: usb_wall
-      extrude: 20
+      extrude: 22.3
   _usb_access_fill:
     - name: usb_wall
       extrude: 13
   _button_access_cut:
     - name: button_wall
-      extrude: 22
+      extrude: wall_z
   _button_access_fill:
     - name: button_wall
       extrude: 12      
@@ -843,21 +845,21 @@ cases:
       extrude: fr4_thickness   
   _cover_cap:
     - name: cover
-      extrude: 26
+      extrude: cover_z
     - name: cover
-      extrude: 22
+      extrude: wall_z
       operation: subtract          
   _cover_cap_tb:
     - name: cover_tb
-      extrude: 26
+      extrude: cover_z
     - name: cover_tb
-      extrude: 22
+      extrude: wall_z
       operation: subtract
     - name: cover_tb_cut
-      extrude: 26
+      extrude: cover_z
       operation: subtract  
     - name: trackball_mount_holes
-      extrude: 26
+      extrude: cover_z
       operation: subtract          
   _wall_insert:
     - name: wall_insert

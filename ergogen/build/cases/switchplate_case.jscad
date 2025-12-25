@@ -75,7 +75,7 @@ function switchplate_extrude_1_6_outline_fn(){
 ).union(
     new CSG.Path2D([[93,-157],[107,-157]]).appendPoint([107,-143]).appendPoint([93,-143]).appendPoint([93,-157]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[207,-126.41],[221,-126.41]]).appendPoint([221,-112.41]).appendPoint([207,-112.41]).appendPoint([207,-123.9302041]).appendArc([207,-125.8897959],{"radius":1.1,"clockwise":false,"large":false}).appendPoint([207,-126.41]).close().innerToCAG()
+    new CSG.Path2D([[208.3485281,-126.41],[217.6514719,-126.41]]).appendArc([219.3485281,-126.41],{"radius":1.1,"clockwise":false,"large":false}).appendPoint([221,-126.41]).appendPoint([221,-112.41]).appendPoint([207,-112.41]).appendPoint([207,-124.7302041]).appendArc([208.3485281,-126.41],{"radius":1.1,"clockwise":false,"large":true}).close().innerToCAG()
 )).extrude({ offset: [0, 0, 1.6] });
 }
 
@@ -143,13 +143,13 @@ function switch_cutout_extrude_1_6_outline_fn(){
 
 
 function plate_hole_extrude_2_outline_fn(){
-    return CAG.circle({"center":[218.5,-124.91],"radius":1.1})
+    return CAG.circle({"center":[218.5,-125.71],"radius":1.1})
 .union(
-    CAG.circle({"center":[207.5,-124.91],"radius":1.1})
+    CAG.circle({"center":[207.5,-125.71],"radius":1.1})
 ).union(
-    CAG.circle({"center":[218.5,-106.91],"radius":1.1})
+    CAG.circle({"center":[218.5,-106.11],"radius":1.1})
 ).union(
-    CAG.circle({"center":[207.5,-106.91],"radius":1.1})
+    CAG.circle({"center":[207.5,-106.11],"radius":1.1})
 ).union(
     CAG.circle({"center":[204.5,-147.41],"radius":1.1})
 ).union(

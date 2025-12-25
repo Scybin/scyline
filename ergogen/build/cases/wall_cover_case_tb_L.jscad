@@ -1,18 +1,18 @@
-function xlBoard_extrude_22_outline_fn(){
+function xlBoard_extrude_24_3_outline_fn(){
     return new CSG.Path2D([[86,-159],[86,-84]]).appendArc([91,-79],{"radius":5,"clockwise":true,"large":false}).appendPoint([106.076991,-79]).appendArc([110,-77.1],{"radius":5,"clockwise":true,"large":false}).appendPoint([124,-77.1]).appendPoint([124,-69.56]).appendArc([129,-64.56],{"radius":5,"clockwise":true,"large":false}).appendPoint([143.0062539,-64.56]).appendArc([148,-59.81],{"radius":5,"clockwise":true,"large":false}).appendPoint([166,-59.81]).appendArc([170.9937461,-64.56],{"radius":5,"clockwise":true,"large":false}).appendPoint([185,-64.56]).appendArc([189.5141444,-67.41],{"radius":5,"clockwise":true,"large":false}).appendPoint([224,-67.41]).appendArc([229,-72.41],{"radius":5,"clockwise":true,"large":false}).appendPoint([229,-166.41]).appendArc([224,-171.41],{"radius":5,"clockwise":true,"large":false}).appendPoint([166.9270443,-171.41]).appendPoint([149.122467,-174.473685]).appendArc([145.6587356,-173.8072585],{"radius":5,"clockwise":true,"large":false}).appendPoint([126.5877419,-162.1]).appendPoint([112.923009,-162.1]).appendArc([109,-164],{"radius":5,"clockwise":true,"large":false}).appendPoint([91,-164]).appendArc([86,-159],{"radius":5,"clockwise":true,"large":false}).close().innerToCAG()
-.extrude({ offset: [0, 0, 22] });
+.extrude({ offset: [0, 0, 24.3] });
 }
 
 
-function pcb_extrude_22_outline_fn(){
+function pcb_extrude_24_3_outline_fn(){
     return new CSG.Path2D([[91,-159],[91,-84]]).appendPoint([110,-84]).appendPoint([110,-82.1]).appendPoint([129,-82.1]).appendPoint([129,-69.56]).appendPoint([148,-69.56]).appendPoint([148,-64.81]).appendPoint([166,-64.81]).appendPoint([166,-69.56]).appendPoint([185,-69.56]).appendPoint([185,-72.41]).appendPoint([224,-72.41]).appendPoint([224,-166.41]).appendPoint([166.5,-166.41]).appendPoint([148.2745638,-169.5461034]).appendPoint([128,-157.1]).appendPoint([109,-157.1]).appendPoint([109,-159]).appendPoint([91,-159]).close().innerToCAG()
-.extrude({ offset: [0, 0, 22] });
+.extrude({ offset: [0, 0, 24.3] });
 }
 
 
-function usb_wall_extrude_20_outline_fn(){
+function usb_wall_extrude_22_3_outline_fn(){
     return new CSG.Path2D([[221,-72.41],[221,-67.41]]).appendPoint([207,-67.41]).appendPoint([207,-72.41]).appendPoint([221,-72.41]).close().innerToCAG()
-.extrude({ offset: [0, 0, 20] });
+.extrude({ offset: [0, 0, 22.3] });
 }
 
 
@@ -22,9 +22,9 @@ function usb_wall_extrude_13_outline_fn(){
 }
 
 
-function button_wall_extrude_22_outline_fn(){
+function button_wall_extrude_24_3_outline_fn(){
     return new CSG.Path2D([[144.9775891,-167.522164],[143.6903575,-172.598915]]).appendPoint([126.7533912,-162.2016884]).appendPoint([127.8375,-157.1]).appendPoint([128,-157.1]).appendPoint([144.9775891,-167.522164]).close().innerToCAG()
-.extrude({ offset: [0, 0, 22] });
+.extrude({ offset: [0, 0, 24.3] });
 }
 
 
@@ -34,33 +34,33 @@ function button_wall_extrude_12_outline_fn(){
 }
 
 
-function cover_tb_extrude_26_outline_fn(){
+function cover_tb_extrude_28_3_outline_fn(){
     return new CSG.Path2D([[224,-67.41],[210,-67.41]]).appendArc([205,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-123.41]).appendArc([210,-128.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-128.41]).appendArc([229,-123.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
-.extrude({ offset: [0, 0, 26] });
+.extrude({ offset: [0, 0, 28.3] });
 }
 
 
-function cover_tb_extrude_22_outline_fn(){
+function cover_tb_extrude_24_3_outline_fn(){
     return new CSG.Path2D([[224,-67.41],[210,-67.41]]).appendArc([205,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-123.41]).appendArc([210,-128.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-128.41]).appendArc([229,-123.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
-.extrude({ offset: [0, 0, 22] });
+.extrude({ offset: [0, 0, 24.3] });
 }
 
 
-function cover_tb_cut_extrude_26_outline_fn(){
+function cover_tb_cut_extrude_28_3_outline_fn(){
     return new CSG.Path2D([[207.85,-123.06],[218.15,-123.06]]).appendArc([220.15,-121.06],{"radius":2,"clockwise":false,"large":false}).appendPoint([220.15,-110.76]).appendArc([218.15,-108.76],{"radius":2,"clockwise":false,"large":false}).appendPoint([207.85,-108.76]).appendArc([205.85,-110.76],{"radius":2,"clockwise":false,"large":false}).appendPoint([205.85,-121.06]).appendArc([207.85,-123.06],{"radius":2,"clockwise":false,"large":false}).close().innerToCAG()
-.extrude({ offset: [0, 0, 26] });
+.extrude({ offset: [0, 0, 28.3] });
 }
 
 
-function trackball_mount_holes_extrude_26_outline_fn(){
-    return CAG.circle({"center":[218.5,-124.91],"radius":1.1})
+function trackball_mount_holes_extrude_28_3_outline_fn(){
+    return CAG.circle({"center":[218.5,-125.71],"radius":1.1})
 .union(
-    CAG.circle({"center":[207.5,-124.91],"radius":1.1})
+    CAG.circle({"center":[207.5,-125.71],"radius":1.1})
 ).union(
-    CAG.circle({"center":[218.5,-106.91],"radius":1.1})
+    CAG.circle({"center":[218.5,-106.11],"radius":1.1})
 ).union(
-    CAG.circle({"center":[207.5,-106.91],"radius":1.1})
-).extrude({ offset: [0, 0, 26] });
+    CAG.circle({"center":[207.5,-106.11],"radius":1.1})
+).extrude({ offset: [0, 0, 28.3] });
 }
 
 
@@ -82,7 +82,7 @@ function wall_insert_extrude_3_outline_fn(){
                     
 
                 // creating part 0 of case _outerWall
-                let _outerWall__part_0 = xlBoard_extrude_22_outline_fn();
+                let _outerWall__part_0 = xlBoard_extrude_24_3_outline_fn();
 
                 // make sure that rotations are relative
                 let _outerWall__part_0_bounds = _outerWall__part_0.getBounds();
@@ -105,7 +105,7 @@ function wall_insert_extrude_3_outline_fn(){
                     
 
                 // creating part 0 of case _innerWall
-                let _innerWall__part_0 = pcb_extrude_22_outline_fn();
+                let _innerWall__part_0 = pcb_extrude_24_3_outline_fn();
 
                 // make sure that rotations are relative
                 let _innerWall__part_0_bounds = _innerWall__part_0.getBounds();
@@ -128,7 +128,7 @@ function wall_insert_extrude_3_outline_fn(){
                     
 
                 // creating part 0 of case _usb_access_cut
-                let _usb_access_cut__part_0 = usb_wall_extrude_20_outline_fn();
+                let _usb_access_cut__part_0 = usb_wall_extrude_22_3_outline_fn();
 
                 // make sure that rotations are relative
                 let _usb_access_cut__part_0_bounds = _usb_access_cut__part_0.getBounds();
@@ -174,7 +174,7 @@ function wall_insert_extrude_3_outline_fn(){
                     
 
                 // creating part 0 of case _button_access_cut
-                let _button_access_cut__part_0 = button_wall_extrude_22_outline_fn();
+                let _button_access_cut__part_0 = button_wall_extrude_24_3_outline_fn();
 
                 // make sure that rotations are relative
                 let _button_access_cut__part_0_bounds = _button_access_cut__part_0.getBounds();
@@ -220,7 +220,7 @@ function wall_insert_extrude_3_outline_fn(){
                     
 
                 // creating part 0 of case _cover_cap_tb
-                let _cover_cap_tb__part_0 = cover_tb_extrude_26_outline_fn();
+                let _cover_cap_tb__part_0 = cover_tb_extrude_28_3_outline_fn();
 
                 // make sure that rotations are relative
                 let _cover_cap_tb__part_0_bounds = _cover_cap_tb__part_0.getBounds();
@@ -236,7 +236,7 @@ function wall_insert_extrude_3_outline_fn(){
             
 
                 // creating part 1 of case _cover_cap_tb
-                let _cover_cap_tb__part_1 = cover_tb_extrude_22_outline_fn();
+                let _cover_cap_tb__part_1 = cover_tb_extrude_24_3_outline_fn();
 
                 // make sure that rotations are relative
                 let _cover_cap_tb__part_1_bounds = _cover_cap_tb__part_1.getBounds();
@@ -252,7 +252,7 @@ function wall_insert_extrude_3_outline_fn(){
             
 
                 // creating part 2 of case _cover_cap_tb
-                let _cover_cap_tb__part_2 = cover_tb_cut_extrude_26_outline_fn();
+                let _cover_cap_tb__part_2 = cover_tb_cut_extrude_28_3_outline_fn();
 
                 // make sure that rotations are relative
                 let _cover_cap_tb__part_2_bounds = _cover_cap_tb__part_2.getBounds();
@@ -268,7 +268,7 @@ function wall_insert_extrude_3_outline_fn(){
             
 
                 // creating part 3 of case _cover_cap_tb
-                let _cover_cap_tb__part_3 = trackball_mount_holes_extrude_26_outline_fn();
+                let _cover_cap_tb__part_3 = trackball_mount_holes_extrude_28_3_outline_fn();
 
                 // make sure that rotations are relative
                 let _cover_cap_tb__part_3_bounds = _cover_cap_tb__part_3.getBounds();

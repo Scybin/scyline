@@ -139,13 +139,13 @@ function switch_cutout_extrude_1_6_outline_fn(){
 
 
 function plate_hole_extrude_2_outline_fn(){
-    return CAG.circle({"center":[218.5,-124.91],"radius":1.1})
+    return CAG.circle({"center":[218.5,-125.71],"radius":1.1})
 .union(
-    CAG.circle({"center":[207.5,-124.91],"radius":1.1})
+    CAG.circle({"center":[207.5,-125.71],"radius":1.1})
 ).union(
-    CAG.circle({"center":[218.5,-106.91],"radius":1.1})
+    CAG.circle({"center":[218.5,-106.11],"radius":1.1})
 ).union(
-    CAG.circle({"center":[207.5,-106.91],"radius":1.1})
+    CAG.circle({"center":[207.5,-106.11],"radius":1.1})
 ).union(
     CAG.circle({"center":[204.5,-147.41],"radius":1.1})
 ).union(
