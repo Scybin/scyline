@@ -27,9 +27,9 @@ units:
 
   # Controller Variables
   mcu_width: 18 # x-axis
-  mcu_height: 33 # y-axis
+  mcu_height: 30.6 # y-axis
   mcu_padding_x: 1.5
-  mcu_padding_y: 1
+  mcu_padding_y: 0.5
 
   # Reset Switch Variables
   rst_x: 27.884 # Reset switch position on x-axis
@@ -334,7 +334,7 @@ outlines:
     switch_cutout_test:
     - what: rectangle
       where: /key/
-      size: [kcow - 1, kcoh]      
+      size: [kcow - 1, kcoh - 1]
 
     pcb:
     - what: polygon
@@ -657,7 +657,7 @@ outlines:
     - what: rectangle
       where:
         ref: matrix_inner_top
-        shift: [kx + mcu_width/2 + 1, -10]
+        shift: [kx + mcu_width/2 + 1, -9]
       size: [4, mcu_height + mcu_padding_y]
 
     _combo:

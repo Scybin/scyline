@@ -5,63 +5,63 @@ function pcb_notched_extrude_1_6_outline_fn(){
 
 
 function switch_cutout_test_extrude_1_6_outline_fn(){
-    return new CSG.Path2D([[150.3892868,-167.1423674],[163.1917876,-164.8849411]]).appendPoint([160.7607132,-151.0976326]).appendPoint([147.9582124,-153.3550589]).appendPoint([150.3892868,-167.1423674]).close().innerToCAG()
+    return new CSG.Path2D([[150.3024628,-166.6499635],[163.1049635,-164.3925372]]).appendPoint([160.8475372,-151.5900365]).appendPoint([148.0450365,-153.8474628]).appendPoint([150.3024628,-166.6499635]).close().innerToCAG()
 .union(
-    new CSG.Path2D([[207.5,-126.41],[220.5,-126.41]]).appendPoint([220.5,-112.41]).appendPoint([207.5,-112.41]).appendPoint([207.5,-126.41]).close().innerToCAG()
+    new CSG.Path2D([[207.5,-125.91],[220.5,-125.91]]).appendPoint([220.5,-112.91]).appendPoint([207.5,-112.91]).appendPoint([207.5,-125.91]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[207.5,-145.41],[220.5,-145.41]]).appendPoint([220.5,-131.41]).appendPoint([207.5,-131.41]).appendPoint([207.5,-145.41]).close().innerToCAG()
+    new CSG.Path2D([[207.5,-144.91],[220.5,-144.91]]).appendPoint([220.5,-131.91]).appendPoint([207.5,-131.91]).appendPoint([207.5,-144.91]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[193,-164.41],[206,-164.41]]).appendPoint([206,-150.41]).appendPoint([193,-150.41]).appendPoint([193,-164.41]).close().innerToCAG()
+    new CSG.Path2D([[193,-163.91],[206,-163.91]]).appendPoint([206,-150.91]).appendPoint([193,-150.91]).appendPoint([193,-163.91]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169.5,-164.41],[182.5,-164.41]]).appendPoint([182.5,-150.41]).appendPoint([169.5,-150.41]).appendPoint([169.5,-164.41]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-163.91],[182.5,-163.91]]).appendPoint([182.5,-150.91]).appendPoint([169.5,-150.91]).appendPoint([169.5,-163.91]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[188.5,-88.41],[201.5,-88.41]]).appendPoint([201.5,-74.41]).appendPoint([188.5,-74.41]).appendPoint([188.5,-88.41]).close().innerToCAG()
+    new CSG.Path2D([[188.5,-87.91],[201.5,-87.91]]).appendPoint([201.5,-74.91]).appendPoint([188.5,-74.91]).appendPoint([188.5,-87.91]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[188.5,-107.41],[201.5,-107.41]]).appendPoint([201.5,-93.41]).appendPoint([188.5,-93.41]).appendPoint([188.5,-107.41]).close().innerToCAG()
+    new CSG.Path2D([[188.5,-106.91],[201.5,-106.91]]).appendPoint([201.5,-93.91]).appendPoint([188.5,-93.91]).appendPoint([188.5,-106.91]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[188.5,-126.41],[201.5,-126.41]]).appendPoint([201.5,-112.41]).appendPoint([188.5,-112.41]).appendPoint([188.5,-126.41]).close().innerToCAG()
+    new CSG.Path2D([[188.5,-125.91],[201.5,-125.91]]).appendPoint([201.5,-112.91]).appendPoint([188.5,-112.91]).appendPoint([188.5,-125.91]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[188.5,-145.41],[201.5,-145.41]]).appendPoint([201.5,-131.41]).appendPoint([188.5,-131.41]).appendPoint([188.5,-145.41]).close().innerToCAG()
+    new CSG.Path2D([[188.5,-144.91],[201.5,-144.91]]).appendPoint([201.5,-131.91]).appendPoint([188.5,-131.91]).appendPoint([188.5,-144.91]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169.5,-85.56],[182.5,-85.56]]).appendPoint([182.5,-71.56]).appendPoint([169.5,-71.56]).appendPoint([169.5,-85.56]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-85.06],[182.5,-85.06]]).appendPoint([182.5,-72.06]).appendPoint([169.5,-72.06]).appendPoint([169.5,-85.06]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169.5,-104.56],[182.5,-104.56]]).appendPoint([182.5,-90.56]).appendPoint([169.5,-90.56]).appendPoint([169.5,-104.56]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-104.06],[182.5,-104.06]]).appendPoint([182.5,-91.06]).appendPoint([169.5,-91.06]).appendPoint([169.5,-104.06]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169.5,-123.56],[182.5,-123.56]]).appendPoint([182.5,-109.56]).appendPoint([169.5,-109.56]).appendPoint([169.5,-123.56]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-123.06],[182.5,-123.06]]).appendPoint([182.5,-110.06]).appendPoint([169.5,-110.06]).appendPoint([169.5,-123.06]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[169.5,-142.56],[182.5,-142.56]]).appendPoint([182.5,-128.56]).appendPoint([169.5,-128.56]).appendPoint([169.5,-142.56]).close().innerToCAG()
+    new CSG.Path2D([[169.5,-142.06],[182.5,-142.06]]).appendPoint([182.5,-129.06]).appendPoint([169.5,-129.06]).appendPoint([169.5,-142.06]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[150.5,-80.81],[163.5,-80.81]]).appendPoint([163.5,-66.81]).appendPoint([150.5,-66.81]).appendPoint([150.5,-80.81]).close().innerToCAG()
+    new CSG.Path2D([[150.5,-80.31],[163.5,-80.31]]).appendPoint([163.5,-67.31]).appendPoint([150.5,-67.31]).appendPoint([150.5,-80.31]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[150.5,-99.81],[163.5,-99.81]]).appendPoint([163.5,-85.81]).appendPoint([150.5,-85.81]).appendPoint([150.5,-99.81]).close().innerToCAG()
+    new CSG.Path2D([[150.5,-99.31],[163.5,-99.31]]).appendPoint([163.5,-86.31]).appendPoint([150.5,-86.31]).appendPoint([150.5,-99.31]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[150.5,-118.81],[163.5,-118.81]]).appendPoint([163.5,-104.81]).appendPoint([150.5,-104.81]).appendPoint([150.5,-118.81]).close().innerToCAG()
+    new CSG.Path2D([[150.5,-118.31],[163.5,-118.31]]).appendPoint([163.5,-105.31]).appendPoint([150.5,-105.31]).appendPoint([150.5,-118.31]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[150.5,-137.81],[163.5,-137.81]]).appendPoint([163.5,-123.81]).appendPoint([150.5,-123.81]).appendPoint([150.5,-137.81]).close().innerToCAG()
+    new CSG.Path2D([[150.5,-137.31],[163.5,-137.31]]).appendPoint([163.5,-124.31]).appendPoint([150.5,-124.31]).appendPoint([150.5,-137.31]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[131.5,-85.56],[144.5,-85.56]]).appendPoint([144.5,-71.56]).appendPoint([131.5,-71.56]).appendPoint([131.5,-85.56]).close().innerToCAG()
+    new CSG.Path2D([[131.5,-85.06],[144.5,-85.06]]).appendPoint([144.5,-72.06]).appendPoint([131.5,-72.06]).appendPoint([131.5,-85.06]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[131.5,-104.56],[144.5,-104.56]]).appendPoint([144.5,-90.56]).appendPoint([131.5,-90.56]).appendPoint([131.5,-104.56]).close().innerToCAG()
+    new CSG.Path2D([[131.5,-104.06],[144.5,-104.06]]).appendPoint([144.5,-91.06]).appendPoint([131.5,-91.06]).appendPoint([131.5,-104.06]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[131.5,-123.56],[144.5,-123.56]]).appendPoint([144.5,-109.56]).appendPoint([131.5,-109.56]).appendPoint([131.5,-123.56]).close().innerToCAG()
+    new CSG.Path2D([[131.5,-123.06],[144.5,-123.06]]).appendPoint([144.5,-110.06]).appendPoint([131.5,-110.06]).appendPoint([131.5,-123.06]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[131.5,-142.56],[144.5,-142.56]]).appendPoint([144.5,-128.56]).appendPoint([131.5,-128.56]).appendPoint([131.5,-142.56]).close().innerToCAG()
+    new CSG.Path2D([[131.5,-142.06],[144.5,-142.06]]).appendPoint([144.5,-129.06]).appendPoint([131.5,-129.06]).appendPoint([131.5,-142.06]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[112.5,-98.1],[125.5,-98.1]]).appendPoint([125.5,-84.1]).appendPoint([112.5,-84.1]).appendPoint([112.5,-98.1]).close().innerToCAG()
+    new CSG.Path2D([[112.5,-97.6],[125.5,-97.6]]).appendPoint([125.5,-84.6]).appendPoint([112.5,-84.6]).appendPoint([112.5,-97.6]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[112.5,-117.1],[125.5,-117.1]]).appendPoint([125.5,-103.1]).appendPoint([112.5,-103.1]).appendPoint([112.5,-117.1]).close().innerToCAG()
+    new CSG.Path2D([[112.5,-116.6],[125.5,-116.6]]).appendPoint([125.5,-103.6]).appendPoint([112.5,-103.6]).appendPoint([112.5,-116.6]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[112.5,-136.1],[125.5,-136.1]]).appendPoint([125.5,-122.1]).appendPoint([112.5,-122.1]).appendPoint([112.5,-136.1]).close().innerToCAG()
+    new CSG.Path2D([[112.5,-135.6],[125.5,-135.6]]).appendPoint([125.5,-122.6]).appendPoint([112.5,-122.6]).appendPoint([112.5,-135.6]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[112.5,-155.1],[125.5,-155.1]]).appendPoint([125.5,-141.1]).appendPoint([112.5,-141.1]).appendPoint([112.5,-155.1]).close().innerToCAG()
+    new CSG.Path2D([[112.5,-154.6],[125.5,-154.6]]).appendPoint([125.5,-141.6]).appendPoint([112.5,-141.6]).appendPoint([112.5,-154.6]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[93.5,-100],[106.5,-100]]).appendPoint([106.5,-86]).appendPoint([93.5,-86]).appendPoint([93.5,-100]).close().innerToCAG()
+    new CSG.Path2D([[93.5,-99.5],[106.5,-99.5]]).appendPoint([106.5,-86.5]).appendPoint([93.5,-86.5]).appendPoint([93.5,-99.5]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[93.5,-119],[106.5,-119]]).appendPoint([106.5,-105]).appendPoint([93.5,-105]).appendPoint([93.5,-119]).close().innerToCAG()
+    new CSG.Path2D([[93.5,-118.5],[106.5,-118.5]]).appendPoint([106.5,-105.5]).appendPoint([93.5,-105.5]).appendPoint([93.5,-118.5]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[93.5,-138],[106.5,-138]]).appendPoint([106.5,-124]).appendPoint([93.5,-124]).appendPoint([93.5,-138]).close().innerToCAG()
+    new CSG.Path2D([[93.5,-137.5],[106.5,-137.5]]).appendPoint([106.5,-124.5]).appendPoint([93.5,-124.5]).appendPoint([93.5,-137.5]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[93.5,-157],[106.5,-157]]).appendPoint([106.5,-143]).appendPoint([93.5,-143]).appendPoint([93.5,-157]).close().innerToCAG()
+    new CSG.Path2D([[93.5,-156.5],[106.5,-156.5]]).appendPoint([106.5,-143.5]).appendPoint([93.5,-143.5]).appendPoint([93.5,-156.5]).close().innerToCAG()
 ).extrude({ offset: [0, 0, 1.6] });
 }
 

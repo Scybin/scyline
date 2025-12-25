@@ -2492,7 +2492,7 @@
 			)
 			(fill yes)
 			(layer "F.SilkS")
-			(uuid "fdb8a499-c5b8-438e-89f7-0a06293b88ed")
+			(uuid "61e3972e-f622-409e-8e5f-a5fb388bedb5")
 		)
 		(embedded_fonts no)
 		(model "F:/VS_repos/source/repos/scyline/3d/bottom_case.step"
@@ -2504,6 +2504,39 @@
 			)
 			(rotate
 				(xyz -0 -0 -0)
+			)
+		)
+		(model "F:/VS_repos/source/repos/scyline/3d/wall_cover_case_tb_L.step"
+			(offset
+				(xyz -138 151.1 -13.6)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+		(model "F:/VS_repos/source/repos/scyline/3d/switchplate_tb.step"
+			(offset
+				(xyz -138 151.1 2.8)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/258 1200mAh lipo.step"
+			(offset
+				(xyz 23 39 -11.5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 180)
 			)
 		)
 	)
