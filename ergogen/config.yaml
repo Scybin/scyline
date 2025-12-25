@@ -527,28 +527,28 @@ outlines:
       operation: stack
       points:
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych+4]     
+          shift: [0.5keycw, 0.5keych+5]     
         - ref: matrix_inner_home
           shift: [0.5keycw, 0.5keych]      
         - ref: matrix_inner_home
-          shift: [0.5kx + mcu_width + mcu_padding_x+4, 0.5keych]                       
+          shift: [0.5kx + mcu_width + mcu_padding_x+5, 0.5keych]                       
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x+4, 0.5keych+4]
-      fillet: 4      
+          shift: [0.5kx + mcu_width + mcu_padding_x+5, 0.5keych+5]
+      fillet: 5      
 
     cover_tb:
     - what: polygon
       operation: stack
       points:
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych+4]     
+          shift: [0.5keycw, 0.5keych+5]     
         - ref: matrix_inner_home
           shift: [0.5keycw, -0.5keych]      
         - ref: matrix_inner_home
-          shift: [0.5kx + mcu_width + mcu_padding_x+4, -0.5keych]                       
+          shift: [0.5kx + mcu_width + mcu_padding_x+5, -0.5keych]                       
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x+4, 0.5keych+4]
-      fillet: 4
+          shift: [0.5kx + mcu_width + mcu_padding_x+5, 0.5keych+5]
+      fillet: 5
 
     # Lip inside case
     bottom_lip_rect:
