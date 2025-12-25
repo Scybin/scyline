@@ -1,8 +1,10 @@
 function switchplate_tb_extrude_1_6_outline_fn(){
-    return new CSG.Path2D([[91,-159],[91,-84]]).appendPoint([110,-84]).appendPoint([110,-82.1]).appendPoint([129,-82.1]).appendPoint([129,-69.56]).appendPoint([148,-69.56]).appendPoint([148,-64.81]).appendPoint([166,-64.81]).appendPoint([166,-69.56]).appendPoint([185,-69.56]).appendPoint([185,-72.41]).appendPoint([204,-72.41]).appendPoint([204,-129.41]).appendPoint([223,-129.41]).appendPoint([222.75,-166.41]).appendPoint([166.5,-166.41]).appendPoint([148.2745638,-169.5461034]).appendPoint([128,-157.1]).appendPoint([109,-157.1]).appendPoint([109,-159]).appendPoint([91,-159]).close().innerToCAG()
+    return new CSG.Path2D([[91,-159],[91,-84]]).appendPoint([110,-84]).appendPoint([110,-82.1]).appendPoint([129,-82.1]).appendPoint([129,-69.56]).appendPoint([148,-69.56]).appendPoint([148,-64.81]).appendPoint([166,-64.81]).appendPoint([166,-69.56]).appendPoint([185,-69.56]).appendPoint([185,-72.41]).appendPoint([204,-72.41]).appendPoint([204,-127.9302041]).appendArc([205.4797959,-129.41],{"radius":1.1,"clockwise":false,"large":true}).appendPoint([223,-129.41]).appendPoint([223,-147.41]).appendPoint([213.75,-147.41]).appendPoint([213.75,-166.41]).appendPoint([166.5,-166.41]).appendPoint([148.2745638,-169.5461034]).appendPoint([128,-157.1]).appendPoint([109,-157.1]).appendPoint([109,-159]).appendPoint([91,-159]).close().innerToCAG()
 .subtract(
-    CAG.circle({"center":[185.5,-127.485],"radius":1.1})
+    CAG.circle({"center":[204.5,-147.41],"radius":1.1})
 .union(
+    CAG.circle({"center":[185.5,-127.485],"radius":1.1})
+).union(
     CAG.circle({"center":[185.5,-108.485],"radius":1.1})
 ).union(
     CAG.circle({"center":[185.5,-89.485],"radius":1.1})
@@ -136,9 +138,13 @@ function switch_cutout_extrude_1_outline_fn(){
 }
 
 
-function plate_hole_extrude_1_outline_fn(){
-    return CAG.circle({"center":[185.5,-127.485],"radius":1.1})
+function plate_hole_extrude_2_outline_fn(){
+    return CAG.circle({"center":[204.5,-147.41],"radius":1.1})
 .union(
+    CAG.circle({"center":[204.5,-128.91],"radius":1.1})
+).union(
+    CAG.circle({"center":[185.5,-127.485],"radius":1.1})
+).union(
     CAG.circle({"center":[185.5,-108.485],"radius":1.1})
 ).union(
     CAG.circle({"center":[185.5,-89.485],"radius":1.1})
@@ -150,28 +156,28 @@ function plate_hole_extrude_1_outline_fn(){
     CAG.circle({"center":[109.5,-120.55],"radius":1.1})
 ).union(
     CAG.circle({"center":[109.5,-101.55],"radius":1.1})
-).extrude({ offset: [0, 0, 1] });
+).extrude({ offset: [0, 0, 2] });
 }
 
 
 
 
-                function switchplate_tb_case_fn() {
+                function _switchplate_tb_case_fn() {
                     
 
-                // creating part 0 of case switchplate_tb
-                let switchplate_tb__part_0 = switchplate_tb_extrude_1_6_outline_fn();
+                // creating part 0 of case _switchplate_tb
+                let _switchplate_tb__part_0 = switchplate_tb_extrude_1_6_outline_fn();
 
                 // make sure that rotations are relative
-                let switchplate_tb__part_0_bounds = switchplate_tb__part_0.getBounds();
-                let switchplate_tb__part_0_x = switchplate_tb__part_0_bounds[0].x + (switchplate_tb__part_0_bounds[1].x - switchplate_tb__part_0_bounds[0].x) / 2
-                let switchplate_tb__part_0_y = switchplate_tb__part_0_bounds[0].y + (switchplate_tb__part_0_bounds[1].y - switchplate_tb__part_0_bounds[0].y) / 2
-                switchplate_tb__part_0 = translate([-switchplate_tb__part_0_x, -switchplate_tb__part_0_y, 0], switchplate_tb__part_0);
-                switchplate_tb__part_0 = rotate([0,0,0], switchplate_tb__part_0);
-                switchplate_tb__part_0 = translate([switchplate_tb__part_0_x, switchplate_tb__part_0_y, 0], switchplate_tb__part_0);
+                let _switchplate_tb__part_0_bounds = _switchplate_tb__part_0.getBounds();
+                let _switchplate_tb__part_0_x = _switchplate_tb__part_0_bounds[0].x + (_switchplate_tb__part_0_bounds[1].x - _switchplate_tb__part_0_bounds[0].x) / 2
+                let _switchplate_tb__part_0_y = _switchplate_tb__part_0_bounds[0].y + (_switchplate_tb__part_0_bounds[1].y - _switchplate_tb__part_0_bounds[0].y) / 2
+                _switchplate_tb__part_0 = translate([-_switchplate_tb__part_0_x, -_switchplate_tb__part_0_y, 0], _switchplate_tb__part_0);
+                _switchplate_tb__part_0 = rotate([0,0,0], _switchplate_tb__part_0);
+                _switchplate_tb__part_0 = translate([_switchplate_tb__part_0_x, _switchplate_tb__part_0_y, 0], _switchplate_tb__part_0);
 
-                switchplate_tb__part_0 = translate([0,0,0], switchplate_tb__part_0);
-                let result = switchplate_tb__part_0;
+                _switchplate_tb__part_0 = translate([0,0,0], _switchplate_tb__part_0);
+                let result = _switchplate_tb__part_0;
                 
             
                     return result;
@@ -206,7 +212,7 @@ function plate_hole_extrude_1_outline_fn(){
                     
 
                 // creating part 0 of case _plate_holes
-                let _plate_holes__part_0 = plate_hole_extrude_1_outline_fn();
+                let _plate_holes__part_0 = plate_hole_extrude_2_outline_fn();
 
                 // make sure that rotations are relative
                 let _plate_holes__part_0_bounds = _plate_holes__part_0.getBounds();
@@ -229,7 +235,7 @@ function plate_hole_extrude_1_outline_fn(){
                     
 
                 // creating part 0 of case switchplate_case_tb
-                let switchplate_case_tb__part_0 = switchplate_tb_case_fn();
+                let switchplate_case_tb__part_0 = _switchplate_tb_case_fn();
 
                 // make sure that rotations are relative
                 let switchplate_case_tb__part_0_bounds = switchplate_case_tb__part_0.getBounds();

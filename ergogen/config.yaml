@@ -431,13 +431,13 @@ outlines:
         - ref: extra_top
           shift: [-0.5keycw, 0.5keych]
         - ref: extra_top
-          shift: [0.5keycw, 0.5keych]          
+          shift: [0.5keycw, 0.5keych]
         - ref: extra_bottom
-          shift: [0.5keycw, 0.5keych]  
-        - ref: extra_bottom
-          shift: [0.5keycw, 0.5keych]                                           
+          shift: [0.5keycw, -0.5keych]  
         - ref: thumb_space
-          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych]
+          shift: [1.5kx/2, 0.5keych+1]                                                         
+        - ref: thumb_space
+          shift: [1.5kx/2, -0.5keych]
         - ref: thumb_space
           shift: [-0.5kx, -0.5keych]
         - ref: thumb_layer
@@ -452,6 +452,12 @@ outlines:
           shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
           shift: [-0.5keycw, -0.5keych]  
+    - what: outline
+      name: switch_cutout
+      operation: subtract
+    - what: outline
+      name: plate_hole
+      operation: subtract          
     switchplate_tb:
     - what: polygon
       operation: stack
@@ -485,9 +491,13 @@ outlines:
         - ref: extra_bottom
           shift: [-0.5kx-0.5, 0.5keych]                                          
         - ref: extra_bottom
-          shift: [0.5keycw, 0.5keych]                                           
+          shift: [0.5keycw, 0.5keych]    
+        - ref: extra_bottom
+          shift: [0.5keycw, -0.5keych]            
         - ref: thumb_space
-          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych]
+          shift: [1.5kx/2, 0.5keych+1]                                                         
+        - ref: thumb_space
+          shift: [1.5kx/2, -0.5keych]
         - ref: thumb_space
           shift: [-0.5kx, -0.5keych]
         - ref: thumb_layer
@@ -855,4 +865,4 @@ cases:
       operation: add    
     - what: case
       name: bottom_case
-      operation: add       
+      operation: add
