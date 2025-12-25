@@ -65,6 +65,7 @@ units:
   case_y: ky+8 # Case position on y-axis
   wall_z: 24.3 # Wall height (& cut)
   cover_z: 28.3 # Cover height (& fill)
+  lip_z: 12 # Bottom / Inner lip height
 
   # Trackball variables
   trackball_housing_w: 14 # Square Width
@@ -74,8 +75,8 @@ units:
   trackball_hole_h: trackball_housing_h + 2*trackball_clearance
   trackball_offset_x: 0.5kx + (mcu_width + mcu_padding_x)/2 - 1.25
   trackball_offset_y: 3.5
-  trackball_mount_x: 5.5
-  trackball_mount_y: 9.8
+  trackball_screw_x: 5.5
+  trackball_screw_y: 9.8
 
 points:
   zones:
@@ -284,31 +285,31 @@ points:
     trackball_hole_nw:
       key.tags:
         - helper
-        - trackball_mount
+        - trackball_screw
       anchor:
         - ref: trackball_center
-          shift: [-trackball_mount_x,  trackball_mount_y]
+          shift: [-trackball_screw_x,  trackball_screw_y]
     trackball_hole_ne:
       key.tags:
         - helper
-        - trackball_mount
+        - trackball_screw
       anchor:
         - ref: trackball_center
-          shift: [ trackball_mount_x,  trackball_mount_y]
+          shift: [ trackball_screw_x,  trackball_screw_y]
     trackball_hole_sw:
       key.tags:
         - helper
-        - trackball_mount
+        - trackball_screw
       anchor:
         - ref: trackball_center
-          shift: [-trackball_mount_x, -trackball_mount_y]
+          shift: [-trackball_screw_x, -trackball_screw_y]
     trackball_hole_se:
       key.tags:
         - helper
-        - trackball_mount
+        - trackball_screw
       anchor:
         - ref: trackball_center
-          shift: [ trackball_mount_x, -trackball_mount_y]                                 
+          shift: [ trackball_screw_x, -trackball_screw_y]                                   
 
   #mirror: &mirror
   #  ref: matrix_inner_top
@@ -429,10 +430,21 @@ outlines:
         ref: matrix_inner_top
         shift: [kx, 0.5keych + 1]
       size: [14, 8]
-      fillet: 0
     usb_wall:
     - what: outline
       name: usb_access
+    - what: outline
+      name: xlBoard_wall
+      operation: intersect
+    trackball_wall_access:
+    - what: rectangle
+      where:
+        ref: trackball_center
+        shift: [trackball_housing_w/2 + trackball_clearance + 4, 0]
+      size: [10, 17]
+    trackball_wall:
+    - what: outline
+      name: trackball_wall_access
     - what: outline
       name: xlBoard_wall
       operation: intersect
@@ -461,9 +473,9 @@ outlines:
     - what: circle
       radius: screw_hole
       where: /wall_screw/
-    trackball_mount_holes:
+    trackball_screw_holes:
     - what: circle
-      where: /trackball_mount/
+      where: /trackball_screw/
       radius: screw_hole      
 
     switchplate:
@@ -641,6 +653,12 @@ outlines:
       name: bottom_lip_wall
       expand: -2
       joints: 1
+    mcu_lip_clear:
+    - what: rectangle
+      where:
+        ref: matrix_inner_top
+        shift: [kx + mcu_width/2 + 1, -10]
+      size: [4, mcu_height + mcu_padding_y]
 
     _combo:
     - what: outline
@@ -836,7 +854,13 @@ cases:
       extrude: wall_z
   _button_access_fill:
     - name: button_wall
-      extrude: 12      
+      extrude: lip_z
+  _trackball_wall_cut:
+    - name: trackball_wall
+      extrude: wall_z
+  _trackball_wall_fill:
+    - name: trackball_wall
+      extrude: wall_z - 7 
   _switchplate:
     - name: switchplate
       extrude: fr4_thickness
@@ -858,7 +882,7 @@ cases:
     - name: cover_tb_cut
       extrude: cover_z
       operation: subtract  
-    - name: trackball_mount_holes
+    - name: trackball_screw_holes
       extrude: cover_z
       operation: subtract          
   _wall_insert:
@@ -869,17 +893,23 @@ cases:
       extrude: 2  # through 2 mm bottom plate
   _bottom_lip_notch:
     - name: bottom_lip_rect
-      extrude: 12    
+      extrude: lip_z   
   _bottom_lip_notch_raise:
     - name: bottom_lip_rect
-      extrude: 2        
+      extrude: 2  
+  _mcu_lip_wall_clear:
+    - name: mcu_lip_clear
+      extrude: lip_z          
 
   bottom_case:
     - name: bottom_lip_wall
-      extrude: 12
+      extrude: lip_z
     - name: bottom_lip_cut
-      extrude: 12
-      operation: subtract     
+      extrude: lip_z
+      operation: subtract
+    - what: case
+      name: _mcu_lip_wall_clear
+      operation: subtract          
     - name: xlBoard
       extrude: 2
       operation: add 
@@ -939,7 +969,13 @@ cases:
       operation: subtract     
     - what: case
       name: _button_access_fill
-      operation: add       
+      operation: add   
+    - what: case
+      name: _trackball_wall_cut
+      operation: subtract
+    - what: case
+      name: _trackball_wall_fill
+      operation: add          
     - what: case
       name: _cover_cap_tb
       operation: add 

@@ -16,6 +16,12 @@ function xlBoard_extrude_2_outline_fn(){
 }
 
 
+function mcu_lip_clear_extrude_12_outline_fn(){
+    return new CSG.Path2D([[222,-108.41],[226,-108.41]]).appendPoint([226,-74.41]).appendPoint([222,-74.41]).appendPoint([222,-108.41]).close().innerToCAG()
+.extrude({ offset: [0, 0, 12] });
+}
+
+
 function bottom_lip_rect_extrude_12_outline_fn(){
     return new CSG.Path2D([[215.5,-166.41],[221.5,-166.41]]).appendPoint([221.5,-164.41]).appendPoint([215.5,-164.41]).appendPoint([215.5,-166.41]).close().innerToCAG()
 .extrude({ offset: [0, 0, 12] });
@@ -29,16 +35,8 @@ function bottom_lip_rect_extrude_2_outline_fn(){
 
 
 function plate_hole_extrude_2_outline_fn(){
-    return CAG.circle({"center":[218.5,-125.71],"radius":1.1})
+    return CAG.circle({"center":[204.5,-147.41],"radius":1.1})
 .union(
-    CAG.circle({"center":[207.5,-125.71],"radius":1.1})
-).union(
-    CAG.circle({"center":[218.5,-106.11],"radius":1.1})
-).union(
-    CAG.circle({"center":[207.5,-106.11],"radius":1.1})
-).union(
-    CAG.circle({"center":[204.5,-147.41],"radius":1.1})
-).union(
     CAG.circle({"center":[204.5,-128.91],"radius":1.1})
 ).union(
     CAG.circle({"center":[185.5,-127.485],"radius":1.1})
@@ -71,6 +69,29 @@ function wall_clearance_extrude_2_outline_fn(){
 
 
 
+
+                function _mcu_lip_wall_clear_case_fn() {
+                    
+
+                // creating part 0 of case _mcu_lip_wall_clear
+                let _mcu_lip_wall_clear__part_0 = mcu_lip_clear_extrude_12_outline_fn();
+
+                // make sure that rotations are relative
+                let _mcu_lip_wall_clear__part_0_bounds = _mcu_lip_wall_clear__part_0.getBounds();
+                let _mcu_lip_wall_clear__part_0_x = _mcu_lip_wall_clear__part_0_bounds[0].x + (_mcu_lip_wall_clear__part_0_bounds[1].x - _mcu_lip_wall_clear__part_0_bounds[0].x) / 2
+                let _mcu_lip_wall_clear__part_0_y = _mcu_lip_wall_clear__part_0_bounds[0].y + (_mcu_lip_wall_clear__part_0_bounds[1].y - _mcu_lip_wall_clear__part_0_bounds[0].y) / 2
+                _mcu_lip_wall_clear__part_0 = translate([-_mcu_lip_wall_clear__part_0_x, -_mcu_lip_wall_clear__part_0_y, 0], _mcu_lip_wall_clear__part_0);
+                _mcu_lip_wall_clear__part_0 = rotate([0,0,0], _mcu_lip_wall_clear__part_0);
+                _mcu_lip_wall_clear__part_0 = translate([_mcu_lip_wall_clear__part_0_x, _mcu_lip_wall_clear__part_0_y, 0], _mcu_lip_wall_clear__part_0);
+
+                _mcu_lip_wall_clear__part_0 = translate([0,0,0], _mcu_lip_wall_clear__part_0);
+                let result = _mcu_lip_wall_clear__part_0;
+                
+            
+                    return result;
+                }
+            
+            
 
                 function _bottom_lip_notch_case_fn() {
                     
@@ -200,7 +221,7 @@ function wall_clearance_extrude_2_outline_fn(){
             
 
                 // creating part 2 of case bottom_case
-                let bottom_case__part_2 = xlBoard_extrude_2_outline_fn();
+                let bottom_case__part_2 = _mcu_lip_wall_clear_case_fn();
 
                 // make sure that rotations are relative
                 let bottom_case__part_2_bounds = bottom_case__part_2.getBounds();
@@ -211,12 +232,12 @@ function wall_clearance_extrude_2_outline_fn(){
                 bottom_case__part_2 = translate([bottom_case__part_2_x, bottom_case__part_2_y, 0], bottom_case__part_2);
 
                 bottom_case__part_2 = translate([0,0,0], bottom_case__part_2);
-                result = result.union(bottom_case__part_2);
+                result = result.subtract(bottom_case__part_2);
                 
             
 
                 // creating part 3 of case bottom_case
-                let bottom_case__part_3 = _bottom_lip_notch_case_fn();
+                let bottom_case__part_3 = xlBoard_extrude_2_outline_fn();
 
                 // make sure that rotations are relative
                 let bottom_case__part_3_bounds = bottom_case__part_3.getBounds();
@@ -227,12 +248,12 @@ function wall_clearance_extrude_2_outline_fn(){
                 bottom_case__part_3 = translate([bottom_case__part_3_x, bottom_case__part_3_y, 0], bottom_case__part_3);
 
                 bottom_case__part_3 = translate([0,0,0], bottom_case__part_3);
-                result = result.subtract(bottom_case__part_3);
+                result = result.union(bottom_case__part_3);
                 
             
 
                 // creating part 4 of case bottom_case
-                let bottom_case__part_4 = _bottom_lip_notch_raise_case_fn();
+                let bottom_case__part_4 = _bottom_lip_notch_case_fn();
 
                 // make sure that rotations are relative
                 let bottom_case__part_4_bounds = bottom_case__part_4.getBounds();
@@ -243,12 +264,12 @@ function wall_clearance_extrude_2_outline_fn(){
                 bottom_case__part_4 = translate([bottom_case__part_4_x, bottom_case__part_4_y, 0], bottom_case__part_4);
 
                 bottom_case__part_4 = translate([0,0,0], bottom_case__part_4);
-                result = result.union(bottom_case__part_4);
+                result = result.subtract(bottom_case__part_4);
                 
             
 
                 // creating part 5 of case bottom_case
-                let bottom_case__part_5 = _plate_holes_case_fn();
+                let bottom_case__part_5 = _bottom_lip_notch_raise_case_fn();
 
                 // make sure that rotations are relative
                 let bottom_case__part_5_bounds = bottom_case__part_5.getBounds();
@@ -259,12 +280,12 @@ function wall_clearance_extrude_2_outline_fn(){
                 bottom_case__part_5 = translate([bottom_case__part_5_x, bottom_case__part_5_y, 0], bottom_case__part_5);
 
                 bottom_case__part_5 = translate([0,0,0], bottom_case__part_5);
-                result = result.subtract(bottom_case__part_5);
+                result = result.union(bottom_case__part_5);
                 
             
 
                 // creating part 6 of case bottom_case
-                let bottom_case__part_6 = _base_holes_case_fn();
+                let bottom_case__part_6 = _plate_holes_case_fn();
 
                 // make sure that rotations are relative
                 let bottom_case__part_6_bounds = bottom_case__part_6.getBounds();
@@ -276,6 +297,22 @@ function wall_clearance_extrude_2_outline_fn(){
 
                 bottom_case__part_6 = translate([0,0,0], bottom_case__part_6);
                 result = result.subtract(bottom_case__part_6);
+                
+            
+
+                // creating part 7 of case bottom_case
+                let bottom_case__part_7 = _base_holes_case_fn();
+
+                // make sure that rotations are relative
+                let bottom_case__part_7_bounds = bottom_case__part_7.getBounds();
+                let bottom_case__part_7_x = bottom_case__part_7_bounds[0].x + (bottom_case__part_7_bounds[1].x - bottom_case__part_7_bounds[0].x) / 2
+                let bottom_case__part_7_y = bottom_case__part_7_bounds[0].y + (bottom_case__part_7_bounds[1].y - bottom_case__part_7_bounds[0].y) / 2
+                bottom_case__part_7 = translate([-bottom_case__part_7_x, -bottom_case__part_7_y, 0], bottom_case__part_7);
+                bottom_case__part_7 = rotate([0,0,0], bottom_case__part_7);
+                bottom_case__part_7 = translate([bottom_case__part_7_x, bottom_case__part_7_y, 0], bottom_case__part_7);
+
+                bottom_case__part_7 = translate([0,0,0], bottom_case__part_7);
+                result = result.subtract(bottom_case__part_7);
                 
             
                     return result;

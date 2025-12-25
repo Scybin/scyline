@@ -67,16 +67,8 @@ function switch_cutout_test_extrude_1_6_outline_fn(){
 
 
 function standoff_hole_extrude_1_6_outline_fn(){
-    return CAG.circle({"center":[218.5,-125.71],"radius":2.15})
+    return CAG.circle({"center":[204.5,-147.41],"radius":2.15})
 .union(
-    CAG.circle({"center":[207.5,-125.71],"radius":2.15})
-).union(
-    CAG.circle({"center":[218.5,-106.11],"radius":2.15})
-).union(
-    CAG.circle({"center":[207.5,-106.11],"radius":2.15})
-).union(
-    CAG.circle({"center":[204.5,-147.41],"radius":2.15})
-).union(
     CAG.circle({"center":[204.5,-128.91],"radius":2.15})
 ).union(
     CAG.circle({"center":[185.5,-127.485],"radius":2.15})

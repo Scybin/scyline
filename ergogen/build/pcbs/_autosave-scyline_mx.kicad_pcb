@@ -2492,10 +2492,10 @@
 			)
 			(fill yes)
 			(layer "F.SilkS")
-			(uuid "187634ce-5539-4f0b-a47e-c546b48e4452")
+			(uuid "fdb8a499-c5b8-438e-89f7-0a06293b88ed")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/3d/wall_cover_case_tb_L.step"
+		(model "F:/VS_repos/source/repos/scyline/3d/bottom_case.step"
 			(offset
 				(xyz -138 151.1 -13.6)
 			)
@@ -9385,7 +9385,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "01a1cc6c-5138-4d7f-ad53-a6cf35cc62af")
 		(at 119 148.1 180)
@@ -9444,7 +9444,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "dbaa9d8d-64c2-4eb3-9024-32e4d8b4b257")
+			(uuid "da0cf67a-7fa4-4be7-881c-a92fbac2abe1")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -9454,7 +9454,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "1275e8d4-8e70-43ac-b724-d634c73b413e")
+			(uuid "f76a418a-3397-4ad3-9e70-0d6bc8a8942c")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -9464,7 +9464,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "8cf74b52-746f-4069-b63b-4c0e409f6226")
+			(uuid "740853d7-eced-434e-8f01-78954ed3eb7a")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -9474,56 +9474,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "79138056-38e5-48d6-8396-20c4cd2e0b21")
+			(uuid "8c8101fd-c4a6-4853-8ebe-7435dca3aae3")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "e37c08b6-b447-48df-9819-99c875dfe227")
+			(uuid "512c1f41-4530-4202-acef-9c0519c03081")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "3e3e9eea-94eb-49a4-8947-c6ccc46c1f89")
+			(uuid "9b6e8f8c-e36c-4f63-bdad-d0c37dc01a19")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "0bec0ed1-009e-4563-9eb8-b4cb5e8f91ad")
+			(uuid "d1702f72-2007-407d-a6ea-59603205a2e7")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "3d1f3e1a-5697-441a-bf96-ab9cfd86fe23")
+			(uuid "515d20c9-7a3d-4663-b2fd-29bc718228b2")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "c6ac6f13-b6d5-4139-85a0-8619ebdaa0f2")
+			(uuid "b5082ba8-9305-4bdf-9e80-eb5c4a2ef4b5")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "6fb6dea5-bf46-42a6-918d-a7c26695ea0a")
+			(uuid "f86cc993-9e5d-4147-8bf7-cfec1a63b369")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "77b5feb8-ed85-4a87-aae8-06be006789cb")
+			(uuid "5b02c3b6-75fa-407b-841f-570af5de5655")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -9560,39 +9560,6 @@
 			(uuid "ac13607d-c1e1-435c-9fe5-bdc8677f163b")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -9731,7 +9698,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "09bdb5ee-c95e-4535-87da-2dcc8b111059")
 		(at 138 116.56 180)
@@ -9790,7 +9757,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "6ba91714-1821-4507-90c5-1026fb8ac117")
+			(uuid "e36583f9-4d6b-4f36-8008-64840409054a")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -9800,7 +9767,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "4415309b-6ba0-412c-895e-bd1e3fd607f3")
+			(uuid "282ca0ad-efe9-4f74-a43b-e28e18cae6d8")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -9810,7 +9777,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "3bd07318-8281-4417-a07f-2be99df9e4de")
+			(uuid "0ee7251b-842c-4db8-9ac6-2696dbb75551")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -9820,56 +9787,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "c2bf2168-3459-4274-9f2e-02574bcfde16")
+			(uuid "389213db-c119-46d6-9b64-21d632372ce1")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "53f16598-5cfe-4aa7-8077-233704effa79")
+			(uuid "2b3aae6d-d165-49b4-9853-329a98d001e2")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "0bcfaf0b-56d0-4655-ace4-9983aac83ddd")
+			(uuid "d13573bf-f201-4237-b968-3f1a736f4674")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "08dc1ebb-f646-4557-96e0-e13bf33be7ce")
+			(uuid "92464f95-230a-458e-94a3-531de482b061")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "435c1702-7c32-4151-a6f5-e2dd28c6cbbf")
+			(uuid "03d0f142-142f-47f3-9edf-ed56e5fbe496")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "808b567e-a9a6-4958-9808-833ac74afc73")
+			(uuid "16006311-997d-400c-bc4d-0d199be26826")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "acfe2831-a68b-402e-a7a1-bc98deadcbbc")
+			(uuid "cd43777d-c802-493b-8f1e-962fd1bb3984")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "7457cd52-5468-4255-8947-b05c0df60702")
+			(uuid "75f16353-b706-46d7-8a95-b54e154e219b")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -9906,39 +9873,6 @@
 			(uuid "d7b68e0d-5c74-4889-8f13-dcf56c18061c")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -10077,7 +10011,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "1709876e-0fdb-45f6-b184-adf01ceffaec")
 		(at 176 78.56 180)
@@ -10136,7 +10070,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "029096ae-6c8c-404a-ae17-e456612ace90")
+			(uuid "07190750-e789-44f7-b3ed-30a75b1657f6")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -10146,7 +10080,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "1ad66afc-12dd-4684-8f2d-03ce691a8edc")
+			(uuid "9ca18742-2a76-45cd-b5a8-2ffdf389e9c2")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -10156,7 +10090,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "0aeb7f1d-31fb-4517-977c-d604b9821a99")
+			(uuid "100abb47-3b90-45c5-bf7e-7afeeb003f72")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -10166,56 +10100,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "3dfef91f-44cc-4782-9609-3ab87ef86b23")
+			(uuid "b7215906-ad2a-4cb5-b327-e4b322b3df8a")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "6ff93f5f-03af-48b1-b217-b7ddf596473c")
+			(uuid "8af426d7-76b5-4a88-a499-527560e46d99")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "413e44b0-d24f-4b4b-b0d5-6539ee142ec5")
+			(uuid "49db661e-55ad-4eaa-baa1-9a4830a506a0")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d8e309ca-d7ef-4f25-8e78-f677bcf395e4")
+			(uuid "f5251eb8-f2c5-4e3a-9c1e-5ec5b2ab4b42")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "36b545e6-fa24-4273-a581-56415876bc54")
+			(uuid "184e6c34-3574-4200-9269-d0f40e0e46cc")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "cba9e050-b795-4150-9183-773c9466431e")
+			(uuid "7d1c9e6e-93ac-4454-a926-ae5437f41a24")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "7c73ee35-e701-45ed-ab2a-528e2e1220c5")
+			(uuid "2d59f2f6-9236-481f-af99-33462e69ecc6")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "772fde2e-10da-4f29-99cd-378cca4adb56")
+			(uuid "d5b4fe63-c9c5-430b-ab85-f0906f36ddb7")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -10252,39 +10186,6 @@
 			(uuid "d966ca9a-cae9-4644-b360-e2c3d78e7629")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -10423,7 +10324,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "1dd91365-c76c-4ff4-a862-d1ba7d490a09")
 		(at 138 78.56 180)
@@ -10482,7 +10383,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "3e2fbf21-2cf3-4986-9a5f-ee4f4c79880f")
+			(uuid "7fda66d4-2390-496e-a97d-b30c07ebb52f")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -10492,7 +10393,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "0123074b-5146-4922-8e2e-5fb88c1dbb7a")
+			(uuid "ace47466-c9e2-441b-9bfe-e44ad4a3d728")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -10502,7 +10403,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "60cdf010-51cb-451f-9cbd-d839330e848b")
+			(uuid "c4ee0ca3-df02-4f93-92bc-a43e34dc9381")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -10512,56 +10413,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "5a571191-317c-4b37-902d-e4a84484b62a")
+			(uuid "09d2f446-b773-4e05-bc72-1b509882c367")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d743fa97-7fd1-4c58-926a-a9846a346a18")
+			(uuid "ca7c9758-29bc-476f-b827-d0ee414ac70a")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "6c1dd884-2f27-47e6-afde-0f7997ab8af4")
+			(uuid "8716c06a-f334-4d87-a66e-bad92531aaf5")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "fdf1e500-705a-4a18-9acd-deb63b5bd151")
+			(uuid "226ab679-51cb-466d-b8ed-d37bd0b5ad1e")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "63009ef0-5ccf-4c1e-852c-c36f5e8fdea6")
+			(uuid "46f642ec-821c-4362-a359-2e39fea29965")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "c10cefa1-e366-41b3-8d4f-f9bd079fb161")
+			(uuid "5582851d-f8c9-4ece-9f1f-44a6a72812c0")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "b5ed32fd-1fdd-406e-82c1-8a33919e62fa")
+			(uuid "961db68e-3b40-49ec-87dd-2aab837bd23f")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "56e7f6e6-5c9d-4986-9642-4ddac8d6fa4f")
+			(uuid "b0e8fd6c-6279-4e6a-9669-cc5370f4d21d")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -10598,41 +10499,8 @@
 			(uuid "af4a228e-60a7-4c1a-8a18-e59c721a843d")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "2462578c-1b7b-4531-ba2a-b45acfe07ed0")
 		(at 119 129.1 180)
@@ -10691,7 +10559,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "bf4da841-dd32-470a-8503-7e441ae6380c")
+			(uuid "45542c29-f9b6-46b9-83d3-b98994d1a07b")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -10701,7 +10569,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "fabb24cd-495f-42f4-a950-22055429db71")
+			(uuid "2cd9096f-9e7d-4637-865d-f5d4f6b671d0")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -10711,7 +10579,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "9b3abddc-99ca-456e-9755-adb113254930")
+			(uuid "8f3e3f05-e3f8-41a9-bf2b-df42d38f262b")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -10721,56 +10589,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "8ba6d50a-fb31-494d-8292-d8cef36a2b32")
+			(uuid "d5e3f3c9-e56b-4dd8-892d-665918b9411e")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "04857ef4-1df0-4787-bb80-f26b84e99615")
+			(uuid "ec3430e4-74f0-468a-9e78-f8e1975dbae5")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "01fc92bf-5849-4e30-a441-049003be5e33")
+			(uuid "990dc114-478d-4708-9a05-1b650ccb718b")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "64d108e1-ef94-44bc-9361-2849a9fdb061")
+			(uuid "29920f46-c1fb-47fc-8037-908cc3705550")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "7857883b-5c1c-4b2b-b968-97423385e39f")
+			(uuid "ace96579-5024-40f4-8dcd-7344b58e1c1e")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "f8681f51-c1ab-4638-9242-f23527dc78e1")
+			(uuid "d6451c44-34f4-4353-bdc0-83f4dc6116d2")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "62f7675f-1067-4047-a30a-f4987e41d732")
+			(uuid "b12aa8a7-edae-4ef3-90d8-e4cf20903827")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "ce6d89fe-96a0-421a-a854-1bf248a8e3c5")
+			(uuid "d2b2e50b-272f-4a8f-b8ad-37db4dbca851")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -10807,41 +10675,8 @@
 			(uuid "be74ca39-f46e-4467-87a1-318a9fca4e81")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "26ae5050-ad08-46fd-bf63-ac5a23869dbc")
 		(at 157 92.81 180)
@@ -10900,7 +10735,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "ab5d7277-cb70-48da-a245-928fd88a5230")
+			(uuid "8939be61-79da-4197-8923-6a11988e2b1b")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -10910,7 +10745,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "754664eb-9c32-41ed-a264-721ebe9fe5dd")
+			(uuid "5d024e51-4362-471e-a709-f504f2e1978b")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -10920,7 +10755,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "5dc312af-b95f-433f-8d89-cc3f3a691b61")
+			(uuid "25eaf3a5-4ba2-4f53-a742-90188a65b612")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -10930,56 +10765,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "54c7bdf5-0ae4-4447-aa80-52e4c138ac08")
+			(uuid "fd22af8b-d23e-4224-9fb5-2159fd7da09a")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "326e902a-8d6e-42ca-b97d-3b529be7d9d5")
+			(uuid "7618ec44-3824-47c7-9565-f074a7dbb448")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "8f454c33-ff60-4260-a1b7-19800edc5ff5")
+			(uuid "37c96d04-4cdb-41e5-b778-8e8182214b82")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "0dc85b67-e49a-4511-afa7-ee22e39770ed")
+			(uuid "cfbcb3dd-6c1f-4009-b572-20c91048cb42")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "79b55339-8673-4656-89da-bbc337ab632e")
+			(uuid "b6d3f932-8958-423f-9024-320c56afb3fd")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "14375939-db13-49d4-a83e-d387fe2e0eb3")
+			(uuid "676a4e4b-f9f4-4ccb-9461-8bcba3aea09e")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "66e68bf0-665a-4c7f-9c75-8dffa77c21b8")
+			(uuid "ac8ce957-1e0a-49f8-8d24-f2ee1a5ef5ec")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "7c8f0b4e-eb8f-4b10-a51a-9d126d99af6c")
+			(uuid "fd81ecde-19d0-4bf8-9c40-79f77d812e8f")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -11016,39 +10851,6 @@
 			(uuid "b2bfc617-fe75-42a2-83b0-bb1183633efe")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -11461,7 +11263,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "373a6a75-635c-443a-9f27-aa5b652f779c")
 		(at 138 135.56 180)
@@ -11520,7 +11322,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "bb31120e-91d3-4139-89c9-7fe855a60c99")
+			(uuid "9b74991d-8897-4480-8ede-55a94dda69d3")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -11530,7 +11332,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "d5edf00f-0854-476f-a144-206676c42c2f")
+			(uuid "3a9d9149-cc3b-46de-a627-5735d31c74b8")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -11540,7 +11342,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "cae1bbe8-74af-4119-a37b-6cf1fe57641e")
+			(uuid "b052e12a-37b6-4a94-8ef4-82060c0d408e")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -11550,56 +11352,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "3726121b-adf7-48da-9cc3-40555350ab2d")
+			(uuid "285af9ee-5561-45dc-a0a1-104787e2c08b")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "4c3132bd-e481-4f06-8552-dfe29f29b460")
+			(uuid "5cab59b6-bbbc-465b-a86f-34dd45d86ebc")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "4976e0e3-4474-45e3-90bc-24b009006332")
+			(uuid "dd65c438-ad82-4d62-a16f-0ad5045f718e")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "150420bf-4289-486b-ad5a-661baf656aca")
+			(uuid "eaeba27a-dfa8-480e-a625-3a80c280e10a")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "6dbf4d4e-124b-4ff7-bb67-6ef842d1de09")
+			(uuid "de51c08b-06c4-4b30-bab0-7d249ed14209")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "c9383fb4-0cab-4b48-8e14-fbba67accaed")
+			(uuid "fe70f66f-3e24-4cb8-b3c2-83553b55fa75")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "db5d81d8-1236-4355-9dd7-94e7f6576c6d")
+			(uuid "97136ba8-51ce-4204-8cb1-82627a54d923")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "cb9704fc-8f67-4572-9565-3c33fa5543df")
+			(uuid "3734e02b-66b7-4b54-a773-97bfa9d91fc6")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -11636,41 +11438,8 @@
 			(uuid "f6ab58af-c643-4d76-95c0-7276cc8fd07a")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "3bdf1725-0ff2-4a3b-a789-7d3dcaee0c75")
 		(at 100 150 180)
@@ -11729,7 +11498,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "c9dbdf8a-e630-4a2f-bb98-d434e0d968f2")
+			(uuid "d504e824-d10e-4087-9edc-27b7de1ceb36")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -11739,7 +11508,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "cd45b86a-7693-444e-a136-c94dbaebacc3")
+			(uuid "2566e8b4-a78f-43fe-9ce7-9ecce6f47d9c")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -11749,7 +11518,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "907e439d-1244-4aad-95f6-076c31bfc4b9")
+			(uuid "1c2b29f9-957c-4ad9-90da-71085124b7da")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -11759,56 +11528,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "919615e4-77ac-4bd5-977e-ebf69b0bdf54")
+			(uuid "ba50416f-ca02-4201-954d-c7ee0f38de5e")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "0d10745f-e12e-4287-b823-d5d41a6588bc")
+			(uuid "e5c56e03-4bef-4eb8-bed3-42b68397f08d")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "811275f8-86c5-416d-b2f1-6fb46da84143")
+			(uuid "bdb3655e-2071-4728-9b9d-b595e3dc7b59")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "4211986d-e332-4a08-9c96-b17d1ec296fb")
+			(uuid "a1bee991-8be3-49de-ad6b-68ca32f0c0de")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "9b5902f6-7b06-4346-a86d-998b68bdf0b3")
+			(uuid "d955b1ab-6512-4802-b69d-7abc8eef3560")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "13df56be-fd24-446f-8eb2-f05a4b37741a")
+			(uuid "c443b1cc-0d00-4255-b93d-e7b81ba32e66")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "feead33a-1e31-43d2-8124-b6f6bf878f71")
+			(uuid "30173334-c602-4102-ae3b-695e1ff1f9e3")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "00a6f76e-455d-41f1-86bb-7391f3057f7c")
+			(uuid "f5b47115-0369-45e3-b11b-d3d8c2f5b22e")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -11845,41 +11614,8 @@
 			(uuid "d2a41708-7363-484c-a8f4-2cdb8c234f46")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "3e1c0790-10ba-4d82-a21e-1d38f0ae6095")
 		(at 119 110.1 180)
@@ -11938,7 +11674,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "d91f5ef4-8437-41c5-82ed-039c6b6248fa")
+			(uuid "381c98b3-b852-40bd-85c8-a71f2cb8cecb")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -11948,7 +11684,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "728fd3b2-5e05-4b46-a75b-c63db12bd37d")
+			(uuid "e665953d-9573-414c-99ba-ded912479975")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -11958,7 +11694,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "05c87d1e-e785-49c4-b4f1-0d384e4764a6")
+			(uuid "5656a68d-1b39-4281-bd5f-655fb3c2b1f6")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -11968,56 +11704,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "8bdf2942-1be0-4533-a841-afd7eb843580")
+			(uuid "e7475ad5-727b-42ec-a7f5-b7b133f3677b")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "5f021d2e-a820-4c5b-9a5b-1a5a9965ca2c")
+			(uuid "949b023d-3b39-4d95-9ef5-9dc5836c3eba")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a7a7a9ba-dc16-4b58-b624-1edfbe3d2578")
+			(uuid "240d5415-300e-4fab-8e6b-e777e50a5a0f")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "04fd2b2b-764a-4784-aca2-be2e087cd845")
+			(uuid "51365228-e9fc-4824-bea5-2720575e09ab")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "4d513192-c6be-4831-bb2a-a45f45eef91b")
+			(uuid "a3f3ab17-199c-4170-85c5-b79ce6fcfb97")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "3c5bac56-a239-40c0-8267-d6adea430e6a")
+			(uuid "4420e876-c7d0-45dd-9d23-cf3879a78b15")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "b99457d3-8e90-4771-980f-43906e9a0d00")
+			(uuid "fd494328-9f76-44bd-a2b9-f12e2277573c")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d860fbb9-90f0-463f-9d79-3deec3f0cffb")
+			(uuid "b8eaa87e-b0d2-4f87-8db5-3f83ae04e971")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -12054,41 +11790,8 @@
 			(uuid "10bad568-48b3-45cf-a699-4f123390fde8")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "446810ff-2eda-4ccb-9f9c-1905dbade817")
 		(at 157 111.81 180)
@@ -12147,7 +11850,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "6b7aab36-861e-4e12-9dea-4526952347c5")
+			(uuid "1d43c891-6b49-4e31-be50-443b193fcb48")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -12157,7 +11860,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "3613596d-0527-4405-8e42-3a240add2a59")
+			(uuid "04428c3c-de34-42c0-aefc-b4a879525753")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -12167,7 +11870,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "ce79c298-d54c-430d-aaa9-8511ec66c122")
+			(uuid "deac8c4b-6c65-4a0c-85b2-2455b2066922")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -12177,56 +11880,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "9a102759-6bf4-4ddc-b73f-b377f377aab6")
+			(uuid "c04e86e3-f357-416a-9573-a6e8f19ba4af")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "fb4521ca-93f4-49cf-9259-682f591f8df0")
+			(uuid "47a9e6f8-1571-4113-aba2-6d4c8db9f7a7")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "f7c28fe7-3b24-46cd-a933-e2482f38d423")
+			(uuid "403e0f8f-2f09-47cd-a9cc-0478722265ad")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "9bd5fddd-aceb-4e84-a57b-0ca1f0ce1a44")
+			(uuid "f25677ed-2e45-44b9-a80c-261fc81e2511")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "501654b1-1ca1-45bc-a749-f0c4b2f224a0")
+			(uuid "66d91df3-8c17-4b01-a65b-326ab6ae1233")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "cb178264-c317-4cef-a9fd-15e9bcc86a1c")
+			(uuid "e594641c-608b-435a-9c58-7e50c017abf8")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "cf916792-0073-44d5-aaf7-ee3f73e9a0dd")
+			(uuid "646a629d-29b0-4288-9e53-4e70044a2f7b")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "7546e056-3b20-4ebd-a8fe-a7b5674dc501")
+			(uuid "a79dd82d-1ed7-41c1-abfe-aaf837781a68")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -12263,39 +11966,6 @@
 			(uuid "f3e4e492-bce4-41e2-85c6-5287bd572cd8")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -12708,7 +12378,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "4bd44020-cf4d-4f3d-8d05-51fd9ec108bd")
 		(at 195 100.41 180)
@@ -12767,7 +12437,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "067bb069-d25d-4cd1-97aa-2cc3cca6e60b")
+			(uuid "a8bae0df-5b44-4eb5-a228-54b673965a33")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -12777,7 +12447,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "22eeea8e-a45e-4975-a99d-80635624c81e")
+			(uuid "30679ede-243f-4a2e-81eb-d2d56c9ff731")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -12787,7 +12457,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "78bc7e4a-37f1-47f7-aac4-f453b64a266a")
+			(uuid "bed15440-d6bf-45ab-ba5a-ab7be1bac572")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -12797,56 +12467,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "0029ab54-65cc-4193-ba8e-de52e7f2649f")
+			(uuid "6c21d34f-bdb7-408e-b34f-520e19b81a60")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "50fb0fb0-b313-47e1-b125-c32f6fe31c3f")
+			(uuid "2f695aff-ad38-4be4-b3a8-68031eaa20dc")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "eb1d00dd-23ef-40ef-a4a5-f07a1a03bbcd")
+			(uuid "8ae91fb3-7092-4dab-905f-1223c1fd966a")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "85b90500-af66-4a45-a5e4-6e6d20831712")
+			(uuid "32b88e2e-7e03-4967-86ab-216a82644cc1")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "bb7ccc39-5557-4e3d-b224-81c497f16d6e")
+			(uuid "6933b0aa-8f4e-422e-ae6f-07c133b3d2db")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "ee30c0d3-aa4c-4718-97b1-6f48a23db684")
+			(uuid "e5016d71-e216-4dfa-ad46-d612e9a26815")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a798ef90-de4c-4ebc-9f35-5bb83d30acc0")
+			(uuid "565b3e6d-5eeb-4fed-ba97-6d364e5345e2")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a76fe675-1d5c-4769-90e2-c8b413f5e6a0")
+			(uuid "642e203f-c1f2-4af8-a5dd-929f7d0da3a2")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -12883,39 +12553,6 @@
 			(uuid "67b986bd-587d-44d2-a399-43574dfc0826")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -13191,7 +12828,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "53b5c612-9b72-4af8-85d2-500bbe45dec8")
 		(at 199.5 157.41 180)
@@ -13250,7 +12887,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "369fdae6-9128-4059-bd3e-0cb3e45f67d8")
+			(uuid "40cd0439-ee01-4c67-af75-4ad16a68208d")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -13260,7 +12897,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "e0bc2dae-4a05-4d38-94f3-8616e18ae8d9")
+			(uuid "8150afab-2f95-4880-9ac3-0159dc898180")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -13270,7 +12907,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "06af87e8-d66a-4123-9f91-40420d6ae45a")
+			(uuid "202cde56-70f7-47aa-85e8-3d547826a258")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -13280,56 +12917,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "1e83dcfa-aa1a-4bcc-958a-6e211d163bd9")
+			(uuid "28283ac0-0bfc-4448-953b-1d4f9bc1dbbf")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "e4f281d5-1f23-498e-98f2-b55923a2fd28")
+			(uuid "d3ee5054-00c4-408f-84ee-9a3a277ff760")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "c1450cb8-c57b-4929-abf6-9d2a99118396")
+			(uuid "84284ade-2ea8-47d3-825b-9c83553e1677")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a76eb73c-8837-4423-95ba-9f3e27eb6673")
+			(uuid "17f4daa0-9f3d-458b-ba1b-2759cfa53578")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "5293b456-0d15-49ff-9ee5-685744cfe31c")
+			(uuid "298efe6b-d4f4-496f-a824-f3bb104a556c")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "88e4f049-05a3-4c11-aef7-b0dd2e73ac1f")
+			(uuid "fa19cf40-6ad7-4c8b-8884-ce10c7956372")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "4a215b0b-a06d-4c8f-b4c0-32bec46dc26f")
+			(uuid "aabf02db-f472-4064-a12d-e74c753890b8")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "e8ae5ef5-4860-41c3-a0b4-d6073b92dee5")
+			(uuid "998be0da-52aa-4871-9447-e43513b97412")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -13366,39 +13003,6 @@
 			(uuid "dcc43124-6116-45f6-a22b-b9d7c6baaacf")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -13537,7 +13141,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "5bdbde08-e753-451a-88dc-e9d5f9b762d2")
 		(at 176 135.56 180)
@@ -13596,7 +13200,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "e50a0992-fcc3-43ba-9ef1-323c89378162")
+			(uuid "cec2912f-ec4f-4d8e-85b1-c9a019b393a6")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -13606,7 +13210,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "274dc024-450c-4790-a605-5631726d3606")
+			(uuid "c8560410-66ce-4aee-b6e0-5b72524e7820")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -13616,7 +13220,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "4cc00eb8-8801-41c2-a461-c51de0ade182")
+			(uuid "ae9aec9b-7eac-477f-9aed-3f1acbd68666")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -13626,56 +13230,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "fe2c41e8-4ede-47ec-8bfb-6fdba9de22c4")
+			(uuid "92a3e7be-614d-4284-aad5-de96221b3904")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "c4b378bf-e5e3-4c36-b4f9-a6aeaf2400ee")
+			(uuid "8b81cbd4-409d-44f4-98e9-b26f48a29f02")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "de6b8d8b-7803-4dd5-ac18-440d6c25c283")
+			(uuid "0201b53c-6caf-4d67-9a00-8fa4ae651808")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "71c12593-835e-419c-b9a3-b3db6e17de9b")
+			(uuid "7bd0cad1-8307-4dbe-adca-443d94bc3038")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "96cc85dc-254a-4c6a-8145-306fb674cd31")
+			(uuid "d3ce5ef1-e820-4ae8-91e2-b19cc79fd5d4")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "8dd53590-fbd7-4e25-bc8c-49a984bd010a")
+			(uuid "d123294b-98e8-4e17-93ec-07c2246754ea")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "b249d5bc-143b-4d0b-99d6-74875f0f3135")
+			(uuid "e91f6132-9332-48ea-8d27-208d57387f39")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "6a2e87e8-f720-4a07-a23a-03849f86e83a")
+			(uuid "a5c2c4dd-1310-44cf-9e3b-1ec03b439c25")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -13712,39 +13316,6 @@
 			(uuid "755b31d9-e7f6-4bb7-8f80-83990711177c")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -13883,7 +13454,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "6e60327f-d4ea-415c-adf2-d9e35cacc4a5")
 		(at 176 97.56 180)
@@ -13942,7 +13513,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "eccc5d55-405b-471a-b51b-a818f5eb9fb9")
+			(uuid "c77ccf8e-286c-4608-8412-c5cf6b1e27a0")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -13952,7 +13523,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "d8acdb08-551d-4262-a52a-0c3138c421f1")
+			(uuid "39005d12-9514-463c-993b-3b804610bb98")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -13962,7 +13533,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "bb05c95e-cff7-4be6-b846-4ef1347fa2f3")
+			(uuid "9c85e82d-b825-47d6-b51f-ed6eb9bb85ea")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -13972,56 +13543,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "b63f9edb-d90f-4c8d-b344-ccc74cf925fb")
+			(uuid "f3f20769-1c99-4933-b72b-a6db9881e633")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "b0c93d2e-2186-430b-9391-838a5064b1e7")
+			(uuid "b4a84f0d-9709-4a99-8cbd-655b45d25a26")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d9c06d59-16a7-43db-ab72-8821c737b0f4")
+			(uuid "c904eb9e-7eed-45f9-a9a8-918c8ff47d99")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d783b419-19ec-4e7a-8496-d110a3417137")
+			(uuid "a9287649-9ebd-4ce9-8c3d-da98a37f06f8")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "83b9a9d6-99b2-49f5-9d20-2fe8c286edf6")
+			(uuid "93a44359-184d-4c95-ba0d-c604b62f7795")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "08a8e19d-2c3f-43bf-9c71-9fc63f470ed8")
+			(uuid "e1c0f41e-f039-4e7a-832d-09a1488f0926")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "aac90013-43df-450a-9934-7c8d235be279")
+			(uuid "cbf70a5c-00a7-44a2-8a78-fb17e7819fbf")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "69adf5b6-dcc5-4e1b-a366-45015517bb1c")
+			(uuid "44e4e4e5-d2cf-4062-8ca2-260f791e27a6")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -14058,39 +13629,6 @@
 			(uuid "bbb02dc5-78e7-4b25-a02d-7aea68cd83de")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -14229,7 +13767,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "74ba2222-b672-42ce-a0d9-39ef5b6503aa")
 		(at 157 130.81 180)
@@ -14288,7 +13826,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "55e3f582-95ec-4a66-a1a8-3cd42ca399ab")
+			(uuid "294ad0b1-8e0f-4f7e-99dc-73e9b1d8cf0d")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -14298,7 +13836,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "d713b301-4f24-43bc-810f-e7b5cf1b494f")
+			(uuid "eefedc3c-ec0a-4e78-a64f-c8f6cd56a333")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -14308,7 +13846,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "208d6251-2c16-4fc1-a81b-7d6ffa0c30bd")
+			(uuid "270c468f-3bb2-4472-8c37-52104ced5b7f")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -14318,56 +13856,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "c6859961-c472-4393-97e9-553109d981de")
+			(uuid "53574238-68cb-4b94-8aa9-2100b2f052f4")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "0ced74f7-50f9-4342-8f80-3416b1601ee1")
+			(uuid "cb1949fa-4b02-4b0b-a3bd-13ef83d06e3b")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a8d10f33-68b5-4bd0-9a54-262355706c99")
+			(uuid "27397f0e-c2ac-4e6b-b517-4604a3c9149a")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "ae22a450-d127-40e5-b3ae-ee8c466bd59f")
+			(uuid "e4c9318e-cd29-4e81-8ac2-d95e01ca5f89")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "39602d8a-6dc8-4144-b860-4408004fd969")
+			(uuid "7f11a12a-0052-4626-9da4-43ad41c2530f")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d4911b7d-83dc-4d76-bec8-ea6ff344c0ce")
+			(uuid "0e43340f-40b7-4ead-99fb-eb8b184cbf30")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "57ce27a0-30df-4e7a-a67f-90e2f334a0a3")
+			(uuid "f43f878b-ce5d-4d27-a804-0a0c5d3264fb")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "00468bc7-7ca6-42d1-aea3-47be1a21a229")
+			(uuid "2736c6ea-362d-416b-b17e-d08710c6ff06")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -14404,39 +13942,6 @@
 			(uuid "454d7d9a-abc1-4155-b037-24fe78955ed2")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -14575,7 +14080,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "7ad7ba51-42b1-464a-a46b-07ba4c5059a3")
 		(at 195 119.41 180)
@@ -14634,7 +14139,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "820a49b0-53d4-4e0c-9375-76dde8be9610")
+			(uuid "ab66e6cd-917d-4ee3-86b1-dd6bb3f4895a")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -14644,7 +14149,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "26bc26f6-d428-457b-8516-4ad7db291df1")
+			(uuid "28d41078-d2ed-4104-ada7-8c262269668b")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -14654,7 +14159,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "6440be70-0423-446d-be97-71e5e2dbde23")
+			(uuid "3a2c3381-49e4-49b2-8adf-c463eb6cea47")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -14664,56 +14169,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "db72d3a3-554d-44a1-96c2-0de05094ee62")
+			(uuid "6cad2d00-6495-4240-8533-915520a3cf46")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "b7f449d7-3ddd-4e33-91ec-75c887be71af")
+			(uuid "e025feb4-5b67-405f-862d-ff48f3e19762")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "3bdb754c-7f34-4799-a080-87a50309e84e")
+			(uuid "ec27d31e-d7a5-4c17-859b-b7153c8b6c05")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "018aea00-5892-427d-b877-58fad708547c")
+			(uuid "a4cdbc1b-3055-41cb-872a-955a96c2a6cb")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "2e33c848-c403-4485-9008-b4772be8cce1")
+			(uuid "e47e471b-fde1-4058-a7f0-d245945ef393")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "56267bdc-9d17-42ea-8897-a44141d24a16")
+			(uuid "da08fd72-76d6-4bff-a7a7-79d3feac1b69")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "5c4b5973-15fa-4128-9943-8e55fafff976")
+			(uuid "422f7b13-0650-46e4-8ceb-e328ece4629b")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "aab21074-beb9-427c-b605-4c703bccde4b")
+			(uuid "9c9254d1-56a3-4223-85b2-37c5ff1286fc")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -14750,39 +14255,6 @@
 			(uuid "f778d683-429c-4249-9f11-8a34274b8bd1")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -14921,7 +14393,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "854ee319-e36f-4fed-9fc2-e69a6c57d2af")
 		(at 100 112 180)
@@ -14980,7 +14452,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "c106ef5b-14d9-47e4-b7a2-1be69096ee7d")
+			(uuid "e6c1ce6b-db52-4483-a5e9-80e44375d3b4")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -14990,7 +14462,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "2d5636b1-07a9-4979-9477-eac5a6b3f5fc")
+			(uuid "a9179f18-cd0b-4183-ab77-6f4ed2bdde45")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -15000,7 +14472,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "b61c134e-c4ba-4cb6-9475-290fad0855eb")
+			(uuid "ec9c137d-dae0-4c90-b205-ec87bd578cef")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -15010,56 +14482,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "4f01538f-8736-431d-949a-a26497aec5e4")
+			(uuid "26a98c77-819a-4e47-88da-34a3f33296a6")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "daf3ce01-8b32-465b-b074-7c47e58e0582")
+			(uuid "23fb56b9-c2ee-46f5-94c4-4addf2016844")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "b4d561c0-b7b2-4a4a-8c8e-6609078a76c9")
+			(uuid "f0ac8d6a-decf-403a-8f77-9dc796ed5374")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "66a9cb40-96c4-4952-aba7-c7a3a885606a")
+			(uuid "5a12276f-8eb2-46be-b951-91d7dfd31041")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "39863041-1af7-4275-96f2-b8c007f8efa2")
+			(uuid "2abf92e9-18d5-456e-9085-e8c05d3ec855")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "74c3e311-e13f-4e9c-95c6-24a53d281aa6")
+			(uuid "d126afd7-3e1b-4f4f-aa5a-9efe47e3db8b")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "0e77cc8e-72bc-4f42-986d-3991a8239643")
+			(uuid "1bfd08ed-c218-4be2-ba04-c0a2ef31e850")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "0c74d7fd-81d1-46cb-bca8-6c0870e0e5a9")
+			(uuid "3417445c-7ae5-4c69-9ef6-0a24d506dab8")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -15096,39 +14568,6 @@
 			(uuid "d2016590-d3c7-42d2-b5d4-92e208ac5289")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -15267,7 +14706,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "887621df-a4a0-4ef7-8730-4f4fee219108")
 		(at 195 138.41 180)
@@ -15326,7 +14765,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "67357c51-93a8-4944-9869-38433ee5bb63")
+			(uuid "1ca26b8a-a9bc-466b-9ac3-5ed56d71d77f")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -15336,7 +14775,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "cf0e7ac2-c6e4-44e5-9ad8-d999eee9c46c")
+			(uuid "54e3a9c7-1065-49ad-9718-76c097bae887")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -15346,7 +14785,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "f11ecc1a-9996-44a2-91c1-dffa94a27f19")
+			(uuid "51499919-7981-4c0c-a1c3-71d16b22bbf6")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -15356,56 +14795,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "448efb57-c23f-443a-aac0-4ee92caa5cf9")
+			(uuid "5943b233-184d-4c0d-b59e-d21e1069ec8f")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "c2abc40d-df0d-4284-835e-9510a62132f8")
+			(uuid "5142ff8d-374a-4b9a-8f70-1572f3f94985")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "e0966515-d63e-46b1-accb-5bd7294a0d09")
+			(uuid "b5f94ab1-e803-4251-833c-41ea5ebcdae4")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "f5dddfdc-1e52-470e-ab76-0f2b8bdb4a7e")
+			(uuid "2f841ea3-2c23-464c-bc69-a6b92453c4f5")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "ded08d4c-598a-4945-8898-397eb02f7036")
+			(uuid "f7c72e5c-dd16-4049-8180-f75134d9d685")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "f02c6e8e-6819-4d07-b434-7d1cf4891bf5")
+			(uuid "0f33a5f6-0d9f-48cf-9442-adb9d72fd1ba")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "4ecb016a-d0a6-45ca-a1e1-efe7e85dbca9")
+			(uuid "a5d24727-7e11-4190-ab7a-807ef0502abc")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "29621af9-ad46-4d8a-9f34-70c675a32bd0")
+			(uuid "4ab43eb7-7771-4497-a11a-83c66edb6639")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -15442,39 +14881,6 @@
 			(uuid "95cb940d-f175-4a5d-95be-efb7a0c9a46e")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -15750,7 +15156,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "94b503c1-50bb-453a-82f3-7b7c49269730")
 		(at 214 138.41 180)
@@ -15809,7 +15215,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "55c49547-3307-49eb-b045-b3a57c98160c")
+			(uuid "fa6f1dd2-6030-47dc-8479-ffecb0544e9c")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -15819,7 +15225,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "e0c33ecf-6aa7-4a77-9881-35d788884298")
+			(uuid "cd09fc2a-89ad-4040-a23c-f430b3d44069")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -15829,7 +15235,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "07dda611-e8ac-4b25-9bd3-fa38d46be556")
+			(uuid "123a77f2-5979-4ded-a096-bc8b9ab131e9")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -15839,56 +15245,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "d13e0c06-788b-41a1-9732-bf030bb2be2e")
+			(uuid "626dc5ae-c76b-4956-813d-50cdbebb088a")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "86413c10-6e44-4bd6-8bae-1d0c1232894f")
+			(uuid "3b13dcf0-0c23-463d-9761-5bbac446d65c")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "4bc5f1f4-f6ea-404a-ba84-c497f186986c")
+			(uuid "504c84fe-8dde-4f29-a4a5-c8b435e874f8")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "7033251e-ba09-4ff5-9608-57f2f6fc9212")
+			(uuid "fef102cc-b615-46cb-8450-78554df2f274")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "5a345532-f4f6-4f36-a299-f7556036d50b")
+			(uuid "9f9a2987-7d70-4a22-ac63-afdf27985dad")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "2c88c966-70cc-49ff-bef6-e02791ccf7d4")
+			(uuid "61b7e7a7-f24c-4ac0-a509-b46a901429db")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "4fe5b249-a872-4421-9c01-668c71f57355")
+			(uuid "a5fdb842-0c4e-403d-90b3-1cfd1fd2eb49")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "bfd0a9e7-4ff1-4586-8ba0-4d732e9a361f")
+			(uuid "2b95708c-00af-47d6-93bb-5263c8ddc526")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -15925,39 +15331,6 @@
 			(uuid "4cc493bf-a561-4fe6-b10a-5335ede5188a")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -16370,7 +15743,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "aafe783a-e456-4932-96b3-5c555a33d76c")
 		(at 157 73.81 180)
@@ -16429,7 +15802,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "db3d9400-16c2-434d-b74d-305d55bac2d5")
+			(uuid "18c2cfa3-177a-46d2-9b7f-7c48db11d2be")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -16439,7 +15812,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "1042fb0b-a204-44e0-9076-525f80cca0ae")
+			(uuid "c1fa2acd-4a18-44f1-96f1-bd1ac6fefc5d")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -16449,7 +15822,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "1cdb5b33-f0d6-4806-b0b8-63544e06af61")
+			(uuid "caad3350-e8b8-467a-9ae6-ca21b23b90df")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -16459,56 +15832,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "af7da103-7625-471e-9e66-df98cdd1a992")
+			(uuid "e1a5a496-c8ac-445b-b224-757595c1e172")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "b319625d-0def-475d-a6c5-e02aa3ae1058")
+			(uuid "7aaa63d3-bf36-4159-afc5-50b7992fa7c4")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "9d0b4f9f-40ba-41a5-a50e-a3b8d49e163c")
+			(uuid "a2114fa3-ef70-4661-bf56-289745f03327")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "21e80c79-51f5-4f77-8c6e-1b6c2244402a")
+			(uuid "049db6ac-2adf-4fef-bb8f-37a5bde44ab3")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "2e232950-17e9-4f8c-ab9c-99164635438e")
+			(uuid "ced7e46c-d081-454b-8626-90017cf025ce")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "899cb44c-7862-457e-83ac-1a4129368b18")
+			(uuid "fc34062b-a6e3-42f1-b2ac-85cd1c659796")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "b368948b-0308-4156-9b1d-02f1fe7ca7a1")
+			(uuid "cf0979ff-4a50-4818-a5f9-7689625c1221")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "845d056a-068c-4f1e-a38c-0882b95466f0")
+			(uuid "c6eec663-4735-49d8-9922-6b50c147e38d")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -16545,39 +15918,6 @@
 			(uuid "4e737a56-3518-45b8-ac8e-daede858c713")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -16716,7 +16056,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "befb3e7f-8d74-4ad1-b7bf-d5f6cc652730")
 		(at 176 116.56 180)
@@ -16775,7 +16115,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "c20cda41-422f-4bc1-926b-f2d2890cf006")
+			(uuid "01f95ff7-92d1-4856-8b75-3ce8fe85ee2a")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -16785,7 +16125,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "e0d70e43-6177-4355-a4a0-b272f01db368")
+			(uuid "789368f6-f917-40f3-b29a-2251cdaf0c4d")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -16795,7 +16135,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "98fb06b5-c1d7-4da7-a40a-3768f577c246")
+			(uuid "ee8fb336-24f6-41fc-884b-2b374ffae8be")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -16805,56 +16145,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "ce431053-e7fa-49e0-9fbf-4271e3ccc9da")
+			(uuid "172f0ef7-43f5-413d-a56c-97c1863aee71")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "ef55cc71-0eb8-4aec-b7cb-8e404beb712d")
+			(uuid "aa75c70c-d0bd-4f3b-823c-4eb0d61e7f7e")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "39a52087-08ef-4924-8c48-bbdfffe39e9b")
+			(uuid "47d1d252-1d53-43b0-94aa-0eab2780e419")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "97da6968-1674-437b-8608-39823fa65060")
+			(uuid "19556557-7826-4326-bc90-b217e0e970e8")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "1793f70c-6b60-46fb-be7f-39b8592f1950")
+			(uuid "cfc9a2fb-d9ad-4d07-b23a-71bec649df6e")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "655e3bb6-0b7a-400d-be1c-a660459fdfad")
+			(uuid "ab203745-4c21-4432-a8c3-bd0f88a4d2ea")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "6058e1b6-6b8d-40b1-bd96-8e552c14a32f")
+			(uuid "7ea15158-5d3f-428b-8899-24f33e602cf9")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d69dfc6f-e0ac-4aff-b2c7-c1535cf59e34")
+			(uuid "8025fd9a-493d-47e3-b849-b44af97762ee")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -16891,39 +16231,6 @@
 			(uuid "5e8049a2-a9ab-413f-a5c3-9a67952c08d1")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -17062,7 +16369,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "c781276e-419c-445d-ace0-8dc9f498ec51")
 		(at 155.575 159.12 -170)
@@ -17121,7 +16428,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "844c393f-54ef-4766-b42a-d6604770cafd")
+			(uuid "02279f2a-305f-4cea-a4e2-4ee33400e109")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -17131,7 +16438,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "0a38db98-bbad-4610-9d0d-6beb8da31570")
+			(uuid "627ae621-1996-42cc-8d73-84360133006f")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -17141,7 +16448,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "b4e6ca0c-a4cc-4062-907d-3d860b7ede0d")
+			(uuid "4a018b48-a13e-4d45-b774-dd79ab1ba22e")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -17151,56 +16458,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "a57cbf13-09a9-4379-a87e-f64c60ab5b0a")
+			(uuid "f9b4d66d-c154-4487-a3bd-4bc40db27659")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0 10)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "f1ad94ec-61a7-49a2-b8fe-42565218a92b")
+			(uuid "e15820ff-919d-446f-8a43-d35ff57039af")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54 10)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "daccda26-c07d-4eff-bf6b-ffeee0402727")
+			(uuid "9869fb7e-b067-48da-a51f-382ce07627ef")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08 10)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "3e9bdeb5-ac90-4ca0-a9e7-7b5901eca396")
+			(uuid "6dfcadc9-3d17-47bf-ad40-d937d40bf38e")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0 10)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "3ccf005e-f1e3-450f-92c4-8ebaebe2fc50")
+			(uuid "139f1eb2-f8d8-4700-82b1-2489dd6a25d5")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08 10)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "8633a27e-7dff-4096-959f-290c1a3cd420")
+			(uuid "cbd10024-6878-43c2-b784-a765e00a4966")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54 10)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "3a248fe4-ea54-4337-837e-a646d683eefa")
+			(uuid "87a4850e-9eaf-4eb4-9f6b-93a91827b9fa")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0 10)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "bca5999b-b43c-4921-821f-2195d66a9adb")
+			(uuid "4339ff86-1c99-4105-8a6e-ead5befe7c4c")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54 10)
@@ -17237,39 +16544,6 @@
 			(uuid "931d45a5-2b3f-455f-85ca-71d49fa14242")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -17545,7 +16819,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "e12fed6f-3ca6-4793-84bc-dbc0a76df243")
 		(at 195 81.41 180)
@@ -17604,7 +16878,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "36ceba19-e509-4a48-a40e-81b563ffe24d")
+			(uuid "3cadfe6e-a631-42db-a190-0fd4192152dd")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -17614,7 +16888,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "9f4e6a16-3e0d-4dc1-b0fd-42d911afc361")
+			(uuid "946b067d-0d5e-4f2d-8608-269a65d42c05")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -17624,7 +16898,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "e44a852a-e622-4b38-b531-261424edc357")
+			(uuid "3ef8c06c-1823-4e7a-9020-818445e6f18c")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -17634,56 +16908,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "e2f9dbef-70d4-44c8-aae9-9b186b1db83c")
+			(uuid "901122da-b1f2-4c14-bcdf-7092f677165e")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "3df26fe6-d2ee-4bea-b5fa-6cb5599827ed")
+			(uuid "01c77df2-9be1-42a3-ba0e-e9dcd899a538")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d365bc3f-61d4-4cc5-b8ea-e05fa27bfe37")
+			(uuid "f0c9ed76-474e-4531-a1d7-afc257a1e2cf")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "d4610924-f9b2-41ae-ae93-47a2657613a2")
+			(uuid "9bd35178-0836-48bb-88b3-b89ccb0f4b50")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "2e3c4a7b-b4f2-4267-b718-a3594c5a1130")
+			(uuid "ccddd1cd-911f-4cc3-b7e5-04ef907b0e18")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "b31347e7-e86a-45b2-b565-c4e788cebc14")
+			(uuid "93426046-16f7-4b9a-8e98-4dbc07941669")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "bb515e22-e27f-43e0-bba1-d3fa7e7cb7c6")
+			(uuid "489e5894-9962-480c-9b4c-56fdcfa870cf")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "f7a6e793-b155-4e0f-8f6f-b4dac7757fc9")
+			(uuid "5d032ddd-fbbb-40f3-a562-4fc1388c2873")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -17720,39 +16994,6 @@
 			(uuid "6eb1a3a9-ab9c-4285-a0d6-f84cc41bb3ac")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
@@ -17930,7 +17171,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "e5ed5029-f309-4758-9c80-0382736651e6")
 		(at 100 93 180)
@@ -17989,7 +17230,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "ed79abf2-dbed-4138-ba88-4640f85c2340")
+			(uuid "a96efcbf-717c-4aa1-96c0-eb0786fc9d33")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -17999,7 +17240,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "e209f813-6b18-4661-996d-f8c9223d712f")
+			(uuid "452314bc-9113-4653-94cb-a854c2f9bf86")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -18009,7 +17250,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "128e53b1-b8b1-488c-9580-c007c346be51")
+			(uuid "2c5f0c53-31c1-466d-b126-72937c37b2b3")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -18019,56 +17260,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "8eeb0b17-1de1-4c26-a6b5-5bffa8acbb17")
+			(uuid "74a5f66a-4f0c-41a2-94e8-3d0a94bb43b7")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "15ebeb3f-bfc7-4673-8ee5-8b7b3fee50ff")
+			(uuid "e2fb6441-394d-4480-929b-ad081d8b3055")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "2096de22-2ef6-425e-8e12-c72c16efea5a")
+			(uuid "afa44f76-d218-461c-a706-1b6b8ac51b18")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "5bb88f7e-6f2c-4f9e-8919-bf42c4bc06f3")
+			(uuid "a89420d4-bb86-448d-a1ae-eb2f7fb93f57")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "4c144ea8-b6b3-49e4-aad7-0ebf026cdd00")
+			(uuid "82b50b41-a877-4c44-8521-e5bcdeccda7e")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a91f1df8-642c-4e54-b47e-fa049c1fa7e2")
+			(uuid "59f75a05-3b39-46b8-876f-ee8fb5f28bb1")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "af89f19c-f882-4bd0-b20e-4abe8c379910")
+			(uuid "71af8541-e861-4ae3-b370-b3d82a8abadb")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "c9e1149e-7a8a-4823-bd39-33e85f47cd58")
+			(uuid "cbc38257-9f0e-4ee5-801d-31b4f24163bc")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -18105,39 +17346,6 @@
 			(uuid "553a4048-8542-4481-ac40-8fdf18f983af")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -18413,7 +17621,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "f6209fb4-e205-4888-be41-ec02d46e51ee")
 		(at 138 97.56 180)
@@ -18472,7 +17680,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "8edf34a8-e02a-4f47-9e23-fa89c56df8ec")
+			(uuid "76e5ef75-00f2-4620-b133-2ca63855ac9f")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -18482,7 +17690,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "bca3399b-3ab2-4055-a8d3-9689472f15fc")
+			(uuid "c991e62e-f209-4d34-b938-f66f737787ef")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -18492,7 +17700,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "d18c230c-614e-4290-8c5b-aa665d00df69")
+			(uuid "0d541d65-12fb-4288-b881-684e790504f6")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -18502,56 +17710,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "1897c109-e08f-4a2e-a8c3-0499d77e4495")
+			(uuid "c4636ad9-02d4-4add-8c11-e1c6d22eac13")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "8e4960e4-6109-4e67-b12c-595d18053866")
+			(uuid "b498ebd1-988e-4510-9ac9-9d95678b41ec")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a23b5cb1-42cf-4bb5-a27b-5de9e9656265")
+			(uuid "495279bb-0908-4bbf-ba01-d4252e551ea6")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "287b18d7-c8ce-4463-8b3d-fa09aad867e2")
+			(uuid "a6bd953a-1130-450f-9569-16ea8d9ac13d")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "de7fb815-43cf-4f02-b5f3-3d45a4cf1ede")
+			(uuid "3eb69a1f-7301-4e83-9bb5-a15f02aa5df6")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "6515cf04-6b9d-44e2-a619-c7c7c3cea830")
+			(uuid "7f6647aa-4ec7-4e9d-8b7a-a3b5a8ccd65c")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "ddeafed4-d19e-43d1-a1f7-5ef1bc0c784e")
+			(uuid "7c9852ae-72b5-49f3-97bc-67648fb40555")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "08499774-d927-46c9-89fd-d9c090006e30")
+			(uuid "aac72a1d-2106-4c55-9d2b-d81a7f441663")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -18588,41 +17796,8 @@
 			(uuid "5ea16774-dcba-4f73-a4e8-0695a7cab987")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "f6230762-7fd9-4087-96bb-4c65248a8d4a")
 		(at 100 131 180)
@@ -18681,7 +17856,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "ce5b7ac4-924e-47e5-9ffa-861e726c11d1")
+			(uuid "fc1c496b-a930-460e-a3b3-2bda9aefc9d7")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -18691,7 +17866,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "dad0ac6c-e1c7-449a-91d8-4567b4286553")
+			(uuid "7b56afc5-6eb5-4a80-a022-83f13c7ac379")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -18701,7 +17876,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "e7525e80-a854-4255-9128-6ace8895afa4")
+			(uuid "9e195874-8935-4bfd-81cb-f3c16a410f47")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -18711,56 +17886,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "f7d86bd4-81ba-4cba-9ce5-6e372add5e19")
+			(uuid "47f64d43-c9a8-4c16-a402-18e71ef4e08a")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "0b18a961-cec8-408a-9f47-28a0c44f2c20")
+			(uuid "af354517-6dbb-4d06-9d53-1181efd2c68a")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "c21a7f5d-aa21-40fe-8a91-734169a8b60b")
+			(uuid "00cea2dd-0e42-4a7f-9c53-032e33029578")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "fdd8d4a3-9ee4-4d4c-a01e-8ceef84a2b88")
+			(uuid "b4d108e3-420e-41e3-8daf-6a6c75b13a42")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "59806038-8daf-4c40-beb2-3f545c5809bc")
+			(uuid "61560598-800f-4a5b-a13b-3abab48ce162")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "11b440d8-4d30-494c-9e13-5aa297bcb198")
+			(uuid "3161bc93-fe28-4c44-9a82-d2f5b66a37e0")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "131773f8-57cd-4307-82e6-c3edeba39d6d")
+			(uuid "c8112702-7d55-4113-8f49-82a57a84a925")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "59af48c9-5ad6-4547-9da3-b9b2a2fb95e4")
+			(uuid "4f8d65a1-4c71-49ae-b930-821af1b09dfa")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -18797,41 +17972,8 @@
 			(uuid "e6cfbfcd-108c-4fa6-abbc-b85494ee7636")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "f7e4f67b-ad46-4f95-9a6a-8a3a301cb222")
 		(at 119 91.1 180)
@@ -18890,7 +18032,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "60eeb4c2-71b4-468a-9a67-ab8286031cd7")
+			(uuid "25757caf-f944-43aa-a942-f1aa4e953059")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -18900,7 +18042,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "9d547473-e957-492f-babe-edc4b0618bfe")
+			(uuid "f392e366-58b4-4751-b060-a69ce4e8556a")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -18910,7 +18052,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "947b4b4b-4af8-4409-915e-348ef56875cc")
+			(uuid "b703b186-5471-4e5c-810d-65cf532c17d5")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -18920,56 +18062,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "e28620c2-7122-4899-8287-91f408ac9779")
+			(uuid "440b85e4-dcb1-4bbb-930a-1f3102f4dc56")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "34f24a8f-cfbe-4f71-9c4c-50b6e1946d41")
+			(uuid "6a87b1dd-d548-4ab0-bbd4-a6abc0b409a2")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "1fa05a15-5529-4990-9bf6-05e2e227a4ef")
+			(uuid "8a7c5799-1814-45d4-bdec-04d444902d1d")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "7cf3ae6c-73c1-4439-9c3c-c9b23613613b")
+			(uuid "adca20ee-4ece-4983-ad6e-5b07576f4d73")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a5e25db4-3824-4dff-ae13-706f9f489866")
+			(uuid "b7d8956e-027c-4085-978e-849297f219b1")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "894edc65-fb7d-41f6-a409-1ce4ada05e3e")
+			(uuid "42015de2-291b-4a4b-8aff-a8f03d7bc60c")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "a59496d8-9069-4508-9461-bc204bec822e")
+			(uuid "2d6434cf-774c-4edd-8038-edaa7205e6ec")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "e593465e-2520-44e6-9467-7f504c3ec9d3")
+			(uuid "c34addaf-4745-49b3-82e7-a5df68b46b30")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -19006,39 +18148,6 @@
 			(uuid "58bf9a68-7681-47da-8b20-f1c741d7e37d")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(footprint "ceoloide:diode_tht_sod123"
 		(layer "B.Cu")
@@ -19177,7 +18286,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "scyline:scybin_switch_mx"
+	(footprint "ceoloide:switch_mx"
 		(layer "B.Cu")
 		(uuid "fdf53697-acad-4b8c-bc56-a8f760c5ee37")
 		(at 176 157.41 180)
@@ -19236,7 +18345,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "911557a6-b7aa-473e-9f99-078e5bf444cb")
+			(uuid "6752915c-ed76-4ae9-a925-9dacf73e3699")
 		)
 		(fp_line
 			(start -1.22 -3.77)
@@ -19246,7 +18355,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "48ce7c5c-bf8e-4b70-9ca2-cd338cf7e7f8")
+			(uuid "770d7291-b008-4471-b8ae-574aedf24c62")
 		)
 		(fp_line
 			(start 1.22 -3.77)
@@ -19256,7 +18365,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "9cfc2753-ae65-4cec-b7d2-78e8c40786da")
+			(uuid "3caaf507-b648-46b1-a124-27371d70a914")
 		)
 		(fp_line
 			(start 0 -2.52)
@@ -19266,56 +18375,56 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "1b5fc38a-4290-48d6-bda0-225e24f7e208")
+			(uuid "eefd692f-d489-4731-8c91-c7291b25559b")
 		)
 		(pad "" np_thru_hole circle
 			(at -5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "e7bb68eb-82c5-4743-b8ea-ca6a4444c2e2")
+			(uuid "a6e95756-bb05-489c-be27-e7a0906abc35")
 		)
 		(pad "" np_thru_hole circle
 			(at -3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "ca89bb87-306a-4aec-b35f-3fc13a939c0b")
+			(uuid "7f7e62c5-7320-497a-9a36-853f776b130a")
 		)
 		(pad "" np_thru_hole circle
 			(at -2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "47a24c71-c3a1-4178-b979-a8ce91838d67")
+			(uuid "dbcefda9-dd0d-4986-9c27-1bae3260e536")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 4.1 4.1)
 			(drill 4.1)
 			(layers "*.Cu" "*.Mask")
-			(uuid "5863426a-7b15-42ef-baa2-6b4fc1590f44")
+			(uuid "c8130bed-7792-4784-8e7c-a3f0cc94167a")
 		)
 		(pad "" np_thru_hole circle
 			(at 2.54 -5.08)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "9d7135fc-11b7-4f84-8cd0-dbbcaa3d77f9")
+			(uuid "8d830c4d-e6f9-4b49-8c22-04885ec37cce")
 		)
 		(pad "" np_thru_hole circle
 			(at 3.81 -2.54)
 			(size 3 3)
 			(drill 3)
 			(layers "*.Cu" "*.Mask")
-			(uuid "07e5109e-8667-4edf-a15f-5644984dc2f6")
+			(uuid "649f6094-c7a7-4f4c-9d6d-b70a434fe71b")
 		)
 		(pad "" np_thru_hole circle
 			(at 5.08 0)
 			(size 1.9 1.9)
 			(drill 1.9)
 			(layers "*.Cu" "*.Mask")
-			(uuid "fef3991c-5a42-4049-b388-4f4b0f0f2f8d")
+			(uuid "f4c0d41f-c407-417d-93c3-6369e6873686")
 		)
 		(pad "1" smd rect
 			(at -7.085 -2.54)
@@ -19352,39 +18461,6 @@
 			(uuid "f1d50220-5d19-45a8-bb3c-b3ab648aee22")
 		)
 		(embedded_fonts no)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/Hotswap_MX.step"
-			(offset
-				(xyz 0 0 -2)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz 180 -0 -0)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_CAD.step"
-			(offset
-				(xyz 0 0 -1)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 180 180)
-			)
-		)
-		(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/MX_1.00u_CAD.step"
-			(offset
-				(xyz 0 0 -16)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -0 -0)
-			)
-		)
 	)
 	(gr_line
 		(start 188 145.41)

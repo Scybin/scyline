@@ -34,6 +34,18 @@ function button_wall_extrude_12_outline_fn(){
 }
 
 
+function trackball_wall_extrude_24_3_outline_fn(){
+    return new CSG.Path2D([[224,-124.41],[229,-124.41]]).appendPoint([229,-107.41]).appendPoint([224,-107.41]).appendPoint([224,-124.41]).close().innerToCAG()
+.extrude({ offset: [0, 0, 24.3] });
+}
+
+
+function trackball_wall_extrude_17_3_outline_fn(){
+    return new CSG.Path2D([[224,-124.41],[229,-124.41]]).appendPoint([229,-107.41]).appendPoint([224,-107.41]).appendPoint([224,-124.41]).close().innerToCAG()
+.extrude({ offset: [0, 0, 17.3] });
+}
+
+
 function cover_tb_extrude_28_3_outline_fn(){
     return new CSG.Path2D([[224,-67.41],[210,-67.41]]).appendArc([205,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-123.41]).appendArc([210,-128.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-128.41]).appendArc([229,-123.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
 .extrude({ offset: [0, 0, 28.3] });
@@ -52,7 +64,7 @@ function cover_tb_cut_extrude_28_3_outline_fn(){
 }
 
 
-function trackball_mount_holes_extrude_28_3_outline_fn(){
+function trackball_screw_holes_extrude_28_3_outline_fn(){
     return CAG.circle({"center":[218.5,-125.71],"radius":1.1})
 .union(
     CAG.circle({"center":[207.5,-125.71],"radius":1.1})
@@ -216,6 +228,52 @@ function wall_insert_extrude_3_outline_fn(){
             
             
 
+                function _trackball_wall_cut_case_fn() {
+                    
+
+                // creating part 0 of case _trackball_wall_cut
+                let _trackball_wall_cut__part_0 = trackball_wall_extrude_24_3_outline_fn();
+
+                // make sure that rotations are relative
+                let _trackball_wall_cut__part_0_bounds = _trackball_wall_cut__part_0.getBounds();
+                let _trackball_wall_cut__part_0_x = _trackball_wall_cut__part_0_bounds[0].x + (_trackball_wall_cut__part_0_bounds[1].x - _trackball_wall_cut__part_0_bounds[0].x) / 2
+                let _trackball_wall_cut__part_0_y = _trackball_wall_cut__part_0_bounds[0].y + (_trackball_wall_cut__part_0_bounds[1].y - _trackball_wall_cut__part_0_bounds[0].y) / 2
+                _trackball_wall_cut__part_0 = translate([-_trackball_wall_cut__part_0_x, -_trackball_wall_cut__part_0_y, 0], _trackball_wall_cut__part_0);
+                _trackball_wall_cut__part_0 = rotate([0,0,0], _trackball_wall_cut__part_0);
+                _trackball_wall_cut__part_0 = translate([_trackball_wall_cut__part_0_x, _trackball_wall_cut__part_0_y, 0], _trackball_wall_cut__part_0);
+
+                _trackball_wall_cut__part_0 = translate([0,0,0], _trackball_wall_cut__part_0);
+                let result = _trackball_wall_cut__part_0;
+                
+            
+                    return result;
+                }
+            
+            
+
+                function _trackball_wall_fill_case_fn() {
+                    
+
+                // creating part 0 of case _trackball_wall_fill
+                let _trackball_wall_fill__part_0 = trackball_wall_extrude_17_3_outline_fn();
+
+                // make sure that rotations are relative
+                let _trackball_wall_fill__part_0_bounds = _trackball_wall_fill__part_0.getBounds();
+                let _trackball_wall_fill__part_0_x = _trackball_wall_fill__part_0_bounds[0].x + (_trackball_wall_fill__part_0_bounds[1].x - _trackball_wall_fill__part_0_bounds[0].x) / 2
+                let _trackball_wall_fill__part_0_y = _trackball_wall_fill__part_0_bounds[0].y + (_trackball_wall_fill__part_0_bounds[1].y - _trackball_wall_fill__part_0_bounds[0].y) / 2
+                _trackball_wall_fill__part_0 = translate([-_trackball_wall_fill__part_0_x, -_trackball_wall_fill__part_0_y, 0], _trackball_wall_fill__part_0);
+                _trackball_wall_fill__part_0 = rotate([0,0,0], _trackball_wall_fill__part_0);
+                _trackball_wall_fill__part_0 = translate([_trackball_wall_fill__part_0_x, _trackball_wall_fill__part_0_y, 0], _trackball_wall_fill__part_0);
+
+                _trackball_wall_fill__part_0 = translate([0,0,0], _trackball_wall_fill__part_0);
+                let result = _trackball_wall_fill__part_0;
+                
+            
+                    return result;
+                }
+            
+            
+
                 function _cover_cap_tb_case_fn() {
                     
 
@@ -268,7 +326,7 @@ function wall_insert_extrude_3_outline_fn(){
             
 
                 // creating part 3 of case _cover_cap_tb
-                let _cover_cap_tb__part_3 = trackball_mount_holes_extrude_28_3_outline_fn();
+                let _cover_cap_tb__part_3 = trackball_screw_holes_extrude_28_3_outline_fn();
 
                 // make sure that rotations are relative
                 let _cover_cap_tb__part_3_bounds = _cover_cap_tb__part_3.getBounds();
@@ -410,7 +468,7 @@ function wall_insert_extrude_3_outline_fn(){
             
 
                 // creating part 6 of case wall_cover_case_tb_L
-                let wall_cover_case_tb_L__part_6 = _cover_cap_tb_case_fn();
+                let wall_cover_case_tb_L__part_6 = _trackball_wall_cut_case_fn();
 
                 // make sure that rotations are relative
                 let wall_cover_case_tb_L__part_6_bounds = wall_cover_case_tb_L__part_6.getBounds();
@@ -421,12 +479,12 @@ function wall_insert_extrude_3_outline_fn(){
                 wall_cover_case_tb_L__part_6 = translate([wall_cover_case_tb_L__part_6_x, wall_cover_case_tb_L__part_6_y, 0], wall_cover_case_tb_L__part_6);
 
                 wall_cover_case_tb_L__part_6 = translate([0,0,0], wall_cover_case_tb_L__part_6);
-                result = result.union(wall_cover_case_tb_L__part_6);
+                result = result.subtract(wall_cover_case_tb_L__part_6);
                 
             
 
                 // creating part 7 of case wall_cover_case_tb_L
-                let wall_cover_case_tb_L__part_7 = _wall_insert_case_fn();
+                let wall_cover_case_tb_L__part_7 = _trackball_wall_fill_case_fn();
 
                 // make sure that rotations are relative
                 let wall_cover_case_tb_L__part_7_bounds = wall_cover_case_tb_L__part_7.getBounds();
@@ -437,7 +495,39 @@ function wall_insert_extrude_3_outline_fn(){
                 wall_cover_case_tb_L__part_7 = translate([wall_cover_case_tb_L__part_7_x, wall_cover_case_tb_L__part_7_y, 0], wall_cover_case_tb_L__part_7);
 
                 wall_cover_case_tb_L__part_7 = translate([0,0,0], wall_cover_case_tb_L__part_7);
-                result = result.subtract(wall_cover_case_tb_L__part_7);
+                result = result.union(wall_cover_case_tb_L__part_7);
+                
+            
+
+                // creating part 8 of case wall_cover_case_tb_L
+                let wall_cover_case_tb_L__part_8 = _cover_cap_tb_case_fn();
+
+                // make sure that rotations are relative
+                let wall_cover_case_tb_L__part_8_bounds = wall_cover_case_tb_L__part_8.getBounds();
+                let wall_cover_case_tb_L__part_8_x = wall_cover_case_tb_L__part_8_bounds[0].x + (wall_cover_case_tb_L__part_8_bounds[1].x - wall_cover_case_tb_L__part_8_bounds[0].x) / 2
+                let wall_cover_case_tb_L__part_8_y = wall_cover_case_tb_L__part_8_bounds[0].y + (wall_cover_case_tb_L__part_8_bounds[1].y - wall_cover_case_tb_L__part_8_bounds[0].y) / 2
+                wall_cover_case_tb_L__part_8 = translate([-wall_cover_case_tb_L__part_8_x, -wall_cover_case_tb_L__part_8_y, 0], wall_cover_case_tb_L__part_8);
+                wall_cover_case_tb_L__part_8 = rotate([0,0,0], wall_cover_case_tb_L__part_8);
+                wall_cover_case_tb_L__part_8 = translate([wall_cover_case_tb_L__part_8_x, wall_cover_case_tb_L__part_8_y, 0], wall_cover_case_tb_L__part_8);
+
+                wall_cover_case_tb_L__part_8 = translate([0,0,0], wall_cover_case_tb_L__part_8);
+                result = result.union(wall_cover_case_tb_L__part_8);
+                
+            
+
+                // creating part 9 of case wall_cover_case_tb_L
+                let wall_cover_case_tb_L__part_9 = _wall_insert_case_fn();
+
+                // make sure that rotations are relative
+                let wall_cover_case_tb_L__part_9_bounds = wall_cover_case_tb_L__part_9.getBounds();
+                let wall_cover_case_tb_L__part_9_x = wall_cover_case_tb_L__part_9_bounds[0].x + (wall_cover_case_tb_L__part_9_bounds[1].x - wall_cover_case_tb_L__part_9_bounds[0].x) / 2
+                let wall_cover_case_tb_L__part_9_y = wall_cover_case_tb_L__part_9_bounds[0].y + (wall_cover_case_tb_L__part_9_bounds[1].y - wall_cover_case_tb_L__part_9_bounds[0].y) / 2
+                wall_cover_case_tb_L__part_9 = translate([-wall_cover_case_tb_L__part_9_x, -wall_cover_case_tb_L__part_9_y, 0], wall_cover_case_tb_L__part_9);
+                wall_cover_case_tb_L__part_9 = rotate([0,0,0], wall_cover_case_tb_L__part_9);
+                wall_cover_case_tb_L__part_9 = translate([wall_cover_case_tb_L__part_9_x, wall_cover_case_tb_L__part_9_y, 0], wall_cover_case_tb_L__part_9);
+
+                wall_cover_case_tb_L__part_9 = translate([0,0,0], wall_cover_case_tb_L__part_9);
+                result = result.subtract(wall_cover_case_tb_L__part_9);
                 
             
                     return result;
