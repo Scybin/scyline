@@ -234,28 +234,28 @@ points:
         - wall_screw
       anchor:
         - ref: matrix_outer_top
-          shift: [-0.5keycw, 0.5keych + 2]
+          shift: [-0.5keycw, 0.5keych + 2.5]
     wall_insert_ne:
       key.tags:
         - helper
         - wall_screw
       anchor:
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + 2]
+          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + 2.5]
     wall_insert_sw:
       key.tags:
         - helper
         - wall_screw
       anchor:
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw, -0.5keych - 2]
+          shift: [-0.5keycw, -0.5keych - 2.5]
     wall_insert_se:
       key.tags:
         - helper
         - wall_screw
       anchor:
         - ref: thumb_space
-          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych - 2]                           
+          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych - 2.5]                           
 
   #mirror: &mirror
   #  ref: matrix_inner_top
@@ -322,21 +322,24 @@ outlines:
           shift: [0.5keycw, -0.5keych]
         - ref: matrix_outer_bottom
           shift: [-0.5keycw, -0.5keych]  
-    pcb_notched:
-    - what: outline
-      name: pcb
-      operation: stack
+    pcb_notch_circle:
     - what: circle
       where:
         ref: thumb_space
         shift: [kx, -0.5ky]
-      radius: 2
-      operation: subtract     
+      radius: 3              
+    pcb_notched:
+    - what: outline
+      name: pcb
+      operation: stack
+    - what: outline
+      name: pcb_notch_circle
+      operation: subtract   
           
     xlBoard:
     - what: outline
       name: pcb
-      expand: 4
+      expand: 5
       operation: stack
       fillet: 0
     xlBoard_wall:
@@ -548,6 +551,17 @@ outlines:
       fillet: 4
 
     # Lip inside case
+    bottom_lip_rect:
+    - what: rectangle
+      where:
+        ref: thumb_space
+        shift: [kx, -8]
+      size: [6, 2]
+    bottom_lip_rect_raise:
+    - what: outline
+      name: bottom_lip_rect
+      expand: 2
+      joints: 1  
     bottom_lip_wall:
     - what: outline
       name: pcb
@@ -556,7 +570,7 @@ outlines:
     - what: outline
       name: bottom_lip_wall
       expand: -2
-      joints: 1 
+      joints: 1
 
     #combo:
     #- what: outline
@@ -770,16 +784,28 @@ cases:
   _base_holes:
     - name: wall_clearance
       extrude: 2  # through 2 mm bottom plate
+  _bottom_lip_notch:
+    - name: bottom_lip_rect
+      extrude: 12    
+  _bottom_lip_notch_raise:
+    - name: bottom_lip_rect
+      extrude: 2         
 
   bottom_case:
     - name: bottom_lip_wall
-      extrude: 8
+      extrude: 12
     - name: bottom_lip_cut
-      extrude: 8
+      extrude: 12
       operation: subtract     
     - name: xlBoard
       extrude: 2
-      operation: add          
+      operation: add 
+    - what: case
+      name: _bottom_lip_notch
+      operation: subtract   
+    - what: case
+      name: _bottom_lip_notch_raise
+      operation: add                       
     - what: case
       name: _plate_holes
       operation: subtract
@@ -805,7 +831,7 @@ cases:
       operation: subtract     
     - what: case
       name: _button_access_fill
-      operation: add       
+      operation: add          
     - what: case
       name: _cover_cap
       operation: add 
@@ -865,4 +891,4 @@ cases:
       operation: add    
     - what: case
       name: bottom_case
-      operation: add
+      operation: add       
