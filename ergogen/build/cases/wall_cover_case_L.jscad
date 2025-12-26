@@ -11,37 +11,37 @@ function pcb_extrude_24_3_outline_fn(){
 
 
 function usb_wall_extrude_22_3_outline_fn(){
-    return new CSG.Path2D([[221,-71.41],[221,-67.41]]).appendPoint([207,-67.41]).appendPoint([207,-71.41]).appendPoint([221,-71.41]).close().innerToCAG()
+    return new CSG.Path2D([[221,-71.41],[221,-66.41]]).appendPoint([207,-66.41]).appendPoint([207,-71.41]).appendPoint([221,-71.41]).close().innerToCAG()
 .extrude({ offset: [0, 0, 22.3] });
 }
 
 
 function usb_wall_extrude_13_outline_fn(){
-    return new CSG.Path2D([[221,-71.41],[221,-67.41]]).appendPoint([207,-67.41]).appendPoint([207,-71.41]).appendPoint([221,-71.41]).close().innerToCAG()
+    return new CSG.Path2D([[221,-71.41],[221,-66.41]]).appendPoint([207,-66.41]).appendPoint([207,-71.41]).appendPoint([221,-71.41]).close().innerToCAG()
 .extrude({ offset: [0, 0, 13] });
 }
 
 
 function button_wall_extrude_24_3_outline_fn(){
-    return new CSG.Path2D([[144.6627477,-168.7638765],[143.3548222,-173.9222427]]).appendPoint([127.4594715,-163.1]).appendPoint([126.5625,-163.1]).appendPoint([127.625,-158.1]).appendPoint([129,-158.1]).appendPoint([144.6627477,-168.7638765]).close().innerToCAG()
+    return new CSG.Path2D([[146.2922217,-169.8732928],[144.0817173,-174.4171443]]).appendPoint([127.4594715,-163.1]).appendPoint([127.4375,-163.1]).appendPoint([128.975,-158.1]).appendPoint([129,-158.1]).appendPoint([146.2922217,-169.8732928]).close().innerToCAG()
 .extrude({ offset: [0, 0, 24.3] });
 }
 
 
 function button_wall_extrude_12_outline_fn(){
-    return new CSG.Path2D([[144.6627477,-168.7638765],[143.3548222,-173.9222427]]).appendPoint([127.4594715,-163.1]).appendPoint([126.5625,-163.1]).appendPoint([127.625,-158.1]).appendPoint([129,-158.1]).appendPoint([144.6627477,-168.7638765]).close().innerToCAG()
+    return new CSG.Path2D([[146.2922217,-169.8732928],[144.0817173,-174.4171443]]).appendPoint([127.4594715,-163.1]).appendPoint([127.4375,-163.1]).appendPoint([128.975,-158.1]).appendPoint([129,-158.1]).appendPoint([146.2922217,-169.8732928]).close().innerToCAG()
 .extrude({ offset: [0, 0, 12] });
 }
 
 
 function cover_extrude_28_3_outline_fn(){
-    return new CSG.Path2D([[224,-67.41],[210,-67.41]]).appendArc([205,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-105.41]).appendArc([210,-110.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-110.41]).appendArc([229,-105.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
+    return new CSG.Path2D([[224,-66.41],[210,-66.41]]).appendArc([205,-71.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-105.41]).appendArc([210,-110.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-110.41]).appendArc([229,-105.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-71.41]).appendArc([224,-66.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
 .extrude({ offset: [0, 0, 28.3] });
 }
 
 
 function cover_extrude_24_3_outline_fn(){
-    return new CSG.Path2D([[224,-67.41],[210,-67.41]]).appendArc([205,-72.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-105.41]).appendArc([210,-110.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-110.41]).appendArc([229,-105.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-72.41]).appendArc([224,-67.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
+    return new CSG.Path2D([[224,-66.41],[210,-66.41]]).appendArc([205,-71.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-105.41]).appendArc([210,-110.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([224,-110.41]).appendArc([229,-105.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([229,-71.41]).appendArc([224,-66.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
 .extrude({ offset: [0, 0, 24.3] });
 }
 

@@ -45,11 +45,8 @@ units:
   jst_shift: 3.5 # JST footprint center point shift
 
   # Screw variables
-  screw_size_M2: 1.5 # M2 flathead screw
-  screw_hole_M2: 1.1 # Switchplate screw hole radius
-  screw_hole_M2.5: 1.35 # Switchplate screw hole radius  
-  screw_x: (-kx/2) # Screw position on x-axis
-  screw_y: (-ky/2) # Screw position on y-axis
+  screw_hole_M2: 1.1 # M2 screw hole radius
+  screw_hole_M2_5: 1.35  # M2.5 screw hole radius
 
   # Standoff variables
   insert_size: 2.5 # Threaded screw inserts 3.2mm wide, and 3mm tall
@@ -297,7 +294,7 @@ points:
         - trackball_screw
       anchor:
         - ref: trackball_center
-          shift: [ trackball_screw_x,  trackball_screw_y]
+          shift: [trackball_screw_x,  trackball_screw_y]
     trackball_hole_sw:
       key.tags:
         - helper
@@ -311,7 +308,7 @@ points:
         - trackball_screw
       anchor:
         - ref: trackball_center
-          shift: [ trackball_screw_x, -trackball_screw_y]                                   
+          shift: [trackball_screw_x, -trackball_screw_y]                                   
 
   #mirror: &mirror
   #  ref: matrix_inner_top
@@ -413,13 +410,13 @@ outlines:
     - what: polygon
       points:
         - ref: thumb_tuck
-          shift: [0, 20]
+          shift: [10, 20]
         - ref: thumb_tuck
-          shift: [-18, -20]
+          shift: [-19, -20]
         - ref: matrix_pinky_bottom
-          shift: [6.5, -20]
+          shift: [6.9, -20]
         - ref: matrix_pinky_bottom
-          shift: [15, 20]
+          shift: [19.2, 20]
     button_wall:
     - what: outline
       name: button_access
@@ -430,7 +427,7 @@ outlines:
     - what: rectangle
       where:
         ref: matrix_inner_top
-        shift: [kx, 0.5keych + 1]
+        shift: [kx, 0.5keych + 1 + pcb_shift]
       size: [14, 8]
     usb_wall:
     - what: outline
@@ -473,8 +470,8 @@ outlines:
       where: /wall_screw/
     trackball_screw_holes:
     - what: circle
+      radius: screw_hole_M2_5
       where: /trackball_screw/
-      radius: screw_hole_M2.5
 
     switchplate:
     - what: polygon
@@ -523,7 +520,7 @@ outlines:
         - ref: thumb_tuck
           shift: [-0.5keycw - 0.158 - pcb_shift, -0.5keych + 0.193 - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [0.5keycw, -0.5keych - pcb_shift]
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_pinky_bottom
           shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]          
         - ref: matrix_outer_bottom
@@ -583,11 +580,11 @@ outlines:
         - ref: thumb_tuck
           shift: [-0.5keycw - 0.158 - pcb_shift, -0.5keych + 0.193 - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [0.5keycw, -0.5keych - pcb_shift]
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [-0.5kx - 0.5 - pcb_shift, -0.5keych - pcb_shift]          
+          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]          
         - ref: matrix_outer_bottom
-          shift: [0.5keycw - pcb_shift, -0.5keych - pcb_shift]
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
           shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]  
     - what: outline
@@ -597,38 +594,59 @@ outlines:
       name: plate_hole
       operation: subtract
 
+    # MCU / Trackball Cover
     cover:
     - what: polygon
       operation: stack
       points:
         - ref: matrix_inner_top
-          shift: [kx - 0.5keycw, 0.5keych+5]     
+          shift: [kx - 0.5keycw, 0.5keych + 5 + pcb_shift]     
         - ref: matrix_inner_home
           shift: [kx - 0.5keycw, 0.5keych]      
         - ref: matrix_inner_home
-          shift: [0.5kx + mcu_width + mcu_padding_x+5, 0.5keych]                       
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych]                       
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x+5, 0.5keych+5]
-      fillet: 5      
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
+      fillet: 5
+    cover_tb_se_corner:
+    - what: rectangle
+      where:
+        ref: trackball_center
+        shift: [trackball_screw_x, -trackball_screw_y]
+      size: [21, 5.4]
+      fillet: 0      
+    cover_tb_sw_corner:
+    - what: rectangle
+      where:
+        ref: trackball_center
+        shift: [-trackball_screw_x, -trackball_screw_y]
+      size: [5, 5.4]
+      fillet: 1                    
     cover_tb:
     - what: polygon
       operation: stack
       points:
         - ref: matrix_inner_top
-          shift: [kx - 0.5keycw, 0.5keych+5]     
+          shift: [kx - 0.5keycw, 0.5keych + 5 + pcb_shift]     
         - ref: matrix_inner_home
           shift: [kx - 0.5keycw, -0.5keych]      
         - ref: matrix_inner_home
-          shift: [0.5kx + mcu_width + mcu_padding_x+5, -0.5keych]                       
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, -0.5keych]                       
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x+5, 0.5keych+5]
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
       fillet: 5
+    - what: outline
+      name: cover_tb_se_corner
+      operation: add      
+    - what: outline
+      name: cover_tb_sw_corner
+      operation: add
     cover_tb_cut:
     - what: rectangle
       where:
         ref: trackball_center
       size: [trackball_hole_w, trackball_hole_h]
-      fillet: 2    
+      fillet: 2      
 
     # Lip inside case
     bottom_lip_rect:
@@ -640,7 +658,7 @@ outlines:
     bottom_lip_rect_raise:
     - what: outline
       name: bottom_lip_rect
-      expand: 2
+      expand: 1
       joints: 1  
     bottom_lip_wall:
     - what: outline
@@ -649,7 +667,7 @@ outlines:
     bottom_lip_cut:
     - what: outline
       name: bottom_lip_wall
-      expand: -2
+      expand: -1
       joints: 1
     mcu_lip_clear:
     - what: rectangle
