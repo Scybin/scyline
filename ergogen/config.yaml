@@ -8,23 +8,19 @@ meta:
 units:
 
   # Key Variables (MX)
-  kx: u # spacing between key centers
-  ky: u # spacing between key centers
-  px: kx + 2 # horizontal padding (21 mm)
-  py: ky + 2 # vertical padding (21 mm)
-  ks: 19 # horizontal space between columns (MX default: 19)
-  kp: 19 # vertical padding between keys (MX default: 19)
+  kx: u # 19mm spacing between key centers
+  ky: u # 19mm spacing between key centers
   kcow: 14 # MX plate cutout width
   kcoh: 14 # MX plate cutout height
   keycw: 18 # keycap width (MX / Cherry ~18 mm)
   keych: 18 # keycap height (MX / Cherry ~18 mm)
   switch_rotation: 180 # Hotswap south, LED north
+  pcb_shift: 1 # Padding
 
   # Diode Variables
   vertical_diode_shift: 1.5 # How much to shift to avoid overlap
   horizontal_diode_shift: -0.5 kcow - 0.85
-  diode_rotation: 180 # Diode rotation
-  diode_rotation_t: -90 # Thumb diode rotation
+  diode_rotation: -90 # Diode rotation
   diode_padding_y: 1.5 # Vertical padding between diodes
   diode_downshift_y: 0.25 # Shift paired diodes on y-axis
 
@@ -49,10 +45,11 @@ units:
   jst_shift: 3.5 # JST footprint center point shift
 
   # Screw variables
-  screw_size: 1.5 # M2 flathead screw
+  screw_size_M2: 1.5 # M2 flathead screw
+  screw_hole_M2: 1.1 # Switchplate screw hole radius
+  screw_hole_M2.5: 1.35 # Switchplate screw hole radius  
   screw_x: (-kx/2) # Screw position on x-axis
   screw_y: (-ky/2) # Screw position on y-axis
-  screw_hole: 1.1 # Switchplate screw hole radius
 
   # Standoff variables
   insert_size: 2.5 # Threaded screw inserts 3.2mm wide, and 3mm tall
@@ -120,32 +117,14 @@ points:
       rows:
         bottom:
           row_net: R3
-          key:
-            tags:
-              - key
-              - matrix_key
-              - row_bottom
         home:
           row_net: R2
-          key:
-            tags:
-              - key
-              - matrix_key
-              - row_home
         upper:
           row_net: R1
-          key:
-            tags:
-              - key
-              - matrix_key
-              - row_upper
         top:
           row_net: R0
           key:
             tags:
-              - key
-              - matrix_key
-              - row_top
 
     # Thumb cluster
     thumb:
@@ -198,19 +177,9 @@ points:
         bottom:
           row_net: R3
           name: extra_bottom
-          key:
-            tags:
-              - key
-              - extra_key
-              - row_bottom
         home:
           row_net: R2 
           name: extra_top
-          key:
-            tags:
-              - key
-              - extra_key
-              - row_home
 
     # Standoff / screw points:
     mount_outer_upper:
@@ -284,28 +253,28 @@ points:
         - wall_screw
       anchor:
         - ref: matrix_outer_top
-          shift: [-0.5keycw, 0.5keych + 2.5]
+          shift: [-0.5keycw, 0.5keych + 2.5 + pcb_shift]
     wall_insert_ne:
       key.tags:
         - helper
         - wall_screw
       anchor:
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + 2.5]
+          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + 2.5 + pcb_shift]
     wall_insert_sw:
       key.tags:
         - helper
         - wall_screw
       anchor:
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw, -0.5keych - 2.5]
+          shift: [-0.5keycw, -0.5keych - 2.5 - pcb_shift]
     wall_insert_se:
       key.tags:
         - helper
         - wall_screw
       anchor:
         - ref: thumb_space
-          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych - 2.5]    
+          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych - 2.5 - pcb_shift]    
 
     # Trackball Points
     trackball_center:
@@ -374,50 +343,50 @@ outlines:
       operation: stack
       points:
         - ref: matrix_outer_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_outer_top
-          shift: [0.5kx+0.5, 0.5keych]
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_pinky_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_pinky_top
-          shift: [0.5kx+0.5, 0.5keych]
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_ring_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_ring_top
-          shift: [0.5kx+0.5, 0.5keych]          
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]          
         - ref: matrix_middle_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_middle_top
-          shift: [0.5keycw, 0.5keych]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
         - ref: matrix_index_top
-          shift: [-0.5kx-0.5, 0.5keych]
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_index_top
-          shift: [0.5keycw, 0.5keych]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
         - ref: matrix_inner_top
-          shift: [-0.5kx-0.5, 0.5keych]
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych]                        
+          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + pcb_shift]                        
         - ref: matrix_inner_bottom
-          shift: [0.5kx + mcu_width + mcu_padding_x, -0.5keych-ky]
+          shift: [0.5kx + mcu_width + mcu_padding_x, -0.5keych - ky - pcb_shift]
         - ref: thumb_space
-          shift: [-0.5kx, -0.5keych]
+          shift: [-0.5kx, -0.5keych - pcb_shift]
         - ref: thumb_layer
-          shift: [-0.5kx, -0.5keych]
+          shift: [-0.5kx, -0.5keych - pcb_shift]
         - ref: thumb_tuck
-          shift: [-0.5keycw, -0.5keych]
+          shift: [-0.5keycw - 0.158 - pcb_shift, -0.5keych + 0.193 - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [0.5keycw, -0.5keych]
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [-0.5kx-0.5, -0.5keych]          
+          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]          
         - ref: matrix_outer_bottom
-          shift: [0.5keycw, -0.5keych]
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw, -0.5keych]  
+          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]  
     pcb_notch_circle:
     - what: circle
       where:
         ref: thumb_space
-        shift: [kx, -0.5ky]
+        shift: [kx, -0.5ky - pcb_shift]
       radius: 3              
     pcb_notched:
     - what: outline
@@ -482,13 +451,9 @@ outlines:
       name: xlBoard_wall
       operation: intersect
 
-    mounting: 
-    - what: circle
-      radius: screw_size
-      where: /mount/
     plate_hole: 
     - what: circle
-      radius: screw_hole
+      radius: screw_hole_M2
       where: /mount/
     standoff_hole: 
     - what: circle
@@ -504,67 +469,67 @@ outlines:
       where: /wall_screw/
     wall_clearance:
     - what: circle
-      radius: screw_hole
+      radius: screw_hole_M2
       where: /wall_screw/
     trackball_screw_holes:
     - what: circle
       where: /trackball_screw/
-      radius: screw_hole      
+      radius: screw_hole_M2.5
 
     switchplate:
     - what: polygon
       operation: stack
       points:
         - ref: matrix_outer_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_outer_top
-          shift: [0.5kx+0.5, 0.5keych]
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_pinky_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_pinky_top
-          shift: [0.5kx+0.5, 0.5keych]
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_ring_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_ring_top
-          shift: [0.5kx+0.5, 0.5keych]          
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]          
         - ref: matrix_middle_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw -  pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_middle_top
-          shift: [0.5keycw, 0.5keych]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
         - ref: matrix_index_top
-          shift: [-0.5kx-0.5, 0.5keych]
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_index_top
-          shift: [0.5keycw, 0.5keych]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
         - ref: matrix_inner_top
-          shift: [-0.5kx-0.5, 0.5keych]
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych] 
+          shift: [0.5keycw, 0.5keych + pcb_shift] 
         - ref: matrix_inner_home
           shift: [0.5keycw, 0.5keych]                       
         - ref: extra_top
           shift: [-0.5keycw, 0.5keych]
         - ref: extra_top
-          shift: [0.5keycw+1, 0.5keych]
+          shift: [0.5keycw + 1, 0.5keych]
         - ref: extra_bottom
-          shift: [0.5keycw+1, -0.5keych]  
+          shift: [0.5keycw + 1, -0.5keych]  
         - ref: thumb_space
-          shift: [1.5kx/2, 0.5keych+1]                                                         
+          shift: [1.5kx/2, 0.5keych + 1]                                                         
         - ref: thumb_space
-          shift: [1.5kx/2, -0.5keych]
+          shift: [1.5kx/2, -0.5keych - pcb_shift]
         - ref: thumb_space
-          shift: [-0.5kx, -0.5keych]
+          shift: [-0.5kx, -0.5keych - pcb_shift]
         - ref: thumb_layer
-          shift: [-0.5kx, -0.5keych]
+          shift: [-0.5kx, -0.5keych - pcb_shift]
         - ref: thumb_tuck
-          shift: [-0.5keycw, -0.5keych]
+          shift: [-0.5keycw - 0.158 - pcb_shift, -0.5keych + 0.193 - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [0.5keycw, -0.5keych]
+          shift: [0.5keycw, -0.5keych - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [-0.5kx-0.5, -0.5keych]          
+          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]          
         - ref: matrix_outer_bottom
-          shift: [0.5keycw, -0.5keych]
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw, -0.5keych]  
+          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]  
     - what: outline
       name: switch_cutout
       operation: subtract
@@ -576,55 +541,55 @@ outlines:
       operation: stack
       points:
         - ref: matrix_outer_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_outer_top
-          shift: [0.5kx+0.5, 0.5keych]
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_pinky_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_pinky_top
-          shift: [0.5kx+0.5, 0.5keych]
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_ring_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_ring_top
-          shift: [0.5kx+0.5, 0.5keych]          
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]          
         - ref: matrix_middle_top
-          shift: [-0.5keycw, 0.5keych]
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_middle_top
-          shift: [0.5keycw, 0.5keych]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
         - ref: matrix_index_top
-          shift: [-0.5kx-0.5, 0.5keych]
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_index_top
-          shift: [0.5keycw, 0.5keych]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
         - ref: matrix_inner_top
-          shift: [-0.5kx-0.5, 0.5keych]
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych] 
+          shift: [0.5keycw, 0.5keych + pcb_shift] 
         - ref: matrix_inner_home
           shift: [0.5keycw, 0.5keych] 
         - ref: extra_bottom
-          shift: [-0.5kx-0.5, 0.5keych]                                          
+          shift: [-0.5kx - 0.5, 0.5keych]                                          
         - ref: extra_bottom
-          shift: [0.5keycw+1, 0.5keych]    
+          shift: [0.5keycw + 1, 0.5keych]    
         - ref: extra_bottom
-          shift: [0.5keycw+1, -0.5keych]            
+          shift: [0.5keycw + 1, -0.5keych]            
         - ref: thumb_space
-          shift: [1.5kx/2, 0.5keych+1]                                                         
+          shift: [1.5kx/2, 0.5keych + 1]                                                         
         - ref: thumb_space
-          shift: [1.5kx/2, -0.5keych]
+          shift: [1.5kx/2, -0.5keych - pcb_shift]
         - ref: thumb_space
-          shift: [-0.5kx, -0.5keych]
+          shift: [-0.5kx, -0.5keych - pcb_shift]
         - ref: thumb_layer
-          shift: [-0.5kx, -0.5keych]
+          shift: [-0.5kx, -0.5keych - pcb_shift]
         - ref: thumb_tuck
-          shift: [-0.5keycw, -0.5keych]
+          shift: [-0.5keycw - 0.158 - pcb_shift, -0.5keych + 0.193 - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [0.5keycw, -0.5keych]
+          shift: [0.5keycw, -0.5keych - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [-0.5kx-0.5, -0.5keych]          
+          shift: [-0.5kx - 0.5 - pcb_shift, -0.5keych - pcb_shift]          
         - ref: matrix_outer_bottom
-          shift: [0.5keycw, -0.5keych]
+          shift: [0.5keycw - pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw, -0.5keych]  
+          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]  
     - what: outline
       name: switch_cutout
       operation: subtract
@@ -690,14 +655,14 @@ outlines:
     - what: rectangle
       where:
         ref: matrix_inner_top
-        shift: [kx + mcu_width/2 + 1, -9]
+        shift: [kx + mcu_width/2 + 1, -8]
       size: [4, mcu_height + mcu_padding_y]
 
-    _combo:
+    combo:
     - what: outline
       name: pcb
     - what: outline
-      name: switchplate
+      name: switchplate_tb
     - operation: subtract
       name: keycap_outline
     - operation: subtract
@@ -730,57 +695,9 @@ pcbs:
         adjust:
           rotate: switch_rotation
 
-      # -------------------------
-      # BACK SIDE DIODES (B side)
-      # -------------------------
-
-      diodes_top_b:
+      diodes_b:
         what: ceoloide/diode_tht_sod123
-        where: [[/key/, /_top$/]]
-        params:
-          from: "{{colrow}}_B"
-          to: "{{row_net}}"
-          reversible: false
-          side: B
-        adjust:
-          shift: [0, -0.5keych + diode_padding_y/2 - diode_downshift_y]
-          rotate: diode_rotation
-      diodes_upper_b:
-        what: ceoloide/diode_tht_sod123
-        where: [[/key/, /_upper$/]]
-        params:
-          from: "{{colrow}}_B"
-          to: "{{row_net}}"
-          reversible: false
-          side: B
-        adjust:
-          shift: [0, 0.5keych - diode_padding_y/2 - diode_downshift_y]
-          rotate: diode_rotation
-      diodes_home_b:
-        what: ceoloide/diode_tht_sod123
-        where: [[/key/, /_home$/]]
-        params:
-          from: "{{colrow}}_B"
-          to: "{{row_net}}"
-          reversible: false
-          side: B
-        adjust:
-          shift: [0, -0.5keych + diode_padding_y/2 - diode_downshift_y]
-          rotate: diode_rotation
-      diodes_bottom_b:
-        what: ceoloide/diode_tht_sod123
-        where: [[/key/, /_bottom$/]]
-        params:
-          from: "{{colrow}}_B"
-          to: "{{row_net}}"
-          reversible: false
-          side: B
-        adjust:
-          shift: [0, 0.5keych - diode_padding_y/2 - diode_downshift_y]
-          rotate: diode_rotation
-      diodes_thumb_b:
-        what: ceoloide/diode_tht_sod123
-        where: /thumb_key/
+        where: /key/
         params:
           from: "{{colrow}}_B"
           to: "{{row_net}}"
@@ -788,59 +705,11 @@ pcbs:
           side: B
         adjust:
           shift: [horizontal_diode_shift, vertical_diode_shift]
-          rotate: diode_rotation_t
-
-      # -------------------------
-      # FRONT SIDE DIODES (F side)
-      # -------------------------
-
-      diodes_top_f:
+          rotate: diode_rotation  
+          
+      diodes_f:
         what: ceoloide/diode_tht_sod123
-        where: [[/key/, /_top$/]]
-        params:
-          from: "{{colrow}}_B"
-          to: "{{row_net}}"
-          reversible: false
-          side: F
-        adjust:
-          shift: [0, -0.5keych + diode_padding_y/2 - diode_downshift_y]
-          rotate: diode_rotation
-      diodes_upper_f:
-        what: ceoloide/diode_tht_sod123
-        where: [[/key/, /_upper$/]]
-        params:
-          from: "{{colrow}}_B"
-          to: "{{row_net}}"
-          reversible: false
-          side: F
-        adjust:
-          shift: [0, 0.5keych - diode_padding_y/2 - diode_downshift_y]
-          rotate: diode_rotation
-      diodes_home_f:
-        what: ceoloide/diode_tht_sod123
-        where: [[/key/, /_home$/]]
-        params:
-          from: "{{colrow}}_B"
-          to: "{{row_net}}"
-          reversible: false
-          side: F
-        adjust:
-          shift: [0, -0.5keych + diode_padding_y/2 - diode_downshift_y]
-          rotate: diode_rotation
-      diodes_bottom_f:
-        what: ceoloide/diode_tht_sod123
-        where: [[/key/, /_bottom$/]]
-        params:
-          from: "{{colrow}}_B"
-          to: "{{row_net}}"
-          reversible: false
-          side: F
-        adjust:
-          shift: [0, 0.5keych - diode_padding_y/2 - diode_downshift_y]
-          rotate: diode_rotation
-      diodes_thumb_f:
-        what: ceoloide/diode_tht_sod123
-        where: /thumb_key/
+        where: /key/
         params:
           from: "{{colrow}}_B"
           to: "{{row_net}}"
@@ -848,13 +717,13 @@ pcbs:
           side: F
         adjust:
           shift: [-1 * horizontal_diode_shift, vertical_diode_shift]
-          rotate: diode_rotation_t
+          rotate: diode_rotation 
           
       mcu:
         what: scybin/mcu_nice_nano_sp # 8.5mm pcb through-holes
         where:
           ref: matrix_inner_top
-          shift: [kx, -mcu_width/2 + 1.4]
+          shift: [kx, -mcu_width/2 + 1.4 + pcb_shift]
         params:
           reversible: true
           use_rectangular_jumpers: true
@@ -898,8 +767,8 @@ pcbs:
           to: RAW
           reversible: true
         adjust:
-          shift: [0.5kx + pwr_shift + 2jst_shift + 1, -14.8]
-          rotate: -122.2
+          shift: [0.5kx + pwr_shift + 2jst_shift + 1.5, -16.4]
+          rotate: -124
 
       reset_switch:
         what: ceoloide/reset_switch_smd_side
@@ -910,8 +779,8 @@ pcbs:
           reversible: true
           include_bosses: true
         adjust:
-          shift: [0.5kx + jst_shift + 1, -9.6]  
-          rotate: 148.2
+          shift: [0.5kx + jst_shift + 2.25, -11]  
+          rotate: 146
           
       jst_ph:  
         what: ceoloide/battery_connector_jst_ph_2
