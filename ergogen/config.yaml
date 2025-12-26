@@ -23,7 +23,10 @@ units:
   # Diode Variables
   vertical_diode_shift: 1.5 # How much to shift to avoid overlap
   horizontal_diode_shift: -0.5 kcow - 0.85
-  diode_rotation: -180 # Diode rotation
+  diode_rotation: 180 # Diode rotation
+  diode_rotation_t: -90 # Thumb diode rotation
+  diode_padding_y: 1.5 # Vertical padding between diodes
+  diode_downshift_y: 0.25 # Shift paired diodes on y-axis
 
   # Controller Variables
   mcu_width: 18 # x-axis
@@ -117,12 +120,32 @@ points:
       rows:
         bottom:
           row_net: R3
+          key:
+            tags:
+              - key
+              - matrix_key
+              - row_bottom
         home:
           row_net: R2
+          key:
+            tags:
+              - key
+              - matrix_key
+              - row_home
         upper:
           row_net: R1
+          key:
+            tags:
+              - key
+              - matrix_key
+              - row_upper
         top:
           row_net: R0
+          key:
+            tags:
+              - key
+              - matrix_key
+              - row_top
 
     # Thumb cluster
     thumb:
@@ -175,9 +198,19 @@ points:
         bottom:
           row_net: R3
           name: extra_bottom
+          key:
+            tags:
+              - key
+              - extra_key
+              - row_bottom
         home:
           row_net: R2 
-          name: extra_top   
+          name: extra_top
+          key:
+            tags:
+              - key
+              - extra_key
+              - row_home
 
     # Standoff / screw points:
     mount_outer_upper:
@@ -334,7 +367,7 @@ outlines:
     switch_cutout_test:
     - what: rectangle
       where: /key/
-      size: [kcow - 1, kcoh - 1]
+      size: [kcow - 1, kcoh - 1]      
 
     pcb:
     - what: polygon
@@ -697,9 +730,57 @@ pcbs:
         adjust:
           rotate: switch_rotation
 
-      diodes_b:
+      # -------------------------
+      # BACK SIDE DIODES (B side)
+      # -------------------------
+
+      diodes_top_b:
         what: ceoloide/diode_tht_sod123
-        where: /key/
+        where: [[/key/, /_top$/]]
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: B
+        adjust:
+          shift: [0, -0.5keych + diode_padding_y/2 - diode_downshift_y]
+          rotate: diode_rotation
+      diodes_upper_b:
+        what: ceoloide/diode_tht_sod123
+        where: [[/key/, /_upper$/]]
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: B
+        adjust:
+          shift: [0, 0.5keych - diode_padding_y/2 - diode_downshift_y]
+          rotate: diode_rotation
+      diodes_home_b:
+        what: ceoloide/diode_tht_sod123
+        where: [[/key/, /_home$/]]
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: B
+        adjust:
+          shift: [0, -0.5keych + diode_padding_y/2 - diode_downshift_y]
+          rotate: diode_rotation
+      diodes_bottom_b:
+        what: ceoloide/diode_tht_sod123
+        where: [[/key/, /_bottom$/]]
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: B
+        adjust:
+          shift: [0, 0.5keych - diode_padding_y/2 - diode_downshift_y]
+          rotate: diode_rotation
+      diodes_thumb_b:
+        what: ceoloide/diode_tht_sod123
+        where: /thumb_key/
         params:
           from: "{{colrow}}_B"
           to: "{{row_net}}"
@@ -707,11 +788,59 @@ pcbs:
           side: B
         adjust:
           shift: [horizontal_diode_shift, vertical_diode_shift]
-          rotate: 90 + diode_rotation  
-          
-      diodes_f:
+          rotate: diode_rotation_t
+
+      # -------------------------
+      # FRONT SIDE DIODES (F side)
+      # -------------------------
+
+      diodes_top_f:
         what: ceoloide/diode_tht_sod123
-        where: /key/
+        where: [[/key/, /_top$/]]
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: F
+        adjust:
+          shift: [0, -0.5keych + diode_padding_y/2 - diode_downshift_y]
+          rotate: diode_rotation
+      diodes_upper_f:
+        what: ceoloide/diode_tht_sod123
+        where: [[/key/, /_upper$/]]
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: F
+        adjust:
+          shift: [0, 0.5keych - diode_padding_y/2 - diode_downshift_y]
+          rotate: diode_rotation
+      diodes_home_f:
+        what: ceoloide/diode_tht_sod123
+        where: [[/key/, /_home$/]]
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: F
+        adjust:
+          shift: [0, -0.5keych + diode_padding_y/2 - diode_downshift_y]
+          rotate: diode_rotation
+      diodes_bottom_f:
+        what: ceoloide/diode_tht_sod123
+        where: [[/key/, /_bottom$/]]
+        params:
+          from: "{{colrow}}_B"
+          to: "{{row_net}}"
+          reversible: false
+          side: F
+        adjust:
+          shift: [0, 0.5keych - diode_padding_y/2 - diode_downshift_y]
+          rotate: diode_rotation
+      diodes_thumb_f:
+        what: ceoloide/diode_tht_sod123
+        where: /thumb_key/
         params:
           from: "{{colrow}}_B"
           to: "{{row_net}}"
@@ -719,7 +848,7 @@ pcbs:
           side: F
         adjust:
           shift: [-1 * horizontal_diode_shift, vertical_diode_shift]
-          rotate: 90 + diode_rotation   
+          rotate: diode_rotation_t
           
       mcu:
         what: scybin/mcu_nice_nano_sp # 8.5mm pcb through-holes
