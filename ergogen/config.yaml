@@ -595,6 +595,27 @@ outlines:
       operation: subtract
 
     # MCU / Trackball Cover
+    cover_nw_corner:
+    - what: rectangle
+      where:
+        ref: matrix_inner_top
+        shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]    
+      size: [5, 6]
+      fillet: 0 
+    cover_se_corner:
+    - what: rectangle
+      where:
+        ref: trackball_center
+        shift: [trackball_screw_x + 1, -trackball_screw_y + 18]
+      size: [19, 5.4]
+      fillet: 0  
+    cover_sw_corner:
+    - what: rectangle
+      where:
+        ref: trackball_center
+        shift: [-trackball_screw_x + 0.5, -trackball_screw_y + 18]
+      size: [6, 5.4]
+      fillet: 1                      
     cover:
     - what: polygon
       operation: stack
@@ -608,6 +629,22 @@ outlines:
         - ref: matrix_inner_top
           shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
       fillet: 5
+    - what: outline
+      name: cover_nw_corner
+      operation: add  
+    - what: outline
+      name: cover_se_corner
+      operation: add  
+    - what: outline
+      name: cover_sw_corner
+      operation: add                  
+    cover_tb_nw_corner:
+    - what: rectangle
+      where:
+        ref: matrix_inner_top
+        shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]    
+      size: [5, 6]
+      fillet: 0    
     cover_tb_se_corner:
     - what: rectangle
       where:
@@ -636,6 +673,9 @@ outlines:
           shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
       fillet: 5
     - what: outline
+      name: cover_tb_nw_corner
+      operation: add         
+    - what: outline
       name: cover_tb_se_corner
       operation: add      
     - what: outline
@@ -646,7 +686,7 @@ outlines:
       where:
         ref: trackball_center
       size: [trackball_hole_w, trackball_hole_h]
-      fillet: 2      
+      fillet: 2          
 
     # Lip to hold PCB
     bottom_lip_rect:
@@ -709,7 +749,7 @@ outlines:
         - ref: thumb_layer
           shift: [-9, -0.5keych - pcb_shift]
 
-    combo:
+    _combo:
     - what: outline
       name: pcb
     - operation: subtract
@@ -726,12 +766,12 @@ pcbs:
     outlines:
       main:
         outline: pcb_notched
-      keycaps_front:
-          outline: keycap_outline
-          layer: F.SilkS
-      switches_front:
-          outline: switch_cutout
-          layer: F.SilkS
+      #keycaps_front:
+      #    outline: keycap_outline
+      #    layer: F.SilkS
+      #switches_front:
+      #    outline: switch_cutout
+      #    layer: F.SilkS
 
     footprints:
 
@@ -817,11 +857,11 @@ pcbs:
           to: RAW
           reversible: true
         adjust:
-          shift: [0.5kx + pwr_shift + 2jst_shift + 1.5, -16.4]
+          shift: [0.5kx + pwr_shift + 2jst_shift + 1.5, -16.2]
           rotate: -124
 
       reset_switch:
-        what: ceoloide/reset_switch_smd_side
+        what: scybin/reset_switch_smd_side
         where: matrix_pinky_bottom
         params:
           from: GND

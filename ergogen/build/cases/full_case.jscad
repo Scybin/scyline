@@ -47,13 +47,13 @@ function trackball_wall_extrude_17_3_outline_fn(){
 
 
 function cover_tb_extrude_28_3_outline_fn(){
-    return new CSG.Path2D([[224,-66.41],[210,-66.41]]).appendArc([205,-71.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-123.41]).appendArc([205.0172551,-123.8250339],{"radius":5,"clockwise":false,"large":false}).appendArc([205,-124.01],{"radius":1,"clockwise":false,"large":false}).appendPoint([205,-127.41]).appendArc([206,-128.41],{"radius":1,"clockwise":false,"large":false}).appendPoint([229,-128.41]).appendPoint([229,-71.41]).appendArc([224,-66.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
+    return new CSG.Path2D([[205,-66.41],[224,-66.41]]).appendArc([229,-71.41],{"radius":5,"clockwise":true,"large":false}).appendPoint([229,-128.41]).appendPoint([206,-128.41]).appendArc([205,-127.41],{"radius":1,"clockwise":true,"large":false}).appendPoint([205,-124.01]).appendArc([205.0172551,-123.8250339],{"radius":1,"clockwise":true,"large":false}).appendArc([205,-123.41],{"radius":5,"clockwise":true,"large":false}).appendPoint([205,-66.41]).close().innerToCAG()
 .extrude({ offset: [0, 0, 28.3] });
 }
 
 
 function cover_tb_extrude_24_3_outline_fn(){
-    return new CSG.Path2D([[224,-66.41],[210,-66.41]]).appendArc([205,-71.41],{"radius":5,"clockwise":false,"large":false}).appendPoint([205,-123.41]).appendArc([205.0172551,-123.8250339],{"radius":5,"clockwise":false,"large":false}).appendArc([205,-124.01],{"radius":1,"clockwise":false,"large":false}).appendPoint([205,-127.41]).appendArc([206,-128.41],{"radius":1,"clockwise":false,"large":false}).appendPoint([229,-128.41]).appendPoint([229,-71.41]).appendArc([224,-66.41],{"radius":5,"clockwise":false,"large":false}).close().innerToCAG()
+    return new CSG.Path2D([[205,-66.41],[224,-66.41]]).appendArc([229,-71.41],{"radius":5,"clockwise":true,"large":false}).appendPoint([229,-128.41]).appendPoint([206,-128.41]).appendArc([205,-127.41],{"radius":1,"clockwise":true,"large":false}).appendPoint([205,-124.01]).appendArc([205.0172551,-123.8250339],{"radius":1,"clockwise":true,"large":false}).appendArc([205,-123.41],{"radius":5,"clockwise":true,"large":false}).appendPoint([205,-66.41]).close().innerToCAG()
 .extrude({ offset: [0, 0, 24.3] });
 }
 
