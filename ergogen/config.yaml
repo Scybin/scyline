@@ -648,12 +648,12 @@ outlines:
       size: [trackball_hole_w, trackball_hole_h]
       fillet: 2      
 
-    # Lip inside case
+    # Lip to hold PCB
     bottom_lip_rect:
     - what: rectangle
       where:
         ref: thumb_space
-        shift: [kx, -8]
+        shift: [kx, -9]
       size: [6, 2]
     bottom_lip_rect_raise:
     - what: outline
@@ -676,17 +676,49 @@ outlines:
         shift: [kx + mcu_width/2 + 1, -8]
       size: [4, mcu_height + mcu_padding_y]
 
+    # Battery housing
+    inner_lip:
+    - what: polygon
+      points:
+        - ref: matrix_pinky_top
+          shift: [10, 0.5keych + pcb_shift]
+        - ref: matrix_pinky_top
+          shift: [9, 0.5keych + pcb_shift]
+        - ref: matrix_pinky_bottom
+          shift: [9, -0.5keych - pcb_shift]
+        - ref: matrix_pinky_bottom
+          shift: [10, -0.5keych - pcb_shift]
+    - what: polygon
+      points:
+        - ref: matrix_index_top
+          shift: [-10, 0.5keych + pcb_shift]
+        - ref: matrix_index_top
+          shift: [-9, 0.5keych + pcb_shift]
+        - ref: matrix_index_home
+          shift: [-9, -0.5keych - 3.5 - pcb_shift]
+        - ref: matrix_index_home
+          shift: [-10, -0.5keych - 3.5 - pcb_shift]
+    - what: polygon
+      points:
+        - ref: matrix_index_home
+          shift: [-9, -0.5keych - 7.5 - pcb_shift]
+        - ref: matrix_index_home
+          shift: [-10, -0.5keych - 7.5 - pcb_shift]
+        - ref: thumb_layer
+          shift: [-10, -0.5keych - pcb_shift]
+        - ref: thumb_layer
+          shift: [-9, -0.5keych - pcb_shift]
+
     combo:
     - what: outline
       name: pcb
-    - what: outline
-      name: switchplate_tb
     - operation: subtract
       name: keycap_outline
-    - operation: subtract
-      name: plate_hole
     - operation: stack
-      name: switchplate
+      name: standoff_hole
+    - what: outline
+      name: inner_lip
+      operation: stack     
 
 pcbs:
   scyline_mx:
@@ -753,7 +785,7 @@ pcbs:
           # RAW:         # Battery Pos
           # GND:         # Ground / Battery Neg
           # RST:         # Reset pin
-          VCC: 3V3
+          VCC: V+
           P21: C0
           P20: C1
           P19: C2
@@ -816,7 +848,7 @@ pcbs:
         where: matrix_inner_home
         params:
           GND: GND
-          VCC: 3V3
+          VCC: V+
           SDA: SDA
           SCL: SCL
           reversible: true
@@ -915,7 +947,10 @@ cases:
       extrude: 2  
   _mcu_lip_wall_clear:
     - name: mcu_lip_clear
-      extrude: lip_z          
+      extrude: lip_z   
+  _inner_lip:
+    - name: inner_lip
+      extrude: lip_z        
 
   bottom_case:
     - name: bottom_lip_wall
@@ -934,7 +969,10 @@ cases:
       operation: subtract   
     - what: case
       name: _bottom_lip_notch_raise
-      operation: add                       
+      operation: add     
+    - what: case
+      name: _inner_lip
+      operation: add                        
     - what: case
       name: _plate_holes
       operation: subtract

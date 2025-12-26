@@ -7,7 +7,7 @@
 		(at 4.572 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "3e28f7dd-2188-445c-8891-38519f875246")
+		(uuid "86ad1b6f-d317-4433-a069-0dbb85920df0")
 		(effects
 			(font
 				(size 1 1)
@@ -18,7 +18,7 @@
 	(property "Value" ""
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "9995453a-cb64-40c3-a01e-bafb192b7532")
+		(uuid "22698889-4828-436d-9a81-74062980895c")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -30,7 +30,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "e2e4e021-a5d6-4e5a-86fe-a7335458ad76")
+		(uuid "ae36fa46-6a87-4b0a-8a17-72a41d9e590a")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -42,7 +42,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "e37b5aba-d57a-4305-95b7-bdefcde50bb9")
+		(uuid "78801297-f9a8-44eb-93bd-d0eda4b1ff34")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -72,7 +72,7 @@
 		)
 		(fill yes)
 		(layer "F.SilkS")
-		(uuid "1a34ef9b-297d-4449-97bf-28d7200c9bc2")
+		(uuid "ef928aec-4329-43d3-ae44-2db966439421")
 	)
 	(embedded_fonts no)
 	(model "F:/VS_repos/source/repos/scyline/3d/bottom_case.step"
@@ -110,7 +110,7 @@
 	)
 	(model "F:/VS_repos/source/repos/scyline/kicad/3d_models/258 1200mAh lipo.step"
 		(offset
-			(xyz 23 39 -11.5)
+			(xyz 9.5 51.5 -11.5)
 		)
 		(scale
 			(xyz 1 1 1)
