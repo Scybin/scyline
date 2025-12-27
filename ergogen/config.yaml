@@ -1,9 +1,9 @@
 meta:
   engine: 4.2.1
-  name: scyline
+  name: chitin
   version: 1.0
   author: Scybin
-  url: https://github.com/Scybin/scyline
+  url: https://github.com/Scybin/chitin
 
 units:
 
