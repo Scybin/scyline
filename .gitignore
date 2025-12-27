@@ -369,3 +369,6 @@ package-lock.json
 package.json
 -p
 NOTES.txt
+# Stop ignoring custom footprints
+!ergogen/footprints/scybin/
+!ergogen/footprints/scybin/*.js
