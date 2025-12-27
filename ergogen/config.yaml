@@ -896,10 +896,10 @@ pcbs:
           shift: [kx, 10.3]   
       
       logo:
-        what: ceoloide/utility_ergogen_logo
+        what: scybin/logo_dual
         where: matrix_pinky_bottom
         adjust:
-          shift: [kx, -3]
+          shift: [28, 32.25]
 
       mounting_holes:
         what: ceoloide/mounting_hole_npth
