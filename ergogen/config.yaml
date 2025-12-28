@@ -1062,6 +1062,7 @@ pcbs:
           from: "{{column_net}}"
           to: "{{colrow}}_B"
           reversible: true
+          include_silkscreen: false
         adjust:
           rotate: switch_rotation
 
@@ -1190,7 +1191,7 @@ pcbs:
 
       mounting_holes:
         what: ceoloide/mounting_hole_npth
-        where: [[/key/, -/^mirror_/]]
+        where: [[/mount/, -/^mirror_/]]
         asym: source        
         params:
           hole_size: spacer_diameter

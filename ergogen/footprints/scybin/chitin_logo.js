@@ -64,7 +64,7 @@ module.exports = {
 	(attr board_only exclude_from_pos_files exclude_from_bom)
 
 	(fp_text user "chitin"
-		(at 55 34 0)
+		(at 55 36 0)
 		(layer "F.SilkS")
 		(effects
 			(font
@@ -74,7 +74,7 @@ module.exports = {
 		)
 	)
 	(fp_text user "chitin"
-		(at 55 34 0)
+		(at 55 36 0)
 		(layer "B.SilkS")
 		(effects
 			(font

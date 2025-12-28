@@ -363,11 +363,19 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Additional exclusions
-scyboard.sln
 .gitmodules
+scyboard.sln
+NOTES.txt
+
+# Ergogen
 package-lock.json
 package.json
 -p
-NOTES.txt
-fp-info-cache
 config-old.yaml
+
+# KiCad
+fp-info-cache
+*.lck
+*.kicad_prl
+*.kicad_pro
+*.kicad_pcb-bak
