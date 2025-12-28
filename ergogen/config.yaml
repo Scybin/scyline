@@ -310,9 +310,9 @@ points:
         - ref: trackball_center
           shift: [trackball_screw_x, -trackball_screw_y]                                   
 
-  #mirror: &mirror
-  #  ref: matrix_inner_top
-  #  distance: 5kx
+  mirror: &mirror
+    ref: matrix_inner_top
+    distance: 5kx
 
 outlines:
 
@@ -333,121 +333,7 @@ outlines:
     switch_cutout_test:
     - what: rectangle
       where: /key/
-      size: [kcow - 1, kcoh - 1]      
-
-    pcb:
-    - what: polygon
-      operation: stack
-      points:
-        - ref: matrix_outer_top
-          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
-        - ref: matrix_outer_top
-          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
-        - ref: matrix_pinky_top
-          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
-        - ref: matrix_pinky_top
-          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
-        - ref: matrix_ring_top
-          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
-        - ref: matrix_ring_top
-          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]          
-        - ref: matrix_middle_top
-          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
-        - ref: matrix_middle_top
-          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
-        - ref: matrix_index_top
-          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
-        - ref: matrix_index_top
-          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
-        - ref: matrix_inner_top
-          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
-        - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + pcb_shift]                        
-        - ref: matrix_inner_bottom
-          shift: [0.5kx + mcu_width + mcu_padding_x, -0.5keych - ky - pcb_shift]
-        - ref: thumb_space
-          shift: [-0.5kx, -0.5keych - pcb_shift]
-        - ref: thumb_layer
-          shift: [-0.5kx, -0.5keych - pcb_shift]
-        - ref: thumb_tuck
-          shift: [-0.5keycw - 0.158 - pcb_shift, -0.5keych + 0.193 - pcb_shift]
-        - ref: matrix_pinky_bottom
-          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
-        - ref: matrix_pinky_bottom
-          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]          
-        - ref: matrix_outer_bottom
-          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
-        - ref: matrix_outer_bottom
-          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]  
-    pcb_notch_circle:
-    - what: circle
-      where:
-        ref: thumb_space
-        shift: [kx, -0.5ky - pcb_shift]
-      radius: 3              
-    pcb_notched:
-    - what: outline
-      name: pcb
-      operation: stack
-    - what: outline
-      name: pcb_notch_circle
-      operation: subtract   
-          
-    xlBoard:
-    - what: outline
-      name: pcb
-      expand: 5
-      operation: stack
-      fillet: 0
-    xlBoard_wall:
-    - what: outline
-      name: xlBoard
-    - what: outline
-      name: pcb
-      operation: subtract
-      
-    # On / Off switch, reset button, and USB-C holes for access
-    button_access:
-    - what: polygon
-      points:
-        - ref: thumb_tuck
-          shift: [10, 20]
-        - ref: thumb_tuck
-          shift: [-19, -20]
-        - ref: matrix_pinky_bottom
-          shift: [6.9, -20]
-        - ref: matrix_pinky_bottom
-          shift: [19.2, 20]
-    button_wall:
-    - what: outline
-      name: button_access
-    - what: outline
-      name: xlBoard_wall
-      operation: intersect    
-    usb_access:
-    - what: rectangle
-      where:
-        ref: matrix_inner_top
-        shift: [kx, 0.5keych + 1 + pcb_shift]
-      size: [14, 8]
-    usb_wall:
-    - what: outline
-      name: usb_access
-    - what: outline
-      name: xlBoard_wall
-      operation: intersect
-    trackball_wall_access:
-    - what: rectangle
-      where:
-        ref: trackball_center
-        shift: [trackball_housing_w/2 + trackball_clearance + 4, 0]
-      size: [10, 17]
-    trackball_wall:
-    - what: outline
-      name: trackball_wall_access
-    - what: outline
-      name: xlBoard_wall
-      operation: intersect
+      size: [kcow - 1, kcoh - 1]   
 
     # Mounting holes
     plate_hole: 
@@ -462,18 +348,10 @@ outlines:
     - what: circle
       radius: insert_size
       where: /mount/
-    wall_insert:
-    - what: circle
-      radius: insert_radius
-      where: /wall_screw/
     wall_clearance:
     - what: circle
       radius: screw_hole_M2
-      where: /wall_screw/
-    trackball_screw_holes:
-    - what: circle
-      radius: screw_hole_M2_5
-      where: /trackball_screw/
+      where: /wall_screw/      
 
     switchplate:
     - what: polygon
@@ -594,31 +472,149 @@ outlines:
       operation: subtract
     - what: outline
       name: plate_hole
-      operation: subtract
+      operation: subtract       
 
-    # MCU / Trackball Cover
-    cover_nw_corner:
+    # -----------------------
+    # (L) Outlines
+    # -----------------------  
+
+    pcb_L:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_outer_top
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
+        - ref: matrix_outer_top
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
+        - ref: matrix_pinky_top
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
+        - ref: matrix_pinky_top
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
+        - ref: matrix_ring_top
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
+        - ref: matrix_ring_top
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]          
+        - ref: matrix_middle_top
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
+        - ref: matrix_middle_top
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
+        - ref: matrix_index_top
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
+        - ref: matrix_index_top
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
+        - ref: matrix_inner_top
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
+        - ref: matrix_inner_top
+          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + pcb_shift]                        
+        - ref: matrix_inner_bottom
+          shift: [0.5kx + mcu_width + mcu_padding_x, -0.5keych - ky - pcb_shift]
+        - ref: thumb_space
+          shift: [-0.5kx, -0.5keych - pcb_shift]
+        - ref: thumb_layer
+          shift: [-0.5kx, -0.5keych - pcb_shift]
+        - ref: thumb_tuck
+          shift: [-0.5keycw - 0.158 - pcb_shift, -0.5keych + 0.193 - pcb_shift]
+        - ref: matrix_pinky_bottom
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
+        - ref: matrix_pinky_bottom
+          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]          
+        - ref: matrix_outer_bottom
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
+        - ref: matrix_outer_bottom
+          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]  
+    pcb_notch_circle_L:
+    - what: circle
+      where:
+        ref: thumb_space
+        shift: [kx, -0.5ky - pcb_shift]
+      radius: 3              
+    pcb_notched_L:
+    - what: outline
+      name: pcb_L
+      operation: stack
+    - what: outline
+      name: pcb_notch_circle_L
+      operation: subtract   
+          
+    xlBoard_L:
+    - what: outline
+      name: pcb_L
+      expand: 5
+      operation: stack
+      fillet: 0
+    xlBoard_wall_L:
+    - what: outline
+      name: xlBoard_L
+    - what: outline
+      name: pcb_L
+      operation: subtract
+      
+    # On / Off switch, reset button, USB-C, and trackball wall holes for access
+    button_access_L:
+    - what: polygon
+      points:
+        - ref: thumb_tuck
+          shift: [10, 20]
+        - ref: thumb_tuck
+          shift: [-19, -20]
+        - ref: matrix_pinky_bottom
+          shift: [6.9, -20]
+        - ref: matrix_pinky_bottom
+          shift: [19.2, 20]      
+    button_wall_L:
+    - what: outline
+      name: button_access_L
+    - what: outline
+      name: xlBoard_wall_L
+      operation: intersect        
+    usb_access_L:
+    - what: rectangle
+      where:
+        ref: matrix_inner_top
+        shift: [kx, 0.5keych + 1 + pcb_shift]
+      size: [14, 8]
+    usb_wall_L:
+    - what: outline
+      name: usb_access_L
+    - what: outline
+      name: xlBoard_wall_L
+      operation: intersect
+    trackball_wall_access_L:
+    - what: rectangle
+      where:
+        ref: trackball_center
+        shift: [trackball_housing_w/2 + trackball_clearance + 4, 0]
+      size: [10, 17]
+    trackball_wall_L:
+    - what: outline
+      name: trackball_wall_access_L
+    - what: outline
+      name: xlBoard_wall_L
+      operation: intersect
+
+    # Cover (no trackball)
+    cover_nw_corner_L:
     - what: rectangle
       where:
         ref: matrix_inner_top
         shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]    
       size: [5, 6]
       fillet: 0 
-    cover_se_corner:
+    cover_se_corner_L:
     - what: rectangle
       where:
         ref: trackball_center
         shift: [trackball_screw_x + 1, -trackball_screw_y + 18]
       size: [19, 5.4]
       fillet: 0  
-    cover_sw_corner:
+    cover_sw_corner_L:
     - what: rectangle
       where:
         ref: trackball_center
         shift: [-trackball_screw_x + 0.5, -trackball_screw_y + 18]
       size: [6, 5.4]
       fillet: 1                      
-    cover:
+    cover_L:
     - what: polygon
       operation: stack
       points:
@@ -632,36 +628,38 @@ outlines:
           shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
       fillet: 5
     - what: outline
-      name: cover_nw_corner
+      name: cover_nw_corner_L
       operation: add  
     - what: outline
-      name: cover_se_corner
+      name: cover_se_corner_L
       operation: add  
     - what: outline
-      name: cover_sw_corner
-      operation: add                  
-    cover_tb_nw_corner:
+      name: cover_sw_corner_L
+      operation: add          
+
+    # Cover (trackball)        
+    cover_tb_nw_corner_L:
     - what: rectangle
       where:
         ref: matrix_inner_top
         shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]    
       size: [5, 6]
       fillet: 0    
-    cover_tb_se_corner:
+    cover_tb_se_corner_L:
     - what: rectangle
       where:
         ref: trackball_center
         shift: [trackball_screw_x, -trackball_screw_y]
       size: [21, 5.4]
       fillet: 0      
-    cover_tb_sw_corner:
+    cover_tb_sw_corner_L:
     - what: rectangle
       where:
         ref: trackball_center
         shift: [-trackball_screw_x, -trackball_screw_y]
       size: [5, 5.4]
       fillet: 1                    
-    cover_tb:
+    cover_tb_L:
     - what: polygon
       operation: stack
       points:
@@ -675,43 +673,53 @@ outlines:
           shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
       fillet: 5
     - what: outline
-      name: cover_tb_nw_corner
+      name: cover_tb_nw_corner_L
       operation: add         
     - what: outline
-      name: cover_tb_se_corner
+      name: cover_tb_se_corner_L
       operation: add      
     - what: outline
-      name: cover_tb_sw_corner
+      name: cover_tb_sw_corner_L
       operation: add
-    cover_tb_cut:
+    cover_tb_cut_L:
     - what: rectangle
       where:
         ref: trackball_center
       size: [trackball_hole_w, trackball_hole_h]
       fillet: 2          
 
+    # Mount Holes 
+    wall_insert_L:
+    - what: circle
+      radius: insert_radius
+      where: /wall_screw/  
+    trackball_screw_holes_L:
+    - what: circle
+      radius: screw_hole_M2_5
+      where: /trackball_screw/          
+
     # Lip to hold PCB
-    bottom_lip_rect:
+    bottom_lip_rect_L:
     - what: rectangle
       where:
         ref: thumb_space
         shift: [kx, -9]
       size: [6, 2]
-    bottom_lip_rect_raise:
+    bottom_lip_rect_raise_L:
     - what: outline
-      name: bottom_lip_rect
+      name: bottom_lip_rect_L
       expand: 1
       joints: 1  
-    bottom_lip_wall:
+    bottom_lip_wall_L:
     - what: outline
-      name: pcb
+      name: pcb_L
       joints: 1
-    bottom_lip_cut:
+    bottom_lip_cut_L:
     - what: outline
-      name: bottom_lip_wall
+      name: bottom_lip_wall_L
       expand: -1
       joints: 1
-    mcu_lip_clear:
+    mcu_lip_clear_L:
     - what: rectangle
       where:
         ref: matrix_inner_top
@@ -719,7 +727,7 @@ outlines:
       size: [4, mcu_height + mcu_padding_y]
 
     # Battery housing
-    inner_lip:
+    inner_lip_L:
     - what: polygon
       points:
         - ref: matrix_pinky_top
@@ -749,25 +757,294 @@ outlines:
         - ref: thumb_layer
           shift: [-10, -0.5keych - pcb_shift]
         - ref: thumb_layer
-          shift: [-9, -0.5keych - pcb_shift]
+          shift: [-9, -0.5keych - pcb_shift] 
+
+    # -----------------------
+    # Mirrored (R) outlines
+    # -----------------------
+
+    pcb_R:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: mirror_matrix_outer_top
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_outer_top
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_pinky_top
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_pinky_top
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_ring_top
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_ring_top
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_middle_top
+          shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_middle_top
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_index_top
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_index_top
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_inner_top
+          shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_inner_top
+          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_inner_bottom
+          shift: [0.5kx + mcu_width + mcu_padding_x, -0.5keych - ky - pcb_shift]
+        - ref: mirror_thumb_space
+          shift: [-0.5kx, -0.5keych - pcb_shift]
+        - ref: mirror_thumb_layer
+          shift: [-0.5kx, -0.5keych - pcb_shift]
+        - ref: mirror_thumb_tuck
+          shift: [-0.5keycw - 0.158 - pcb_shift, -0.5keych + 0.193 - pcb_shift]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]
+        - ref: mirror_matrix_outer_bottom
+          shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
+        - ref: mirror_matrix_outer_bottom
+          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]
+
+    xlBoard_R:
+    - what: outline
+      name: pcb_R
+      expand: 5
+      operation: stack
+      fillet: 0
+    xlBoard_wall_R:
+    - what: outline
+      name: xlBoard_R
+    - what: outline
+      name: pcb_R
+      operation: subtract
+
+    # On / Off switch, reset button, USB-C, and trackball wall holes for access
+    button_access_R:
+    - what: polygon
+      points:
+        - ref: mirror_thumb_tuck
+          shift: [10, 20]
+        - ref: mirror_thumb_tuck
+          shift: [-19, -20]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [6.9, -20]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [19.2, 20]
+    button_wall_R:
+    - what: outline
+      name: button_access_R
+    - what: outline
+      name: xlBoard_wall_R
+      operation: intersect
+    usb_access_R:
+    - what: rectangle
+      where:
+        ref: mirror_matrix_inner_top
+        shift: [kx, 0.5keych + 1 + pcb_shift]
+      size: [14, 8]
+    usb_wall_R:
+    - what: outline
+      name: usb_access_R
+    - what: outline
+      name: xlBoard_wall_R
+      operation: intersect
+    trackball_wall_access_R:
+    - what: rectangle
+      where:
+        ref: mirror_trackball_center
+        shift: [trackball_housing_w/2 + trackball_clearance + 4, 0]
+      size: [10, 17]
+    trackball_wall_R:
+    - what: outline
+      name: trackball_wall_access_R
+    - what: outline
+      name: xlBoard_wall_R
+      operation: intersect
+
+    # Cover (no trackball)
+    cover_nw_corner_R:
+    - what: rectangle
+      where:
+        ref: mirror_matrix_inner_top
+        shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]
+      size: [5, 6]
+      fillet: 0
+    cover_se_corner_R:
+    - what: rectangle
+      where:
+        ref: mirror_trackball_center
+        shift: [trackball_screw_x + 1, -trackball_screw_y + 18]
+      size: [19, 5.4]
+      fillet: 0
+    cover_sw_corner_R:
+    - what: rectangle
+      where:
+        ref: mirror_trackball_center
+        shift: [-trackball_screw_x + 0.5, -trackball_screw_y + 18]
+      size: [6, 5.4]
+      fillet: 1
+    cover_R:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: mirror_matrix_inner_top
+          shift: [kx - 0.5keycw, 0.5keych + 5 + pcb_shift]
+        - ref: mirror_matrix_inner_home
+          shift: [kx - 0.5keycw, 0.5keych]
+        - ref: mirror_matrix_inner_home
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych]
+        - ref: mirror_matrix_inner_top
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
+      fillet: 5
+    - what: outline
+      name: cover_nw_corner_R
+      operation: add
+    - what: outline
+      name: cover_se_corner_R
+      operation: add
+    - what: outline
+      name: cover_sw_corner_R
+      operation: add
+
+    # Cover (trackball)
+    cover_tb_nw_corner_R:
+    - what: rectangle
+      where:
+        ref: mirror_matrix_inner_top
+        shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]
+      size: [5, 6]
+      fillet: 0
+    cover_tb_se_corner_R:
+    - what: rectangle
+      where:
+        ref: mirror_trackball_center
+        shift: [trackball_screw_x, -trackball_screw_y]
+      size: [21, 5.4]
+      fillet: 0
+    cover_tb_sw_corner_R:
+    - what: rectangle
+      where:
+        ref: mirror_trackball_center
+        shift: [-trackball_screw_x, -trackball_screw_y]
+      size: [5, 5.4]
+      fillet: 1
+    cover_tb_R:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: mirror_matrix_inner_top
+          shift: [kx - 0.5keycw, 0.5keych + 5 + pcb_shift]
+        - ref: mirror_matrix_inner_home
+          shift: [kx - 0.5keycw, -0.5keych]
+        - ref: mirror_matrix_inner_home
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, -0.5keych]
+        - ref: mirror_matrix_inner_top
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
+      fillet: 5
+    - what: outline
+      name: cover_tb_nw_corner_R
+      operation: add
+    - what: outline
+      name: cover_tb_se_corner_R
+      operation: add
+    - what: outline
+      name: cover_tb_sw_corner_R
+      operation: add
+    cover_tb_cut_R:
+    - what: rectangle
+      where:
+        ref: mirror_trackball_center
+      size: [trackball_hole_w, trackball_hole_h]
+      fillet: 2
+
+    # Mount Holes 
+    wall_insert_R:
+    - what: circle
+      radius: insert_radius
+      where: /wall_screw/
+      asym: clone
+    trackball_screw_holes_R:
+    - what: circle
+      radius: screw_hole_M2_5
+      where: /trackball_screw/
+      asym: clone
+
+    # Lip to hold PCB      
+    bottom_lip_rect_R:
+    - what: rectangle
+      where:
+        ref: mirror_thumb_space
+        shift: [-1 * kx, -9]
+      size: [6, 2]
+    bottom_lip_wall_R:
+    - what: outline
+      name: pcb_R
+      joints: 1
+    bottom_lip_cut_R:
+    - what: outline
+      name: bottom_lip_wall_R
+      expand: -1
+      joints: 1
+    mcu_lip_clear_R:
+    - what: rectangle
+      where:
+        ref: mirror_matrix_inner_top
+        shift: [-1 * (kx + mcu_width/2 + 1), -8]
+      size: [4, mcu_height + mcu_padding_y]
+
+    # Battery housing      
+    inner_lip_R:
+    - what: polygon
+      points:
+        - ref: mirror_matrix_pinky_top
+          shift: [-10,  0.5keych + pcb_shift]
+        - ref: mirror_matrix_pinky_top
+          shift: [-9,   0.5keych + pcb_shift]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [-9,  -0.5keych - pcb_shift]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [-10, -0.5keych - pcb_shift]
+    - what: polygon
+      points:
+        - ref: mirror_matrix_index_top
+          shift: [10,  0.5keych + pcb_shift]
+        - ref: mirror_matrix_index_top
+          shift: [9,   0.5keych + pcb_shift]
+        - ref: mirror_matrix_index_home
+          shift: [9,  -0.5keych - 3.5 - pcb_shift]
+        - ref: mirror_matrix_index_home
+          shift: [10, -0.5keych - 3.5 - pcb_shift]
+    - what: polygon
+      points:
+        - ref: mirror_matrix_index_home
+          shift: [9,  -0.5keych - 7.5 - pcb_shift]
+        - ref: mirror_matrix_index_home
+          shift: [10, -0.5keych - 7.5 - pcb_shift]
+        - ref: mirror_thumb_layer
+          shift: [10, -0.5keych - pcb_shift]
+        - ref: mirror_thumb_layer
+          shift: [9,  -0.5keych - pcb_shift]
 
     _combo:
     - what: outline
-      name: pcb
+      name: pcb_L
     - operation: subtract
       name: keycap_outline
     - operation: stack
       name: standoff_hole
     - what: outline
-      name: inner_lip
-      operation: stack     
+      name: inner_lip_L
+      operation: stack          
 
 pcbs:
   chitin:
     template: kicad8
     outlines:
       main:
-        outline: pcb_notched
+        outline: pcb_notched_L
       #keycaps_front:
       #    outline: keycap_outline
       #    layer: F.SilkS
@@ -779,7 +1056,8 @@ pcbs:
 
       key_switches:
         what: ceoloide/switch_mx
-        where: /key/
+        where: [[/key/, -/^mirror_/]]
+        asym: source  
         params:
           from: "{{column_net}}"
           to: "{{colrow}}_B"
@@ -789,7 +1067,8 @@ pcbs:
 
       diodes_b:
         what: ceoloide/diode_tht_sod123
-        where: /key/
+        where: [[/key/, -/^mirror_/]]
+        asym: source        
         params:
           from: "{{colrow}}_B"
           to: "{{row_net}}"
@@ -801,7 +1080,8 @@ pcbs:
           
       diodes_f:
         what: ceoloide/diode_tht_sod123
-        where: /key/
+        where: [[/key/, -/^mirror_/]]
+        asym: source        
         params:
           from: "{{colrow}}_B"
           to: "{{row_net}}"
@@ -815,7 +1095,7 @@ pcbs:
         what: scybin/mcu_nice_nano_sp # 8.5mm pcb through-holes
         where:
           ref: matrix_inner_top
-          shift: [kx, -mcu_width/2 + 1.4 + pcb_shift]
+          shift: [kx, -mcu_width/2 + 1.4 + pcb_shift]       
         params:
           reversible: true
           use_rectangular_jumpers: true
@@ -854,6 +1134,7 @@ pcbs:
       on_off_switch:
         what: ceoloide/power_switch_smd_side
         where: matrix_pinky_bottom
+        asym: source        
         params:
           from: BAT_P
           to: RAW
@@ -865,6 +1146,7 @@ pcbs:
       reset_switch:
         what: scybin/reset_switch_smd_side
         where: matrix_pinky_bottom
+        asym: source        
         params:
           from: GND
           to: RST
@@ -877,6 +1159,7 @@ pcbs:
       jst_ph:  
         what: ceoloide/battery_connector_jst_ph_2
         where: thumb_space
+        asym: source        
         params:
           BAT_P: BAT_P
           BAT_N: GND
@@ -888,6 +1171,7 @@ pcbs:
       jst_sh:  
         what: scybin/jst_sh_sm04b_srss_tb
         where: matrix_inner_home
+        asym: source      
         params:
           GND: GND
           VCC: V+
@@ -900,12 +1184,14 @@ pcbs:
       logo:
         what: scybin/logo_dual
         where: matrix_pinky_bottom
+        asym: source      
         adjust:
           shift: [28, 32.25]
 
       mounting_holes:
         what: ceoloide/mounting_hole_npth
-        where: /mount/
+        where: [[/key/, -/^mirror_/]]
+        asym: source        
         params:
           hole_size: spacer_diameter
           hole_drill: spacer_diameter
@@ -926,158 +1212,13 @@ cases:
       extrude: 2
   _mounting_holes:
     - name: standoff_hole
-      extrude: fr4_thickness      
-  _outerWall:
-    - name: xlBoard
-      extrude: wall_z
-  _innerWall:
-    - name: pcb
-      extrude: wall_z
-  _usb_access_cut:
-    - name: usb_wall
-      extrude: 22.3
-  _usb_access_fill:
-    - name: usb_wall
-      extrude: 13
-  _button_access_cut:
-    - name: button_wall
-      extrude: wall_z
-  _button_access_fill:
-    - name: button_wall
-      extrude: lip_z
-  _trackball_wall_cut:
-    - name: trackball_wall
-      extrude: wall_z
-  _trackball_wall_fill:
-    - name: trackball_wall
-      extrude: wall_z - 7 
+      extrude: fr4_thickness  
   _switchplate:
     - name: switchplate
       extrude: fr4_thickness
   _switchplate_tb:
     - name: switchplate_tb
-      extrude: fr4_thickness   
-  _cover_cap:
-    - name: cover
-      extrude: cover_z
-    - name: cover
-      extrude: wall_z
-      operation: subtract          
-  _cover_cap_tb:
-    - name: cover_tb
-      extrude: cover_z
-    - name: cover_tb
-      extrude: wall_z
-      operation: subtract
-    - name: cover_tb_cut
-      extrude: cover_z
-      operation: subtract  
-    - name: trackball_screw_holes
-      extrude: cover_z
-      operation: subtract          
-  _wall_insert:
-    - name: wall_insert
-      extrude: 3  # 3mm insert height
-  _base_holes:
-    - name: wall_clearance
-      extrude: 2  # through 2 mm bottom plate
-  _bottom_lip_notch:
-    - name: bottom_lip_rect
-      extrude: lip_z   
-  _bottom_lip_notch_raise:
-    - name: bottom_lip_rect
-      extrude: 2  
-  _mcu_lip_wall_clear:
-    - name: mcu_lip_clear
-      extrude: lip_z   
-  _inner_lip:
-    - name: inner_lip
-      extrude: lip_z        
-
-  bottom_case:
-    - name: bottom_lip_wall
-      extrude: lip_z
-    - name: bottom_lip_cut
-      extrude: lip_z
-      operation: subtract
-    - what: case
-      name: _mcu_lip_wall_clear
-      operation: subtract          
-    - name: xlBoard
-      extrude: 2
-      operation: add 
-    - what: case
-      name: _bottom_lip_notch
-      operation: subtract   
-    - what: case
-      name: _bottom_lip_notch_raise
-      operation: add     
-    - what: case
-      name: _inner_lip
-      operation: add                        
-    - what: case
-      name: _plate_holes
-      operation: subtract
-    - what: case
-      name: _base_holes
-      operation: subtract   
-
-  wall_cover_case_L:
-    - what: case
-      name: _outerWall
-      operation: add
-    - what: case
-      name: _innerWall
-      operation: subtract
-    - what: case
-      name: _usb_access_cut
-      operation: subtract
-    - what: case
-      name: _usb_access_fill
-      operation: add
-    - what: case
-      name: _button_access_cut
-      operation: subtract     
-    - what: case
-      name: _button_access_fill
-      operation: add          
-    - what: case
-      name: _cover_cap
-      operation: add 
-    - what: case
-      name: _wall_insert
-      operation: subtract             
-  wall_cover_case_tb_L:
-    - what: case
-      name: _outerWall
-      operation: add
-    - what: case
-      name: _innerWall
-      operation: subtract
-    - what: case
-      name: _usb_access_cut
-      operation: subtract
-    - what: case
-      name: _usb_access_fill
-      operation: add
-    - what: case
-      name: _button_access_cut
-      operation: subtract     
-    - what: case
-      name: _button_access_fill
-      operation: add   
-    - what: case
-      name: _trackball_wall_cut
-      operation: subtract
-    - what: case
-      name: _trackball_wall_fill
-      operation: add          
-    - what: case
-      name: _cover_cap_tb
-      operation: add 
-    - what: case
-      name: _wall_insert
-      operation: subtract             
+      extrude: fr4_thickness         
 
   switchplate_case:
     - what: case
@@ -1101,13 +1242,310 @@ cases:
       operation: subtract  
 
   pcb_case:
-    - name: pcb_notched
+    - name: pcb_notched_L
       extrude: fr4_thickness
     - what: case
       name: _switch_holes_test
       operation: subtract
     - what: case
       name: _mounting_holes
+      operation: subtract 
+
+  # -----------------------
+  # (L) Case parts
+  # -----------------------
+
+  _outerWall_L:
+    - name: xlBoard_L
+      extrude: wall_z
+  _innerWall_L:
+    - name: pcb_L
+      extrude: wall_z
+  _usb_access_cut_L:
+    - name: usb_wall_L
+      extrude: 22.3
+  _usb_access_fill_L:
+    - name: usb_wall_L
+      extrude: 13
+  _button_access_cut_L:
+    - name: button_wall_L
+      extrude: wall_z
+  _button_access_fill_L:
+    - name: button_wall_L
+      extrude: lip_z
+  _trackball_wall_cut_L:
+    - name: trackball_wall_L
+      extrude: wall_z
+  _trackball_wall_fill_L:
+    - name: trackball_wall_L
+      extrude: wall_z - 7 
+  _cover_cap_L:
+    - name: cover_L
+      extrude: cover_z
+    - name: cover_L
+      extrude: wall_z
+      operation: subtract          
+  _cover_cap_tb_L:
+    - name: cover_tb_L
+      extrude: cover_z
+    - name: cover_tb_L
+      extrude: wall_z
+      operation: subtract
+    - name: cover_tb_cut_L
+      extrude: cover_z
+      operation: subtract  
+    - name: trackball_screw_holes_L
+      extrude: cover_z
+      operation: subtract          
+  _wall_insert_L:
+    - name: wall_insert_L
+      extrude: 3  # 3mm insert height
+  _base_holes:
+    - name: wall_clearance
+      extrude: 2  # through 2 mm bottom plate
+  _bottom_lip_notch_L:
+    - name: bottom_lip_rect_L
+      extrude: lip_z   
+  _bottom_lip_notch_raise_L:
+    - name: bottom_lip_rect_L
+      extrude: 2  
+  _mcu_lip_wall_clear_L:
+    - name: mcu_lip_clear_L
+      extrude: lip_z   
+  _inner_lip_L:
+    - name: inner_lip_L
+      extrude: lip_z        
+
+  bottom_case_L:
+    - name: bottom_lip_wall_L
+      extrude: lip_z
+    - name: bottom_lip_cut_L
+      extrude: lip_z
+      operation: subtract
+    - what: case
+      name: _mcu_lip_wall_clear_L
+      operation: subtract          
+    - name: xlBoard_L
+      extrude: 2
+      operation: add 
+    - what: case
+      name: _bottom_lip_notch_L
+      operation: subtract   
+    - what: case
+      name: _bottom_lip_notch_raise_L
+      operation: add     
+    - what: case
+      name: _inner_lip_L
+      operation: add                        
+    - what: case
+      name: _plate_holes
+      operation: subtract
+    - what: case
+      name: _base_holes
+      operation: subtract   
+
+  wall_cover_case_L:
+    - what: case
+      name: _outerWall_L
+      operation: add
+    - what: case
+      name: _innerWall_L
+      operation: subtract
+    - what: case
+      name: _usb_access_cut_L
+      operation: subtract
+    - what: case
+      name: _usb_access_fill_L
+      operation: add
+    - what: case
+      name: _button_access_cut_L
+      operation: subtract          
+    - what: case
+      name: _button_access_fill_L
+      operation: add          
+    - what: case
+      name: _cover_cap_L
+      operation: add 
+    - what: case
+      name: _wall_insert_L
+      operation: subtract             
+  wall_cover_case_tb_L:
+    - what: case
+      name: _outerWall_L
+      operation: add
+    - what: case
+      name: _innerWall_L
+      operation: subtract
+    - what: case
+      name: _usb_access_cut_L
+      operation: subtract
+    - what: case
+      name: _usb_access_fill_L
+      operation: add
+    - what: case
+      name: _button_access_cut_L
+      operation: subtract     
+    - what: case
+      name: _button_access_fill_L
+      operation: add   
+    - what: case
+      name: _trackball_wall_cut_L
+      operation: subtract
+    - what: case
+      name: _trackball_wall_fill_L
+      operation: add          
+    - what: case
+      name: _cover_cap_tb_L
+      operation: add 
+    - what: case
+      name: _wall_insert_L
+      operation: subtract             
+
+  # -----------------------
+  # (R) Case parts
+  # -----------------------
+
+  _outerWall_R:
+    - name: xlBoard_R
+      extrude: wall_z
+  _innerWall_R:
+    - name: pcb_R
+      extrude: wall_z
+  _usb_access_cut_R:
+    - name: usb_wall_R
+      extrude: 22.3
+  _usb_access_fill_R:
+    - name: usb_wall_R
+      extrude: 13
+  _button_access_cut_R:
+    - name: button_wall_R
+      extrude: wall_z
+  _button_access_fill_R:
+    - name: button_wall_R
+      extrude: lip_z
+  _trackball_wall_cut_R:
+    - name: trackball_wall_R
+      extrude: wall_z
+  _trackball_wall_fill_R:
+    - name: trackball_wall_R
+      extrude: wall_z - 7
+  _cover_cap_R:
+    - name: cover_R
+      extrude: cover_z
+    - name: cover_R
+      extrude: wall_z
+      operation: subtract
+  _cover_cap_tb_R:
+    - name: cover_tb_R
+      extrude: cover_z
+    - name: cover_tb_R
+      extrude: wall_z
+      operation: subtract
+    - name: cover_tb_cut_R
+      extrude: cover_z
+      operation: subtract
+    - name: trackball_screw_holes_R
+      extrude: cover_z
+      operation: subtract
+  _wall_insert_R:
+    - name: wall_insert_R
+      extrude: 3
+  _bottom_lip_notch_R:
+    - name: bottom_lip_rect_R
+      extrude: lip_z
+  _bottom_lip_notch_raise_R:
+    - name: bottom_lip_rect_R
+      extrude: 2
+  _mcu_lip_wall_clear_R:
+    - name: mcu_lip_clear_R
+      extrude: lip_z
+  _inner_lip_R:
+    - name: inner_lip_R
+      extrude: lip_z
+
+  bottom_case_R:
+    - name: bottom_lip_wall_R
+      extrude: lip_z
+    - name: bottom_lip_cut_R
+      extrude: lip_z
+      operation: subtract
+    - what: case
+      name: _mcu_lip_wall_clear_R
+      operation: subtract
+    - name: xlBoard_R
+      extrude: 2
+      operation: add
+    - what: case
+      name: _bottom_lip_notch_R
+      operation: subtract
+    - what: case
+      name: _bottom_lip_notch_raise_R
+      operation: add
+    - what: case
+      name: _inner_lip_R
+      operation: add
+    - what: case
+      name: _plate_holes
+      operation: subtract
+    - what: case
+      name: _base_holes
+      operation: subtract      
+
+  wall_cover_case_R:
+    - what: case
+      name: _outerWall_R
+      operation: add
+    - what: case
+      name: _innerWall_R
+      operation: subtract
+    - what: case
+      name: _usb_access_cut_R
+      operation: subtract
+    - what: case
+      name: _usb_access_fill_R
+      operation: add
+    - what: case
+      name: _button_access_cut_R
+      operation: subtract
+    - what: case
+      name: _button_access_fill_R
+      operation: add
+    - what: case
+      name: _cover_cap_R
+      operation: add
+    - what: case
+      name: _wall_insert_R
+      operation: subtract
+  wall_cover_case_tb_R:
+    - what: case
+      name: _outerWall_R
+      operation: add
+    - what: case
+      name: _innerWall_R
+      operation: subtract
+    - what: case
+      name: _usb_access_cut_R
+      operation: subtract
+    - what: case
+      name: _usb_access_fill_R
+      operation: add
+    - what: case
+      name: _button_access_cut_R
+      operation: subtract
+    - what: case
+      name: _button_access_fill_R
+      operation: add
+    - what: case
+      name: _trackball_wall_cut_R
+      operation: subtract
+    - what: case
+      name: _trackball_wall_fill_R
+      operation: add
+    - what: case
+      name: _cover_cap_tb_R
+      operation: add
+    - what: case
+      name: _wall_insert_R
       operation: subtract
 
   full_case:
@@ -1115,5 +1553,5 @@ cases:
       name: wall_cover_case_tb_L
       operation: add    
     - what: case
-      name: bottom_case
-      operation: add       
+      name: bottom_case_L
+      operation: add         
