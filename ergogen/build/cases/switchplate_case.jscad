@@ -81,8 +81,66 @@ function switchplate_extrude_1_6_outline_fn(){
 
 
 function switch_cutout_extrude_1_6_outline_fn(){
-    return new CSG.Path2D([[149.896883,-167.2291915],[163.6841915,-164.798117]]).appendPoint([161.253117,-151.0108085]).appendPoint([147.4658085,-153.441883]).appendPoint([149.896883,-167.2291915]).close().innerToCAG()
+    return new CSG.Path2D([[321.3158085,-164.798117],[335.103117,-167.2291915]]).appendPoint([337.5341915,-153.441883]).appendPoint([323.746883,-151.0108085]).appendPoint([321.3158085,-164.798117]).close().innerToCAG()
 .union(
+    new CSG.Path2D([[149.896883,-167.2291915],[163.6841915,-164.798117]]).appendPoint([161.253117,-151.0108085]).appendPoint([147.4658085,-153.441883]).appendPoint([149.896883,-167.2291915]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[264,-126.41],[278,-126.41]]).appendPoint([278,-112.41]).appendPoint([264,-112.41]).appendPoint([264,-126.41]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[264,-145.41],[278,-145.41]]).appendPoint([278,-131.41]).appendPoint([264,-131.41]).appendPoint([264,-145.41]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[278.5,-164.41],[292.5,-164.41]]).appendPoint([292.5,-150.41]).appendPoint([278.5,-150.41]).appendPoint([278.5,-164.41]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[302,-164.41],[316,-164.41]]).appendPoint([316,-150.41]).appendPoint([302,-150.41]).appendPoint([302,-164.41]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[283,-88.41],[297,-88.41]]).appendPoint([297,-74.41]).appendPoint([283,-74.41]).appendPoint([283,-88.41]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[283,-107.41],[297,-107.41]]).appendPoint([297,-93.41]).appendPoint([283,-93.41]).appendPoint([283,-107.41]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[283,-126.41],[297,-126.41]]).appendPoint([297,-112.41]).appendPoint([283,-112.41]).appendPoint([283,-126.41]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[283,-145.41],[297,-145.41]]).appendPoint([297,-131.41]).appendPoint([283,-131.41]).appendPoint([283,-145.41]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[302,-85.56],[316,-85.56]]).appendPoint([316,-71.56]).appendPoint([302,-71.56]).appendPoint([302,-85.56]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[302,-104.56],[316,-104.56]]).appendPoint([316,-90.56]).appendPoint([302,-90.56]).appendPoint([302,-104.56]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[302,-123.56],[316,-123.56]]).appendPoint([316,-109.56]).appendPoint([302,-109.56]).appendPoint([302,-123.56]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[302,-142.56],[316,-142.56]]).appendPoint([316,-128.56]).appendPoint([302,-128.56]).appendPoint([302,-142.56]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[321,-80.81],[335,-80.81]]).appendPoint([335,-66.81]).appendPoint([321,-66.81]).appendPoint([321,-80.81]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[321,-99.81],[335,-99.81]]).appendPoint([335,-85.81]).appendPoint([321,-85.81]).appendPoint([321,-99.81]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[321,-118.81],[335,-118.81]]).appendPoint([335,-104.81]).appendPoint([321,-104.81]).appendPoint([321,-118.81]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[321,-137.81],[335,-137.81]]).appendPoint([335,-123.81]).appendPoint([321,-123.81]).appendPoint([321,-137.81]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[340,-85.56],[354,-85.56]]).appendPoint([354,-71.56]).appendPoint([340,-71.56]).appendPoint([340,-85.56]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[340,-104.56],[354,-104.56]]).appendPoint([354,-90.56]).appendPoint([340,-90.56]).appendPoint([340,-104.56]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[340,-123.56],[354,-123.56]]).appendPoint([354,-109.56]).appendPoint([340,-109.56]).appendPoint([340,-123.56]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[340,-142.56],[354,-142.56]]).appendPoint([354,-128.56]).appendPoint([340,-128.56]).appendPoint([340,-142.56]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[359,-98.1],[373,-98.1]]).appendPoint([373,-84.1]).appendPoint([359,-84.1]).appendPoint([359,-98.1]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[359,-117.1],[373,-117.1]]).appendPoint([373,-103.1]).appendPoint([359,-103.1]).appendPoint([359,-117.1]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[359,-136.1],[373,-136.1]]).appendPoint([373,-122.1]).appendPoint([359,-122.1]).appendPoint([359,-136.1]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[359,-155.1],[373,-155.1]]).appendPoint([373,-141.1]).appendPoint([359,-141.1]).appendPoint([359,-155.1]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[378,-100],[392,-100]]).appendPoint([392,-86]).appendPoint([378,-86]).appendPoint([378,-100]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[378,-119],[392,-119]]).appendPoint([392,-105]).appendPoint([378,-105]).appendPoint([378,-119]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[378,-138],[392,-138]]).appendPoint([392,-124]).appendPoint([378,-124]).appendPoint([378,-138]).close().innerToCAG()
+).union(
+    new CSG.Path2D([[378,-157],[392,-157]]).appendPoint([392,-143]).appendPoint([378,-143]).appendPoint([378,-157]).close().innerToCAG()
+).union(
     new CSG.Path2D([[207,-126.41],[221,-126.41]]).appendPoint([221,-112.41]).appendPoint([207,-112.41]).appendPoint([207,-126.41]).close().innerToCAG()
 ).union(
     new CSG.Path2D([[207,-145.41],[221,-145.41]]).appendPoint([221,-131.41]).appendPoint([207,-131.41]).appendPoint([207,-145.41]).close().innerToCAG()
@@ -143,8 +201,26 @@ function switch_cutout_extrude_1_6_outline_fn(){
 
 
 function plate_hole_extrude_2_outline_fn(){
-    return CAG.circle({"center":[204.5,-147.41],"radius":1.1})
+    return CAG.circle({"center":[280.5,-147.41],"radius":1.1})
 .union(
+    CAG.circle({"center":[280.5,-128.91],"radius":1.1})
+).union(
+    CAG.circle({"center":[299.5,-127.485],"radius":1.1})
+).union(
+    CAG.circle({"center":[299.5,-108.485],"radius":1.1})
+).union(
+    CAG.circle({"center":[299.5,-89.485],"radius":1.1})
+).union(
+    CAG.circle({"center":[328.7125,-144.965],"radius":1.1})
+).union(
+    CAG.circle({"center":[375.5,-139.55],"radius":1.1})
+).union(
+    CAG.circle({"center":[375.5,-120.55],"radius":1.1})
+).union(
+    CAG.circle({"center":[375.5,-101.55],"radius":1.1})
+).union(
+    CAG.circle({"center":[204.5,-147.41],"radius":1.1})
+).union(
     CAG.circle({"center":[204.5,-128.91],"radius":1.1})
 ).union(
     CAG.circle({"center":[185.5,-127.485],"radius":1.1})

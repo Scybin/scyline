@@ -11,7 +11,7 @@
   (paper "A3")
   (title_block
     (title "chitin")
-    (date "2025-12-27")
+    (date "2025-12-28")
     (rev "1")
     (company "Scybin")
   )
@@ -14981,7 +14981,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 109.5 101.55 0)
+    (at 100 150 0)
     (property "Reference" "MH1"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -14999,7 +14999,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 109.5 120.55 0)
+    (at 100 131 0)
     (property "Reference" "MH2"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -15017,7 +15017,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 109.5 139.55 0)
+    (at 100 112 0)
     (property "Reference" "MH3"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -15035,7 +15035,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 156.2875 144.965 0)
+    (at 100 93 0)
     (property "Reference" "MH4"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -15053,7 +15053,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 185.5 89.485 0)
+    (at 119 148.1 0)
     (property "Reference" "MH5"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -15071,7 +15071,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 185.5 108.485 0)
+    (at 119 129.1 0)
     (property "Reference" "MH6"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -15089,7 +15089,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 185.5 127.485 0)
+    (at 119 110.1 0)
     (property "Reference" "MH7"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -15107,7 +15107,7 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 204.5 128.91 0)
+    (at 119 91.1 0)
     (property "Reference" "MH8"
       (at 0 2.55 0)
       (layer "F.SilkS")
@@ -15125,8 +15125,368 @@
 
   (footprint "ceoloide:mounting_hole_npth"
     (layer "F.Cu")
-    (at 204.5 147.41 0)
+    (at 138 135.56 0)
     (property "Reference" "MH9"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 138 116.56 0)
+    (property "Reference" "MH10"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 138 97.56 0)
+    (property "Reference" "MH11"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 138 78.56 0)
+    (property "Reference" "MH12"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 157 130.81 0)
+    (property "Reference" "MH13"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 157 111.81 0)
+    (property "Reference" "MH14"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 157 92.81 0)
+    (property "Reference" "MH15"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 157 73.81 0)
+    (property "Reference" "MH16"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 176 135.56 0)
+    (property "Reference" "MH17"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 176 116.56 0)
+    (property "Reference" "MH18"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 176 97.56 0)
+    (property "Reference" "MH19"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 176 78.56 0)
+    (property "Reference" "MH20"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 195 138.41 0)
+    (property "Reference" "MH21"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 195 119.41 0)
+    (property "Reference" "MH22"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 195 100.41 0)
+    (property "Reference" "MH23"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 195 81.41 0)
+    (property "Reference" "MH24"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 155.575 159.12 10)
+    (property "Reference" "MH25"
+      (at 0 2.55 10)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 10)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 176 157.41 0)
+    (property "Reference" "MH26"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 199.5 157.41 0)
+    (property "Reference" "MH27"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 214 138.41 0)
+    (property "Reference" "MH28"
+      (at 0 2.55 0)
+      (layer "F.SilkS")
+      hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad "" np_thru_hole circle
+      (at 0 0 0)
+      (size 5 5)
+      (drill 5)
+      (layers "*.Cu" "*.Mask")
+    )
+  )
+  
+
+  (footprint "ceoloide:mounting_hole_npth"
+    (layer "F.Cu")
+    (at 214 119.41 0)
+    (property "Reference" "MH29"
       (at 0 2.55 0)
       (layer "F.SilkS")
       hide
@@ -15161,238 +15521,6 @@
 (gr_line (start 110 158.1) (end 110 160) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_line (start 110 160) (end 90 160) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
 (gr_arc (start 221.4580399 167.41) (mid 218.5 164.91) (end 215.5419601 167.41) (layer Edge.Cuts) (stroke (width 0.15) (type default)))
-(gr_line (start 91 159) (end 109 159) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 109 159) (end 109 141) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 109 141) (end 91 141) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 91 141) (end 91 159) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 91 140) (end 109 140) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 109 140) (end 109 122) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 109 122) (end 91 122) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 91 122) (end 91 140) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 91 121) (end 109 121) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 109 121) (end 109 103) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 109 103) (end 91 103) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 91 103) (end 91 121) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 91 102) (end 109 102) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 109 102) (end 109 84) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 109 84) (end 91 84) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 91 84) (end 91 102) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 110 157.1) (end 128 157.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 128 157.1) (end 128 139.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 128 139.1) (end 110 139.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 110 139.1) (end 110 157.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 110 138.1) (end 128 138.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 128 138.1) (end 128 120.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 128 120.1) (end 110 120.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 110 120.1) (end 110 138.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 110 119.1) (end 128 119.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 128 119.1) (end 128 101.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 128 101.1) (end 110 101.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 110 101.1) (end 110 119.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 110 100.1) (end 128 100.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 128 100.1) (end 128 82.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 128 82.1) (end 110 82.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 110 82.1) (end 110 100.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 129 144.56) (end 147 144.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 147 144.56) (end 147 126.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 147 126.56) (end 129 126.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 129 126.56) (end 129 144.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 129 125.56) (end 147 125.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 147 125.56) (end 147 107.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 147 107.56) (end 129 107.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 129 107.56) (end 129 125.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 129 106.56) (end 147 106.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 147 106.56) (end 147 88.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 147 88.56) (end 129 88.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 129 88.56) (end 129 106.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 129 87.56) (end 147 87.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 147 87.56) (end 147 69.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 147 69.56) (end 129 69.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 129 69.56) (end 129 87.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 148 139.81) (end 166 139.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 166 139.81) (end 166 121.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 166 121.81) (end 148 121.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 148 121.81) (end 148 139.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 148 120.81) (end 166 120.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 166 120.81) (end 166 102.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 166 102.81) (end 148 102.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 148 102.81) (end 148 120.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 148 101.81) (end 166 101.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 166 101.81) (end 166 83.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 166 83.81) (end 148 83.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 148 83.81) (end 148 101.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 148 82.81) (end 166 82.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 166 82.81) (end 166 64.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 166 64.81) (end 148 64.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 148 64.81) (end 148 82.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 144.56) (end 185 144.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 144.56) (end 185 126.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 126.56) (end 167 126.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 126.56) (end 167 144.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 125.56) (end 185 125.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 125.56) (end 185 107.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 107.56) (end 167 107.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 107.56) (end 167 125.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 106.56) (end 185 106.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 106.56) (end 185 88.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 88.56) (end 167 88.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 88.56) (end 167 106.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 87.56) (end 185 87.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 87.56) (end 185 69.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 69.56) (end 167 69.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 69.56) (end 167 87.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 147.41) (end 204 147.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 204 147.41) (end 204 129.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 204 129.41) (end 186 129.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 129.41) (end 186 147.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 128.41) (end 204 128.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 204 128.41) (end 204 110.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 204 110.41) (end 186 110.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 110.41) (end 186 128.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 109.41) (end 204 109.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 204 109.41) (end 204 91.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 204 91.41) (end 186 91.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 91.41) (end 186 109.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 90.41) (end 204 90.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 204 90.41) (end 204 72.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 204 72.41) (end 186 72.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 72.41) (end 186 90.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 148.27456379999998 169.5461034) (end 166.00110339999998 166.4204362) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 166.00110339999998 166.4204362) (end 162.8754362 148.69389660000002) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 162.8754362 148.69389660000002) (end 145.1488966 151.8195638) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 145.1488966 151.8195638) (end 148.27456379999998 169.5461034) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 166.41) (end 185 166.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 166.41) (end 185 148.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 185 148.41) (end 167 148.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 167 148.41) (end 167 166.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 166.41) (end 213 166.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 148.41) (end 213 148.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 205 147.41) (end 223 147.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 223 147.41) (end 223 129.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 223 129.41) (end 205 129.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 205 129.41) (end 205 147.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 205 128.41) (end 223 128.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 223 128.41) (end 223 110.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 223 110.41) (end 205 110.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 205 110.41) (end 205 128.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 213 166.41) (end 213 148.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 186 148.41) (end 186 166.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 93 157) (end 107 157) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 107 157) (end 107 143) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 107 143) (end 93 143) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 93 143) (end 93 157) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 93 138) (end 107 138) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 107 138) (end 107 124) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 107 124) (end 93 124) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 93 124) (end 93 138) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 93 119) (end 107 119) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 107 119) (end 107 105) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 107 105) (end 93 105) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 93 105) (end 93 119) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 93 100) (end 107 100) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 107 100) (end 107 86) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 107 86) (end 93 86) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 93 86) (end 93 100) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 112 155.1) (end 126 155.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 126 155.1) (end 126 141.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 126 141.1) (end 112 141.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 112 141.1) (end 112 155.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 112 136.1) (end 126 136.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 126 136.1) (end 126 122.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 126 122.1) (end 112 122.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 112 122.1) (end 112 136.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 112 117.1) (end 126 117.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 126 117.1) (end 126 103.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 126 103.1) (end 112 103.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 112 103.1) (end 112 117.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 112 98.1) (end 126 98.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 126 98.1) (end 126 84.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 126 84.1) (end 112 84.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 112 84.1) (end 112 98.1) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 131 142.56) (end 145 142.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 145 142.56) (end 145 128.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 145 128.56) (end 131 128.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 131 128.56) (end 131 142.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 131 123.56) (end 145 123.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 145 123.56) (end 145 109.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 145 109.56) (end 131 109.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 131 109.56) (end 131 123.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 131 104.56) (end 145 104.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 145 104.56) (end 145 90.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 145 90.56) (end 131 90.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 131 90.56) (end 131 104.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 131 85.56) (end 145 85.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 145 85.56) (end 145 71.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 145 71.56) (end 131 71.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 131 71.56) (end 131 85.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 150 137.81) (end 164 137.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 164 137.81) (end 164 123.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 164 123.81) (end 150 123.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 150 123.81) (end 150 137.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 150 118.81) (end 164 118.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 164 118.81) (end 164 104.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 164 104.81) (end 150 104.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 150 104.81) (end 150 118.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 150 99.81) (end 164 99.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 164 99.81) (end 164 85.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 164 85.81) (end 150 85.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 150 85.81) (end 150 99.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 150 80.81) (end 164 80.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 164 80.81) (end 164 66.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 164 66.81) (end 150 66.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 150 66.81) (end 150 80.81) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 142.56) (end 183 142.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 142.56) (end 183 128.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 128.56) (end 169 128.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 128.56) (end 169 142.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 123.56) (end 183 123.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 123.56) (end 183 109.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 109.56) (end 169 109.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 109.56) (end 169 123.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 104.56) (end 183 104.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 104.56) (end 183 90.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 90.56) (end 169 90.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 90.56) (end 169 104.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 85.56) (end 183 85.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 85.56) (end 183 71.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 71.56) (end 169 71.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 71.56) (end 169 85.56) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 188 145.41) (end 202 145.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 202 145.41) (end 202 131.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 202 131.41) (end 188 131.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 188 131.41) (end 188 145.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 188 126.41) (end 202 126.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 202 126.41) (end 202 112.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 202 112.41) (end 188 112.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 188 112.41) (end 188 126.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 188 107.41) (end 202 107.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 202 107.41) (end 202 93.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 202 93.41) (end 188 93.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 188 93.41) (end 188 107.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 188 88.41) (end 202 88.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 202 88.41) (end 202 74.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 202 74.41) (end 188 74.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 188 74.41) (end 188 88.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 149.896883 167.2291915) (end 163.6841915 164.798117) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 163.6841915 164.798117) (end 161.25311699999997 151.0108085) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 161.25311699999997 151.0108085) (end 147.46580849999998 153.44188300000002) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 147.46580849999998 153.44188300000002) (end 149.896883 167.2291915) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 164.41) (end 183 164.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 164.41) (end 183 150.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 183 150.41) (end 169 150.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 169 150.41) (end 169 164.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 192.5 164.41) (end 206.5 164.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 206.5 164.41) (end 206.5 150.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 206.5 150.41) (end 192.5 150.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 192.5 150.41) (end 192.5 164.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 207 145.41) (end 221 145.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 221 145.41) (end 221 131.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 221 131.41) (end 207 131.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 207 131.41) (end 207 145.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 207 126.41) (end 221 126.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 221 126.41) (end 221 112.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 221 112.41) (end 207 112.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
-(gr_line (start 207 112.41) (end 207 126.41) (layer F.SilkS) (stroke (width 0.15) (type default)))
 
 )
 
