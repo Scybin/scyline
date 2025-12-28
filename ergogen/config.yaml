@@ -55,7 +55,7 @@ units:
   spacer_diameter: spacer_radius * 2
 
   # FR4 variables
-  fr4_thickness: 1.6  # standard FR4 thickness in mm  
+  fr4_thickness: 1.6  # standard FR4 thickness in mm
 
   # Case variables
   case_x: kx+8 # Case position on x-axis
@@ -175,7 +175,7 @@ points:
           row_net: R3
           name: extra_bottom
         home:
-          row_net: R2 
+          row_net: R2
           name: extra_top
 
     # Standoff / screw points:
@@ -213,14 +213,14 @@ points:
         - mount
       anchor:
         - ref: matrix_inner_top
-          shift: [-0.5kx, -0.5kcow-1.075]          
+          shift: [-0.5kx, -0.5kcow-1.075]
     mount_inner_middle:
       key.tags:
         - helper
         - mount
       anchor:
         - ref: matrix_inner_upper
-          shift: [-0.5kx, -0.5kcow-1.075]                          
+          shift: [-0.5kx, -0.5kcow-1.075]
     mount_inner_home:
       key.tags:
         - helper
@@ -234,14 +234,14 @@ points:
         - mount
       anchor:
         - ref: extra_top
-          shift: [-0.5kx, -0.5keych-0.5]   
+          shift: [-0.5kx, -0.5keych-0.5]
     mount_extra_bottom:
       key.tags:
         - helper
         - mount
       anchor:
         - ref: extra_bottom
-          shift: [-0.5kx, -0.5keych]   
+          shift: [-0.5kx, -0.5keych]
 
     # Case insert Points
     wall_insert_nw:
@@ -271,7 +271,7 @@ points:
         - wall_screw
       anchor:
         - ref: thumb_space
-          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych - 2.5 - pcb_shift]    
+          shift: [1.5kx/2 + 0.5kx-0.5, -0.5keych - 2.5 - pcb_shift]
 
     # Trackball Points
     trackball_center:
@@ -280,7 +280,7 @@ points:
         - trackball
       anchor:
         - ref: matrix_inner_home
-          shift: [trackball_offset_x, trackball_offset_y]      
+          shift: [trackball_offset_x, trackball_offset_y]
     trackball_hole_nw:
       key.tags:
         - helper
@@ -308,7 +308,7 @@ points:
         - trackball_screw
       anchor:
         - ref: trackball_center
-          shift: [trackball_screw_x, -trackball_screw_y]                                   
+          shift: [trackball_screw_x, -trackball_screw_y]
 
   mirror: &mirror
     ref: matrix_inner_top
@@ -333,17 +333,17 @@ outlines:
     switch_cutout_test:
     - what: rectangle
       where: /key/
-      size: [kcow - 1, kcoh - 1]   
+      size: [kcow - 1, kcoh - 1]
 
     # Mounting holes
-    plate_hole: 
+    plate_hole:
     - what: circle
       radius: screw_hole_m2
       where: /mount/
-    standoff_hole: 
+    standoff_hole:
     - what: circle
       radius: spacer_radius
-      where: /mount/      
+      where: /mount/
     insert:
     - what: circle
       radius: insert_size
@@ -351,7 +351,7 @@ outlines:
     wall_clearance:
     - what: circle
       radius: screw_hole_m2
-      where: /wall_screw/      
+      where: /wall_screw/
 
     switchplate:
     - what: polygon
@@ -368,29 +368,29 @@ outlines:
         - ref: matrix_ring_top
           shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_ring_top
-          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]          
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_middle_top
           shift: [-0.5keycw -  pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_middle_top
-          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_index_top
           shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_index_top
-          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_inner_top
           shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych + pcb_shift] 
+          shift: [0.5keycw, 0.5keych + pcb_shift]
         - ref: matrix_inner_home
-          shift: [0.5keycw, 0.5keych]                       
+          shift: [0.5keycw, 0.5keych]
         - ref: extra_top
           shift: [-0.5keycw, 0.5keych]
         - ref: extra_top
           shift: [0.5keycw + 1, 0.5keych]
         - ref: extra_bottom
-          shift: [0.5keycw + 1, -0.5keych]  
+          shift: [0.5keycw + 1, -0.5keych]
         - ref: thumb_space
-          shift: [1.5kx/2, 0.5keych + 1]                                                         
+          shift: [1.5kx/2, 0.5keych + 1]
         - ref: thumb_space
           shift: [1.5kx/2, -0.5keych - pcb_shift]
         - ref: thumb_space
@@ -402,17 +402,17 @@ outlines:
         - ref: matrix_pinky_bottom
           shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]          
+          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
           shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]  
+          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]
     - what: outline
       name: switch_cutout
       operation: subtract
     - what: outline
       name: plate_hole
-      operation: subtract          
+      operation: subtract
     switchplate_tb:
     - what: polygon
       operation: stack
@@ -428,29 +428,29 @@ outlines:
         - ref: matrix_ring_top
           shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_ring_top
-          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]          
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_middle_top
           shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_middle_top
-          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_index_top
           shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_index_top
-          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_inner_top
           shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_inner_top
-          shift: [0.5keycw, 0.5keych + pcb_shift] 
+          shift: [0.5keycw, 0.5keych + pcb_shift]
         - ref: matrix_inner_home
-          shift: [0.5keycw, 0.5keych] 
+          shift: [0.5keycw, 0.5keych]
         - ref: extra_bottom
-          shift: [-0.5kx - 0.5, 0.5keych]                                          
+          shift: [-0.5kx - 0.5, 0.5keych]
         - ref: extra_bottom
-          shift: [0.5keycw + 1, 0.5keych]    
+          shift: [0.5keycw + 1, 0.5keych]
         - ref: extra_bottom
-          shift: [0.5keycw + 1, -0.5keych]            
+          shift: [0.5keycw + 1, -0.5keych]
         - ref: thumb_space
-          shift: [1.5kx/2, 0.5keych + 1]                                                         
+          shift: [1.5kx/2, 0.5keych + 1]
         - ref: thumb_space
           shift: [1.5kx/2, -0.5keych - pcb_shift]
         - ref: thumb_space
@@ -462,21 +462,21 @@ outlines:
         - ref: matrix_pinky_bottom
           shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]          
+          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
           shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]  
+          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]
     - what: outline
       name: switch_cutout
       operation: subtract
     - what: outline
       name: plate_hole
-      operation: subtract       
+      operation: subtract
 
     # -----------------------
     # (L) Outlines
-    # -----------------------  
+    # -----------------------
 
     pcb_L:
     - what: polygon
@@ -493,19 +493,19 @@ outlines:
         - ref: matrix_ring_top
           shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_ring_top
-          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]          
+          shift: [0.5kx + 0.5 - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_middle_top
           shift: [-0.5keycw - pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_middle_top
-          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_index_top
           shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_index_top
-          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]          
+          shift: [0.5keycw + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_inner_top
           shift: [-0.5kx - 0.5 + pcb_shift, 0.5keych + pcb_shift]
         - ref: matrix_inner_top
-          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + pcb_shift]                        
+          shift: [0.5kx + mcu_width + mcu_padding_x, 0.5keych + pcb_shift]
         - ref: matrix_inner_bottom
           shift: [0.5kx + mcu_width + mcu_padding_x, -0.5keych - ky - pcb_shift]
         - ref: thumb_space
@@ -517,24 +517,24 @@ outlines:
         - ref: matrix_pinky_bottom
           shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_pinky_bottom
-          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]          
+          shift: [-0.5kx - 0.5 + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
           shift: [0.5keycw + pcb_shift, -0.5keych - pcb_shift]
         - ref: matrix_outer_bottom
-          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]  
+          shift: [-0.5keycw - pcb_shift, -0.5keych - pcb_shift]
     pcb_notch_circle_L:
     - what: circle
       where:
         ref: thumb_space
         shift: [kx, -0.5ky - pcb_shift]
-      radius: 3              
+      radius: 3
     pcb_notched_L:
     - what: outline
       name: pcb_L
       operation: stack
     - what: outline
       name: pcb_notch_circle_L
-      operation: subtract   
+      operation: subtract
           
     xlBoard_L:
     - what: outline
@@ -560,13 +560,13 @@ outlines:
         - ref: matrix_pinky_bottom
           shift: [6.9, -20]
         - ref: matrix_pinky_bottom
-          shift: [19.2, 20]      
+          shift: [19.2, 20]
     button_wall_L:
     - what: outline
       name: button_access_L
     - what: outline
       name: xlBoard_wall_L
-      operation: intersect        
+      operation: intersect
     usb_access_L:
     - what: rectangle
       where:
@@ -597,87 +597,87 @@ outlines:
     - what: rectangle
       where:
         ref: matrix_inner_top
-        shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]    
+        shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]
       size: [5, 6]
-      fillet: 0 
+      fillet: 0
     cover_se_corner_L:
     - what: rectangle
       where:
         ref: trackball_center
         shift: [trackball_screw_x + 1, -trackball_screw_y + 18]
       size: [19, 5.4]
-      fillet: 0  
+      fillet: 0
     cover_sw_corner_L:
     - what: rectangle
       where:
         ref: trackball_center
         shift: [-trackball_screw_x + 0.5, -trackball_screw_y + 18]
       size: [6, 5.4]
-      fillet: 1                      
+      fillet: 1
     cover_L:
     - what: polygon
       operation: stack
       points:
         - ref: matrix_inner_top
-          shift: [kx - 0.5keycw, 0.5keych + 5 + pcb_shift]     
+          shift: [kx - 0.5keycw, 0.5keych + 5 + pcb_shift]
         - ref: matrix_inner_home
-          shift: [kx - 0.5keycw, 0.5keych]      
+          shift: [kx - 0.5keycw, 0.5keych]
         - ref: matrix_inner_home
-          shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych]                       
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych]
         - ref: matrix_inner_top
           shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
       fillet: 5
     - what: outline
       name: cover_nw_corner_L
-      operation: add  
+      operation: add
     - what: outline
       name: cover_se_corner_L
-      operation: add  
+      operation: add
     - what: outline
       name: cover_sw_corner_L
-      operation: add          
+      operation: add
 
-    # Cover (trackball)        
+    # Cover (trackball)
     cover_tb_nw_corner_L:
     - what: rectangle
       where:
         ref: matrix_inner_top
-        shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]    
+        shift: [0.5kx + 3, 0.5keych + 2 + pcb_shift]
       size: [5, 6]
-      fillet: 0    
+      fillet: 0
     cover_tb_se_corner_L:
     - what: rectangle
       where:
         ref: trackball_center
         shift: [trackball_screw_x, -trackball_screw_y]
       size: [21, 5.4]
-      fillet: 0      
+      fillet: 0
     cover_tb_sw_corner_L:
     - what: rectangle
       where:
         ref: trackball_center
         shift: [-trackball_screw_x, -trackball_screw_y]
       size: [5, 5.4]
-      fillet: 1                    
+      fillet: 1
     cover_tb_L:
     - what: polygon
       operation: stack
       points:
         - ref: matrix_inner_top
-          shift: [kx - 0.5keycw, 0.5keych + 5 + pcb_shift]     
+          shift: [kx - 0.5keycw, 0.5keych + 5 + pcb_shift]
         - ref: matrix_inner_home
-          shift: [kx - 0.5keycw, -0.5keych]      
+          shift: [kx - 0.5keycw, -0.5keych]
         - ref: matrix_inner_home
-          shift: [0.5kx + mcu_width + mcu_padding_x + 5, -0.5keych]                       
+          shift: [0.5kx + mcu_width + mcu_padding_x + 5, -0.5keych]
         - ref: matrix_inner_top
           shift: [0.5kx + mcu_width + mcu_padding_x + 5, 0.5keych + 5 + pcb_shift]
       fillet: 5
     - what: outline
       name: cover_tb_nw_corner_L
-      operation: add         
+      operation: add
     - what: outline
       name: cover_tb_se_corner_L
-      operation: add      
+      operation: add
     - what: outline
       name: cover_tb_sw_corner_L
       operation: add
@@ -686,17 +686,17 @@ outlines:
       where:
         ref: trackball_center
       size: [trackball_hole_w, trackball_hole_h]
-      fillet: 2          
+      fillet: 2
 
-    # Mount Holes 
+    # Mount Holes
     wall_insert_L:
     - what: circle
       radius: insert_radius
-      where: /wall_screw/  
+      where: /wall_screw/
     trackball_screw_holes_L:
     - what: circle
       radius: screw_hole_m2_5
-      where: /trackball_screw/          
+      where: /trackball_screw/
 
     # Lip to hold PCB
     bottom_lip_rect_L:
@@ -709,7 +709,7 @@ outlines:
     - what: outline
       name: bottom_lip_rect_L
       expand: 1
-      joints: 1  
+      joints: 1
     bottom_lip_wall_L:
     - what: outline
       name: pcb_L
@@ -757,10 +757,10 @@ outlines:
         - ref: thumb_layer
           shift: [-10, -0.5keych - pcb_shift]
         - ref: thumb_layer
-          shift: [-9, -0.5keych - pcb_shift] 
+          shift: [-9, -0.5keych - pcb_shift]
 
     # -----------------------
-    # Mirrored (R) outlines
+    # (R) outlines
     # -----------------------
 
     pcb_R:
@@ -960,7 +960,7 @@ outlines:
       size: [trackball_hole_w, trackball_hole_h]
       fillet: 2
 
-    # Mount Holes 
+    # Mount Holes
     wall_insert_R:
     - what: circle
       radius: insert_radius
@@ -972,12 +972,12 @@ outlines:
       where: /trackball_screw/
       asym: clone
 
-    # Lip to hold PCB      
+    # Lip to hold PCB
     bottom_lip_rect_R:
     - what: rectangle
       where:
         ref: mirror_thumb_space
-        shift: [-1 * kx, -9]
+        shift: [kx, -9]
       size: [6, 2]
     bottom_lip_wall_R:
     - what: outline
@@ -992,41 +992,41 @@ outlines:
     - what: rectangle
       where:
         ref: mirror_matrix_inner_top
-        shift: [-1 * (kx + mcu_width/2 + 1), -8]
+        shift: [kx + mcu_width/2 + 1, -8]
       size: [4, mcu_height + mcu_padding_y]
 
-    # Battery housing      
+    # Battery housing
     inner_lip_R:
     - what: polygon
       points:
         - ref: mirror_matrix_pinky_top
-          shift: [-10,  0.5keych + pcb_shift]
+          shift: [10, 0.5keych + pcb_shift]
         - ref: mirror_matrix_pinky_top
-          shift: [-9,   0.5keych + pcb_shift]
+          shift: [9,  0.5keych + pcb_shift]
         - ref: mirror_matrix_pinky_bottom
-          shift: [-9,  -0.5keych - pcb_shift]
-        - ref: mirror_matrix_pinky_bottom
-          shift: [-10, -0.5keych - pcb_shift]
-    - what: polygon
-      points:
-        - ref: mirror_matrix_index_top
-          shift: [10,  0.5keych + pcb_shift]
-        - ref: mirror_matrix_index_top
-          shift: [9,   0.5keych + pcb_shift]
-        - ref: mirror_matrix_index_home
-          shift: [9,  -0.5keych - 3.5 - pcb_shift]
-        - ref: mirror_matrix_index_home
-          shift: [10, -0.5keych - 3.5 - pcb_shift]
-    - what: polygon
-      points:
-        - ref: mirror_matrix_index_home
-          shift: [9,  -0.5keych - 7.5 - pcb_shift]
-        - ref: mirror_matrix_index_home
-          shift: [10, -0.5keych - 7.5 - pcb_shift]
-        - ref: mirror_thumb_layer
-          shift: [10, -0.5keych - pcb_shift]
-        - ref: mirror_thumb_layer
           shift: [9,  -0.5keych - pcb_shift]
+        - ref: mirror_matrix_pinky_bottom
+          shift: [10, -0.5keych - pcb_shift]
+    - what: polygon
+      points:
+        - ref: mirror_matrix_index_top
+          shift: [-10, 0.5keych + pcb_shift]
+        - ref: mirror_matrix_index_top
+          shift: [-9,  0.5keych + pcb_shift]
+        - ref: mirror_matrix_index_home
+          shift: [-9,  -0.5keych - 3.5 - pcb_shift]
+        - ref: mirror_matrix_index_home
+          shift: [-10, -0.5keych - 3.5 - pcb_shift]
+    - what: polygon
+      points:
+       - ref: mirror_matrix_index_home
+         shift: [-9,  -0.5keych - 7.5 - pcb_shift]
+       - ref: mirror_matrix_index_home
+         shift: [-10, -0.5keych - 7.5 - pcb_shift]
+       - ref: mirror_thumb_layer
+         shift: [-10, -0.5keych - pcb_shift]
+       - ref: mirror_thumb_layer
+         shift: [-9,  -0.5keych - pcb_shift]
 
     _combo:
     - what: outline
@@ -1037,7 +1037,7 @@ outlines:
       name: standoff_hole
     - what: outline
       name: inner_lip_L
-      operation: stack          
+      operation: stack
 
 pcbs:
 
@@ -1046,28 +1046,28 @@ pcbs:
     outlines:
       main:
         outline: switchplate
-    footprints: 
+    footprints:
       m2_screws:
         what: ceoloide/mounting_hole_npth
         where: [[/mount/, -/^mirror_/]]
-        asym: source        
+        asym: source
         params:
           hole_size: 2 * (screw_hole_m2)
-          hole_drill: 2 * (screw_hole_m2)        
+          hole_drill: 2 * (screw_hole_m2)
 
   switchplate_tb:
     template: kicad8
     outlines:
       main:
-        outline: switchplate_tb   
-    footprints: 
+        outline: switchplate_tb
+    footprints:
       m2_screws:
         what: ceoloide/mounting_hole_npth
         where: [[/mount/, -/^mirror_/]]
-        asym: source        
+        asym: source
         params:
           hole_size: 2 * (screw_hole_m2)
-          hole_drill: 2 * (screw_hole_m2)   
+          hole_drill: 2 * (screw_hole_m2)
 
   chitin:
     template: kicad8
@@ -1080,13 +1080,12 @@ pcbs:
       #switches_front:
       #    outline: switch_cutout
       #    layer: F.SilkS
-
     footprints:
 
       key_switches:
         what: ceoloide/switch_mx
         where: [[/key/, -/^mirror_/]]
-        asym: source  
+        asym: source
         params:
           from: "{{column_net}}"
           to: "{{colrow}}_B"
@@ -1098,7 +1097,7 @@ pcbs:
       diodes_b:
         what: ceoloide/diode_tht_sod123
         where: [[/key/, -/^mirror_/]]
-        asym: source        
+        asym: source
         params:
           from: "{{colrow}}_B"
           to: "{{row_net}}"
@@ -1106,12 +1105,12 @@ pcbs:
           side: B
         adjust:
           shift: [horizontal_diode_shift, vertical_diode_shift]
-          rotate: diode_rotation  
+          rotate: diode_rotation
           
       diodes_f:
         what: ceoloide/diode_tht_sod123
         where: [[/key/, -/^mirror_/]]
-        asym: source        
+        asym: source
         params:
           from: "{{colrow}}_B"
           to: "{{row_net}}"
@@ -1119,13 +1118,13 @@ pcbs:
           side: F
         adjust:
           shift: [-1 * horizontal_diode_shift, vertical_diode_shift]
-          rotate: diode_rotation 
+          rotate: diode_rotation
           
       mcu:
-        what: scybin/mcu_nice_nano_sp # 8.5mm pcb through-holes
+        what: scybin/mcu_nice_nano_sp # 8.5mm pcb through-holes for no-solder spring headers
         where:
           ref: matrix_inner_top
-          shift: [kx, -mcu_width/2 + 1.4 + pcb_shift]       
+          shift: [kx, -mcu_width/2 + 1.4 + pcb_shift]
         params:
           reversible: true
           use_rectangular_jumpers: true
@@ -1164,7 +1163,7 @@ pcbs:
       on_off_switch:
         what: ceoloide/power_switch_smd_side
         where: matrix_pinky_bottom
-        asym: source        
+        asym: source
         params:
           from: BAT_P
           to: RAW
@@ -1176,20 +1175,20 @@ pcbs:
       reset_switch:
         what: scybin/reset_switch_smd_side
         where: matrix_pinky_bottom
-        asym: source        
+        asym: source
         params:
           from: GND
           to: RST
           reversible: true
           include_bosses: true
         adjust:
-          shift: [0.5kx + jst_shift + 2.25, -11]  
+          shift: [0.5kx + jst_shift + 2.25, -11]
           rotate: 146
           
-      jst_ph:  
+      jst_ph:
         what: ceoloide/battery_connector_jst_ph_2
         where: thumb_space
-        asym: source        
+        asym: source
         params:
           BAT_P: BAT_P
           BAT_N: GND
@@ -1198,10 +1197,10 @@ pcbs:
         adjust:
           shift: [kx, 0.5ky-2]
 
-      jst_sh:  
+      jst_sh:
         what: scybin/jst_sh_sm04b_srss_tb
         where: matrix_inner_home
-        asym: source      
+        asym: source
         params:
           GND: GND
           VCC: V+
@@ -1209,19 +1208,19 @@ pcbs:
           SCL: SCL
           reversible: true
         adjust:
-          shift: [kx, 10.3]   
+          shift: [kx, 10.3]
       
       logo:
         what: scybin/chitin_logo
         where: matrix_pinky_bottom
-        asym: source      
+        asym: source
         adjust:
           shift: [28, 32.25]
 
       mounting_holes:
         what: ceoloide/mounting_hole_npth
         where: [[/mount/, -/^mirror_/]]
-        asym: source        
+        asym: source
         params:
           hole_size: spacer_diameter
           hole_drill: spacer_diameter
@@ -1230,19 +1229,19 @@ cases:
 
   _inserts:
     - name: insert
-      extrude: 0     
+      extrude: 0
   _switch_holes:
-    - name: switch_cutout  
+    - name: switch_cutout
       extrude: fr4_thickness
   _switch_holes_test:
-    - name: switch_cutout_test 
-      extrude: fr4_thickness      
+    - name: switch_cutout_test
+      extrude: fr4_thickness
   _plate_holes:
-    - name: plate_hole 
+    - name: plate_hole
       extrude: 2
   _mounting_holes:
     - name: standoff_hole
-      extrude: fr4_thickness  
+      extrude: fr4_thickness
   _base_holes:
     - name: wall_clearance
       extrude: 2  # through 2 mm bottom plate
@@ -1251,7 +1250,7 @@ cases:
       extrude: fr4_thickness
   _switchplate_tb:
     - name: switchplate_tb
-      extrude: fr4_thickness        
+      extrude: fr4_thickness
 
   switchplate_case:
     - what: case
@@ -1272,7 +1271,7 @@ cases:
       operation: subtract
     - what: case
       name: _plate_holes
-      operation: subtract  
+      operation: subtract
 
   pcb_case:
     - name: pcb_notched_L
@@ -1311,13 +1310,13 @@ cases:
       extrude: wall_z
   _trackball_wall_fill_L:
     - name: trackball_wall_L
-      extrude: wall_z - 7 
+      extrude: wall_z - 7
   _cover_cap_L:
     - name: cover_L
       extrude: cover_z
     - name: cover_L
       extrude: wall_z
-      operation: subtract          
+      operation: subtract
   _cover_cap_tb_L:
     - name: cover_tb_L
       extrude: cover_z
@@ -1326,25 +1325,25 @@ cases:
       operation: subtract
     - name: cover_tb_cut_L
       extrude: cover_z
-      operation: subtract  
+      operation: subtract
     - name: trackball_screw_holes_L
       extrude: cover_z
-      operation: subtract          
+      operation: subtract
   _wall_insert_L:
     - name: wall_insert_L
       extrude: 3  # 3mm insert height
   _bottom_lip_notch_L:
     - name: bottom_lip_rect_L
-      extrude: lip_z   
+      extrude: lip_z
   _bottom_lip_notch_raise_L:
     - name: bottom_lip_rect_L
-      extrude: 2  
+      extrude: 2
   _mcu_lip_wall_clear_L:
     - name: mcu_lip_clear_L
-      extrude: lip_z   
+      extrude: lip_z
   _inner_lip_L:
     - name: inner_lip_L
-      extrude: lip_z        
+      extrude: lip_z
 
   bottom_case_L:
     - name: bottom_lip_wall_L
@@ -1354,25 +1353,25 @@ cases:
       operation: subtract
     - what: case
       name: _mcu_lip_wall_clear_L
-      operation: subtract          
+      operation: subtract
     - name: xlBoard_L
       extrude: 2
-      operation: add 
+      operation: add
     - what: case
       name: _bottom_lip_notch_L
-      operation: subtract   
+      operation: subtract
     - what: case
       name: _bottom_lip_notch_raise_L
-      operation: add     
+      operation: add
     - what: case
       name: _inner_lip_L
-      operation: add                        
+      operation: add
     - what: case
       name: _plate_holes
       operation: subtract
     - what: case
       name: _base_holes
-      operation: subtract   
+      operation: subtract
 
   wall_cover_case_L:
     - what: case
@@ -1389,16 +1388,16 @@ cases:
       operation: add
     - what: case
       name: _button_access_cut_L
-      operation: subtract          
+      operation: subtract
     - what: case
       name: _button_access_fill_L
-      operation: add          
+      operation: add
     - what: case
       name: _cover_cap_L
-      operation: add 
+      operation: add
     - what: case
       name: _wall_insert_L
-      operation: subtract             
+      operation: subtract
   wall_cover_case_tb_L:
     - what: case
       name: _outerWall_L
@@ -1414,22 +1413,22 @@ cases:
       operation: add
     - what: case
       name: _button_access_cut_L
-      operation: subtract     
+      operation: subtract
     - what: case
       name: _button_access_fill_L
-      operation: add   
+      operation: add
     - what: case
       name: _trackball_wall_cut_L
       operation: subtract
     - what: case
       name: _trackball_wall_fill_L
-      operation: add          
+      operation: add
     - what: case
       name: _cover_cap_tb_L
-      operation: add 
+      operation: add
     - what: case
       name: _wall_insert_L
-      operation: subtract             
+      operation: subtract
 
   # -----------------------
   # (R) Case parts
@@ -1458,13 +1457,13 @@ cases:
       extrude: wall_z
   _trackball_wall_fill_R:
     - name: trackball_wall_R
-      extrude: wall_z - 7 
+      extrude: wall_z - 7
   _cover_cap_R:
     - name: cover_R
       extrude: cover_z
     - name: cover_R
       extrude: wall_z
-      operation: subtract          
+      operation: subtract
   _cover_cap_tb_R:
     - name: cover_tb_R
       extrude: cover_z
@@ -1473,25 +1472,25 @@ cases:
       operation: subtract
     - name: cover_tb_cut_R
       extrude: cover_z
-      operation: subtract  
+      operation: subtract
     - name: trackball_screw_holes_R
       extrude: cover_z
-      operation: subtract          
+      operation: subtract
   _wall_insert_R:
     - name: wall_insert_R
       extrude: 3  # 3mm insert height
   _bottom_lip_notch_R:
     - name: bottom_lip_rect_R
-      extrude: lip_z   
+      extrude: lip_z
   _bottom_lip_notch_raise_R:
     - name: bottom_lip_rect_R
-      extrude: 2  
+      extrude: 2
   _mcu_lip_wall_clear_R:
     - name: mcu_lip_clear_R
-      extrude: lip_z   
+      extrude: lip_z
   _inner_lip_R:
     - name: inner_lip_R
-      extrude: lip_z    
+      extrude: lip_z
 
   bottom_case_R:
     - name: bottom_lip_wall_R
@@ -1519,7 +1518,7 @@ cases:
       operation: subtract
     - what: case
       name: _base_holes
-      operation: subtract      
+      operation: subtract
 
   wall_cover_case_R:
     - what: case
@@ -1581,7 +1580,7 @@ cases:
   full_case:
     - what: case
       name: wall_cover_case_tb_L
-      operation: add    
+      operation: add
     - what: case
       name: bottom_case_L
-      operation: add         
+      operation: add
