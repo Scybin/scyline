@@ -384,166 +384,166 @@ function wall_insert_R_extrude_3_outline_fn(){
             
             
 
-                function wall_cover_case_tb_R_case_fn() {
+                function top_case_tb_R_case_fn() {
                     
 
-                // creating part 0 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_0 = _outerWall_R_case_fn();
+                // creating part 0 of case top_case_tb_R
+                let top_case_tb_R__part_0 = _outerWall_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_0_bounds = wall_cover_case_tb_R__part_0.getBounds();
-                let wall_cover_case_tb_R__part_0_x = wall_cover_case_tb_R__part_0_bounds[0].x + (wall_cover_case_tb_R__part_0_bounds[1].x - wall_cover_case_tb_R__part_0_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_0_y = wall_cover_case_tb_R__part_0_bounds[0].y + (wall_cover_case_tb_R__part_0_bounds[1].y - wall_cover_case_tb_R__part_0_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_0 = translate([-wall_cover_case_tb_R__part_0_x, -wall_cover_case_tb_R__part_0_y, 0], wall_cover_case_tb_R__part_0);
-                wall_cover_case_tb_R__part_0 = rotate([0,0,0], wall_cover_case_tb_R__part_0);
-                wall_cover_case_tb_R__part_0 = translate([wall_cover_case_tb_R__part_0_x, wall_cover_case_tb_R__part_0_y, 0], wall_cover_case_tb_R__part_0);
+                let top_case_tb_R__part_0_bounds = top_case_tb_R__part_0.getBounds();
+                let top_case_tb_R__part_0_x = top_case_tb_R__part_0_bounds[0].x + (top_case_tb_R__part_0_bounds[1].x - top_case_tb_R__part_0_bounds[0].x) / 2
+                let top_case_tb_R__part_0_y = top_case_tb_R__part_0_bounds[0].y + (top_case_tb_R__part_0_bounds[1].y - top_case_tb_R__part_0_bounds[0].y) / 2
+                top_case_tb_R__part_0 = translate([-top_case_tb_R__part_0_x, -top_case_tb_R__part_0_y, 0], top_case_tb_R__part_0);
+                top_case_tb_R__part_0 = rotate([0,0,0], top_case_tb_R__part_0);
+                top_case_tb_R__part_0 = translate([top_case_tb_R__part_0_x, top_case_tb_R__part_0_y, 0], top_case_tb_R__part_0);
 
-                wall_cover_case_tb_R__part_0 = translate([0,0,0], wall_cover_case_tb_R__part_0);
-                let result = wall_cover_case_tb_R__part_0;
+                top_case_tb_R__part_0 = translate([0,0,0], top_case_tb_R__part_0);
+                let result = top_case_tb_R__part_0;
                 
             
 
-                // creating part 1 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_1 = _innerWall_R_case_fn();
+                // creating part 1 of case top_case_tb_R
+                let top_case_tb_R__part_1 = _innerWall_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_1_bounds = wall_cover_case_tb_R__part_1.getBounds();
-                let wall_cover_case_tb_R__part_1_x = wall_cover_case_tb_R__part_1_bounds[0].x + (wall_cover_case_tb_R__part_1_bounds[1].x - wall_cover_case_tb_R__part_1_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_1_y = wall_cover_case_tb_R__part_1_bounds[0].y + (wall_cover_case_tb_R__part_1_bounds[1].y - wall_cover_case_tb_R__part_1_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_1 = translate([-wall_cover_case_tb_R__part_1_x, -wall_cover_case_tb_R__part_1_y, 0], wall_cover_case_tb_R__part_1);
-                wall_cover_case_tb_R__part_1 = rotate([0,0,0], wall_cover_case_tb_R__part_1);
-                wall_cover_case_tb_R__part_1 = translate([wall_cover_case_tb_R__part_1_x, wall_cover_case_tb_R__part_1_y, 0], wall_cover_case_tb_R__part_1);
+                let top_case_tb_R__part_1_bounds = top_case_tb_R__part_1.getBounds();
+                let top_case_tb_R__part_1_x = top_case_tb_R__part_1_bounds[0].x + (top_case_tb_R__part_1_bounds[1].x - top_case_tb_R__part_1_bounds[0].x) / 2
+                let top_case_tb_R__part_1_y = top_case_tb_R__part_1_bounds[0].y + (top_case_tb_R__part_1_bounds[1].y - top_case_tb_R__part_1_bounds[0].y) / 2
+                top_case_tb_R__part_1 = translate([-top_case_tb_R__part_1_x, -top_case_tb_R__part_1_y, 0], top_case_tb_R__part_1);
+                top_case_tb_R__part_1 = rotate([0,0,0], top_case_tb_R__part_1);
+                top_case_tb_R__part_1 = translate([top_case_tb_R__part_1_x, top_case_tb_R__part_1_y, 0], top_case_tb_R__part_1);
 
-                wall_cover_case_tb_R__part_1 = translate([0,0,0], wall_cover_case_tb_R__part_1);
-                result = result.subtract(wall_cover_case_tb_R__part_1);
+                top_case_tb_R__part_1 = translate([0,0,0], top_case_tb_R__part_1);
+                result = result.subtract(top_case_tb_R__part_1);
                 
             
 
-                // creating part 2 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_2 = _usb_access_cut_R_case_fn();
+                // creating part 2 of case top_case_tb_R
+                let top_case_tb_R__part_2 = _usb_access_cut_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_2_bounds = wall_cover_case_tb_R__part_2.getBounds();
-                let wall_cover_case_tb_R__part_2_x = wall_cover_case_tb_R__part_2_bounds[0].x + (wall_cover_case_tb_R__part_2_bounds[1].x - wall_cover_case_tb_R__part_2_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_2_y = wall_cover_case_tb_R__part_2_bounds[0].y + (wall_cover_case_tb_R__part_2_bounds[1].y - wall_cover_case_tb_R__part_2_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_2 = translate([-wall_cover_case_tb_R__part_2_x, -wall_cover_case_tb_R__part_2_y, 0], wall_cover_case_tb_R__part_2);
-                wall_cover_case_tb_R__part_2 = rotate([0,0,0], wall_cover_case_tb_R__part_2);
-                wall_cover_case_tb_R__part_2 = translate([wall_cover_case_tb_R__part_2_x, wall_cover_case_tb_R__part_2_y, 0], wall_cover_case_tb_R__part_2);
+                let top_case_tb_R__part_2_bounds = top_case_tb_R__part_2.getBounds();
+                let top_case_tb_R__part_2_x = top_case_tb_R__part_2_bounds[0].x + (top_case_tb_R__part_2_bounds[1].x - top_case_tb_R__part_2_bounds[0].x) / 2
+                let top_case_tb_R__part_2_y = top_case_tb_R__part_2_bounds[0].y + (top_case_tb_R__part_2_bounds[1].y - top_case_tb_R__part_2_bounds[0].y) / 2
+                top_case_tb_R__part_2 = translate([-top_case_tb_R__part_2_x, -top_case_tb_R__part_2_y, 0], top_case_tb_R__part_2);
+                top_case_tb_R__part_2 = rotate([0,0,0], top_case_tb_R__part_2);
+                top_case_tb_R__part_2 = translate([top_case_tb_R__part_2_x, top_case_tb_R__part_2_y, 0], top_case_tb_R__part_2);
 
-                wall_cover_case_tb_R__part_2 = translate([0,0,0], wall_cover_case_tb_R__part_2);
-                result = result.subtract(wall_cover_case_tb_R__part_2);
+                top_case_tb_R__part_2 = translate([0,0,0], top_case_tb_R__part_2);
+                result = result.subtract(top_case_tb_R__part_2);
                 
             
 
-                // creating part 3 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_3 = _usb_access_fill_R_case_fn();
+                // creating part 3 of case top_case_tb_R
+                let top_case_tb_R__part_3 = _usb_access_fill_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_3_bounds = wall_cover_case_tb_R__part_3.getBounds();
-                let wall_cover_case_tb_R__part_3_x = wall_cover_case_tb_R__part_3_bounds[0].x + (wall_cover_case_tb_R__part_3_bounds[1].x - wall_cover_case_tb_R__part_3_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_3_y = wall_cover_case_tb_R__part_3_bounds[0].y + (wall_cover_case_tb_R__part_3_bounds[1].y - wall_cover_case_tb_R__part_3_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_3 = translate([-wall_cover_case_tb_R__part_3_x, -wall_cover_case_tb_R__part_3_y, 0], wall_cover_case_tb_R__part_3);
-                wall_cover_case_tb_R__part_3 = rotate([0,0,0], wall_cover_case_tb_R__part_3);
-                wall_cover_case_tb_R__part_3 = translate([wall_cover_case_tb_R__part_3_x, wall_cover_case_tb_R__part_3_y, 0], wall_cover_case_tb_R__part_3);
+                let top_case_tb_R__part_3_bounds = top_case_tb_R__part_3.getBounds();
+                let top_case_tb_R__part_3_x = top_case_tb_R__part_3_bounds[0].x + (top_case_tb_R__part_3_bounds[1].x - top_case_tb_R__part_3_bounds[0].x) / 2
+                let top_case_tb_R__part_3_y = top_case_tb_R__part_3_bounds[0].y + (top_case_tb_R__part_3_bounds[1].y - top_case_tb_R__part_3_bounds[0].y) / 2
+                top_case_tb_R__part_3 = translate([-top_case_tb_R__part_3_x, -top_case_tb_R__part_3_y, 0], top_case_tb_R__part_3);
+                top_case_tb_R__part_3 = rotate([0,0,0], top_case_tb_R__part_3);
+                top_case_tb_R__part_3 = translate([top_case_tb_R__part_3_x, top_case_tb_R__part_3_y, 0], top_case_tb_R__part_3);
 
-                wall_cover_case_tb_R__part_3 = translate([0,0,0], wall_cover_case_tb_R__part_3);
-                result = result.union(wall_cover_case_tb_R__part_3);
+                top_case_tb_R__part_3 = translate([0,0,0], top_case_tb_R__part_3);
+                result = result.union(top_case_tb_R__part_3);
                 
             
 
-                // creating part 4 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_4 = _button_access_cut_R_case_fn();
+                // creating part 4 of case top_case_tb_R
+                let top_case_tb_R__part_4 = _button_access_cut_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_4_bounds = wall_cover_case_tb_R__part_4.getBounds();
-                let wall_cover_case_tb_R__part_4_x = wall_cover_case_tb_R__part_4_bounds[0].x + (wall_cover_case_tb_R__part_4_bounds[1].x - wall_cover_case_tb_R__part_4_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_4_y = wall_cover_case_tb_R__part_4_bounds[0].y + (wall_cover_case_tb_R__part_4_bounds[1].y - wall_cover_case_tb_R__part_4_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_4 = translate([-wall_cover_case_tb_R__part_4_x, -wall_cover_case_tb_R__part_4_y, 0], wall_cover_case_tb_R__part_4);
-                wall_cover_case_tb_R__part_4 = rotate([0,0,0], wall_cover_case_tb_R__part_4);
-                wall_cover_case_tb_R__part_4 = translate([wall_cover_case_tb_R__part_4_x, wall_cover_case_tb_R__part_4_y, 0], wall_cover_case_tb_R__part_4);
+                let top_case_tb_R__part_4_bounds = top_case_tb_R__part_4.getBounds();
+                let top_case_tb_R__part_4_x = top_case_tb_R__part_4_bounds[0].x + (top_case_tb_R__part_4_bounds[1].x - top_case_tb_R__part_4_bounds[0].x) / 2
+                let top_case_tb_R__part_4_y = top_case_tb_R__part_4_bounds[0].y + (top_case_tb_R__part_4_bounds[1].y - top_case_tb_R__part_4_bounds[0].y) / 2
+                top_case_tb_R__part_4 = translate([-top_case_tb_R__part_4_x, -top_case_tb_R__part_4_y, 0], top_case_tb_R__part_4);
+                top_case_tb_R__part_4 = rotate([0,0,0], top_case_tb_R__part_4);
+                top_case_tb_R__part_4 = translate([top_case_tb_R__part_4_x, top_case_tb_R__part_4_y, 0], top_case_tb_R__part_4);
 
-                wall_cover_case_tb_R__part_4 = translate([0,0,0], wall_cover_case_tb_R__part_4);
-                result = result.subtract(wall_cover_case_tb_R__part_4);
+                top_case_tb_R__part_4 = translate([0,0,0], top_case_tb_R__part_4);
+                result = result.subtract(top_case_tb_R__part_4);
                 
             
 
-                // creating part 5 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_5 = _button_access_fill_R_case_fn();
+                // creating part 5 of case top_case_tb_R
+                let top_case_tb_R__part_5 = _button_access_fill_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_5_bounds = wall_cover_case_tb_R__part_5.getBounds();
-                let wall_cover_case_tb_R__part_5_x = wall_cover_case_tb_R__part_5_bounds[0].x + (wall_cover_case_tb_R__part_5_bounds[1].x - wall_cover_case_tb_R__part_5_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_5_y = wall_cover_case_tb_R__part_5_bounds[0].y + (wall_cover_case_tb_R__part_5_bounds[1].y - wall_cover_case_tb_R__part_5_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_5 = translate([-wall_cover_case_tb_R__part_5_x, -wall_cover_case_tb_R__part_5_y, 0], wall_cover_case_tb_R__part_5);
-                wall_cover_case_tb_R__part_5 = rotate([0,0,0], wall_cover_case_tb_R__part_5);
-                wall_cover_case_tb_R__part_5 = translate([wall_cover_case_tb_R__part_5_x, wall_cover_case_tb_R__part_5_y, 0], wall_cover_case_tb_R__part_5);
+                let top_case_tb_R__part_5_bounds = top_case_tb_R__part_5.getBounds();
+                let top_case_tb_R__part_5_x = top_case_tb_R__part_5_bounds[0].x + (top_case_tb_R__part_5_bounds[1].x - top_case_tb_R__part_5_bounds[0].x) / 2
+                let top_case_tb_R__part_5_y = top_case_tb_R__part_5_bounds[0].y + (top_case_tb_R__part_5_bounds[1].y - top_case_tb_R__part_5_bounds[0].y) / 2
+                top_case_tb_R__part_5 = translate([-top_case_tb_R__part_5_x, -top_case_tb_R__part_5_y, 0], top_case_tb_R__part_5);
+                top_case_tb_R__part_5 = rotate([0,0,0], top_case_tb_R__part_5);
+                top_case_tb_R__part_5 = translate([top_case_tb_R__part_5_x, top_case_tb_R__part_5_y, 0], top_case_tb_R__part_5);
 
-                wall_cover_case_tb_R__part_5 = translate([0,0,0], wall_cover_case_tb_R__part_5);
-                result = result.union(wall_cover_case_tb_R__part_5);
+                top_case_tb_R__part_5 = translate([0,0,0], top_case_tb_R__part_5);
+                result = result.union(top_case_tb_R__part_5);
                 
             
 
-                // creating part 6 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_6 = _trackball_wall_cut_R_case_fn();
+                // creating part 6 of case top_case_tb_R
+                let top_case_tb_R__part_6 = _trackball_wall_cut_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_6_bounds = wall_cover_case_tb_R__part_6.getBounds();
-                let wall_cover_case_tb_R__part_6_x = wall_cover_case_tb_R__part_6_bounds[0].x + (wall_cover_case_tb_R__part_6_bounds[1].x - wall_cover_case_tb_R__part_6_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_6_y = wall_cover_case_tb_R__part_6_bounds[0].y + (wall_cover_case_tb_R__part_6_bounds[1].y - wall_cover_case_tb_R__part_6_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_6 = translate([-wall_cover_case_tb_R__part_6_x, -wall_cover_case_tb_R__part_6_y, 0], wall_cover_case_tb_R__part_6);
-                wall_cover_case_tb_R__part_6 = rotate([0,0,0], wall_cover_case_tb_R__part_6);
-                wall_cover_case_tb_R__part_6 = translate([wall_cover_case_tb_R__part_6_x, wall_cover_case_tb_R__part_6_y, 0], wall_cover_case_tb_R__part_6);
+                let top_case_tb_R__part_6_bounds = top_case_tb_R__part_6.getBounds();
+                let top_case_tb_R__part_6_x = top_case_tb_R__part_6_bounds[0].x + (top_case_tb_R__part_6_bounds[1].x - top_case_tb_R__part_6_bounds[0].x) / 2
+                let top_case_tb_R__part_6_y = top_case_tb_R__part_6_bounds[0].y + (top_case_tb_R__part_6_bounds[1].y - top_case_tb_R__part_6_bounds[0].y) / 2
+                top_case_tb_R__part_6 = translate([-top_case_tb_R__part_6_x, -top_case_tb_R__part_6_y, 0], top_case_tb_R__part_6);
+                top_case_tb_R__part_6 = rotate([0,0,0], top_case_tb_R__part_6);
+                top_case_tb_R__part_6 = translate([top_case_tb_R__part_6_x, top_case_tb_R__part_6_y, 0], top_case_tb_R__part_6);
 
-                wall_cover_case_tb_R__part_6 = translate([0,0,0], wall_cover_case_tb_R__part_6);
-                result = result.subtract(wall_cover_case_tb_R__part_6);
+                top_case_tb_R__part_6 = translate([0,0,0], top_case_tb_R__part_6);
+                result = result.subtract(top_case_tb_R__part_6);
                 
             
 
-                // creating part 7 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_7 = _trackball_wall_fill_R_case_fn();
+                // creating part 7 of case top_case_tb_R
+                let top_case_tb_R__part_7 = _trackball_wall_fill_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_7_bounds = wall_cover_case_tb_R__part_7.getBounds();
-                let wall_cover_case_tb_R__part_7_x = wall_cover_case_tb_R__part_7_bounds[0].x + (wall_cover_case_tb_R__part_7_bounds[1].x - wall_cover_case_tb_R__part_7_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_7_y = wall_cover_case_tb_R__part_7_bounds[0].y + (wall_cover_case_tb_R__part_7_bounds[1].y - wall_cover_case_tb_R__part_7_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_7 = translate([-wall_cover_case_tb_R__part_7_x, -wall_cover_case_tb_R__part_7_y, 0], wall_cover_case_tb_R__part_7);
-                wall_cover_case_tb_R__part_7 = rotate([0,0,0], wall_cover_case_tb_R__part_7);
-                wall_cover_case_tb_R__part_7 = translate([wall_cover_case_tb_R__part_7_x, wall_cover_case_tb_R__part_7_y, 0], wall_cover_case_tb_R__part_7);
+                let top_case_tb_R__part_7_bounds = top_case_tb_R__part_7.getBounds();
+                let top_case_tb_R__part_7_x = top_case_tb_R__part_7_bounds[0].x + (top_case_tb_R__part_7_bounds[1].x - top_case_tb_R__part_7_bounds[0].x) / 2
+                let top_case_tb_R__part_7_y = top_case_tb_R__part_7_bounds[0].y + (top_case_tb_R__part_7_bounds[1].y - top_case_tb_R__part_7_bounds[0].y) / 2
+                top_case_tb_R__part_7 = translate([-top_case_tb_R__part_7_x, -top_case_tb_R__part_7_y, 0], top_case_tb_R__part_7);
+                top_case_tb_R__part_7 = rotate([0,0,0], top_case_tb_R__part_7);
+                top_case_tb_R__part_7 = translate([top_case_tb_R__part_7_x, top_case_tb_R__part_7_y, 0], top_case_tb_R__part_7);
 
-                wall_cover_case_tb_R__part_7 = translate([0,0,0], wall_cover_case_tb_R__part_7);
-                result = result.union(wall_cover_case_tb_R__part_7);
+                top_case_tb_R__part_7 = translate([0,0,0], top_case_tb_R__part_7);
+                result = result.union(top_case_tb_R__part_7);
                 
             
 
-                // creating part 8 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_8 = _cover_cap_tb_R_case_fn();
+                // creating part 8 of case top_case_tb_R
+                let top_case_tb_R__part_8 = _cover_cap_tb_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_8_bounds = wall_cover_case_tb_R__part_8.getBounds();
-                let wall_cover_case_tb_R__part_8_x = wall_cover_case_tb_R__part_8_bounds[0].x + (wall_cover_case_tb_R__part_8_bounds[1].x - wall_cover_case_tb_R__part_8_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_8_y = wall_cover_case_tb_R__part_8_bounds[0].y + (wall_cover_case_tb_R__part_8_bounds[1].y - wall_cover_case_tb_R__part_8_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_8 = translate([-wall_cover_case_tb_R__part_8_x, -wall_cover_case_tb_R__part_8_y, 0], wall_cover_case_tb_R__part_8);
-                wall_cover_case_tb_R__part_8 = rotate([0,0,0], wall_cover_case_tb_R__part_8);
-                wall_cover_case_tb_R__part_8 = translate([wall_cover_case_tb_R__part_8_x, wall_cover_case_tb_R__part_8_y, 0], wall_cover_case_tb_R__part_8);
+                let top_case_tb_R__part_8_bounds = top_case_tb_R__part_8.getBounds();
+                let top_case_tb_R__part_8_x = top_case_tb_R__part_8_bounds[0].x + (top_case_tb_R__part_8_bounds[1].x - top_case_tb_R__part_8_bounds[0].x) / 2
+                let top_case_tb_R__part_8_y = top_case_tb_R__part_8_bounds[0].y + (top_case_tb_R__part_8_bounds[1].y - top_case_tb_R__part_8_bounds[0].y) / 2
+                top_case_tb_R__part_8 = translate([-top_case_tb_R__part_8_x, -top_case_tb_R__part_8_y, 0], top_case_tb_R__part_8);
+                top_case_tb_R__part_8 = rotate([0,0,0], top_case_tb_R__part_8);
+                top_case_tb_R__part_8 = translate([top_case_tb_R__part_8_x, top_case_tb_R__part_8_y, 0], top_case_tb_R__part_8);
 
-                wall_cover_case_tb_R__part_8 = translate([0,0,0], wall_cover_case_tb_R__part_8);
-                result = result.union(wall_cover_case_tb_R__part_8);
+                top_case_tb_R__part_8 = translate([0,0,0], top_case_tb_R__part_8);
+                result = result.union(top_case_tb_R__part_8);
                 
             
 
-                // creating part 9 of case wall_cover_case_tb_R
-                let wall_cover_case_tb_R__part_9 = _wall_insert_R_case_fn();
+                // creating part 9 of case top_case_tb_R
+                let top_case_tb_R__part_9 = _wall_insert_R_case_fn();
 
                 // make sure that rotations are relative
-                let wall_cover_case_tb_R__part_9_bounds = wall_cover_case_tb_R__part_9.getBounds();
-                let wall_cover_case_tb_R__part_9_x = wall_cover_case_tb_R__part_9_bounds[0].x + (wall_cover_case_tb_R__part_9_bounds[1].x - wall_cover_case_tb_R__part_9_bounds[0].x) / 2
-                let wall_cover_case_tb_R__part_9_y = wall_cover_case_tb_R__part_9_bounds[0].y + (wall_cover_case_tb_R__part_9_bounds[1].y - wall_cover_case_tb_R__part_9_bounds[0].y) / 2
-                wall_cover_case_tb_R__part_9 = translate([-wall_cover_case_tb_R__part_9_x, -wall_cover_case_tb_R__part_9_y, 0], wall_cover_case_tb_R__part_9);
-                wall_cover_case_tb_R__part_9 = rotate([0,0,0], wall_cover_case_tb_R__part_9);
-                wall_cover_case_tb_R__part_9 = translate([wall_cover_case_tb_R__part_9_x, wall_cover_case_tb_R__part_9_y, 0], wall_cover_case_tb_R__part_9);
+                let top_case_tb_R__part_9_bounds = top_case_tb_R__part_9.getBounds();
+                let top_case_tb_R__part_9_x = top_case_tb_R__part_9_bounds[0].x + (top_case_tb_R__part_9_bounds[1].x - top_case_tb_R__part_9_bounds[0].x) / 2
+                let top_case_tb_R__part_9_y = top_case_tb_R__part_9_bounds[0].y + (top_case_tb_R__part_9_bounds[1].y - top_case_tb_R__part_9_bounds[0].y) / 2
+                top_case_tb_R__part_9 = translate([-top_case_tb_R__part_9_x, -top_case_tb_R__part_9_y, 0], top_case_tb_R__part_9);
+                top_case_tb_R__part_9 = rotate([0,0,0], top_case_tb_R__part_9);
+                top_case_tb_R__part_9 = translate([top_case_tb_R__part_9_x, top_case_tb_R__part_9_y, 0], top_case_tb_R__part_9);
 
-                wall_cover_case_tb_R__part_9 = translate([0,0,0], wall_cover_case_tb_R__part_9);
-                result = result.subtract(wall_cover_case_tb_R__part_9);
+                top_case_tb_R__part_9 = translate([0,0,0], top_case_tb_R__part_9);
+                result = result.subtract(top_case_tb_R__part_9);
                 
             
                     return result;
@@ -552,7 +552,7 @@ function wall_insert_R_extrude_3_outline_fn(){
             
         
             function main() {
-                return wall_cover_case_tb_R_case_fn();
+                return top_case_tb_R_case_fn();
             }
 
         
