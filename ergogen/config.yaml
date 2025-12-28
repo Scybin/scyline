@@ -7,19 +7,19 @@ meta:
 
 units:
 
-  # Key Variables (MX)
+  # Key Variables
   kx: u # 19mm spacing between key centers
   ky: u # 19mm spacing between key centers
   kcow: 14 # MX plate cutout width
   kcoh: 14 # MX plate cutout height
-  keycw: 18 # keycap width (MX / Cherry ~18 mm)
-  keych: 18 # keycap height (MX / Cherry ~18 mm)
-  switch_rotation: 180 # Hotswap south, LED north
-  pcb_shift: 1 # Padding
+  keycw: 18 # keycap width (MX 18 mm)
+  keych: 18 # keycap height (MX 18 mm)
+  switch_rotation: 180 # Hotswap south
+  pcb_shift: 1 # PCB outline padding
 
   # Diode Variables
-  vertical_diode_shift: 1.5 # How much to shift to avoid overlap
-  horizontal_diode_shift: -0.5 kcow - 0.85
+  vertical_diode_shift: 1.5 # Shift to avoid overlap (y)
+  horizontal_diode_shift: -0.5 kcow - 0.85 # Shift to avoid overlap (x)
   diode_rotation: -90 # Diode rotation
   diode_padding_y: 1.5 # Vertical padding between diodes
   diode_downshift_y: 0.25 # Shift paired diodes on y-axis
@@ -27,8 +27,8 @@ units:
   # Controller Variables
   mcu_width: 18 # x-axis
   mcu_height: 30.6 # y-axis
-  mcu_padding_x: 1.5
   mcu_padding_y: 1
+  mcu_padding_x: 1.5
 
   # Reset Switch Variables
   rst_x: 27.884 # Reset switch position on x-axis
@@ -51,7 +51,7 @@ units:
   # Standoff variables
   insert_size: 2.5 # Threaded screw inserts 3.2mm wide, and 3mm tall
   insert_radius: 1.25 # Threaded screw insert radius
-  spacer_radius: 2.15 # M2 standoffs
+  spacer_radius: 2.5 # M2 hex standoffs
   spacer_diameter: spacer_radius * 2
 
   # FR4 variables
@@ -243,7 +243,7 @@ points:
         - ref: extra_bottom
           shift: [-0.5kx, -0.5keych]   
 
-    # Insert Points
+    # Case insert Points
     wall_insert_nw:
       key.tags:
         - helper
@@ -406,6 +406,7 @@ outlines:
       name: pcb
       operation: subtract
       
+    # On / Off switch, reset button, and USB-C holes for access
     button_access:
     - what: polygon
       points:
@@ -448,6 +449,7 @@ outlines:
       name: xlBoard_wall
       operation: intersect
 
+    # Mounting holes
     plate_hole: 
     - what: circle
       radius: screw_hole_M2
