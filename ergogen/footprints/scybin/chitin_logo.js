@@ -1,15 +1,20 @@
-/*
- * Ergogen footprint: logo_dual
- *
- * Front and back silkscreen are IDENTICAL (same geometry and coordinates).
- * Note: In KiCad's 2D top view, the B.SilkS may appear mirrored due to viewing from the opposite side.
- */
+//
+// chitin keyboard silkscreen logo
+//
+// Copyright (c) 2025 @Scybin
+//
+// This footprint generator and the footprint it produces are licensed
+// under the Creative Commons Attribution-ShareAlike 4.0 International
+// License (CC BY-SA 4.0).
+// See https://creativecommons.org/licenses/by-sa/4.0/
+//
+
 module.exports = {
   params: {
     designator: 'LOGO'
   },
   body: p => `
-(footprint "logo_dual"
+(footprint "logo_dual_chitin"
 	(layer "F.Cu")
 	${p.at}
 	(property "Reference" "${p.ref}"
@@ -57,6 +62,29 @@ module.exports = {
 		)
 	)
 	(attr board_only exclude_from_pos_files exclude_from_bom)
+
+	(fp_text user "chitin"
+		(at 55 34 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.25)
+			)
+		)
+	)
+	(fp_text user "chitin"
+		(at 55 34 0)
+		(layer "B.SilkS")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.25)
+			)
+			(justify mirror)
+		)
+	)
+
 	(fp_poly
 			(pts
 				(xy 16.339075 -11.957668) (xy 16.448597 -11.862526) (xy 16.466321 -11.709267) (xy 16.378374 -11.449493)
@@ -3251,6 +3279,7 @@ module.exports = {
 			(fill yes)
 			(layer "F.SilkS")
 		)
+
 	(fp_poly
 			(pts
 				(xy 16.339075 -11.957668) (xy 16.448597 -11.862526) (xy 16.466321 -11.709267) (xy 16.378374 -11.449493)
@@ -6445,6 +6474,8 @@ module.exports = {
 			(fill yes)
 			(layer "B.SilkS")
 		)
+
+	(embedded_fonts no)
 )
 `
-}
+};

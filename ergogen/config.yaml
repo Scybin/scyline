@@ -1182,7 +1182,7 @@ pcbs:
           shift: [kx, 10.3]   
       
       logo:
-        what: scybin/logo_dual
+        what: scybin/chitin_logo
         where: matrix_pinky_bottom
         asym: source      
         adjust:
