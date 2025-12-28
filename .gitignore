@@ -379,6 +379,8 @@ fp-info-cache
 *.kicad_prl
 *.kicad_pro
 _autosave-chitin.kicad_pcb
+_autosave-switchplate.kicad_pcb
+_autosave-switchplate_tb.kicad_pcb
 
 # Freerouting
 temp-freerouting.dsn
