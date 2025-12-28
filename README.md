@@ -16,7 +16,7 @@ A custom split ergomech keyboard
 <a name="disclaimer"></a>
 ## ⚠️ Disclaimer
 
-This project has reached the fully working prototype stage. All core features have been tested and function as intended. However, as with any DIY hardware project, you should carefully review all files before manufacturing or assembly. The author(s) cannot guarantee flawless operation in every environment or configuration.
+This project is in the prototype testing stage. All core features have been tested and function as intended. However, as with any DIY hardware project, you should carefully review all files before manufacturing or assembly. The author(s) cannot guarantee flawless operation in every environment or configuration.
 
 The author(s) take no responsibility for any damage, issues, or legal trouble that might result from using this project (see the license). Be sure to follow local laws regarding radio frequencies and DIY electronics.
 
@@ -70,28 +70,12 @@ The prototype design is complete. Waiting for hardware to build keyboard.
 <a name="build-guide"></a>
 ## 🛠️ Build Guide
 
-For assembling the keyboard hardware, I recommend following the guide for the Corne keyboard, as the assembly process is similar. You can find the guide here: [corne-cherry v2 buildguide](https://github.com/foostan/crkbd/blob/main/docs/corne-cherry/v2/buildguide_en.md)
-
-In addition, here are some specific notes for the scyboard:
-- There will be slight differences in the assembly process due to the different components used, but the overall steps will be similar.
-- Place the nice!nano V2 microcontroller face down (flat side facing up).
-- Solder the MCU jumper pads on the *same* (top) side of the PCB where the MCU wis mounted.
-- Solder the JST battery connector jumpper pads on the *opposite* (back) side of the PCB where the MCU is mounted.
-
-You can use the 3D printed bottom case without a plate. This requires M2x4 screws on the top, M2X3 screws on the bottom, knurled insert nuts, and 3D printed screw spacers. To mount the PCB directly to the case, use the 3D printed screw spacers between the screw and PCB. 
-
-![screw_spacer](https://github.com/user-attachments/assets/ef3eff7b-e7f6-42c6-901a-7139196d5e08)
-![assembled_case](https://github.com/user-attachments/assets/c5cd95bc-1be1-412f-810b-84f73f5b5ab3)
-
-If you want to add a plate to the build, you can replace the nuts and spacers by using M2x6 standoffs. I included files for a plate if you decide to go this route. You will need one insert nut and spacer for the hole next to the JST connector since the plate does not cover this area.
+TODO
 
 <a name="firmware"></a>
 ## 💾 Firmware
 
-A ZMK module for this keyboard is available at:  
-[zmk-keyboard-scyboard](https://github.com/Scybin/zmk-keyboard-scyboard)
-
-To get started, add the module to your west.yaml file and follow the flashing instructions in the ZMK docs.
+TODO
 
 <a name="thanks"></a>
 ## 🙏 Thanks
@@ -106,6 +90,7 @@ To get started, add the module to your west.yaml file and follow the flashing in
 - **[Corne by foostan](https://github.com/foostan/crkbd):** For thumb cluster inspiration.
 - **[FlatFootFox](https://flatfootfox.com/ergogen-introduction/):** For an Ergogen tutorial.
 - **[nickcoutsos](https://nickcoutsos.github.io/keymap-editor/):** For the ZMK Keymap Editor browser app.
+- **[joe-scotto](https://github.com/Scybin/scottokeebs/tree/dab518b84248842a73bc8f1feb84828ada38bbac/Extras/ScottoKicad):** For a 3d model library
 - Open Source Community: For sharing knowledge, scripts, and inspiration.
 
 <a name="license"></a>
