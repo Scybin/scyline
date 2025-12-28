@@ -17,29 +17,29 @@ function xlBoard_R_extrude_2_outline_fn(){
 
 
 function mcu_lip_clear_R_extrude_12_outline_fn(){
-    return new CSG.Path2D([[317,-105.21],[321,-105.21]]).appendPoint([321,-73.61]).appendPoint([317,-73.61]).appendPoint([317,-105.21]).close().innerToCAG()
+    return new CSG.Path2D([[259,-105.21],[263,-105.21]]).appendPoint([263,-73.61]).appendPoint([259,-73.61]).appendPoint([259,-105.21]).close().innerToCAG()
 .extrude({ offset: [0, 0, 12] });
 }
 
 
 function bottom_lip_rect_R_extrude_12_outline_fn(){
-    return new CSG.Path2D([[301.5,-167.41],[307.5,-167.41]]).appendPoint([307.5,-165.41]).appendPoint([301.5,-165.41]).appendPoint([301.5,-167.41]).close().innerToCAG()
+    return new CSG.Path2D([[263.5,-167.41],[269.5,-167.41]]).appendPoint([269.5,-165.41]).appendPoint([263.5,-165.41]).appendPoint([263.5,-167.41]).close().innerToCAG()
 .extrude({ offset: [0, 0, 12] });
 }
 
 
 function bottom_lip_rect_R_extrude_2_outline_fn(){
-    return new CSG.Path2D([[301.5,-167.41],[307.5,-167.41]]).appendPoint([307.5,-165.41]).appendPoint([301.5,-165.41]).appendPoint([301.5,-167.41]).close().innerToCAG()
+    return new CSG.Path2D([[263.5,-167.41],[269.5,-167.41]]).appendPoint([269.5,-165.41]).appendPoint([263.5,-165.41]).appendPoint([263.5,-167.41]).close().innerToCAG()
 .extrude({ offset: [0, 0, 2] });
 }
 
 
 function inner_lip_R_extrude_12_outline_fn(){
-    return new CSG.Path2D([[300,-167.41],[300,-134.06]]).appendPoint([299,-134.06]).appendPoint([299,-167.41]).appendPoint([300,-167.41]).close().innerToCAG()
+    return new CSG.Path2D([[318,-167.41],[318,-134.06]]).appendPoint([319,-134.06]).appendPoint([319,-167.41]).appendPoint([318,-167.41]).close().innerToCAG()
 .union(
-    new CSG.Path2D([[299,-130.06],[299,-68.56]]).appendPoint([300,-68.56]).appendPoint([300,-130.06]).appendPoint([299,-130.06]).close().innerToCAG()
+    new CSG.Path2D([[319,-130.06],[319,-68.56]]).appendPoint([318,-68.56]).appendPoint([318,-130.06]).appendPoint([319,-130.06]).close().innerToCAG()
 ).union(
-    new CSG.Path2D([[376,-158.1],[376,-81.1]]).appendPoint([375,-81.1]).appendPoint([375,-158.1]).appendPoint([376,-158.1]).close().innerToCAG()
+    new CSG.Path2D([[356,-158.1],[356,-81.1]]).appendPoint([357,-81.1]).appendPoint([357,-158.1]).appendPoint([356,-158.1]).close().innerToCAG()
 ).extrude({ offset: [0, 0, 12] });
 }
 
