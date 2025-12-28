@@ -1040,6 +1040,19 @@ outlines:
       operation: stack          
 
 pcbs:
+  
+  switchplate:
+    template: kicad8
+    outlines:
+      main:
+        outline: switchplate
+
+  switchplate_tb:
+    template: kicad8
+    outlines:
+      main:
+        outline: switchplate_tb    
+
   chitin:
     template: kicad8
     outlines:
@@ -1214,12 +1227,15 @@ cases:
   _mounting_holes:
     - name: standoff_hole
       extrude: fr4_thickness  
+  _base_holes:
+    - name: wall_clearance
+      extrude: 2  # through 2 mm bottom plate
   _switchplate:
     - name: switchplate
       extrude: fr4_thickness
   _switchplate_tb:
     - name: switchplate_tb
-      extrude: fr4_thickness         
+      extrude: fr4_thickness        
 
   switchplate_case:
     - what: case
@@ -1301,9 +1317,6 @@ cases:
   _wall_insert_L:
     - name: wall_insert_L
       extrude: 3  # 3mm insert height
-  _base_holes:
-    - name: wall_clearance
-      extrude: 2  # through 2 mm bottom plate
   _bottom_lip_notch_L:
     - name: bottom_lip_rect_L
       extrude: lip_z   
@@ -1429,13 +1442,13 @@ cases:
       extrude: wall_z
   _trackball_wall_fill_R:
     - name: trackball_wall_R
-      extrude: wall_z - 7
+      extrude: wall_z - 7 
   _cover_cap_R:
     - name: cover_R
       extrude: cover_z
     - name: cover_R
       extrude: wall_z
-      operation: subtract
+      operation: subtract          
   _cover_cap_tb_R:
     - name: cover_tb_R
       extrude: cover_z
@@ -1444,25 +1457,25 @@ cases:
       operation: subtract
     - name: cover_tb_cut_R
       extrude: cover_z
-      operation: subtract
+      operation: subtract  
     - name: trackball_screw_holes_R
       extrude: cover_z
-      operation: subtract
+      operation: subtract          
   _wall_insert_R:
     - name: wall_insert_R
-      extrude: 3
+      extrude: 3  # 3mm insert height
   _bottom_lip_notch_R:
     - name: bottom_lip_rect_R
-      extrude: lip_z
+      extrude: lip_z   
   _bottom_lip_notch_raise_R:
     - name: bottom_lip_rect_R
-      extrude: 2
+      extrude: 2  
   _mcu_lip_wall_clear_R:
     - name: mcu_lip_clear_R
-      extrude: lip_z
+      extrude: lip_z   
   _inner_lip_R:
     - name: inner_lip_R
-      extrude: lip_z
+      extrude: lip_z    
 
   bottom_case_R:
     - name: bottom_lip_wall_R
