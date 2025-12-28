@@ -1,9 +1,6 @@
 ﻿# chitin
 A custom split ergomech keyboard
 
-Standoff height = 15mm https://www.newark.com/wurth-elektronik/970150244/standoff-brass-hex-f-f-m2-15mm/dp/46AJ4338
-M2.5 nut: https://www.newark.com/tr-fastenings/m2-5-hfst-z100/full-nut-steel-bzp-m2-5/dp/53M8595
-
 ## 📚 Table of Contents
 
 - [⚠️ Disclaimer](#disclaimer)
@@ -26,7 +23,7 @@ The author(s) take no responsibility for any damage, issues, or legal trouble th
 <a name="welcome"></a>
 ## ⌨️ Welcome
 
-Scyboard is a custom, open-source mechanical keyboard designed for ergonomic comfort and wireless functionality. Inspired by the Sweep and Corne keyboards, scyboard builds on these layouts and design principles. Every aspect was created using open-source tools, making it easy to modify, build, and share.
+Chitin is a custom, open-source mechanical keyboard designed for ergonomic comfort, wireless functionality, and trackball. The design is built off my original design scyboard, a minimal keyboard design.
 
 <a name="features"></a>
 ## ⚙️ Features
@@ -67,8 +64,8 @@ The prototype design is complete. Waiting for hardware to build keyboard.
 | M2x15 Standoff            |    18    | Standoffs for plate                             | [Newark M2x15 Standoff](https://www.newark.com/wurth-elektronik/970150244/standoff-brass-hex-f-f-m2-15mm/dp/46AJ4338)  | [Farnell Datasheet](https://www.farnell.com/cad/3209262.pdf)                                                                        |
 | M2x3 Insert Nut           |    12    | Inserts for bottom case                         | [uxcell Knurled Insert Nuts](https://www.amazon.com/dp/B07LBQFNQD?th=1)                                                |                                                                                                                                     |
 | M2.5x2 Nut                |    4     | Nuts to hold trackball in place (per trackball) | [Newark M2.5 Hex Nuts](https://www.newark.com/tr-fastenings/m2-5-hfst-z100/full-nut-steel-bzp-m2-5/dp/53M8595)         | [Farnell Datasheet](https://www.farnell.com/datasheets/2644739.pdf)                                                                 |
-| Bottom Case               |    2     | 3D printed bottom case                          | [Case STL Found Here](https://github.com/Scybin/chitin/tree/master/3d)                                                 |                                                                                                                                     |
-| Top Case                  |    2     | 3D printed top case                             | [Plate STL Found Here](https://github.com/Scybin/chitin/tree/master/3d)                                                |                                                                                                                                     | 
+| Bottom Case               |    2     | 3D printed bottom case                          | [Case Files Found Here](https://github.com/Scybin/chitin/tree/master/3d)                                               |                                                                                                                                     |
+| Top Case                  |    2     | 3D printed top case (tb case for trackball)     | [Case Files Found Here](https://github.com/Scybin/chitin/tree/master/3d)                                               |                                                                                                                                     | 
 
 <a name="build-guide"></a>
 ## 🛠️ Build Guide
