@@ -378,4 +378,4 @@ fp-info-cache
 *.lck
 *.kicad_prl
 *.kicad_pro
-*.kicad_pcb-bak
+_autosave-chitin.kicad_pcb
