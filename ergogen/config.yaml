@@ -1373,7 +1373,7 @@ cases:
       name: _base_holes
       operation: subtract
 
-  wall_cover_case_L:
+  top_case_L:
     - what: case
       name: _outerWall_L
       operation: add
@@ -1398,7 +1398,7 @@ cases:
     - what: case
       name: _wall_insert_L
       operation: subtract
-  wall_cover_case_tb_L:
+  top_case_tb_L:
     - what: case
       name: _outerWall_L
       operation: add
@@ -1520,7 +1520,7 @@ cases:
       name: _base_holes
       operation: subtract
 
-  wall_cover_case_R:
+  top_case_R:
     - what: case
       name: _outerWall_R
       operation: add
@@ -1545,7 +1545,7 @@ cases:
     - what: case
       name: _wall_insert_R
       operation: subtract
-  wall_cover_case_tb_R:
+  top_case_tb_R:
     - what: case
       name: _outerWall_R
       operation: add
@@ -1579,7 +1579,7 @@ cases:
 
   full_case:
     - what: case
-      name: wall_cover_case_tb_L
+      name: top_case_tb_L
       operation: add
     - what: case
       name: bottom_case_L
