@@ -1295,16 +1295,16 @@ cases:
       extrude: wall_z
   _usb_access_cut_L:
     - name: usb_wall_L
-      extrude: 22.3
+      extrude: 22
   _usb_access_fill_L:
     - name: usb_wall_L
-      extrude: 13
+      extrude: 11
   _button_access_cut_L:
     - name: button_wall_L
       extrude: wall_z
   _button_access_fill_L:
     - name: button_wall_L
-      extrude: lip_z
+      extrude: lip_z-2
   _trackball_wall_cut_L:
     - name: trackball_wall_L
       extrude: wall_z
@@ -1442,16 +1442,16 @@ cases:
       extrude: wall_z
   _usb_access_cut_R:
     - name: usb_wall_R
-      extrude: 22.3
+      extrude: 22
   _usb_access_fill_R:
     - name: usb_wall_R
-      extrude: 13
+      extrude: 11
   _button_access_cut_R:
     - name: button_wall_R
       extrude: wall_z
   _button_access_fill_R:
     - name: button_wall_R
-      extrude: lip_z
+      extrude: lip_z-2
   _trackball_wall_cut_R:
     - name: trackball_wall_R
       extrude: wall_z
