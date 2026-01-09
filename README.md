@@ -68,6 +68,9 @@ The prototype design is complete. Waiting for hardware to build keyboard.
 | Bottom Case               |    2     | 3D printed bottom case                          | [Case Files Found Here](https://github.com/Scybin/chitin/tree/master/3d)                                               |                                                                                                                                     |
 | Top Case                  |    2     | 3D printed top case (tb case for trackball)     | [Case Files Found Here](https://github.com/Scybin/chitin/tree/master/3d)                                               |                                                                                                                                     | 
 
+m2.5 x 8 x4 (trackball screws)
+m2 x 5 screw (bottom case)
+m2 x 6 screw (plate)
 <a name="build-guide"></a>
 ## 🛠️ Build Guide
 
