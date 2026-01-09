@@ -10,15 +10,15 @@ function pcb_R_extrude_24_3_outline_fn(){
 }
 
 
-function usb_wall_R_extrude_22_3_outline_fn(){
+function usb_wall_R_extrude_22_outline_fn(){
     return new CSG.Path2D([[278,-71.41],[278,-66.41]]).appendPoint([264,-66.41]).appendPoint([264,-71.41]).appendPoint([278,-71.41]).close().innerToCAG()
-.extrude({ offset: [0, 0, 22.3] });
+.extrude({ offset: [0, 0, 22] });
 }
 
 
-function usb_wall_R_extrude_13_outline_fn(){
+function usb_wall_R_extrude_11_outline_fn(){
     return new CSG.Path2D([[278,-71.41],[278,-66.41]]).appendPoint([264,-66.41]).appendPoint([264,-71.41]).appendPoint([278,-71.41]).close().innerToCAG()
-.extrude({ offset: [0, 0, 13] });
+.extrude({ offset: [0, 0, 11] });
 }
 
 
@@ -28,9 +28,9 @@ function button_wall_R_extrude_24_3_outline_fn(){
 }
 
 
-function button_wall_R_extrude_12_outline_fn(){
+function button_wall_R_extrude_10_outline_fn(){
     return new CSG.Path2D([[338.7077783,-169.8732928],[340.9182827,-174.4171443]]).appendPoint([357.5405285,-163.1]).appendPoint([357.5625,-163.1]).appendPoint([356.025,-158.1]).appendPoint([356,-158.1]).appendPoint([338.7077783,-169.8732928]).close().innerToCAG()
-.extrude({ offset: [0, 0, 12] });
+.extrude({ offset: [0, 0, 10] });
 }
 
 
@@ -118,7 +118,7 @@ function wall_insert_R_extrude_3_outline_fn(){
                     
 
                 // creating part 0 of case _usb_access_cut_R
-                let _usb_access_cut_R__part_0 = usb_wall_R_extrude_22_3_outline_fn();
+                let _usb_access_cut_R__part_0 = usb_wall_R_extrude_22_outline_fn();
 
                 // make sure that rotations are relative
                 let _usb_access_cut_R__part_0_bounds = _usb_access_cut_R__part_0.getBounds();
@@ -141,7 +141,7 @@ function wall_insert_R_extrude_3_outline_fn(){
                     
 
                 // creating part 0 of case _usb_access_fill_R
-                let _usb_access_fill_R__part_0 = usb_wall_R_extrude_13_outline_fn();
+                let _usb_access_fill_R__part_0 = usb_wall_R_extrude_11_outline_fn();
 
                 // make sure that rotations are relative
                 let _usb_access_fill_R__part_0_bounds = _usb_access_fill_R__part_0.getBounds();
@@ -187,7 +187,7 @@ function wall_insert_R_extrude_3_outline_fn(){
                     
 
                 // creating part 0 of case _button_access_fill_R
-                let _button_access_fill_R__part_0 = button_wall_R_extrude_12_outline_fn();
+                let _button_access_fill_R__part_0 = button_wall_R_extrude_10_outline_fn();
 
                 // make sure that rotations are relative
                 let _button_access_fill_R__part_0_bounds = _button_access_fill_R__part_0.getBounds();
