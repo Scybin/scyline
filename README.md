@@ -1,6 +1,6 @@
 ﻿# chitin
 
-![chitin](https://github.com/Scybin/chitin/blob/3c7a1b36d5239445cf905e086bad57631ca62dac/images/chitin.png)
+![chitin](https://github.com/Scybin/chitin/blob/772c60d10595441565a0f650681d6e9988789062/images/chitin.png)
 
 ## 📚 Table of Contents
 
