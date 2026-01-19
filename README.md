@@ -1,5 +1,6 @@
 ﻿# chitin
-A custom split ergomech keyboard
+
+![chitin](https://github.com/Scybin/chitin/blob/3c7a1b36d5239445cf905e086bad57631ca62dac/images/chitin.png)
 
 ## 📚 Table of Contents
 
@@ -10,20 +11,19 @@ A custom split ergomech keyboard
 - [📦 Parts List](#parts-list)
 - [🛠️ Build Guide](#build-guide)
 - [💾 Firmware](#firmware)
-- [🙏 Thanks](#thanks)
 - [📄 License](#license)
 
 <a name="disclaimer"></a>
 ## ⚠️ Disclaimer
 
-This project is in the prototype testing stage. All core features have been tested and function as intended. However, as with any DIY hardware project, you should carefully review all files before manufacturing or assembly. The author(s) cannot guarantee flawless operation in every environment or configuration.
+This project has reached the fully working prototype stage. All core features have been tested and function as intended. However, as with any DIY hardware project, you should carefully review all files before manufacturing or assembly. The author(s) cannot guarantee flawless operation in every environment or configuration.
 
 The author(s) take no responsibility for any damage, issues, or legal trouble that might result from using this project (see the license). Be sure to follow local laws regarding radio frequencies and DIY electronics.
 
 <a name="welcome"></a>
 ## ⌨️ Welcome
 
-Chitin is a custom, open-source mechanical keyboard designed for ergonomic comfort, wireless functionality, and trackball. The design is built off my original design scyboard, a minimal keyboard design.
+Chitin is a custom, open-source mechanical keyboard designed for ergonomic comfort, wireless functionality, and trackball. The design is built off my original keyboard design: scyboard, a minimal keyboard design.
 
 <a name="features"></a>
 ## ⚙️ Features
@@ -80,22 +80,6 @@ TODO
 ## 💾 Firmware
 
 TODO
-
-<a name="thanks"></a>
-## 🙏 Thanks
-
-- **[Ergogen](https://docs.ergogen.xyz/):** For keyboard PCB generation and configuration.
-- **[Ceoloide](https://github.com/ceoloide/ergogen-footprints):** For providing footprints. An additional thanks for code inspiration.
-- **[ZMK Firmware](https://zmk.dev/):** For providing the open-source keyboard architecture support.
-- **[KiCad](https://www.kicad.org/):** For PCB viewing and editing.
-- **[Freerouting](https://www.freerouting.app/):** For PCB auto-routing in KiCad.
-- **[typeractive](https://typeractive.xyz/):** For design and parts inspiration.
-- **[Sweep by David Philip Barr](https://github.com/davidphilipbarr/Sweep):** For key matrix and column stagger inspiration.
-- **[Corne by foostan](https://github.com/foostan/crkbd):** For thumb cluster inspiration.
-- **[FlatFootFox](https://flatfootfox.com/ergogen-introduction/):** For an Ergogen tutorial.
-- **[nickcoutsos](https://nickcoutsos.github.io/keymap-editor/):** For the ZMK Keymap Editor browser app.
-- **[joe-scotto](https://github.com/Scybin/scottokeebs/tree/dab518b84248842a73bc8f1feb84828ada38bbac/Extras/ScottoKicad):** For a 3d model library
-- Open Source Community: For sharing knowledge, scripts, and inspiration.
 
 <a name="license"></a>
 ## 📄 License
