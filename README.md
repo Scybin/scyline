@@ -59,7 +59,7 @@ The prototype design is complete. Waiting for hardware to build keyboard.
 | Diode                     |    57    | SMD Diode                                       | [Semtech SMD Diodes](https://typeractive.xyz/products/smd-diodes)                                                      | [SOD-123](https://www.onsemi.com/download/data-sheet/pdf/mmsd301t1-d.pdf)      									                          |
 | Hotswap Socket            |    57    | Kailh MX PCB Socket                             | [Kailh Hotswap Sockets](https://typeractive.xyz/products/hotswap-sockets)                                              | [CPG151101S11](https://www.kailhswitch.com/Content/upload/pdf/202215927/CPG151101S11-16.pdf?rnd=181)                                      |
 | MX Switch                 |    57    | JWICK Linear Switches                           | [JWK JWICK Linear Switches](https://typeractive.xyz/products/jwk-jwick-linear-switches)                                | [MX Series Keyswitch](https://cdn.sparkfun.com/datasheets/Components/Switches/MX%20Series.pdf)                                            |
-| MX Keycap                 |    57    | 55 x 1u, 2 x 1.5u                               | [DSA Keycaps](https://typeractive.xyz/products/dsa-keycaps)                                                            |                                                                                                                                           |
+| MX Keycap                 |    57    | 55 x 1u, 2 x 1.5u                               | [DSA Keycaps](https://typeractive.xyz/products/dsa-keycaps)                                                            | [DSA Keycap Project](https://drive.google.com/drive/folders/0B0LNjZf_tzjWZGhwZ0VKUm9PQVE?resourcekey=0-rYUAMYD1-22Btlgdmpb0IQ)            |
 | M2x15 Standoff            |    18    | Standoffs for plate                             | [Newark M2x15 Standoff](https://www.newark.com/wurth-elektronik/970150244/standoff-brass-hex-f-f-m2-15mm/dp/46AJ4338)  | [Farnell Datasheet](https://www.farnell.com/cad/3209262.pdf)                                                                              |
 | M2x4 Screw                |    8     | Screws to connect bottom case to top case       | [CO-RODE Screw Kit](https://www.amazon.com/gp/product/B01FTI8TM8/)                                                     |                                                                                                                                           |
 | M2x6 Screw                |    18    | Screws for bottom case and top plate            | [CO-RODE Screw Kit](https://www.amazon.com/gp/product/B01FTI8TM8/)                                                     |                                                                                                                                           |
@@ -85,7 +85,11 @@ TODO
 <a name="firmware"></a>
 ## 💾 Firmware
 
-TODO
+To get started, I recommend forking my personal repository for chitin. Making modifications to the keyboard can be done within the config folder. 
+
+My repository sets the central device as the right half of the keyboard, and the peripheral as the left half. Making changes to which half the trackball resides on, and excluding the trackball from the firmware requires many changes to the chitin repository, and source module.
+
+The repository uses my chitin ZMK module [HERE](https://github.com/Scybin/zmk-keyboard-chitin), and my Pimoroni trackball driver module (derived from mwandzik's driver) [HERE](https://github.com/Scybin/zmk-driver-pim447).
 
 <a name="license"></a>
 ## 📄 License
