@@ -71,7 +71,7 @@ The prototype design is complete. Waiting for hardware to build keyboard.
 | Bottom Case               |    2     | 3D printed bottom case                          | [Case Files Found Here](https://github.com/Scybin/chitin/tree/master/3d)                                               |                                                                                                                                           |
 | Top Case                  |    2     | 3D printed top case (tb case for trackball)     | [Case Files Found Here](https://github.com/Scybin/chitin/tree/master/3d)                                               |                                                                                                                                           | 
 
-**NOTE: The trackball replaces the position of 1 switch from the keyboard layout. If not incorporating a trackball in the build, add 1 to each of the following parts:**
+**NOTE: The trackball replaces the position of 1 switch from the keyboard layout. If not incorporating a trackball in the build, add 1 quantity to each of the following parts:**
 - Diode
 - Hotswap Socket
 - MX Switch
