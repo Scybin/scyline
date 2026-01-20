@@ -85,11 +85,11 @@ TODO
 <a name="firmware"></a>
 ## 💾 Firmware
 
-To get started, I recommend forking my personal repository for chitin. Making modifications to the keyboard can be done within the config folder. 
+To get started, I recommend forking my personal repository for chitin here: [zmk-config-chitin](https://github.com/Scybin/zmk-config-chitin). Making modifications to the keyboard can be done within the config folder. 
 
 My build sets the central device to the right half of the keyboard, and the peripheral to the left half. Making changes to which half the trackball resides on, or excluding the trackball from the build requires many changes to the code in the chitin repository and source module.
 
-The repository uses my chitin ZMK module [HERE](https://github.com/Scybin/zmk-keyboard-chitin), and my Pimoroni trackball driver module (derived from mwandzik's driver) [HERE](https://github.com/Scybin/zmk-driver-pim447).
+The repository uses my chitin ZMK module here: [zmk-keyboard-chitin](https://github.com/Scybin/zmk-keyboard-chitin), and my Pimoroni trackball driver module (derived from mwandzik's driver) here: [zmk-driver-pim447](https://github.com/Scybin/zmk-driver-pim447).
 
 <a name="license"></a>
 ## 📄 License
